@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const MaskIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M4 12.5V7.1814C4 5.2811 5.7456 3.8685 7.6333 4.087c2.9288.3387 5.8046.3387 8.7334 0C18.2544 3.8685 20 5.281 20 7.1814V12.5c0 4.4183-3.5817 8-8 8s-8-3.5817-8-8Z" style={{
+import { Ref, forwardRef } from "react";
+const MaskIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M4 12.5V7.1814C4 5.2811 5.7456 3.8685 7.6333 4.087c2.9288.3387 5.8046.3387 8.7334 0C18.2544 3.8685 20 5.281 20 7.1814V12.5c0 4.4183-3.5817 8-8 8s-8-3.5817-8-8Z" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><path fill="currentColor" d="M15.1593 13.4157q-3.1587 1.2934-6.3174 0c-.4445-.182-.902.256-.6325.6535 2.0278 2.991 5.5546 2.991 7.5824 0 .2696-.3975-.188-.8355-.6325-.6535" style={{
@@ -15,4 +16,5 @@ const MaskIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.o
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default MaskIcon;
+const ForwardRef = forwardRef(MaskIcon);
+export default ForwardRef;

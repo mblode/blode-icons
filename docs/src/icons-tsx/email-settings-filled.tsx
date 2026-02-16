@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const EmailSettingsFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M2.3347 6.404c-.1743.421-.2515.8662-.2905 1.3442C2 8.2894 2 8.9537 2 9.7587v4.4826c0 .8049 0 1.4693.0442 2.0105.046.5621.1445 1.0788.3918 1.5642a4 4 0 0 0 1.748 1.748c.4854.2473 1.002.3459 1.5642.3918C6.2894 20 6.9537 20 7.7587 20h6.044C13.2922 19.1175 13 18.0929 13 17c0-3.3137 2.6863-6 6-6 1.0929 0 2.1175.2922 3 .8027v-2.044c0-.805 0-1.4693-.0442-2.0105-.0391-.478-.1162-.9232-.2905-1.3442l-7.6175 4.5397a4 4 0 0 1-4.0956 0z" style={{
+import { Ref, forwardRef } from "react";
+const EmailSettingsFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M2.3347 6.404c-.1743.421-.2515.8662-.2905 1.3442C2 8.2894 2 8.9537 2 9.7587v4.4826c0 .8049 0 1.4693.0442 2.0105.046.5621.1445 1.0788.3918 1.5642a4 4 0 0 0 1.748 1.748c.4854.2473 1.002.3459 1.5642.3918C6.2894 20 6.9537 20 7.7587 20h6.044C13.2922 19.1175 13 18.0929 13 17c0-3.3137 2.6863-6 6-6 1.0929 0 2.1175.2922 3 .8027v-2.044c0-.805 0-1.4693-.0442-2.0105-.0391-.478-.1162-.9232-.2905-1.3442l-7.6175 4.5397a4 4 0 0 1-4.0956 0z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M20.4221 4.8167a4 4 0 0 0-.6061-.3807c-.4854-.2473-1.0021-.3459-1.5642-.3918C17.7106 4 17.0463 4 16.2413 4H7.7587c-.805 0-1.4693 0-2.0105.0442-.5621.046-1.0788.1445-1.5642.3918a4 4 0 0 0-.606.3807l7.3981 4.409a2 2 0 0 0 2.0478 0z" style={{
@@ -10,4 +11,5 @@ const EmailSettingsFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default EmailSettingsFilledIcon;
+const ForwardRef = forwardRef(EmailSettingsFilledIcon);
+export default ForwardRef;

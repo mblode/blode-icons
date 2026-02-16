@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Direction1Icon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 16v4m0-4H6a2 2 0 0 1-1.6-.8l-1.5-2a2 2 0 0 1 0-2.4l1.5-2A2 2 0 0 1 6 8h5c.5523 0 1 .4477 1 1zm1-12h5a2 2 0 0 1 1.6.8l1.5 2a2 2 0 0 1 0 2.4l-1.5 2a2 2 0 0 1-1.6.8h-5c-.5523 0-1-.4477-1-1V5c0-.5523.4477-1 1-1" /></svg>;
-export default Direction1Icon;
+import { Ref, forwardRef } from "react";
+const Direction1Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 16v4m0-4H6a2 2 0 0 1-1.6-.8l-1.5-2a2 2 0 0 1 0-2.4l1.5-2A2 2 0 0 1 6 8h5c.5523 0 1 .4477 1 1zm1-12h5a2 2 0 0 1 1.6.8l1.5 2a2 2 0 0 1 0 2.4l-1.5 2a2 2 0 0 1-1.6.8h-5c-.5523 0-1-.4477-1-1V5c0-.5523.4477-1 1-1" /></svg>;
+const ForwardRef = forwardRef(Direction1Icon);
+export default ForwardRef;

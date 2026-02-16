@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const EmailPlusFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M2.0442 7.7482c.039-.478.1162-.9232.2905-1.3442l7.6175 4.5397a4 4 0 0 0 4.0956 0l7.6175-4.5397c.1743.421.2514.8662.2905 1.3442C22 8.2894 22 8.9537 22 9.7587V14c0-1.6569-1.3431-3-3-3s-3 1.3431-3 3c-1.6569 0-3 1.3431-3 3 0 1.6555 1.3409 2.9977 2.9958 3H7.7587c-.805 0-1.4693 0-2.0105-.0442-.5621-.0459-1.0788-.1445-1.5642-.3918a4 4 0 0 1-1.748-1.748c-.2473-.4854-.3459-1.0021-.3918-1.5642C2 15.7106 2 15.0463 2 14.2413V9.7587c0-.805 0-1.4693.0442-2.0105" style={{
+import { Ref, forwardRef } from "react";
+const EmailPlusFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M2.0442 7.7482c.039-.478.1162-.9232.2905-1.3442l7.6175 4.5397a4 4 0 0 0 4.0956 0l7.6175-4.5397c.1743.421.2514.8662.2905 1.3442C22 8.2894 22 8.9537 22 9.7587V14c0-1.6569-1.3431-3-3-3s-3 1.3431-3 3c-1.6569 0-3 1.3431-3 3 0 1.6555 1.3409 2.9977 2.9958 3H7.7587c-.805 0-1.4693 0-2.0105-.0442-.5621-.0459-1.0788-.1445-1.5642-.3918a4 4 0 0 1-1.748-1.748c-.2473-.4854-.3459-1.0021-.3918-1.5642C2 15.7106 2 15.0463 2 14.2413V9.7587c0-.805 0-1.4693.0442-2.0105" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M19.816 4.436c.2141.109.4168.2366.6061.3807l-7.3982 4.409a2 2 0 0 1-2.0478 0l-7.3982-4.409c.1893-.144.392-.2716.6061-.3807.4854-.2473 1.002-.3459 1.5642-.3918C6.2894 4 6.9537 4 7.7587 4h8.4826c.805 0 1.4693 0 2.0105.0442.5621.046 1.0788.1445 1.5642.3918M19 13c.5523 0 1 .4477 1 1v2h2c.5523 0 1 .4477 1 1s-.4477 1-1 1h-2v2c0 .5523-.4477 1-1 1s-1-.4477-1-1v-2h-2c-.5523 0-1-.4477-1-1s.4477-1 1-1h2v-2c0-.5523.4477-1 1-1" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default EmailPlusFilledIcon;
+const ForwardRef = forwardRef(EmailPlusFilledIcon);
+export default ForwardRef;

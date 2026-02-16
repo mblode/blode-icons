@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const FolderLink2FilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M2 7c0-2.2091 1.7909-4 4-4h2.9296a3 3 0 0 1 2.4962 1.3359l.8125 1.2188A1 1 0 0 0 13.0704 6H18c2.2091 0 4 1.7909 4 4v6c0 2.2091-1.7909 4-4 4h-3v-4c0-2.7614-2.2386-5-5-5H4a4.98 4.98 0 0 0-2 .416z" style={{
+import { Ref, forwardRef } from "react";
+const FolderLink2FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M2 7c0-2.2091 1.7909-4 4-4h2.9296a3 3 0 0 1 2.4962 1.3359l.8125 1.2188A1 1 0 0 0 13.0704 6H18c2.2091 0 4 1.7909 4 4v6c0 2.2091-1.7909 4-4 4h-3v-4c0-2.7614-2.2386-5-5-5H4a4.98 4.98 0 0 0-2 .416z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" fillRule="evenodd" d="M5 17c0-.5523.4477-1 1-1h2c.5523 0 1 .4477 1 1s-.4477 1-1 1H6c-.5523 0-1-.4477-1-1" clipRule="evenodd" style={{
@@ -10,4 +11,5 @@ const FolderLink2FilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="ht
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default FolderLink2FilledIcon;
+const ForwardRef = forwardRef(FolderLink2FilledIcon);
+export default ForwardRef;

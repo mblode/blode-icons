@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Rewrite2Icon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 13.4882V14h.5118c.7337 0 1.1006 0 1.4459-.0829a3 3 0 0 0 .8672-.3592c.3027-.1855.5621-.4449 1.081-.9638L19.75 6.75c.6904-.6904.6904-1.8096 0-2.5s-1.8096-.6904-2.5 0l-5.8441 5.8441c-.5189.5189-.7783.7783-.9638 1.081a3 3 0 0 0-.3592.8672C10 12.3876 10 12.7545 10 13.4882M16 6l2 2" style={{
+import { Ref, forwardRef } from "react";
+const Rewrite2Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 13.4882V14h.5118c.7337 0 1.1006 0 1.4459-.0829a3 3 0 0 0 .8672-.3592c.3027-.1855.5621-.4449 1.081-.9638L19.75 6.75c.6904-.6904.6904-1.8096 0-2.5s-1.8096-.6904-2.5 0l-5.8441 5.8441c-.5189.5189-.7783.7783-.9638 1.081a3 3 0 0 0-.3592.8672C10 12.3876 10 12.7545 10 13.4882M16 6l2 2" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><path fill="currentColor" d="M11.0224 4.612 8.3153 2.4123c-.3268-.2655-.8153-.033-.8153.388v4.3991c0 .421.4885.6536.8153.388l2.7071-2.1994c.2463-.2001.2463-.576 0-.7762M12.9776 18.6119l2.7071-2.1995c.3268-.2655.8153-.0329.8153.3881v4.399c0 .421-.4885.6536-.8153.3881l-2.7071-2.1995c-.2463-.2001-.2463-.5761 0-.7762" style={{
@@ -10,4 +11,5 @@ const Rewrite2Icon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.
     stroke: "currentColor",
     strokeOpacity: 1
   }} /></svg>;
-export default Rewrite2Icon;
+const ForwardRef = forwardRef(Rewrite2Icon);
+export default ForwardRef;

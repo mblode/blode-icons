@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const PackageEditFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M8 3H7C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5.1707A3 3 0 0 1 12 20.0001v-2.3334a3 3 0 0 1 .8787-2.1213l3.5-3.5c1.2509-1.2509 3.0372-1.6401 4.6213-1.1676V7c0-2.2091-1.7909-4-4-4h-1v3.5C16 7.8807 14.8807 9 13.5 9h-3C9.1193 9 8 7.8807 8 6.5z" style={{
+import { Ref, forwardRef } from "react";
+const PackageEditFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M8 3H7C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5.1707A3 3 0 0 1 12 20.0001v-2.3334a3 3 0 0 1 .8787-2.1213l3.5-3.5c1.2509-1.2509 3.0372-1.6401 4.6213-1.1676V7c0-2.2091-1.7909-4-4-4h-1v3.5C16 7.8807 14.8807 9 13.5 9h-3C9.1193 9 8 7.8807 8 6.5z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M14 3h-4v3.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" style={{
@@ -10,4 +11,5 @@ const PackageEditFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="ht
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default PackageEditFilledIcon;
+const ForwardRef = forwardRef(PackageEditFilledIcon);
+export default ForwardRef;

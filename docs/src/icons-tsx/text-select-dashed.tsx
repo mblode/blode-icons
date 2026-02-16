@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const TextSelectDashedIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v11M20 6v11" style={{
+import { Ref, forwardRef } from "react";
+const TextSelectDashedIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v11M20 6v11" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><circle cx={4} cy={5} r={2} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} style={{
@@ -13,4 +14,5 @@ const TextSelectDashedIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="htt
     stroke: "currentColor",
     strokeOpacity: 1
   }} /></svg>;
-export default TextSelectDashedIcon;
+const ForwardRef = forwardRef(TextSelectDashedIcon);
+export default ForwardRef;

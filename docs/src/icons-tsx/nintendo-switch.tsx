@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const NintendoSwitchIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M9 8.25C9 9.2165 8.2165 10 7.25 10S5.5 9.2165 5.5 8.25 6.2835 6.5 7.25 6.5 9 7.2835 9 8.25" /><path fill="currentColor" fillRule="evenodd" d="M3 7.25C3 4.9028 4.9028 3 7.25 3h4.25v18H7.25C4.9028 21 3 19.0972 3 16.75zM7.25 4.5C5.7312 4.5 4.5 5.7312 4.5 7.25v9.5c0 1.5188 1.2312 2.75 2.75 2.75H10v-15zM16.75 3C19.0972 3 21 4.9028 21 7.25v9.5c0 2.3472-1.9028 4.25-4.25 4.25H12.5V3zm1.75 10c0 .9665-.7835 1.75-1.75 1.75S15 13.9665 15 13s.7835-1.75 1.75-1.75 1.75.7835 1.75 1.75" clipRule="evenodd" /></svg>;
-export default NintendoSwitchIcon;
+import { Ref, forwardRef } from "react";
+const NintendoSwitchIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M9 8.25C9 9.2165 8.2165 10 7.25 10S5.5 9.2165 5.5 8.25 6.2835 6.5 7.25 6.5 9 7.2835 9 8.25" /><path fill="currentColor" fillRule="evenodd" d="M3 7.25C3 4.9028 4.9028 3 7.25 3h4.25v18H7.25C4.9028 21 3 19.0972 3 16.75zM7.25 4.5C5.7312 4.5 4.5 5.7312 4.5 7.25v9.5c0 1.5188 1.2312 2.75 2.75 2.75H10v-15zM16.75 3C19.0972 3 21 4.9028 21 7.25v9.5c0 2.3472-1.9028 4.25-4.25 4.25H12.5V3zm1.75 10c0 .9665-.7835 1.75-1.75 1.75S15 13.9665 15 13s.7835-1.75 1.75-1.75 1.75.7835 1.75 1.75" clipRule="evenodd" /></svg>;
+const ForwardRef = forwardRef(NintendoSwitchIcon);
+export default ForwardRef;

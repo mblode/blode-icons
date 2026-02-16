@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const GamepadControlsDownFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M13.5 22c1.3807 0 2.5-1.1193 2.5-2.5v-1.6287a2.5 2.5 0 0 0-.7322-1.7677L13.4142 14.25c-.781-.781-2.0474-.781-2.8284 0l-1.8536 1.8536A2.5 2.5 0 0 0 8 17.8713V19.5c0 1.3807 1.1193 2.5 2.5 2.5zm0-2a.5.5 0 0 0 .5-.5v-1.6287a.5.5 0 0 0-.1464-.3535L12 15.6642l-1.8536 1.8536a.5.5 0 0 0-.1464.3535V19.5a.5.5 0 0 0 .5.5z" clipRule="evenodd" style={{
+import { Ref, forwardRef } from "react";
+const GamepadControlsDownFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M13.5 22c1.3807 0 2.5-1.1193 2.5-2.5v-1.6287a2.5 2.5 0 0 0-.7322-1.7677L13.4142 14.25c-.781-.781-2.0474-.781-2.8284 0l-1.8536 1.8536A2.5 2.5 0 0 0 8 17.8713V19.5c0 1.3807 1.1193 2.5 2.5 2.5zm0-2a.5.5 0 0 0 .5-.5v-1.6287a.5.5 0 0 0-.1464-.3535L12 15.6642l-1.8536 1.8536a.5.5 0 0 0-.1464.3535V19.5a.5.5 0 0 0 .5.5z" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M19.5 16c1.3807 0 2.5-1.1193 2.5-2.5v-3C22 9.1193 20.8807 8 19.5 8h-1.6287c-.663 0-1.2989.2634-1.7677.7322L14.25 10.5858c-.781.781-.781 2.0474 0 2.8284l1.8536 1.8536A2.5 2.5 0 0 0 17.8713 16zM6.1287 16c.663 0 1.299-.2634 1.7677-.7322L9.75 13.4142c.781-.781.781-2.0474 0-2.8284L7.8964 8.7322A2.5 2.5 0 0 0 6.1288 8H4.5C3.1193 8 2 9.1193 2 10.5v3C2 14.8807 3.1193 16 4.5 16zM10.5858 9.75c.781.781 2.0474.781 2.8284 0l1.8536-1.8536A2.5 2.5 0 0 0 16 6.1288V4.5C16 3.1193 14.8807 2 13.5 2h-3C9.1193 2 8 3.1193 8 4.5v1.6287a2.5 2.5 0 0 0 .7322 1.7677z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default GamepadControlsDownFilledIcon;
+const ForwardRef = forwardRef(GamepadControlsDownFilledIcon);
+export default ForwardRef;

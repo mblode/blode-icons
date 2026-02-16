@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const FileCloudFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M12 2H8C5.7909 2 4 3.7909 4 6v5.9172A6.24 6.24 0 0 1 6.25 11.5c1.6734 0 3.192.6588 4.311 1.7252 2.2776.6733 3.939 2.7786 3.939 5.2748a5.477 5.477 0 0 1-1.2572 3.5H16c2.2091 0 4-1.7909 4-4v-8h-5c-1.6569 0-3-1.3431-3-3z" style={{
+import { Ref, forwardRef } from "react";
+const FileCloudFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12 2H8C5.7909 2 4 3.7909 4 6v5.9172A6.24 6.24 0 0 1 6.25 11.5c1.6734 0 3.192.6588 4.311 1.7252 2.2776.6733 3.939 2.7786 3.939 5.2748a5.477 5.477 0 0 1-1.2572 3.5H16c2.2091 0 4-1.7909 4-4v-8h-5c-1.6569 0-3-1.3431-3-3z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M19.4142 8 14 2.5858V7c0 .5523.4477 1 1 1z" style={{
@@ -10,4 +11,5 @@ const FileCloudFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default FileCloudFilledIcon;
+const ForwardRef = forwardRef(FileCloudFilledIcon);
+export default ForwardRef;

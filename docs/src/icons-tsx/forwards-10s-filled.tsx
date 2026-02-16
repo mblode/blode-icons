@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Forwards10sFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M3.6554 8.6248C4.9897 5.3283 8.222 3 12.0008 3c2.8286 0 5.3511 1.3047 7.0005 3.3436V5c0-.5523.4477-1 1-1s1 .4477 1 1v4c0 .5523-.4477 1-1 1h-4c-.5523 0-1-.4477-1-1s.4477-1 1-1h1.7451c-1.2656-1.8143-3.3679-3-5.7456-3-2.9361 0-5.4524 1.808-6.4916 4.3752-.2072.512-.7902.759-1.3021.5517-.512-.2072-.759-.7902-.5517-1.3021" clipRule="evenodd" style={{
+import { Ref, forwardRef } from "react";
+const Forwards10sFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M3.6554 8.6248C4.9897 5.3283 8.222 3 12.0008 3c2.8286 0 5.3511 1.3047 7.0005 3.3436V5c0-.5523.4477-1 1-1s1 .4477 1 1v4c0 .5523-.4477 1-1 1h-4c-.5523 0-1-.4477-1-1s.4477-1 1-1h1.7451c-1.2656-1.8143-3.3679-3-5.7456-3-2.9361 0-5.4524 1.808-6.4916 4.3752-.2072.512-.7902.759-1.3021.5517-.512-.2072-.759-.7902-.5517-1.3021" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M7.926 19.9653v-5.7065h-.0253l-.6665.4507c-.3301.2094-.5079.2729-.7173.2729-.419 0-.7237-.3047-.7237-.7236 0-.311.1905-.5903.565-.8252l1.0346-.6919c.4952-.3174.9458-.4634 1.3711-.4634.7427 0 1.2378.5015 1.2378 1.2759v6.4111c0 .7173-.3745 1.1172-1.0346 1.1172-.6665 0-1.041-.4062-1.041-1.1172M11.284 16.9058v-.4634c0-2.5835 1.3266-4.2656 3.4594-4.2656 2.1392 0 3.4151 1.6503 3.4151 4.2656v.4634c0 2.5771-1.3394 4.2846-3.4595 4.2846s-3.415-1.6694-3.415-4.2846m2.1074-.4571v.4507c0 1.6504.4951 2.6152 1.333 2.6152.8315 0 1.333-.9711 1.333-2.6152v-.4507c0-1.6377-.5015-2.5962-1.3394-2.5962s-1.3266.9522-1.3266 2.5962" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default Forwards10sFilledIcon;
+const ForwardRef = forwardRef(Forwards10sFilledIcon);
+export default ForwardRef;
