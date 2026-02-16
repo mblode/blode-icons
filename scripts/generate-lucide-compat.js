@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const srcDir = path.join(__dirname, '../src')
-const mappingFile = path.join(__dirname, '../compare/src/mapping.ts')
+const mappingFile = path.join(__dirname, 'lucide-mapping.ts')
 const indexFile = path.join(srcDir, 'all-icons.ts')
 const outputFile = path.join(srcDir, 'lucide.ts')
 

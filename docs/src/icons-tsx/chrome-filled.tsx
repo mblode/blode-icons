@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const ChromeFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M4.4146 5.4838C9.0633.0736 17.6827 1.1415 20.905 7.4613c-2.2683.0008-5.8203-.0006-7.744 0-1.3953.0004-2.296-.0313-3.2716.4823-1.147.6037-2.0124 1.7228-2.3144 3.0373z" clipRule="evenodd" style={{
+import { Ref, forwardRef } from "react";
+const ChromeFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M4.4146 5.4838C9.0633.0736 17.6827 1.1415 20.905 7.4613c-2.2683.0008-5.8203-.0006-7.744 0-1.3953.0004-2.296-.0313-3.2716.4823-1.147.6037-2.0124 1.7228-2.3144 3.0373z" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" fillRule="evenodd" d="M8.673 11.9995c0 1.8336 1.4909 3.3254 3.3235 3.3254 1.8325 0 3.3234-1.4917 3.3234-3.3254 0-1.8336-1.4909-3.3254-3.3234-3.3254S8.673 10.1659 8.673 11.9995" clipRule="evenodd" style={{
@@ -13,4 +14,5 @@ const ChromeFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default ChromeFilledIcon;
+const ForwardRef = forwardRef(ChromeFilledIcon);
+export default ForwardRef;

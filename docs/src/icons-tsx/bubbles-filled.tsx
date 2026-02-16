@@ -1,7 +1,9 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const BubblesFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M18.502 3c1.9329 0 3.5 1.567 3.5 3.5v5c0 1.933-1.5671 3.5-3.5 3.5h-.5v.5c0 1.933-1.5671 3.5-3.5 3.5h-3.7409l-4.2735 2.3742A1 1 0 0 1 5.002 20.5v-1.5354c-1.6962-.2427-3-1.7014-3-3.4646v-5c0-1.933 1.567-3.5 3.5-3.5h.5v-.5c0-1.933 1.567-3.5 3.5-3.5zm-10.5 4h6.5c1.9329 0 3.5 1.567 3.5 3.5V13h.5c.8284 0 1.5-.6716 1.5-1.5v-5c0-.8284-.6716-1.5-1.5-1.5h-9c-.8285 0-1.5.6716-1.5 1.5z" clipRule="evenodd" style={{
+import { Ref, forwardRef } from "react";
+const BubblesFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M18.502 3c1.9329 0 3.5 1.567 3.5 3.5v5c0 1.933-1.5671 3.5-3.5 3.5h-.5v.5c0 1.933-1.5671 3.5-3.5 3.5h-3.7409l-4.2735 2.3742A1 1 0 0 1 5.002 20.5v-1.5354c-1.6962-.2427-3-1.7014-3-3.4646v-5c0-1.933 1.567-3.5 3.5-3.5h.5v-.5c0-1.933 1.567-3.5 3.5-3.5zm-10.5 4h6.5c1.9329 0 3.5 1.567 3.5 3.5V13h.5c.8284 0 1.5-.6716 1.5-1.5v-5c0-.8284-.6716-1.5-1.5-1.5h-9c-.8285 0-1.5.6716-1.5 1.5z" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default BubblesFilledIcon;
+const ForwardRef = forwardRef(BubblesFilledIcon);
+export default ForwardRef;

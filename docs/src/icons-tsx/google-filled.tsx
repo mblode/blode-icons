@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const GoogleFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M21.5844 12.2273c0-.7091-.0636-1.3909-.1818-2.0455h-9.4182v3.8728h5.3818c-.2364 1.2454-.9455 2.3-2.0091 3.0091v2.5181h3.2455c1.8909-1.7454 2.9818-4.3091 2.9818-7.3545" style={{
+import { Ref, forwardRef } from "react";
+const GoogleFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M21.5844 12.2273c0-.7091-.0636-1.3909-.1818-2.0455h-9.4182v3.8728h5.3818c-.2364 1.2454-.9455 2.3-2.0091 3.0091v2.5181h3.2455c1.8909-1.7454 2.9818-4.3091 2.9818-7.3545" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M11.982 22c2.7 0 4.9636-.8909 6.6182-2.4182l-3.2455-2.5182c-.8909.6-2.0273.9636-3.3727.9636-2.6 0-4.8091-1.7545-5.6-4.1181H3.0547v2.5818C4.7 19.7545 8.0729 22 11.982 22" style={{
@@ -13,4 +14,5 @@ const GoogleFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default GoogleFilledIcon;
+const ForwardRef = forwardRef(GoogleFilledIcon);
+export default ForwardRef;

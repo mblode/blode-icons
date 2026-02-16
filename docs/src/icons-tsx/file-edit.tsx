@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const FileEditIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8V6c0-1.6569 1.3431-3 3-3h3.7574a3 3 0 0 1 2.1213.8787l4.2426 4.2426A3 3 0 0 1 19 10.2426V18c0 1.6569-1.3431 3-3 3h-5" style={{
+import { Ref, forwardRef } from "react";
+const FileEditIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8V6c0-1.6569 1.3431-3 3-3h3.7574a3 3 0 0 1 2.1213.8787l4.2426 4.2426A3 3 0 0 1 19 10.2426V18c0 1.6569-1.3431 3-3 3h-5" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 3.75V7c0 1.1046.8954 2 2 2h3" style={{
@@ -10,4 +11,5 @@ const FileEditIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.
     stroke: "currentColor",
     strokeOpacity: 1
   }} /></svg>;
-export default FileEditIcon;
+const ForwardRef = forwardRef(FileEditIcon);
+export default ForwardRef;

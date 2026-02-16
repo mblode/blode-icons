@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const KeyboardUpFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M12.7071 2.2929c-.3905-.3905-1.0237-.3905-1.4142 0l-2 2c-.3905.3905-.3905 1.0237 0 1.4142s1.0237.3905 1.4142 0L12 4.4142l1.2929 1.293c.3905.3904 1.0237.3904 1.4142 0 .3905-.3906.3905-1.0238 0-1.4143z" style={{
+import { Ref, forwardRef } from "react";
+const KeyboardUpFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12.7071 2.2929c-.3905-.3905-1.0237-.3905-1.4142 0l-2 2c-.3905.3905-.3905 1.0237 0 1.4142s1.0237.3905 1.4142 0L12 4.4142l1.2929 1.293c.3905.3904 1.0237.3904 1.4142 0 .3905-.3906.3905-1.0238 0-1.4143z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" fillRule="evenodd" d="M1 12c0-2.2091 1.7909-4 4-4h14c2.2091 0 4 1.7909 4 4v6c0 2.2091-1.7909 4-4 4H5c-2.2091 0-4-1.7909-4-4zm3.75 1c0 .6904.5596 1.25 1.25 1.25s1.25-.5596 1.25-1.25-.5596-1.25-1.25-1.25-1.25.5596-1.25 1.25M10 16c-.5523 0-1 .4477-1 1s.4477 1 1 1h4c.5523 0 1-.4477 1-1s-.4477-1-1-1zm6.75-3c0 .6904.5596 1.25 1.25 1.25s1.25-.5596 1.25-1.25-.5596-1.25-1.25-1.25-1.25.5596-1.25 1.25M14 14.25c-.6904 0-1.25-.5596-1.25-1.25s.5596-1.25 1.25-1.25 1.25.5596 1.25 1.25-.5596 1.25-1.25 1.25M8.75 13c0 .6904.5596 1.25 1.25 1.25s1.25-.5596 1.25-1.25-.5596-1.25-1.25-1.25-1.25.5596-1.25 1.25M6 18.25c-.6904 0-1.25-.5596-1.25-1.25s.5596-1.25 1.25-1.25 1.25.5596 1.25 1.25-.5596 1.25-1.25 1.25M16.75 17c0 .6904.5596 1.25 1.25 1.25s1.25-.5596 1.25-1.25-.5596-1.25-1.25-1.25-1.25.5596-1.25 1.25" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default KeyboardUpFilledIcon;
+const ForwardRef = forwardRef(KeyboardUpFilledIcon);
+export default ForwardRef;

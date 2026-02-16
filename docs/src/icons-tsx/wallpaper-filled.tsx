@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const WallpaperFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M6 4C3.7909 4 2 5.7909 2 8v4.8739c.149-.078.3112-.1637.485-.2554.9938-.5243 2.3643-1.2474 3.7696-1.8935.9738-.4476 1.9945-.8732 2.9636-1.1884C10.1731 9.2261 11.1448 9 12 9s1.8269.226 2.7818.5366c.9691.3152 1.9898.7408 2.9636 1.1884 1.4053.6461 2.7758 1.3692 3.7695 1.8935.1739.0917.3362.1774.4851.2554V8c0-2.2091-1.7909-4-4-4z" style={{
+import { Ref, forwardRef } from "react";
+const WallpaperFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M6 4C3.7909 4 2 5.7909 2 8v4.8739c.149-.078.3112-.1637.485-.2554.9938-.5243 2.3643-1.2474 3.7696-1.8935.9738-.4476 1.9945-.8732 2.9636-1.1884C10.1731 9.2261 11.1448 9 12 9s1.8269.226 2.7818.5366c.9691.3152 1.9898.7408 2.9636 1.1884 1.4053.6461 2.7758 1.3692 3.7695 1.8935.1739.0917.3362.1774.4851.2554V8c0-2.2091-1.7909-4-4-4z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="m22 15.1215-.4526-.2298c-.288-.1462-.6347-.3291-1.0269-.5361-.9857-.5202-2.2591-1.1921-3.6105-1.8134-.9359-.4302-1.8793-.8215-2.7468-1.1036-.6495-.2113-1.2207-.3493-1.694-.4073l-.0319.0441c-.2025.2821-.4573.6652-.6799 1.0827-.2271.4257-.3954.8405-.4626 1.1931-.0668.3508-.0124.5164.0345.5899.0132.0119.118.0938.5267.1237.393.0287.8455-.0023 1.3874-.0394q.1757-.0122.3644-.0243c.6367-.0408 1.4246-.0779 2.1049.0891.3563.0875.7375.2425 1.067.526.3415.2939.5755.6815.6904 1.1413.2536 1.014-.2123 1.8586-.8053 2.4548-.5813.5842-1.3996 1.0615-2.2423 1.4544-.2722.1269-.4697.2391-.6124.3333H18c2.2091 0 4-1.7909 4-4z" style={{
@@ -10,4 +11,5 @@ const WallpaperFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default WallpaperFilledIcon;
+const ForwardRef = forwardRef(WallpaperFilledIcon);
+export default ForwardRef;

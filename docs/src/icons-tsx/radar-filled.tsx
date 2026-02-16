@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const RadarFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M6.023 3.982C3.581 5.8053 2 8.718 2 12c0 5.5228 4.4772 10 10 10s10-4.4772 10-10c0-3.282-1.5811-6.1947-4.0231-8.018l-2.0755 3.4592C17.1848 8.5407 18 10.1746 18 11.9996c0 3.3137-2.6863 6-6 6s-6-2.6863-6-6c0-1.825.8152-3.459 2.0986-4.5584z" style={{
+import { Ref, forwardRef } from "react";
+const RadarFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M6.023 3.982C3.581 5.8053 2 8.718 2 12c0 5.5228 4.4772 10 10 10s10-4.4772 10-10c0-3.282-1.5811-6.1947-4.0231-8.018l-2.0755 3.4592C17.1848 8.5407 18 10.1746 18 11.9996c0 3.3137-2.6863 6-6 6s-6-2.6863-6-6c0-1.825.8152-3.459 2.0986-4.5584z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="m16.2628 2.9515-4.2292 7.0488L12 10l-.0335.0003-4.2293-7.0488C9.0302 2.3412 10.4753 2 12 2s2.9697.3412 4.2628.9515" style={{
@@ -10,4 +11,5 @@ const RadarFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://w
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default RadarFilledIcon;
+const ForwardRef = forwardRef(RadarFilledIcon);
+export default ForwardRef;

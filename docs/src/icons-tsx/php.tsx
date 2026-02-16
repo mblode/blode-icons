@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const PhpIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="m5.9973 10.2705-.411 2.4658h.9864c.7397-.0822 1.3972-.3288 1.4794-1.7261 0-.4931-.411-.7397-.9863-.7397zM17.011 10.2705l-.411 2.4658h.9864c.7397-.0822 1.3973-.3288 1.4794-1.7261 0-.4931-.4109-.7397-.9862-.7397z" style={{
+import { Ref, forwardRef } from "react";
+const PhpIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="m5.9973 10.2705-.411 2.4658h.9864c.7397-.0822 1.3972-.3288 1.4794-1.7261 0-.4931-.411-.7397-.9863-.7397zM17.011 10.2705l-.411 2.4658h.9864c.7397-.0822 1.3973-.3288 1.4794-1.7261 0-.4931-.4109-.7397-.9862-.7397z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" fillRule="evenodd" d="M24 11.9966c0 3.4498-5.3726 6.2465-12 6.2465S0 15.4464 0 11.9966C0 8.5466 5.3726 5.75 12 5.75s12 2.7967 12 6.2466M4.6823 9.0376l-1.3151 6.6576h1.5617l.3288-1.7261h1.4792c1.3974.0822 2.959-1.0684 2.959-3.041 0-1.1508-.6576-1.8083-1.9726-1.8905zm6.0231-1.726-1.315 6.6575h1.5616l.7397-3.6986h1.2329c.5753 0 .5753.2466.4932.6576l-.5754 3.041h1.6438l.5754-3.3698c.1643-.822-.3288-1.4795-1.6439-1.5617h-1.4794l.3288-1.726zm4.9906 1.726-1.3151 6.6576h1.5616l.3288-1.7261h1.4795c1.3972.0822 2.9589-1.0684 2.9589-3.041 0-1.1508-.6575-1.8083-1.9727-1.8905z" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default PhpIcon;
+const ForwardRef = forwardRef(PhpIcon);
+export default ForwardRef;

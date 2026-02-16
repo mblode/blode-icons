@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SteveJobsIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.25 10.5395C4.25 6.2375 7.1563 2.75 12 2.75s7.75 3.4875 7.75 7.7895c0 2.6303-.3185 4.6708-1.9541 6.696-.2294.284-.4459.5795-.6573.8789-.6854.9709-2.5084 3.1356-5.1386 3.1356s-4.4532-2.1647-5.1386-3.1356c-.2114-.2994-.4279-.5949-.6573-.8789-1.6356-2.0252-1.9541-4.0657-1.9541-6.696" style={{
+import { Ref, forwardRef } from "react";
+const SteveJobsIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.25 10.5395C4.25 6.2375 7.1563 2.75 12 2.75s7.75 3.4875 7.75 7.7895c0 2.6303-.3185 4.6708-1.9541 6.696-.2294.284-.4459.5795-.6573.8789-.6854.9709-2.5084 3.1356-5.1386 3.1356s-4.4532-2.1647-5.1386-3.1356c-.2114-.2994-.4279-.5949-.6573-.8789-1.6356-2.0252-1.9541-4.0657-1.9541-6.696" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><circle cx={15} cy={11} r={2} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} style={{
@@ -16,4 +17,5 @@ const SteveJobsIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www
     stroke: "currentColor",
     strokeOpacity: 1
   }} /></svg>;
-export default SteveJobsIcon;
+const ForwardRef = forwardRef(SteveJobsIcon);
+export default ForwardRef;

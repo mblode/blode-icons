@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const PackageBlockFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M8 3H7C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5.8096C11.6888 19.8321 11 18.2465 11 16.5c0-3.5899 2.9101-6.5 6.5-6.5 1.2886 0 2.4897.375 3.5 1.0218V7c0-2.2091-1.7909-4-4-4h-1v2.5C16 6.8807 14.8807 8 13.5 8h-3C9.1193 8 8 6.8807 8 5.5z" style={{
+import { Ref, forwardRef } from "react";
+const PackageBlockFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M8 3H7C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5.8096C11.6888 19.8321 11 18.2465 11 16.5c0-3.5899 2.9101-6.5 6.5-6.5 1.2886 0 2.4897.375 3.5 1.0218V7c0-2.2091-1.7909-4-4-4h-1v2.5C16 6.8807 14.8807 8 13.5 8h-3C9.1193 8 8 6.8807 8 5.5z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M14 3h-4v2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" style={{
@@ -10,4 +11,5 @@ const PackageBlockFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="h
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default PackageBlockFilledIcon;
+const ForwardRef = forwardRef(PackageBlockFilledIcon);
+export default ForwardRef;

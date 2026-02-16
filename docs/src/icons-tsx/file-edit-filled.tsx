@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const FileEditFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M8 2h4v5c0 1.6569 1.3431 3 3 3h5v8c0 2.2091-1.7909 4-4 4H8.7426l.3787-.3787A3 3 0 0 0 10 19.5v-5.9412c0-2.4852-2.0147-4.5-4.5-4.5-.526 0-1.0308.0903-1.5.2561V6c0-2.2091 1.7909-4 4-4" style={{
+import { Ref, forwardRef } from "react";
+const FileEditFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M8 2h4v5c0 1.6569 1.3431 3 3 3h5v8c0 2.2091-1.7909 4-4 4H8.7426l.3787-.3787A3 3 0 0 0 10 19.5v-5.9412c0-2.4852-2.0147-4.5-4.5-4.5-.526 0-1.0308.0903-1.5.2561V6c0-2.2091 1.7909-4 4-4" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M14 2.5858 19.4142 8H15c-.5523 0-1-.4477-1-1z" style={{
@@ -10,4 +11,5 @@ const FileEditFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http:
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default FileEditFilledIcon;
+const ForwardRef = forwardRef(FileEditFilledIcon);
+export default ForwardRef;

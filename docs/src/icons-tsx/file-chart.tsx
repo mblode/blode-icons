@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const FileChartIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M13 3.5V7c0 1.1046.8954 2 2 2h3.5m-10 8.5V16m3.5 1.5V13m3.5 4.5V15M8 3h4.1716a2 2 0 0 1 1.4142.5858l4.8284 4.8284A2 2 0 0 1 19 9.8284V18c0 1.6569-1.3431 3-3 3H8c-1.6569 0-3-1.3431-3-3V6c0-1.6569 1.3431-3 3-3Z" /></svg>;
-export default FileChartIcon;
+import { Ref, forwardRef } from "react";
+const FileChartIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M13 3.5V7c0 1.1046.8954 2 2 2h3.5m-10 8.5V16m3.5 1.5V13m3.5 4.5V15M8 3h4.1716a2 2 0 0 1 1.4142.5858l4.8284 4.8284A2 2 0 0 1 19 9.8284V18c0 1.6569-1.3431 3-3 3H8c-1.6569 0-3-1.3431-3-3V6c0-1.6569 1.3431-3 3-3Z" /></svg>;
+const ForwardRef = forwardRef(FileChartIcon);
+export default ForwardRef;

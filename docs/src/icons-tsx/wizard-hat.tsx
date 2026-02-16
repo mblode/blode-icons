@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const WizardHatIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={25} height={24} fill="none" viewBox="0 0 25 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.75 20h18" style={{
+import { Ref, forwardRef } from "react";
+const WizardHatIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={25} height={24} fill="none" viewBox="0 0 25 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.75 20h18" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><path stroke="currentColor" strokeWidth={2} d="M13.2085 15.75c.1125-.0805.211-.179.2915-.2915.0805.1125.179.211.2915.2915a1.26 1.26 0 0 0-.2915.2915 1.26 1.26 0 0 0-.2915-.2915ZM10.4585 11.75c.1125-.0805.211-.179.2915-.2915.0805.1125.179.211.2915.2915a1.26 1.26 0 0 0-.2915.2915 1.26 1.26 0 0 0-.2915-.2915Z" style={{
@@ -10,4 +11,5 @@ const WizardHatIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www
     stroke: "currentColor",
     strokeOpacity: 1
   }} /></svg>;
-export default WizardHatIcon;
+const ForwardRef = forwardRef(WizardHatIcon);
+export default ForwardRef;

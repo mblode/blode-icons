@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SignalIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><g clipPath="url(#a)"><mask id="b" width={20} height={20} x={2} y={2} maskUnits="userSpaceOnUse" style={{
+import { Ref, forwardRef } from "react";
+const SignalIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><g clipPath="url(#a)"><mask id="b" width={20} height={20} x={2} y={2} maskUnits="userSpaceOnUse" style={{
       maskType: "luminance"
     }}><path fill="#fff" d="M2.625 21.375h18.6153V2.6248H2.625z" /></mask><g mask="url(#b)"><mask id="c" width={102} height={181} x={-39} y={-13} maskUnits="userSpaceOnUse" style={{
         maskType: "luminance"
@@ -33,4 +34,5 @@ const SignalIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3
         }}><path fill="#fff" d="M7.603 19.2285a.2416.2416 0 0 1-.2399-.2235l-.1852-2.3939c-.7857-.5986-1.3966-1.3708-1.8167-2.2975-.4146-.913-.6249-1.9322-.6249-3.0274 0-3.7395 3.289-6.7823 7.3315-6.7823 4.0421 0 7.3315 3.0428 7.3315 6.7823 0 3.7399-3.2894 6.7827-7.3315 6.7827a7.88 7.88 0 0 1-1.9804-.2509l-2.3633 1.3777a.24.24 0 0 1-.121.0328" /></mask><g mask="url(#p)"><mask id="q" width={20} height={20} x={2} y={2} maskUnits="userSpaceOnUse" style={{
             maskType: "luminance"
           }}><path fill="#fff" d="M2.625 21.375h18.6153V2.6248H2.625z" /></mask><g mask="url(#q)"><path fill="currentColor" d="M4.0625 3.8288h16.0119v16.0735H4.0625z" /></g></g></g></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z" /></clipPath></defs></svg>;
-export default SignalIcon;
+const ForwardRef = forwardRef(SignalIcon);
+export default ForwardRef;

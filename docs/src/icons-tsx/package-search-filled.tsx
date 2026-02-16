@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const PackageSearchFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M8 3H7C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5.5276c-2.1107-2.3558-2.0341-5.9787.2298-8.2426s5.8868-2.3405 8.2426-.2298V7c0-2.2091-1.7909-4-4-4h-1v3.5C16 7.8807 14.8807 9 13.5 9h-3C9.1193 9 8 7.8807 8 6.5z" style={{
+import { Ref, forwardRef } from "react";
+const PackageSearchFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M8 3H7C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5.5276c-2.1107-2.3558-2.0341-5.9787.2298-8.2426s5.8868-2.3405 8.2426-.2298V7c0-2.2091-1.7909-4-4-4h-1v3.5C16 7.8807 14.8807 9 13.5 9h-3C9.1193 9 8 7.8807 8 6.5z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M14 3h-4v3.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" style={{
@@ -10,4 +11,5 @@ const PackageSearchFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default PackageSearchFilledIcon;
+const ForwardRef = forwardRef(PackageSearchFilledIcon);
+export default ForwardRef;

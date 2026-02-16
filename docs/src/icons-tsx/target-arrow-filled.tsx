@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const TargetArrowFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M18.5766 2.5682c-.2938-.8816-1.4127-1.1457-2.0697-.4886l-2.3353 2.3352A4 4 0 0 0 13 7.2433v2.3431l-1.7071 1.7071c-.3905.3905-.3905 1.0237 0 1.4142.3905.3906 1.0237.3906 1.4142 0l1.7071-1.7071h2.3432a4 4 0 0 0 2.8284-1.1715l2.3353-2.3353c.657-.6571.3929-1.776-.4886-2.0698l-2.1419-.714z" style={{
+import { Ref, forwardRef } from "react";
+const TargetArrowFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M18.5766 2.5682c-.2938-.8816-1.4127-1.1457-2.0697-.4886l-2.3353 2.3352A4 4 0 0 0 13 7.2433v2.3431l-1.7071 1.7071c-.3905.3905-.3905 1.0237 0 1.4142.3905.3906 1.0237.3906 1.4142 0l1.7071-1.7071h2.3432a4 4 0 0 0 2.8284-1.1715l2.3353-2.3353c.657-.6571.3929-1.776-.4886-2.0698l-2.1419-.714z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M4 12c0-4.4183 3.5817-8 8-8 .5523 0 1-.4477 1-1s-.4477-1-1-1C6.4772 2 2 6.4772 2 12s4.4772 10 10 10 10-4.4772 10-10c0-.5523-.4477-1-1-1s-1 .4477-1 1c0 4.4183-3.5817 8-8 8s-8-3.5817-8-8" style={{
@@ -10,4 +11,5 @@ const TargetArrowFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="ht
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default TargetArrowFilledIcon;
+const ForwardRef = forwardRef(TargetArrowFilledIcon);
+export default ForwardRef;

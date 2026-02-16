@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const ArmchairFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><rect width={2} height={4} x={6} y={17} fill="currentColor" rx={1} style={{
+import { Ref, forwardRef } from "react";
+const ArmchairFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><rect width={2} height={4} x={6} y={17} fill="currentColor" rx={1} style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M5 7v3c1.6569 0 3 1.3431 3 3h8c0-1.6569 1.3431-3 3-3V7c0-2.2091-1.7909-4-4-4H9C6.7909 3 5 4.7909 5 7" style={{
@@ -10,4 +11,5 @@ const ArmchairFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http:
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default ArmchairFilledIcon;
+const ForwardRef = forwardRef(ArmchairFilledIcon);
+export default ForwardRef;

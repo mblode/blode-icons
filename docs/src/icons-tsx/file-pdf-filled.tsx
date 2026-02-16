@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const FilePdfFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M13 3H8C5.7909 3 4 4.7909 4 7v5h16v-2h-4c-1.6569 0-3-1.3431-3-3z" style={{
+import { Ref, forwardRef } from "react";
+const FilePdfFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M13 3H8C5.7909 3 4 4.7909 4 7v5h16v-2h-4c-1.6569 0-3-1.3431-3-3z" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" d="M19.8834 8a3 3 0 0 0-.7621-1.2929l-2.8284-2.8284A3 3 0 0 0 15 3.1167V7c0 .5523.4477 1 1 1z" style={{
@@ -10,4 +11,5 @@ const FilePdfFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http:/
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default FilePdfFilledIcon;
+const ForwardRef = forwardRef(FilePdfFilledIcon);
+export default ForwardRef;

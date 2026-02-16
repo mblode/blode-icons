@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SafeSimpleFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M12 10.5c-.8284 0-1.5.6716-1.5 1.5s.6716 1.5 1.5 1.5 1.5-.6716 1.5-1.5-.6716-1.5-1.5-1.5" style={{
+import { Ref, forwardRef } from "react";
+const SafeSimpleFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12 10.5c-.8284 0-1.5.6716-1.5 1.5s.6716 1.5 1.5 1.5 1.5-.6716 1.5-1.5-.6716-1.5-1.5-1.5" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /><path fill="currentColor" fillRule="evenodd" d="M7 3C4.7909 3 3 4.7909 3 7c-.5523 0-1 .4477-1 1s.4477 1 1 1v6c-.5523 0-1 .4477-1 1s.4477 1 1 1c0 2.2091 1.7909 4 4 4h10c2.2091 0 4-1.7909 4-4V7c0-2.2091-1.7909-4-4-4zm3.3349 5.9207A3.484 3.484 0 0 1 12 8.5c.6028 0 1.1699.1524 1.6651.4207l1.1278-1.1278c.3905-.3905 1.0237-.3905 1.4142 0s.3905 1.0237 0 1.4142l-1.1278 1.1278A3.485 3.485 0 0 1 15.5 12a3.485 3.485 0 0 1-.4207 1.6651l1.1278 1.1278c.3905.3905.3905 1.0237 0 1.4142s-1.0237.3905-1.4142 0l-1.1278-1.1278A3.485 3.485 0 0 1 12 15.5a3.485 3.485 0 0 1-1.6651-.4207l-1.1278 1.1278c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l1.1278-1.1278A3.484 3.484 0 0 1 8.5 12c0-.6028.1524-1.1699.4207-1.6651L7.7929 9.2071c-.3905-.3905-.3905-1.0237 0-1.4142s1.0237-.3905 1.4142 0z" clipRule="evenodd" style={{
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default SafeSimpleFilledIcon;
+const ForwardRef = forwardRef(SafeSimpleFilledIcon);
+export default ForwardRef;

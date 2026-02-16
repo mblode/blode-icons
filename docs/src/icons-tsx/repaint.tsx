@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const RepaintIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M14.0038 16C15.1063 16 16 16.8937 16 17.9962c0 2.2373-2.4477 1.9962-3.9924 1.9962 0-1.5447-.2411-3.9924 1.9962-3.9924Z" style={{
+import { Ref, forwardRef } from "react";
+const RepaintIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M14.0038 16C15.1063 16 16 16.8937 16 17.9962c0 2.2373-2.4477 1.9962-3.9924 1.9962 0-1.5447-.2411-3.9924 1.9962-3.9924Z" style={{
     stroke: "currentColor",
     strokeOpacity: 1
   }} /><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M14 16c1.6385-2.3342 2.9126-3.6592 5.207-4.8589.4702-.2459 1.0428-.1413 1.418.2339v0c.3752.3752.4798.9478.2339 1.418C19.6592 15.0874 18.3342 16.3615 16 18" style={{
@@ -10,4 +11,5 @@ const RepaintIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w
     fill: "currentColor",
     fillOpacity: 1
   }} /></svg>;
-export default RepaintIcon;
+const ForwardRef = forwardRef(RepaintIcon);
+export default ForwardRef;
