@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.5" cy="6" r="2" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="6.5" cy="18" r="2" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="17.5" cy="18" r="2" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 8V16" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.5 11V16" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.75 4.25L19.25 7.75M19.25 4.25L15.75 7.75" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

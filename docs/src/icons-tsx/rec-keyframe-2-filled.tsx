@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const RecKeyframe2FilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M9.9995 12c0-1.1046.8954-2 2-2s2 .8954 2 2-.8954 2-2 2-2-.8954-2-2" /><path fill="currentColor" fillRule="evenodd" d="M9.1711 3.1642c1.5621-1.562 4.0948-1.562 5.6569 0l6.0073 6.0074c1.5621 1.5621 1.5621 4.0947 0 5.6568l-6.0073 6.0074c-1.5621 1.5621-4.0948 1.5621-5.6569 0l-6.0073-6.0074c-1.5621-1.5621-1.5621-4.0947 0-5.6568zM11.9995 8c-2.2091 0-4 1.7909-4 4s1.7909 4 4 4 4-1.7909 4-4-1.7908-4-4-4" clipRule="evenodd" /></svg>;
+export default RecKeyframe2FilledIcon;

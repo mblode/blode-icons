@@ -1,0 +1,19 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SteveJobsIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.25 10.5395C4.25 6.2375 7.1563 2.75 12 2.75s7.75 3.4875 7.75 7.7895c0 2.6303-.3185 4.6708-1.9541 6.696-.2294.284-.4459.5795-.6573.8789-.6854.9709-2.5084 3.1356-5.1386 3.1356s-4.4532-2.1647-5.1386-3.1356c-.2114-.2994-.4279-.5949-.6573-.8789-1.6356-2.0252-1.9541-4.0657-1.9541-6.696" style={{
+    stroke: "currentColor",
+    strokeOpacity: 1
+  }} /><circle cx={15} cy={11} r={2} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} style={{
+    stroke: "currentColor",
+    strokeOpacity: 1
+  }} /><circle cx={9} cy={11} r={2} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} style={{
+    stroke: "currentColor",
+    strokeOpacity: 1
+  }} /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="m11 10.25.0299-.0075a4 4 0 0 1 1.9402 0L13 10.25" style={{
+    stroke: "currentColor",
+    strokeOpacity: 1
+  }} /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 9.5c.8333-.8333 1.6-3.3 2-4.5M19.5 9.5c-.8333-.8333-1.6-3.3-2-4.5M9.5 3.5c1.7328 1.3333 3.2672 1.3333 5 0M6.5 10.5l-2-.5m13 .5 2-.5M8 19v-1c0-1.1046.8954-2 2-2h4c1.1046 0 2 .8954 2 2v1M13.5 20c-.6719-.5963-2.3281-.5964-3-.0001" style={{
+    stroke: "currentColor",
+    strokeOpacity: 1
+  }} /></svg>;
+export default SteveJobsIcon;

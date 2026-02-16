@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const BottleIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M10 2v3.7574a3 3 0 0 1-.8787 2.1213L7.8787 9.1213A3 3 0 0 0 7 11.2426V19c0 1.6569 1.3431 3 3 3h4c1.6569 0 3-1.3431 3-3v-7.7574a3 3 0 0 0-.8787-2.1213l-1.2426-1.2426A3 3 0 0 1 14 5.7574V2m-4 0h4m-4 0h-.5M14 2h.5" /></svg>;
+export default BottleIcon;

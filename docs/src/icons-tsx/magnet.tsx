@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const MagnetIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="square" strokeLinejoin="round" strokeWidth={1.995} d="M19 3c1.1046 0 2 .8954 2 2s-.8954 2-2 2-2-.8954-2-2 .8954-2 2-2ZM5.7574 18.2426c-2.3432-2.3431-2.3432-6.1421 0-8.4853L9.4697 6.045c.6834-.6834 1.7914-.6834 2.4748 0s.6835 1.7915 0 2.475l-3.7123 3.7122c-.9763.9763-.9763 2.5592 0 3.5356s2.5593.9763 3.5356 0l3.7123-3.7124c.6834-.6834 1.7914-.6834 2.4749 0s.6834 1.7915 0 2.4749l-3.7124 3.7123C13.0711 19.4142 11.5355 20 10 20s-3.071-.5858-4.2426-1.7574ZM13.8887 13.6465l2.4748 2.4749M7.879 7.636l2.4748 2.4749" /></svg>;
+export default MagnetIcon;

@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const Chart6Icon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M9.33 20v-5H5.5c-.8284 0-1.5.6716-1.5 1.5V20zm0 0h5.33m-5.33 0v-9c0-.8284.6716-1.5 1.5-1.5h3.83V20m0 0V5.5c0-.8284.6715-1.5 1.5-1.5h2.33c.8284 0 1.5.6716 1.5 1.5V20zM2 20h20" /></svg>;
+export default Chart6Icon;

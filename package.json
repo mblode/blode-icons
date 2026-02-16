@@ -1,0 +1,71 @@
+{
+  "name": "blode-icons-react",
+  "version": "0.1.0",
+  "description": "Blode icons for React — drop-in lucide-react replacement",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node scripts/generate-icons.mjs",
+    "compile": "rollup -c",
+    "generate:lucide": "node scripts/generate-lucide-compat.js",
+    "build": "npm run generate && npm run generate:lucide && npm run compile",
+    "prepublishOnly": "npm run build",
+    "check:types": "tsc --noEmit",
+    "watch:types": "tsc --noEmit --incremental --watch",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "release:publish": "npm run build && changeset publish",
+    "check": "biome check .",
+    "fix": "biome check --write ."
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "component",
+    "ui",
+    "lucide",
+    "lucide-react",
+    "blode"
+  ],
+  "author": "Matthew Blode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hello-fingertip/icons/issues"
+  },
+  "homepage": "https://github.com/hello-fingertip/icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hello-fingertip/icons.git"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.0",
+    "@changesets/cli": "^2.29.8",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@types/react": "^18.2.79",
+    "rollup": "^4.14.3"
+  }
+}

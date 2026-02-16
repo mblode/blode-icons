@@ -1,0 +1,10 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const VideoTrimFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M15 2c-.5523 0-1 .4477-1 1v1H6C3.7909 4 2 5.7909 2 8v8c0 2.2091 1.7909 4 4 4h8v1c0 .5523.4477 1 1 1s1-.4477 1-1V3c0-.5523-.4477-1-1-1M7.5668 9.0987a1 1 0 0 1 1.0579.1204l2.5 2a1 1 0 0 1 0 1.5618l-2.5 2A1.0001 1.0001 0 0 1 7 14v-4a1 1 0 0 1 .5668-.9013" clipRule="evenodd" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /><path fill="currentColor" d="M22 16c0 2.2091-1.7909 4-4 4V4c2.2091 0 4 1.7909 4 4z" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /></svg>;
+export default VideoTrimFilledIcon;

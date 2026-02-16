@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const TrainFrontViewFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M8.0862 2a4 4 0 0 0-2.5608.9271l-1.0861.9051A4 4 0 0 0 3 6.9052V10h18V6.9051a4 4 0 0 0-1.4393-3.0729l-1.0861-.905A4 4 0 0 0 15.9138 2z" /><path fill="currentColor" fillRule="evenodd" d="M3 14v-2h18v2c0 2.0066-1.4775 3.668-3.4039 3.9559l1.6603 3.3205c.1662.3324-.0755.7236-.4472.7236h-1.1181a.5.5 0 0 1-.4472-.2764L15.3821 18h-6.764l-1.8618 3.7236A.5.5 0 0 1 6.3091 22h-1.118c-.3717 0-.6135-.3912-.4472-.7236l1.6602-3.3205C4.4776 17.6682 3 16.0066 3 14m5 2c.5523 0 1-.4477 1-1s-.4477-1-1-1-1 .4477-1 1 .4477 1 1 1m9-1c0 .5523-.4477 1-1 1s-1-.4477-1-1 .4477-1 1-1 1 .4477 1 1" clipRule="evenodd" /></svg>;
+export default TrainFrontViewFilledIcon;

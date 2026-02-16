@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SpeakerIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M10 6c-.5523 0-1 .4477-1 1s.4477 1 1 1zm4 2c.5523 0 1-.4477 1-1s-.4477-1-1-1zM8 4h8V2H8zm10 2v12h2V6zm-2 14H8v2h8zM6 18V6H4v12zm2 2c-1.1046 0-2-.8954-2-2H4c0 2.2091 1.7909 4 4 4zm10-2c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zM16 4c1.1046 0 2 .8954 2 2h2c0-2.2091-1.7909-4-4-4zM8 2C5.7909 2 4 3.7909 4 6h2c0-1.1046.8954-2 2-2zm6 12c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zm-2 2c-1.1046 0-2-.8954-2-2H8c0 2.2091 1.7909 4 4 4zm-2-2c0-1.1046.8954-2 2-2v-2c-2.2091 0-4 1.7909-4 4zm2-2c1.1046 0 2 .8954 2 2h2c0-2.2091-1.7909-4-4-4zm-2-4h4V6h-4z" /></svg>;
+export default SpeakerIcon;

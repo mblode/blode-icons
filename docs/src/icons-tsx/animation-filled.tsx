@@ -1,0 +1,10 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const AnimationFilledIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M8.7071 15.2929c.3905.3905.3905 1.0237 0 1.4142l-5 5c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l5-5c.3905-.3905 1.0237-.3905 1.4142 0M13.2071 17.7929c.3905.3905.3905 1.0237 0 1.4142l-2.5 2.5c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l2.5-2.5c.3905-.3905 1.0237-.3905 1.4142 0M6.2071 10.7929c.3905.3905.3905 1.0237 0 1.4142l-2.5 2.5c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l2.5-2.5c.3905-.3905 1.0237-.3905 1.4142 0" clipRule="evenodd" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /><path fill="currentColor" d="M15 2c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /></svg>;
+export default AnimationFilledIcon;

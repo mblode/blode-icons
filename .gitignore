@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+yarn-debug.log*
+yarn-error.log*
+.npmrc-ci
+
+# build
+dist
+out
+build
+.swc
+
+# testing
+coverage
+**/test-results/
+
+# production
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# misc
+.DS_Store
+.env
+.env.secrets
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
+.history/
+**/*.orig
+
+# IDE
+**/.idea
+**/.vscode
+!/.vscode
+.vscode
+
+# yalc
+.yalc
+yalc.lock
+yarn.lock
+.react-email
+
+src/
+!docs/src/
+tmp/
+.cache-manifest.json

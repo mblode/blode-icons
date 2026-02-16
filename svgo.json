@@ -1,0 +1,22 @@
+{
+  "precision": 4,
+  "plugins": [
+    {
+      "name": "preset-default",
+      "params": {
+        "overrides": {
+          "convertPathData": {
+            "floatPrecision": 4
+          },
+          "cleanupNumericValues": {
+            "floatPrecision": 4
+          },
+          "removeViewBox": false
+        }
+      }
+    }
+  ],
+  "filePath": {
+    "exclude": ["brand-amex.svg"]
+  }
+}
