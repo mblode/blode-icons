@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 5C10 4.44772 10.4477 4 11 4C11.5523 4 12 3.55228 12 3C12 2.44772 11.5523 2 11 2C9.34315 2 8 3.34315 8 5C8 5.55228 8.44772 6 9 6C9.55228 6 10 5.55228 10 5Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M14 2C13.4477 2 13 2.44772 13 3C13 3.55228 13.4477 4 14 4H16C16.5523 4 17 3.55228 17 3C17 2.44772 16.5523 2 16 2H14Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M19 2C18.4477 2 18 2.44772 18 3C18 3.55228 18.4477 4 19 4C19.5523 4 20 4.44772 20 5C20 5.55228 20.4477 6 21 6C21.5523 6 22 5.55228 22 5C22 3.34315 20.6569 2 19 2Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M22 8C22 7.44772 21.5523 7 21 7C20.4477 7 20 7.44772 20 8V10C20 10.5523 20.4477 11 21 11C21.5523 11 22 10.5523 22 10V8Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 8H13C14.6569 8 16 9.34315 16 11V15C16 15.5523 15.5523 16 15 16H11C9.34315 16 8 14.6569 8 13V9C8 8.44772 8.44772 8 9 8Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M22 13C22 12.4477 21.5523 12 21 12C20.4477 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14C18.4477 14 18 14.4477 18 15C18 15.5523 18.4477 16 19 16C20.6569 16 22 14.6569 22 13Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M4 11C4 10.4477 4.44772 10 5 10C5.55228 10 6 9.55228 6 9C6 8.44772 5.55228 8 5 8C3.34315 8 2 9.34315 2 11C2 11.5523 2.44772 12 3 12C3.55228 12 4 11.5523 4 11Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M4 14C4 13.4477 3.55228 13 3 13C2.44772 13 2 13.4477 2 14V16C2 16.5523 2.44772 17 3 17C3.55228 17 4 16.5523 4 16V14Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M4 19C4 18.4477 3.55228 18 3 18C2.44772 18 2 18.4477 2 19C2 20.6569 3.34315 22 5 22C5.55228 22 6 21.5523 6 21C6 20.4477 5.55228 20 5 20C4.44772 20 4 19.5523 4 19Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M16 19C16 18.4477 15.5523 18 15 18C14.4477 18 14 18.4477 14 19C14 19.5523 13.5523 20 13 20C12.4477 20 12 20.4477 12 21C12 21.5523 12.4477 22 13 22C14.6569 22 16 20.6569 16 19Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+<path d="M8 20C7.44772 20 7 20.4477 7 21C7 21.5523 7.44772 22 8 22H10C10.5523 22 11 21.5523 11 21C11 20.4477 10.5523 20 10 20H8Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+</svg>

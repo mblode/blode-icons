@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const PasskeysIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.9997 13c-2.9785 0-5.3257 1.5539-6.5667 3.8621C4.596 18.4191 6.0272 20 7.795 20h6.2047m1.5-13.5c0 1.933-1.567 3.5-3.5 3.5s-3.5-1.567-3.5-3.5 1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5" /><path fill="currentColor" fillRule="evenodd" d="M18 11c-1.6569 0-3 1.3431-3 3 0 1.2107.7172 2.254 1.75 2.728v3.5317c0 .1519.069.2955.1877.3904l.75.6a.5.5 0 0 0 .6246 0l.75-.6a.5.5 0 0 0 .1877-.3904v-.8327l-.75-.677.75-.75v-1.272C20.2828 16.254 21 15.2107 21 14c0-1.6569-1.3431-3-3-3m-1 3c0-.5523.4477-1 1-1s1 .4477 1 1-.4477 1-1 1-1-.4477-1-1" clipRule="evenodd" /></svg>;
+export default PasskeysIcon;

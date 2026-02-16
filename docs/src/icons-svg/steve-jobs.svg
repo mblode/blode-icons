@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.25 10.5395C4.25 6.23747 7.15625 2.75 12 2.75C16.8438 2.75 19.75 6.23747 19.75 10.5395C19.75 13.1698 19.4315 15.2103 17.7959 17.2355C17.5665 17.5195 17.35 17.815 17.1386 18.1144C16.4532 19.0853 14.6302 21.25 12 21.25C9.36979 21.25 7.54678 19.0853 6.86138 18.1144C6.65002 17.815 6.43353 17.5195 6.2041 17.2355C4.56845 15.2103 4.25 13.1698 4.25 10.5395Z" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="15" cy="11" r="2" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="9" cy="11" r="2" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 10.25L11.0299 10.2425C11.6668 10.0833 12.3332 10.0833 12.9701 10.2425L13 10.25" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.5 9.5C5.33333 8.66667 6.1 6.2 6.5 5" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.5 9.5C18.6667 8.66667 17.9 6.2 17.5 5" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.5 3.5C11.2328 4.83333 12.7672 4.83333 14.5 3.5" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 10.5L4.5 10M17.5 10.5L19.5 10" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 19V18C8 16.8954 8.89543 16 10 16H14C15.1046 16 16 16.8954 16 18V19" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.5 20C12.8281 19.4037 11.1719 19.4036 10.5 19.9999" stroke="currentColor" style="stroke:currentColor;stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
