@@ -986,6 +986,12 @@ export const mappings: IconMapping[] = [
     hasMatch: true,
     isChanged: true,
   },
+  {
+    lucideName: "OctagonX",
+    fingertipName: "CircleXIcon",
+    category: "Status",
+    hasMatch: true,
+  },
 ];
 
 export const categories = [...new Set(mappings.map((m) => m.category))];
