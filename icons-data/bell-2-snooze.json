@@ -1,1 +1,5 @@
-{"icon":"bell-2-snooze","category":"Interface General","tags":["notification","activity","alert"]}
+{
+  "icon": "bell-2-snooze",
+  "category": "Interface General",
+  "tags": ["notification", "activity", "alert"]
+}

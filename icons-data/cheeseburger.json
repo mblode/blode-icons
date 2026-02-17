@@ -1,1 +1,5 @@
-{"icon":"cheeseburger","category":"Food","tags":["hamburger","sandwich"]}
+{
+  "icon": "cheeseburger",
+  "category": "Food",
+  "tags": ["hamburger", "sandwich"]
+}

@@ -1,6 +1,31 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const FocusMagicIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V7c0-1.6569 1.3431-3 3-3h1M4 16v1c0 1.6569 1.3431 3 3 3h1m8-16h1c1.6569 0 3 1.3431 3 3v1m0 8v1c0 1.6569-1.3431 3-3 3h-1" /><path fill="currentColor" d="M12.1845 9.2898a.5.5 0 0 0 .2236-.2236l.645-1.2898c.1842-.3685.7101-.3685.8944 0l.6449 1.2898a.5.5 0 0 0 .2236.2236l1.2898.645c.3686.1842.3686.7101 0 .8944l-1.2898.6449a.5.5 0 0 0-.2236.2236l-.6449 1.2898c-.1843.3686-.7102.3686-.8944 0l-.645-1.2898a.5.5 0 0 0-.2236-.2236l-1.2898-.6449c-.3685-.1843-.3685-.7102 0-.8945zM8.5775 13.5934a.3.3 0 0 0 .1342-.1342l.5202-1.0406c.1106-.2211.4261-.2211.5367 0l.5203 1.0406a.3.3 0 0 0 .1341.1342l1.0406.5202c.2211.1106.2211.4261 0 .5367l-1.0406.5203a.3.3 0 0 0-.1341.1341l-.5203 1.0406c-.1106.2211-.4261.2211-.5367 0l-.5202-1.0406a.3.3 0 0 0-.1342-.1341l-1.0406-.5203c-.221-.1106-.221-.4261 0-.5367z" /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const FocusMagicIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M4 8V7c0-1.6569 1.3431-3 3-3h1M4 16v1c0 1.6569 1.3431 3 3 3h1m8-16h1c1.6569 0 3 1.3431 3 3v1m0 8v1c0 1.6569-1.3431 3-3 3h-1"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+    />
+    <path
+      d="M12.1845 9.2898a.5.5 0 0 0 .2236-.2236l.645-1.2898c.1842-.3685.7101-.3685.8944 0l.6449 1.2898a.5.5 0 0 0 .2236.2236l1.2898.645c.3686.1842.3686.7101 0 .8944l-1.2898.6449a.5.5 0 0 0-.2236.2236l-.6449 1.2898c-.1843.3686-.7102.3686-.8944 0l-.645-1.2898a.5.5 0 0 0-.2236-.2236l-1.2898-.6449c-.3685-.1843-.3685-.7102 0-.8945zM8.5775 13.5934a.3.3 0 0 0 .1342-.1342l.5202-1.0406c.1106-.2211.4261-.2211.5367 0l.5203 1.0406a.3.3 0 0 0 .1341.1342l1.0406.5202c.2211.1106.2211.4261 0 .5367l-1.0406.5203a.3.3 0 0 0-.1341.1341l-.5203 1.0406c-.1106.2211-.4261.2211-.5367 0l-.5202-1.0406a.3.3 0 0 0-.1342-.1341l-1.0406-.5203c-.221-.1106-.221-.4261 0-.5367z"
+      fill="currentColor"
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(FocusMagicIcon);
 export default ForwardRef;

@@ -1,1 +1,5 @@
-{"icon":"buildings","category":"Building","tags":["company","workspace"]}
+{
+  "icon": "buildings",
+  "category": "Building",
+  "tags": ["company", "workspace"]
+}

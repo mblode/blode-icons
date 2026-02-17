@@ -1,1 +1,5 @@
-{"icon":"search-menu","category":"Interface General","tags":["list-search"]}
+{
+  "icon": "search-menu",
+  "category": "Interface General",
+  "tags": ["list-search"]
+}

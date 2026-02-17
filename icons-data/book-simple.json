@@ -1,9 +1,5 @@
 {
   "icon": "book-simple",
   "category": "Communication",
-  "tags": [
-    "guide",
-    "info",
-    "faq"
-  ]
+  "tags": ["guide", "info", "faq"]
 }

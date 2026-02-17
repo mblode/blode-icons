@@ -1,7 +1,5 @@
 {
   "icon": "trash-permanently",
   "category": "Interface General",
-  "tags": [
-    "remove"
-  ]
+  "tags": ["remove"]
 }

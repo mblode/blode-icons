@@ -1,8 +1,5 @@
 {
   "icon": "toggle",
   "category": "Filter & Settings",
-  "tags": [
-    "settings",
-    "control"
-  ]
+  "tags": ["settings", "control"]
 }

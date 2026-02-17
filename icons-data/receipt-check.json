@@ -1,1 +1,5 @@
-{"icon":"receipt-check","category":"Shopping & Payment","tags":["ticket"]}
+{
+  "icon": "receipt-check",
+  "category": "Shopping & Payment",
+  "tags": ["ticket"]
+}

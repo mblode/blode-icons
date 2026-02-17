@@ -1,1 +1,5 @@
-{"icon":"file-edit","category":"Folders & Files","tags":["document","cloud","sync"]}
+{
+  "icon": "file-edit",
+  "category": "Folders & Files",
+  "tags": ["document", "cloud", "sync"]
+}

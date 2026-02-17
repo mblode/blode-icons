@@ -1,7 +1,5 @@
 {
   "icon": "cooking",
   "category": "Food",
-  "tags": [
-    "stirring"
-  ]
+  "tags": ["stirring"]
 }

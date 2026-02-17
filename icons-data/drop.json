@@ -1,1 +1,5 @@
-{"icon":"drop","category":"Weather","tags":["water","precipitation","liquid"]}
+{
+  "icon": "drop",
+  "category": "Weather",
+  "tags": ["water", "precipitation", "liquid"]
+}

@@ -1,18 +1,14 @@
-import React, {
-  ChangeEvent,
-  KeyboardEvent,
-  useRef,
-  useState,
-} from "react";
+import type React from "react";
+import { type ChangeEvent, type KeyboardEvent, useRef, useState } from "react";
 
-type Props = {
+interface Props {
   initial: string;
-  placeholder?: string;
   name: string;
-  onSubmit: (name: string, text: string) => void;
   onBlur?: (name: string, text: string) => void;
+  onSubmit: (name: string, text: string) => void;
+  placeholder?: string;
   type?: React.HTMLInputTypeAttribute;
-};
+}
 
 export const InputField = ({
   initial,
@@ -25,7 +21,7 @@ export const InputField = ({
   const [textInput, setTextInput] = useState(initial);
   const ref = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = async (e: KeyboardEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       onSubmit(name, textInput);
     }
@@ -45,15 +41,15 @@ export const InputField = ({
     <div className="mb-4">
       <label htmlFor={name}>{name}</label>
       <input
-        ref={ref}
-        id={name}
-        type={type}
-        placeholder={placeholder}
         autoFocus={true}
-        value={textInput}
+        id={name}
         onBlur={handleBlur}
         onChange={handleChange}
         onKeyDown={handleSubmit}
+        placeholder={placeholder}
+        ref={ref}
+        type={type}
+        value={textInput}
       />
     </div>
   );

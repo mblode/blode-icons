@@ -1,1 +1,5 @@
-{"icon":"payment","category":"Shopping & Payment","tags":["flow","connection"]}
+{
+  "icon": "payment",
+  "category": "Shopping & Payment",
+  "tags": ["flow", "connection"]
+}

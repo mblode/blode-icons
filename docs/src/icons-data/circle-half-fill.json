@@ -1,1 +1,5 @@
-{"icon":"circle-half-fill","category":"Accessibility","tags":["contrast"]}
+{
+  "icon": "circle-half-fill",
+  "category": "Accessibility",
+  "tags": ["contrast"]
+}

@@ -1,1 +1,5 @@
-{"icon":"maintenance","category":"Filter & Settings","tags":["settings","service"]}
+{
+  "icon": "maintenance",
+  "category": "Filter & Settings",
+  "tags": ["settings", "service"]
+}

@@ -1,1 +1,5 @@
-{"icon":"electrocardiogram","category":"Interface General","tags":["activity","notification","pulse","heartbeat","beat"]}
+{
+  "icon": "electrocardiogram",
+  "category": "Interface General",
+  "tags": ["activity", "notification", "pulse", "heartbeat", "beat"]
+}

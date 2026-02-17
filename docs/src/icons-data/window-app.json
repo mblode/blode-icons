@@ -1,1 +1,5 @@
-{"icon":"window-app","category":"Interface General","tags":["browser","app","desktop"]}
+{
+  "icon": "window-app",
+  "category": "Interface General",
+  "tags": ["browser", "app", "desktop"]
+}

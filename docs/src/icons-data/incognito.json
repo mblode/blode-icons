@@ -1,11 +1,5 @@
 {
   "icon": "incognito",
   "category": "Security",
-  "tags": [
-    "detective",
-    "privacy",
-    "anonymous",
-    "anonym",
-    "hidden"
-  ]
+  "tags": ["detective", "privacy", "anonymous", "anonym", "hidden"]
 }

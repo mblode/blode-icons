@@ -1,6 +1,21 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const BookIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M9 6c-.5523 0-1 .4477-1 1s.4477 1 1 1zm6 2c.5523 0 1-.4477 1-1s-.4477-1-1-1zm-6 2c-.5523 0-1 .4477-1 1s.4477 1 1 1zm3 2c.5523 0 1-.4477 1-1s-.4477-1-1-1zM7 4h9V2H7zm11 2v12h2V6zm-2 14H7v2h9zM6 19V5H4v14zm1 1c-.5523 0-1-.4477-1-1H4c0 1.6569 1.3431 3 3 3zm11-2c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zM16 4c1.1046 0 2 .8954 2 2h2c0-2.2091-1.7909-4-4-4zM7 2C5.3431 2 4 3.3432 4 5h2c0-.5523.4477-1 1-1zm11 10v2h2v-2zm-2 4H7v2h9zm-9 6h3v-2H7zm0-6c-1.6569 0-3 1.3431-3 3h2c0-.5523.4477-1 1-1zm11-2c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zM9 8h6V6H9zm0 4h3v-2H9z" /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const BookIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M9 6c-.5523 0-1 .4477-1 1s.4477 1 1 1zm6 2c.5523 0 1-.4477 1-1s-.4477-1-1-1zm-6 2c-.5523 0-1 .4477-1 1s.4477 1 1 1zm3 2c.5523 0 1-.4477 1-1s-.4477-1-1-1zM7 4h9V2H7zm11 2v12h2V6zm-2 14H7v2h9zM6 19V5H4v14zm1 1c-.5523 0-1-.4477-1-1H4c0 1.6569 1.3431 3 3 3zm11-2c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zM16 4c1.1046 0 2 .8954 2 2h2c0-2.2091-1.7909-4-4-4zM7 2C5.3431 2 4 3.3432 4 5h2c0-.5523.4477-1 1-1zm11 10v2h2v-2zm-2 4H7v2h9zm-9 6h3v-2H7zm0-6c-1.6569 0-3 1.3431-3 3h2c0-.5523.4477-1 1-1zm11-2c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zM9 8h6V6H9zm0 4h3v-2H9z"
+      fill="currentColor"
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(BookIcon);
 export default ForwardRef;

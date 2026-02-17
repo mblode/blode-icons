@@ -1,1 +1,5 @@
-{"icon":"dot-grid-1x3-vertical","category":"Interface General","tags":["menu","drag","grab"]}
+{
+  "icon": "dot-grid-1x3-vertical",
+  "category": "Interface General",
+  "tags": ["menu", "drag", "grab"]
+}

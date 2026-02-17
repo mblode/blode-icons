@@ -1,8 +1,5 @@
 {
   "icon": "gold-medal",
   "category": "Things",
-  "tags": [
-    "first-place",
-    "win"
-  ]
+  "tags": ["first-place", "win"]
 }

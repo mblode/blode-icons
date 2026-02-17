@@ -1,1 +1,5 @@
-{"icon":"wheelchair","category":"People","tags":["bathroom accessible","toilet","wc"]}
+{
+  "icon": "wheelchair",
+  "category": "People",
+  "tags": ["bathroom accessible", "toilet", "wc"]
+}

@@ -1,1 +1,5 @@
-{"icon":"wifi-no-signal","category":"Devices & Signals","tags":["spot","signal","hot spot"]}
+{
+  "icon": "wifi-no-signal",
+  "category": "Devices & Signals",
+  "tags": ["spot", "signal", "hot spot"]
+}

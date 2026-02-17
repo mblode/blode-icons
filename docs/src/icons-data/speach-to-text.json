@@ -1,1 +1,5 @@
-{"icon":"speach-to-text","category":"Sound & Music","tags":["voice-to-text"]}
+{
+  "icon": "speach-to-text",
+  "category": "Sound & Music",
+  "tags": ["voice-to-text"]
+}

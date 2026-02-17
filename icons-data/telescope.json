@@ -1,8 +1,5 @@
 {
   "icon": "telescope",
   "category": "Things",
-  "tags": [
-    "deep-search",
-    "research"
-  ]
+  "tags": ["deep-search", "research"]
 }

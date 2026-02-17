@@ -1,1 +1,5 @@
-{"icon":"send","category":"Location","tags":["email","paper-plane","arrow"]}
+{
+  "icon": "send",
+  "category": "Location",
+  "tags": ["email", "paper-plane", "arrow"]
+}

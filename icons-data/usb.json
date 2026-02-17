@@ -1,1 +1,5 @@
-{"icon":"usb","category":"Devices & Signals","tags":["connection","connect","save","data"]}
+{
+  "icon": "usb",
+  "category": "Devices & Signals",
+  "tags": ["connection", "connect", "save", "data"]
+}

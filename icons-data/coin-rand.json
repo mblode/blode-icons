@@ -1,8 +1,5 @@
 {
   "icon": "coin-rand",
   "category": "Shopping & Payment",
-  "tags": [
-    "currency",
-    "money"
-  ]
+  "tags": ["currency", "money"]
 }

@@ -1,1 +1,5 @@
-{"icon":"thumbtack","category":"Interface General","tags":["pin","location","bookmark"]}
+{
+  "icon": "thumbtack",
+  "category": "Interface General",
+  "tags": ["pin", "location", "bookmark"]
+}

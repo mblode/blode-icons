@@ -1,1 +1,5 @@
-{"icon":"trash-can-simple","category":"Interface General","tags":["delete","remove","garbage","waste"]}
+{
+  "icon": "trash-can-simple",
+  "category": "Interface General",
+  "tags": ["delete", "remove", "garbage", "waste"]
+}

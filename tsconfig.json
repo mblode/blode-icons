@@ -2,11 +2,15 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "es2018",
-    "module": "es6",
+    "module": "es2020",
+    "moduleResolution": "node",
     "declaration": true,
+    "sourceMap": true,
     "outDir": "dist",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
   "include": ["src"],
   "exclude": ["node_modules"]

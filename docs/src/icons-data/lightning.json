@@ -1,1 +1,5 @@
-{"icon":"lightning","category":"Weather","tags":["zap","flash","thunder"]}
+{
+  "icon": "lightning",
+  "category": "Weather",
+  "tags": ["zap", "flash", "thunder"]
+}

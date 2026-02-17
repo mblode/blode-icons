@@ -1,1 +1,5 @@
-{"icon":"phone","category":"Devices & Signals","tags":["iphone","mobile"]}
+{
+  "icon": "phone",
+  "category": "Devices & Signals",
+  "tags": ["iphone", "mobile"]
+}

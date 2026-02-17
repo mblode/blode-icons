@@ -1,1 +1,5 @@
-{"icon":"backward","category":"Keyboard","tags":["delete","remove","key"]}
+{
+  "icon": "backward",
+  "category": "Keyboard",
+  "tags": ["delete", "remove", "key"]
+}

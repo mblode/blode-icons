@@ -1,7 +1,5 @@
 {
   "icon": "car-7",
   "category": "Things",
-  "tags": [
-    "pickup"
-  ]
+  "tags": ["pickup"]
 }

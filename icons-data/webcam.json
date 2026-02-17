@@ -1,1 +1,5 @@
-{"icon":"webcam","category":"Devices & Signals","tags":["camera","view"]}
+{
+  "icon": "webcam",
+  "category": "Devices & Signals",
+  "tags": ["camera", "view"]
+}

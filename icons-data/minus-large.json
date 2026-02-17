@@ -1,1 +1,5 @@
-{"icon":"minus-large","category":"Interface General","tags":["remove","delete"]}
+{
+  "icon": "minus-large",
+  "category": "Interface General",
+  "tags": ["remove", "delete"]
+}

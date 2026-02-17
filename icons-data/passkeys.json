@@ -1,1 +1,5 @@
-{"icon":"passkeys","category":"Security","tags":["passkey","passwordless"]}
+{
+  "icon": "passkeys",
+  "category": "Security",
+  "tags": ["passkey", "passwordless"]
+}

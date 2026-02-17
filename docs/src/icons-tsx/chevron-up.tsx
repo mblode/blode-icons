@@ -1,6 +1,26 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const ChevronUpIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="lucide lucide-chevron-up" viewBox="0 0 24 24" ref={ref} {...props}><path d="m18 15-6-6-6 6" /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const ChevronUpIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    className="lucide lucide-chevron-up"
+    fill="none"
+    height={24}
+    ref={ref}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m18 15-6-6-6 6" />
+  </svg>
+);
 const ForwardRef = forwardRef(ChevronUpIcon);
 export default ForwardRef;

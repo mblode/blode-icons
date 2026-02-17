@@ -1,1 +1,5 @@
-{"icon":"square-info","category":"Interface General","tags":["information","tooltip"]}
+{
+  "icon": "square-info",
+  "category": "Interface General",
+  "tags": ["information", "tooltip"]
+}

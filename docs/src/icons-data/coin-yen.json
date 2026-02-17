@@ -1,8 +1,5 @@
 {
   "icon": "coin-yen",
   "category": "Shopping & Payment",
-  "tags": [
-    "currency",
-    "money"
-  ]
+  "tags": ["currency", "money"]
 }

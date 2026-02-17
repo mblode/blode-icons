@@ -1,8 +1,5 @@
 {
   "icon": "offline",
   "category": "Devices & Signals",
-  "tags": [
-    "disconnect",
-    "energy"
-  ]
+  "tags": ["disconnect", "energy"]
 }

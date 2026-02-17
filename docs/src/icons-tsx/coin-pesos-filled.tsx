@@ -1,6 +1,30 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const CoinPesosFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M13.3945 11.4004c-.3372.7085-1.0574 1.1992-1.8945 1.1992h-.5996v-1.1992zM11.5 8.4004c.8371 0 1.5573.4907 1.8945 1.1992h-2.4941V8.4004z" /><path fill="currentColor" fillRule="evenodd" d="M12 2c5.5228 0 10 4.4772 10 10s-4.4772 10-10 10S2 17.5228 2 12 6.4772 2 12 2m-2 4.5996c-.466 0-.8495.3547-.8955.8086L9.0996 7.5v2.0996H8c-.497 0-.9004.4033-.9004.9004s.4033.9004.9004.9004h1.0996V16.5c0 .4971.4033.9004.9004.9004s.9004-.4033.9004-.9004v-2.0996H11.5c1.8439 0 3.3883-1.2802 3.7949-3H16l.0918-.0049c.4539-.046.8086-.4294.8086-.8955s-.3547-.8495-.8086-.8955L16 9.5996h-.7051c-.4066-1.7198-1.951-3-3.7949-3z" clipRule="evenodd" /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const CoinPesosFilledIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M13.3945 11.4004c-.3372.7085-1.0574 1.1992-1.8945 1.1992h-.5996v-1.1992zM11.5 8.4004c.8371 0 1.5573.4907 1.8945 1.1992h-2.4941V8.4004z"
+      fill="currentColor"
+    />
+    <path
+      clipRule="evenodd"
+      d="M12 2c5.5228 0 10 4.4772 10 10s-4.4772 10-10 10S2 17.5228 2 12 6.4772 2 12 2m-2 4.5996c-.466 0-.8495.3547-.8955.8086L9.0996 7.5v2.0996H8c-.497 0-.9004.4033-.9004.9004s.4033.9004.9004.9004h1.0996V16.5c0 .4971.4033.9004.9004.9004s.9004-.4033.9004-.9004v-2.0996H11.5c1.8439 0 3.3883-1.2802 3.7949-3H16l.0918-.0049c.4539-.046.8086-.4294.8086-.8955s-.3547-.8495-.8086-.8955L16 9.5996h-.7051c-.4066-1.7198-1.951-3-3.7949-3z"
+      fill="currentColor"
+      fillRule="evenodd"
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(CoinPesosFilledIcon);
 export default ForwardRef;

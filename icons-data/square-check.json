@@ -1,1 +1,5 @@
-{"icon":"square-check","category":"Interface General","tags":["checkbox","check","checkmark","confirm"]}
+{
+  "icon": "square-check",
+  "category": "Interface General",
+  "tags": ["checkbox", "check", "checkmark", "confirm"]
+}
