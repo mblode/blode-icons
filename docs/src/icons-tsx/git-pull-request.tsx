@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const GitPullRequestIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEleme
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(GitPullRequestIcon);
-export default ForwardRef;
+export default createLucideIcon('GitPullRequestIcon', ForwardRef);

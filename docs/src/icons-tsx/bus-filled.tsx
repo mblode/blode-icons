@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const BusFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M21 7c0-2.2091-1.7909-4-4-4H7C4.7909 3 3 4.7909 3 7H2c-.5523 0-1 .4477-1 1s.4477 1 1 1h1v2.5h18V9h1c.5523 0 1-.4477 1-1s-.4477-1-1-1zM9 5.5a.9.9 0 0 0 .9.9h4.2a.9.9 0 0 0 .9-.9.9.9 0 0 0-.9-.9H9.9a.9.9 0 0 0-.9.9M21 13H3v7c0 .5523.4477 1 1 1h2c.5523 0 1-.4477 1-1v-1h10v1c0 .5523.4477 1 1 1h2c.5523 0 1-.4477 1-1zM9 16c0 .5523-.4477 1-1 1H7c-.5523 0-1-.4477-1-1s.4477-1 1-1h1c.5523 0 1 .4477 1 1m6 0c0 .5523.4477 1 1 1h1c.5523 0 1-.4477 1-1s-.4477-1-1-1h-1c-.5523 0-1 .4477-1 1" clipRule="evenodd" /></svg>;
 const ForwardRef = forwardRef(BusFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('BusFilledIcon', ForwardRef);

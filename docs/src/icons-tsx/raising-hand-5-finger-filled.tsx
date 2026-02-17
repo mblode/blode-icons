@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const RaisingHand5FingerFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<S
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(RaisingHand5FingerFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('RaisingHand5FingerFilledIcon', ForwardRef);

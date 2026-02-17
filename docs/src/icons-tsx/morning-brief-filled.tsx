@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const MorningBriefFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M5.0996 18.9004c.6074 0 1.1004.4923 1.1006 1.0996 0 .6075-.493 1.1006-1.1006 1.1006C4.4923 21.1004 4 20.6074 4 20c.0002-.6072.4924-1.0994 1.0996-1.0996M15 19c.5523 0 1 .4477 1 1s-.4477 1-1 1H8.5c-.5523 0-1-.4477-1-1s.4477-1 1-1zM5.0996 14.9004c.6074 0 1.1004.4923 1.1006 1.0996 0 .6075-.493 1.1006-1.1006 1.1006C4.4923 17.1004 4 16.6074 4 16c.0002-.6072.4924-1.0994 1.0996-1.0996M18 15c.5523 0 1 .4477 1 1s-.4477 1-1 1H8.5c-.5523 0-1-.4477-1-1s.4477-1 1-1z" /><path fill="currentColor" fillRule="evenodd" d="M12 6.5c2.696 0 4.9379 1.94 5.4082 4.5H22c.5523 0 1 .4477 1 1s-.4477 1-1 1H2c-.5523 0-1-.4477-1-1s.4477-1 1-1h4.5918C7.0621 8.44 9.304 6.5 12 6.5" clipRule="evenodd" /><path fill="currentColor" d="M4.2217 4.2217c.3905-.3905 1.0235-.3904 1.414 0l1.4141 1.414c.3905.3906.3905 1.0236 0 1.4141s-1.0236.3905-1.414 0l-1.4141-1.414c-.3904-.3905-.3904-1.0236 0-1.4141M18.3643 4.2217c.3905-.3904 1.0235-.3905 1.414 0s.3904 1.0236 0 1.414l-1.414 1.4141c-.3905.3905-1.0236.3904-1.4141 0s-.3905-1.0235 0-1.414zM12 1c.5523 0 1 .4477 1 1v2c0 .5523-.4477 1-1 1s-1-.4477-1-1V2c0-.5523.4477-1 1-1" /></svg>;
 const ForwardRef = forwardRef(MorningBriefFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('MorningBriefFilledIcon', ForwardRef);

@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const CalendarSearch4FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGS
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(CalendarSearch4FilledIcon);
-export default ForwardRef;
+export default createLucideIcon('CalendarSearch4FilledIcon', ForwardRef);

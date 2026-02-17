@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -17,4 +18,4 @@ const MaskIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <s
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(MaskIcon);
-export default ForwardRef;
+export default createLucideIcon('MaskIcon', ForwardRef);

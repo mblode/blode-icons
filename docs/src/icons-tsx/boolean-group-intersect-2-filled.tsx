@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -12,4 +13,4 @@ const BooleanGroupIntersect2FilledIcon = (props: SVGProps<SVGSVGElement>, ref: R
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(BooleanGroupIntersect2FilledIcon);
-export default ForwardRef;
+export default createLucideIcon('BooleanGroupIntersect2FilledIcon', ForwardRef);

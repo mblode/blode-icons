@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -12,4 +13,4 @@ const TouchGrassIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>)
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(TouchGrassIcon);
-export default ForwardRef;
+export default createLucideIcon('TouchGrassIcon', ForwardRef);

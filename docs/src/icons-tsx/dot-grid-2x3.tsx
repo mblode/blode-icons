@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const DotGrid2x3Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>)
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(DotGrid2x3Icon);
-export default ForwardRef;
+export default createLucideIcon('DotGrid2x3Icon', ForwardRef);

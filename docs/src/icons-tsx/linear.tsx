@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const LinearIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M2.245 14.3046c-.0444-.1897.1816-.3092.3194-.1714l7.3024 7.3024c.1378.1378.0183.3638-.1714.3193-3.6851-.8645-6.5858-3.7652-7.4503-7.4503m-.2446-2.9268a.198.198 0 0 0 .0579.1521L12.47 21.9417a.198.198 0 0 0 .1521.0579c.4738-.0295.9387-.092 1.3925-.1852.1529-.0314.206-.2192.0956-.3296L2.5152 9.8897c-.1104-.1104-.2982-.0573-.3296.0956a10 10 0 0 0-.1852 1.3925m.8418-3.4367a.198.198 0 0 0 .0415.22L15.839 21.1163a.198.198 0 0 0 .22.0415 10 10 0 0 0 1.0371-.5368c.1104-.0656.1275-.2173.0367-.3081L3.6871 6.8673c-.0908-.0908-.2425-.0737-.3081.0367a10 10 0 0 0-.5368 1.037m1.6895-2.3263a.197.197 0 0 1-.0088-.2708C6.3559 3.2919 9.0223 2 11.9904 2 17.5185 2 22 6.4815 22 12.0096c0 2.9681-1.2919 5.6345-3.344 7.4675a.197.197 0 0 1-.2708-.0088z" /></svg>;
 const ForwardRef = forwardRef(LinearIcon);
-export default ForwardRef;
+export default createLucideIcon('LinearIcon', ForwardRef);

@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const GamepadControlsLeftFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(GamepadControlsLeftFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('GamepadControlsLeftFilledIcon', ForwardRef);

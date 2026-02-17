@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const BoxSparkleFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEle
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(BoxSparkleFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('BoxSparkleFilledIcon', ForwardRef);

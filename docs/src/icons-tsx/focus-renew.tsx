@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const FocusRenewIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V7c0-1.6569 1.3431-3 3-3h1M4 16v1c0 1.6569 1.3431 3 3 3h1m8-16h1c1.6569 0 3 1.3431 3 3v1m0 8v1c0 1.6569-1.3431 3-3 3h-1m-1.3273-5A4.075 4.075 0 0 1 12 16c-1.8638 0-3.43-1.2748-3.874-3m.9747-3.787A4.075 4.075 0 0 1 12 8c1.8638 0 3.4299 1.2748 3.874 3" /><path fill="currentColor" d="M16.5 14v2.2928c0 .4455-.5386.6686-.8536.3536l-2.7928-2.7929c-.315-.315-.0919-.8535.3535-.8535H15.5c.5523 0 1 .4477 1 1M7.5 10V7.707c0-.4454.5386-.6685.8536-.3535l2.7928 2.7929c.315.315.0919.8536-.3535.8536H8.5c-.5523 0-1-.4478-1-1" /></svg>;
 const ForwardRef = forwardRef(FocusRenewIcon);
-export default ForwardRef;
+export default createLucideIcon('FocusRenewIcon', ForwardRef);

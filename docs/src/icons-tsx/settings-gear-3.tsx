@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const SettingsGear3Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12.0001h2m-2 0c0-1.4574-.3897-2.8238-1.0707-4.0007M20 12.0001c0 1.4574-.3898 2.8239-1.0707 4.0007M20 12.0001h-6m4.9293-4.0007 1.7309-.9993m-1.7309.9993a8.04 8.04 0 0 0-2.9286-2.9286m2.9286 10.93 1.7309.9994m-1.7309-.9994a8.04 8.04 0 0 1-2.9287 2.9287m0 0c-1.1768.6809-2.5432 1.0706-4.0006 1.0706m4.0006-1.0706L17 20.6604m-5-.6603c-1.4574 0-2.8238-.3897-4.0007-1.0706M12 20.0001V22m-4.0007-3.0705L7 20.6604m.9993-1.7309a8.04 8.04 0 0 1-2.9287-2.9287m2.9287 2.9287 3.0005-5.1971m-5.9292 2.2684C4.3897 14.8239 4 13.4575 4 12.0001m1.0706 4.0007-1.7309.9993m.6603-5c0-1.4574.3897-2.8238 1.0706-4.0006M4 12 2 12m1.3397-4.9998 1.7309.9993m0 0a8.04 8.04 0 0 1 2.9287-2.9288m0 0C9.1762 4.3898 10.5426 4.0001 12 4.0001M7.9993 5.0707 7 3.3398m.9993 1.731 3.0005 5.197M12 4.0001V2m0 2.0001c1.4574 0 2.8238.3897 4.0007 1.0707m0 0L17 3.3399m-3 8.6602c0 1.1046-.8955 2-2 2a1.99 1.99 0 0 1-1.0002-.2677M14 12.0001c0-1.1046-.8955-2-2-2a1.99 1.99 0 0 0-1.0002.2677m0 0c-.5977.3458-.9998.9921-.9998 1.7323s.4021 1.3865.9998 1.7323" /></svg>;
 const ForwardRef = forwardRef(SettingsGear3Icon);
-export default ForwardRef;
+export default createLucideIcon('SettingsGear3Icon', ForwardRef);

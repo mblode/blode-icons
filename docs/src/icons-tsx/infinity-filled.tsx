@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const InfinityFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEleme
         fillOpacity: 1
       }} /></clipPath></defs></svg>;
 const ForwardRef = forwardRef(InfinityFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('InfinityFilledIcon', ForwardRef);

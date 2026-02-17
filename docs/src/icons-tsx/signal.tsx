@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -35,4 +36,4 @@ const SignalIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => 
             maskType: "luminance"
           }}><path fill="#fff" d="M2.625 21.375h18.6153V2.6248H2.625z" /></mask><g mask="url(#q)"><path fill="currentColor" d="M4.0625 3.8288h16.0119v16.0735H4.0625z" /></g></g></g></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z" /></clipPath></defs></svg>;
 const ForwardRef = forwardRef(SignalIcon);
-export default ForwardRef;
+export default createLucideIcon('SignalIcon', ForwardRef);

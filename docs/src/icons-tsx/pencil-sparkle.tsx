@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const PencilSparkleIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M8.7199 3.5601A.357.357 0 0 1 8.56 3.72l-.9213.4606c-.2632.1316-.2632.5073 0 .6389l.9213.4607a.357.357 0 0 1 .1598.1597l.4606.9213c.1316.2632.5073.2632.6389 0l.4606-.9213a.357.357 0 0 1 .1598-.1597l.9213-.4607c.2632-.1316.2632-.5073 0-.6389l-.9213-.4606A.357.357 0 0 1 10.28 3.56l-.4606-.9213c-.1316-.2632-.5073-.2632-.6389 0zM4.407 7.1844a.5.5 0 0 1-.2236.2236l-1.2898.645c-.3685.1842-.3685.71 0 .8943l1.2898.645a.5.5 0 0 1 .2236.2236l.645 1.2898c.1842.3685.7101.3685.8944 0l.6449-1.2898a.5.5 0 0 1 .2236-.2236l1.2898-.645c.3686-.1842.3686-.7101 0-.8944L6.815 7.408a.5.5 0 0 1-.2236-.2236l-.645-1.2898c-.1842-.3686-.7101-.3686-.8944 0z" /><path fill="currentColor" fillRule="evenodd" d="m7.1062 13.017 10.1704-8.8438c.9974-.8673 2.4958-.8151 3.4304.1195s.9869 2.433.1196 3.4304l-8.8435 10.1701C11.7839 20.1943 9.8528 22 7.5 22H4c-.5523 0-1-.4477-1-1v-3.5c0-2.3526 1.8053-4.2835 4.1062-4.483m4.3822 2.3971a4.52 4.52 0 0 0-1.9029-1.9027l9.0034-7.829a.5163.5163 0 0 1 .7284.7284zM7.5 15C6.1193 15 5 16.1193 5 17.5V20h2.5c1.3807 0 2.5-1.1193 2.5-2.5S8.8807 15 7.5 15" clipRule="evenodd" /></svg>;
 const ForwardRef = forwardRef(PencilSparkleIcon);
-export default ForwardRef;
+export default createLucideIcon('PencilSparkleIcon', ForwardRef);

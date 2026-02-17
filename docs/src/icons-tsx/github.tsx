@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const GithubIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12.0459 1.0001a10.9969 10.9969 0 0 0-3.4824 21.444c.5498.0917.7331-.2749.7331-.5498v-1.8328c-3.0241.6414-3.6656-1.4663-3.6656-1.4663-.5499-1.283-1.283-1.6495-1.283-1.6495-.9164-.6415.0917-.6415.0917-.6415 1.0996 0 1.7411 1.0997 1.7411 1.0997.9164 1.6495 2.566 1.1913 3.2075.9164.0916-.7332.3665-1.1914.7331-1.4663-2.4743-.2749-5.0403-1.1913-5.0403-5.4068 0-1.1913.4582-2.1994 1.0997-2.9325-.1832-.275-.4582-1.283.0917-2.6576 0 0 .9164-.275 3.0241 1.0997a10.54 10.54 0 0 1 5.4985 0c2.1077-1.3746 3.0241-1.0997 3.0241-1.0997.5499 1.3746.275 2.3827.0917 2.6576.7331.7331 1.0997 1.7412 1.0997 2.9325 0 4.2155-2.566 5.1319-5.0403 5.4068.3666.3666.7332 1.0081.7332 2.0161v3.0242c0 .2749.1832.6415.7331.5498a10.997 10.997 0 0 0 7.4284-12.1646 10.9966 10.9966 0 0 0-10.8191-9.2794" /></svg>;
 const ForwardRef = forwardRef(GithubIcon);
-export default ForwardRef;
+export default createLucideIcon('GithubIcon', ForwardRef);

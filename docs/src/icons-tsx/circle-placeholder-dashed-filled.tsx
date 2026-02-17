@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const CirclePlaceholderDashedFilledIcon = (props: SVGProps<SVGSVGElement>, ref: 
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(CirclePlaceholderDashedFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('CirclePlaceholderDashedFilledIcon', ForwardRef);

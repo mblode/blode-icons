@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const Web3FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>)
         fillOpacity: 1
       }} /></clipPath></defs></svg>;
 const ForwardRef = forwardRef(Web3FilledIcon);
-export default ForwardRef;
+export default createLucideIcon('Web3FilledIcon', ForwardRef);

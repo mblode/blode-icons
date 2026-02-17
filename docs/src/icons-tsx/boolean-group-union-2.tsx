@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -12,4 +13,4 @@ const BooleanGroupUnion2Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGE
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(BooleanGroupUnion2Icon);
-export default ForwardRef;
+export default createLucideIcon('BooleanGroupUnion2Icon', ForwardRef);
