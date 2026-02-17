@@ -30,17 +30,27 @@ for (const value of Object.values(iconMetadataFiles)) {
 
 const ICON_NAME_REGEX = /FilledIcon$|Icon$/;
 
-export const icons = Object.entries(IconComponents).map(([name, component]) => {
-  const iconKey = kebabCase(name.replace(ICON_NAME_REGEX, ""), {
-    separateNumbers: true,
-  });
-  const metadata = metadataMap[iconKey] || { category: "", tags: [] };
+const seenComponents = new Set<unknown>();
 
-  return {
-    name,
-    component,
-    category: metadata.category,
-    tags: metadata.tags,
-    categories: metadata.category ? [metadata.category] : [],
-  };
-});
+export const icons = Object.entries(IconComponents)
+  .filter(([_, component]) => {
+    if (seenComponents.has(component)) {
+      return false;
+    }
+    seenComponents.add(component);
+    return true;
+  })
+  .map(([name, component]) => {
+    const iconKey = kebabCase(name.replace(ICON_NAME_REGEX, ""), {
+      separateNumbers: true,
+    });
+    const metadata = metadataMap[iconKey] || { category: "", tags: [] };
+
+    return {
+      name,
+      component,
+      category: metadata.category,
+      tags: metadata.tags,
+      categories: metadata.category ? [metadata.category] : [],
+    };
+  });
