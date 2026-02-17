@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const CallCancelIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M20.7071 4.7071c.3905-.3905.3905-1.0237 0-1.4142s-1.0237-.3905-1.4142 0l-8.4552 8.4552a12.05 12.05 0 0 1-1.0488-1.4435c-.1345-.2174-.1178-.5601.1488-.8267a2.825 2.825 0 0 0 .7083-2.8094l-.2984-.9944C9.8715 4.0869 8.4106 3 6.7536 3c-2.0156 0-3.888 1.684-3.504 3.91.5498 3.1856 1.9853 6.0672 4.0439 8.3823l-4.0006 4.0006c-.3905.3905-.3905 1.0237 0 1.4142s1.0237.3905 1.4142 0zM8.7105 13.8753l.7088-.7088a14.04 14.04 0 0 1-1.3312-1.8096c-.6852-1.1073-.3996-2.4582.4354-3.2932a.825.825 0 0 0 .2068-.8205l-.2983-.9945A1.752 1.752 0 0 0 6.7536 5c-1.0244 0-1.666.8002-1.533 1.57.4777 2.7687 1.7152 5.278 3.4899 7.3053" clipRule="evenodd" /><path fill="currentColor" d="M17.4314 18.7809c-2.0785-.3587-4.0108-1.1456-5.7028-2.2664l-1.4396 1.4396c1.9966 1.3922 4.3062 2.3669 6.8023 2.7976 2.2261.3842 3.9101-1.4884 3.9101-3.5039 0-1.6571-1.0869-3.1179-2.6741-3.594l-.9945-.2984a2.825 2.825 0 0 0-2.8093.7083c-.1772.1772-.3881.244-.5735.2294l-1.4985 1.4986q.0959.0615.193.1216c1.1073.6852 2.4582.3996 3.2932-.4354a.825.825 0 0 1 .8204-.2068l.9945.2983a1.752 1.752 0 0 1 1.2488 1.6784c0 1.0244-.8002 1.6659-1.57 1.5331" /></svg>;
 const ForwardRef = forwardRef(CallCancelIcon);
-export default ForwardRef;
+export default createLucideIcon('CallCancelIcon', ForwardRef);

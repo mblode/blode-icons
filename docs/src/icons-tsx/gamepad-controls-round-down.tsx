@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -8,4 +9,4 @@ const GamepadControlsRoundDownIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<S
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(GamepadControlsRoundDownIcon);
-export default ForwardRef;
+export default createLucideIcon('GamepadControlsRoundDownIcon', ForwardRef);

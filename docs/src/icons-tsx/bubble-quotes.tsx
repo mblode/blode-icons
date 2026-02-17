@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const BubbleQuotesIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M3.002 7c0-1.6568 1.3431-3 3-3h11.9999c1.6569 0 3.0001 1.3431 3.0001 3v8.0358c0 1.6568-1.3432 2.9999-3 3h-2.6263a1 1 0 0 0-.638.2299l-2.74 2.2701-2.7037-2.2664a1 1 0 0 0-.6424-.2336H6.0019c-1.6568 0-3-1.3432-3-3z" /><path fill="currentColor" d="M9.523 8C8.4059 8 7.5 8.9103 7.5 10.0331s.9058 2.0331 2.023 2.0331a2.01 2.01 0 0 0 .7871-.1595 2.6 2.6 0 0 1-.1566.2516c-.3532.5019-.8756.8846-1.5542 1.3392a.4535.4535 0 0 0-.125.6261c.1373.2069.4175.264.6238.1258.6702-.449 1.3279-.9135 1.7895-1.5693.4745-.6741.7169-1.5101.6585-2.6594C11.5395 8.9036 10.6363 8 9.5231 8M14.4684 8c-1.1173 0-2.0231.9103-2.0231 2.0331s.9058 2.0331 2.0231 2.0331c.2792 0 .5451-.0568.787-.1595a2.6 2.6 0 0 1-.1565.2516c-.3533.5019-.8757.8846-1.5542 1.3392a.4535.4535 0 0 0-.1251.6261c.1373.2069.4175.264.6238.1258.6702-.449 1.3279-.9135 1.7895-1.5693.4745-.6741.7169-1.5101.6586-2.6594C16.4848 8.9036 15.5816 8 14.4684 8" /></svg>;
 const ForwardRef = forwardRef(BubbleQuotesIcon);
-export default ForwardRef;
+export default createLucideIcon('BubbleQuotesIcon', ForwardRef);

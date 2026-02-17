@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const Car10EvFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M11.0001 4c.5523.0001.9999.4478.9999 1v11.0001h2v-9c0-.5523.4477-1 1-1h1.417c1.6316 0 3.161.7962 4.0967 2.1328l1.582 2.2607A5 5 0 0 1 23 13.2608v1.7393c0 1.6014-1.2547 2.9097-2.8347 2.9955-.5608 1.1849-1.7673 2.0045-3.1653 2.0045-1.3962 0-2.6015-.8175-3.1632-2h-3.6736c-.5617 1.1825-1.767 2-3.1632 2-1.398 0-2.6045-.8196-3.1653-2.0045C2.2547 17.9098 1 16.6015 1 15.0001v-7c0-2.2092 1.7909-4 4-4h6.0001M8.5 16.5002c0-.8284-.6716-1.5-1.5-1.5s-1.5.6716-1.5 1.5.6716 1.5 1.5 1.5 1.5-.6716 1.5-1.5m10 0c0-.8284-.6716-1.5-1.5-1.5s-1.5.6716-1.5 1.5.6716 1.5 1.5 1.5 1.5-.6716 1.5-1.5M6.8797 9.1037h1.892c.189 0 .2957.213.1809.3604l-2.6868 3.4474c-.1423.1826-.4385.0608-.4064-.1672l.261-1.848H4.2281c-.1888 0-.2957-.213-.1808-.3604l2.6868-3.4474c.1423-.1826.4385-.0608.4064.1672z" clipRule="evenodd" /></svg>;
 const ForwardRef = forwardRef(Car10EvFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('Car10EvFilledIcon', ForwardRef);

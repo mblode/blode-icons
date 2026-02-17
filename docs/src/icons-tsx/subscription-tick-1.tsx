@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const SubscriptionTick1Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="m9.501 12.5 1.1464 1.1464a.5.5 0 0 0 .7071 0L14.501 10.5M8.549 4.9992l-1.2107-.192c-.954-.1513-1.8211.5763-1.8377 1.542L5.4795 7.575a1.589 1.589 0 0 1-.7707 1.3349l-1.051.631c-.828.4973-1.0245 1.6122-.4165 2.3626l.7716.9525a1.589 1.589 0 0 1 .2677 1.518l-.3994 1.1589c-.3146.9132.2514 1.8936 1.1995 2.0776l1.2034.2337a1.589 1.589 0 0 1 1.1808.9908l.439 1.1445c.346.9018 1.4097 1.2889 2.2544.8205l1.0719-.5946a1.589 1.589 0 0 1 1.5415 0l1.0719.5946c.8447.4684 1.9085.0813 2.2544-.8205l.439-1.1445a1.589 1.589 0 0 1 1.1808-.9908l1.2033-.2337c.9482-.184 1.5142-1.1644 1.1996-2.0776l-.3994-1.1589a1.589 1.589 0 0 1 .2677-1.518l.7716-.9525c.608-.7504.4115-1.8653-.4166-2.3625l-1.0509-.6311a1.589 1.589 0 0 1-.7707-1.335l-.0211-1.2256c-.0166-.9657-.8838-1.6933-1.8377-1.542l-1.2107.192a1.589 1.589 0 0 1-1.4485-.5272l-.8039-.9253c-.6335-.7291-1.7656-.729-2.3991 0l-.804.9253a1.589 1.589 0 0 1-1.4484.5272Z" /></svg>;
 const ForwardRef = forwardRef(SubscriptionTick1Icon);
-export default ForwardRef;
+export default createLucideIcon('SubscriptionTick1Icon', ForwardRef);

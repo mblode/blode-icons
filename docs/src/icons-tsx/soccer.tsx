@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const SoccerIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="m8.8198 3.578 1.4168 1.0294a3 3 0 0 0 3.5268 0l1.4168-1.0294m-6.3604 0C9.8086 3.2044 10.8804 3 12 3s2.1914.2044 3.1802.578m-6.3604 0c-1.5215.5748-2.8464 1.5501-3.846 2.7973m0 0C3.7387 7.9161 3 9.8718 3 12q0 .2114.0097.4204m1.964-6.045.5404 1.6631a3 3 0 0 1-1.0898 3.3541l-1.4146 1.0278m0 0a8.95 8.95 0 0 0 1.4688 4.5239m0 0h1.7497a3 3 0 0 1 2.8531 2.0729l.5411 1.6654m-5.1439-3.7383c1.1881 1.8037 3.0076 3.1547 5.144 3.7383m0 0A9 9 0 0 0 12 21a9 9 0 0 0 2.3776-.3174m0 0 .5411-1.6654a3 3 0 0 1 2.8532-2.0729h1.7496m-5.1439 3.7383c2.1363-.5836 3.9558-1.9346 5.1439-3.7383m0 0a8.95 8.95 0 0 0 1.4689-4.5239m0 0A9 9 0 0 0 21 12c0-2.1282-.7387-4.084-1.9737-5.6247m1.9641 6.0451-1.4147-1.0278a3 3 0 0 1-1.0898-3.354l.5404-1.6633m0 0c-.9997-1.2472-2.3246-2.2225-3.8461-2.7973M9.6917 12.75a2.4272 2.4272 0 0 0 4.6166 0 2.427 2.427 0 0 0-3.7349-2.7135 2.427 2.427 0 0 0-.8817 2.7135Z" /></svg>;
 const ForwardRef = forwardRef(SoccerIcon);
-export default ForwardRef;
+export default createLucideIcon('SoccerIcon', ForwardRef);

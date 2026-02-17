@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -15,4 +16,4 @@ const BranchIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => 
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(BranchIcon);
-export default ForwardRef;
+export default createLucideIcon('BranchIcon', ForwardRef);

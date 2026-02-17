@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const BathWoman1Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>)
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(BathWoman1Icon);
-export default ForwardRef;
+export default createLucideIcon('BathWoman1Icon', ForwardRef);

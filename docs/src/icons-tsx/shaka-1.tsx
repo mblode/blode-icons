@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const Shaka1Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m16 13 3.4867-3.4867c.5596-.5596 1.467-.5596 2.0266 0 .5491.5491.5618 1.4339.0223 1.9925-1.228 1.2718-3.3882 3.4782-5.0356 4.9942-.82.7546-1.8203 1.6211-2.7881 2.4397-2.0511 1.7351-5.1034 1.4548-6.8629-.5755l-2.2246-2.5668a5 5 0 0 1-1.2146-3.0119L3 5h.5504a3 3 0 0 1 2.7414 1.7816L7.5 9.5 9 8m0 0 1.0002-1c.5522-.5524 1.4477-.5524 2 0 .5522.5522.5522 1.4476 0 2l-1 1c-.5523.5522-1.4478.5522-2 0C8.4478 9.4475 8.4477 8.5522 9 8m4.5002 3.4999 1-1c.5522-.5523.5522-1.4477 0-2s-1.4478-.5523-2 0l-1 1c-.5523.5523-.5523 1.4477 0 2s1.4477.5523 2 0m0 0 1.5-1.5c.5522-.5523 1.4477-.5523 2 0s.5522 1.4477 0 2l-1.5 1.5c-.5523.5523-1.4478.5523-2 0s-.5523-1.4477 0-2" /></svg>;
 const ForwardRef = forwardRef(Shaka1Icon);
-export default ForwardRef;
+export default createLucideIcon('Shaka1Icon', ForwardRef);

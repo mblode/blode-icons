@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const FileLockIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="m13.5858 3.5858.7071-.7071zm4.8284 4.8284-.7071.7071zM4 10.5c0 .5523.4477 1 1 1s1-.4477 1-1zM14 20c-.5523 0-1 .4477-1 1s.4477 1 1 1zm0-16.5v-1h-2v1zm4.5 6.5h1V8h-1zM8 4h4.1716V2H8zm10 5.8284V18h2V9.8284zM12.8787 4.293l4.8284 4.8284 1.4142-1.4142-4.8284-4.8284zM6 10.5V6H4v4.5zM16 20h-2v2h2zm4-10.1716a3 3 0 0 0-.8787-2.1213l-1.4142 1.4142c.1875.1876.2929.442.2929.7071zM12.1716 4c.2652 0 .5195.1054.7071.2929l1.4142-1.4142A3 3 0 0 0 12.1716 2zM18 18c0 1.1046-.8954 2-2 2v2c2.2091 0 4-1.7909 4-4zM8 2C5.7909 2 4 3.7909 4 6h2c0-1.1046.8954-2 2-2zm4 1.5V7h2V3.5zm3 6.5h3.5V8H15zm-3-3c0 1.6569 1.3431 3 3 3V8c-.5523 0-1-.4477-1-1zM5 18h4v-2H5zm4 0v2h2v-2zm0 2H5v2h4zm-4 0v-2H3v2zm0 0H3c0 1.1046.8954 2 2 2zm4 0v2c1.1046 0 2-.8954 2-2zm0-2h2c0-1.1046-.8954-2-2-2zm-4-2c-1.1046 0-2 .8954-2 2h2zm3 0v1h2v-1zm-2 1v-1H4v1zm1-2c.5523 0 1 .4477 1 1h2c0-1.6569-1.3431-3-3-3zm0-2c-1.6569 0-3 1.3431-3 3h2c0-.5523.4477-1 1-1z" /></svg>;
 const ForwardRef = forwardRef(FileLockIcon);
-export default ForwardRef;
+export default createLucideIcon('FileLockIcon', ForwardRef);

@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const AirplayAudioFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M10.9473 14.7311c.5809-.5744 1.5246-.5746 2.1055 0l.1181.1318 2.96 3.7002.0693.0937c.6717.9783-.0229 2.3428-1.2412 2.3428H9.04c-1.2573-.0002-1.956-1.4545-1.1708-2.4365l2.9589-3.7002z" clipRule="evenodd" /><path fill="currentColor" d="M4.9287 4.9283c3.9052-3.9051 10.2374-3.905 14.1426 0 3.6537 3.6538 3.8886 9.4303.7061 13.3584l-.0684.0772c-.3572.3595-.9366.3962-1.3389.0703-.4285-.3478-.4949-.9773-.1474-1.4063l.2314-.2988c2.2997-3.1295 2.034-7.5559-.7968-10.3867-3.1242-3.124-8.1904-3.124-11.3145 0-2.8308 2.8308-3.0965 7.2572-.7969 10.3867l.2315.2988.0595.0831c.2777.4238.195.9972-.207 1.3232-.4023.3259-.9816.2892-1.3389-.0703l-.0683-.0772-.2881-.373C1.0582 14.0002 1.389 8.468 4.9287 4.9283" /><path fill="currentColor" d="M12 5.9996c3.3137 0 5.9999 2.6864 6 6a5.98 5.98 0 0 1-.6377 2.6944c-.2482.4931-.8495.6923-1.3427.4443-.493-.2483-.6922-.8496-.4444-1.3428A3.98 3.98 0 0 0 16 11.9996c-.0001-2.209-1.7909-4-4-4-2.209 0-3.9999 1.791-4 4 0 .5665.1173 1.1037.3282 1.5899l.0966.206.041.0928c.1812.4735-.0227 1.0171-.4853 1.25-.4625.2326-1.0197.0721-1.292-.3555l-.0508-.0888-.1445-.3086A5.985 5.985 0 0 1 6 11.9996c.0001-3.3135 2.6864-6 6-6" /></svg>;
 const ForwardRef = forwardRef(AirplayAudioFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('AirplayAudioFilledIcon', ForwardRef);

@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const LightbulbGlowFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12 2c-4.4183 0-8 3.5817-8 8 0 2.9113 1.5557 5.4582 3.8763 6.8565q.0615.037.1237.0731V17h8v-.0704a8 8 0 0 0 .1237-.0731C18.4443 15.4582 20 12.9113 20 10c0-4.4183-3.5817-8-8-8M12 23c-2.2091 0-4-1.7909-4-4h8c0 2.2091-1.7909 4-4 4M2.2803 12.1114c.4953-.1069 1.0012.1767 1.1611.6689.1707.5253-.1173 1.0891-.6425 1.2598l-.9512.3096c-.5252.1704-1.0892-.1175-1.2598-.6426-.1704-.5251.1175-1.0891.6426-1.2598l.9502-.3086zM.588 6.291c.1599-.4923.6657-.7759 1.161-.6689l.0987.0264.9512.3096.0957.0361c.4638.2045.7068.7311.5468 1.2237-.16.4922-.6658.7758-1.1611.6689l-.0996-.0274-.9502-.3086-.0957-.036C.6708 7.3103.428 6.7835.5879 6.291M22.252 5.6221a1 1 0 0 1 1.1611.669c.1706.5252-.1165 1.089-.6416 1.2597l-.9512.3096-.0986.0264a1 1 0 0 1-1.1611-.669c-.1706-.5251.1164-1.089.6416-1.2597l.9511-.3086zM23.4131 13.7074a.9996.9996 0 0 0-.6416-1.2598l-.9512-.3096c-.5252-.1706-1.0891.1174-1.2597.6426-.1705.5252.1164 1.0891.6416 1.2598l.9512.3086c.5252.1706 1.089-.1165 1.2597-.6416" /></svg>;
 const ForwardRef = forwardRef(LightbulbGlowFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('LightbulbGlowFilledIcon', ForwardRef);

@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const ArCube2FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElemen
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(ArCube2FilledIcon);
-export default ForwardRef;
+export default createLucideIcon('ArCube2FilledIcon', ForwardRef);

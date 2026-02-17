@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const SettingsToggle2FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGS
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(SettingsToggle2FilledIcon);
-export default ForwardRef;
+export default createLucideIcon('SettingsToggle2FilledIcon', ForwardRef);

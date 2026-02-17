@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -12,4 +13,4 @@ const RemoveBackgroundIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEle
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(RemoveBackgroundIcon);
-export default ForwardRef;
+export default createLucideIcon('RemoveBackgroundIcon', ForwardRef);

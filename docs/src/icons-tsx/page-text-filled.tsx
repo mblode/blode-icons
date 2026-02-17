@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const PageTextFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEleme
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(PageTextFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('PageTextFilledIcon', ForwardRef);

@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const HumanMashineFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M15.709 2c.7639 0 1.4348.5073 1.6435 1.2422l3.2676 11.5058c.0621.2188.1966.4102.3818.542l.4961.3526a1 1 0 0 1 .4082.9668l-.6787 4.4131c-.1083.7039-.8975 1.0719-1.5068.7031l-2.6533-1.6065c-.1559-.0943-.3183-.1796-.4932-.2304a2.8 2.8 0 0 0-.7793-.1114C14.2513 19.7773 13 18.526 13 16.9824v-5.791c.2319-.6836.8758-1.1912 1.6572-1.1914.5421 0 1.0098.3825 1.1162.9141l.7363 3.6836.0293.0976a.5005.5005 0 0 0 .961-.1924l-.0098-.1006-.7363-3.6845C16.5539 9.7188 15.6759 9 14.6572 9c-.2273 0-.4473.0278-.6572.0791V3.709C14 2.7652 14.7652 2 15.709 2M3.0503 14.8281a4.5 4.5 0 0 0-.0498.6719c0 2.3481 1.7981 4.2748 4.0927 4.4805l-2.9931 1.8427c-.5569.3427-1.2871.0673-1.4795-.5576l-1.3848-4.5a1.001 1.001 0 0 1 .459-1.1631zM8.3452 2c.9137 0 1.6551.7406 1.6553 1.6543v8.1035a4.48 4.48 0 0 0-2.5-.7578c-.9417 0-1.8166.2887-2.5391.7832L6.726 3.3174A1.654 1.654 0 0 1 8.3452 2" /><path fill="currentColor" fillRule="evenodd" d="M7.5 12c1.933 0 3.5 1.567 3.5 3.5S9.433 19 7.5 19 4 17.433 4 15.5 5.567 12 7.5 12m0 2.5c-.5523 0-1 .4477-1 1s.4477 1 1 1 1-.4477 1-1-.4477-1-1-1" clipRule="evenodd" /></svg>;
 const ForwardRef = forwardRef(HumanMashineFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('HumanMashineFilledIcon', ForwardRef);

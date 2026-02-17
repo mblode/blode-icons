@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const RetouchIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M17.9847 1.4329a.4878.4878 0 0 0-.9693-.001c-.1774 1.538-1.0455 2.4061-2.5835 2.5835a.4878.4878 0 0 0 .001.9693c1.5162.1718 2.4445 1.0315 2.5812 2.5707a.4879.4879 0 0 0 .9719-.0011c.1313-1.5175 1.0508-2.437 2.5683-2.5683a.4878.4878 0 0 0 .0011-.9719c-1.5392-.1367-2.399-1.065-2.5707-2.5812" /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-9c0-4.6858 3.581-8.5353 8.1556-8.961M21 21v-9c0-1.039-.1761-2.037-.5-2.9655M14.9231 11H9.0769C7.93 11 7 11.9299 7 13.0769V15c0 2.7614 2.2386 5 5 5s5-2.2386 5-5v-1.9231C17 11.9299 16.0701 11 14.9231 11" /></svg>;
 const ForwardRef = forwardRef(RetouchIcon);
-export default ForwardRef;
+export default createLucideIcon('RetouchIcon', ForwardRef);

@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const HeadlineFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEleme
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(HeadlineFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('HeadlineFilledIcon', ForwardRef);

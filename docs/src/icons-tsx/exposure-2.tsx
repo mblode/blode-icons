@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -6,4 +7,4 @@ const Exposure2Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) 
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(Exposure2Icon);
-export default ForwardRef;
+export default createLucideIcon('Exposure2Icon', ForwardRef);

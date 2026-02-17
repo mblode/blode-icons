@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const UntrashIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 16v-5" /><path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="m3.892 3.4473 16.7418 2.952M8.4377 3.9909c.6683-1.7595 2.5113-2.8535 4.4331-2.5147s3.2796 1.9973 3.3057 3.8792" /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.5 12.5 12 10l2.5 2.5" /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m19.0002 6.5-.8074 11.7064C18.0844 19.7794 16.7767 21 15.2 21H8.8004c-1.5767 0-2.8844-1.2206-2.9929-2.7936L5.0347 7" /></svg>;
 const ForwardRef = forwardRef(UntrashIcon);
-export default ForwardRef;
+export default createLucideIcon('UntrashIcon', ForwardRef);

@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const MathEqualsCircleIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEle
     strokeOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(MathEqualsCircleIcon);
-export default ForwardRef;
+export default createLucideIcon('MathEqualsCircleIcon', ForwardRef);

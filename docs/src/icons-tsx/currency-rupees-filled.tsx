@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const CurrencyRupeesFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M18.7501 2c.6904 0 1.25.5596 1.25 1.25s-.5596 1.25-1.25 1.25h-2.25a6.22 6.22 0 0 1 1.125 2.5h1.125c.6904 0 1.25.5596 1.25 1.25s-.5596 1.25-1.25 1.25h-1.125c-.579 2.8528-3.1013 5-6.125 5H9.1515l7.3252 5.2324.1006.0801c.4754.4184.5664 1.1375.1904 1.6641-.3762.5267-1.0865.6739-1.6367.3593l-.1074-.0683-10.5-7.5A1.2502 1.2502 0 0 1 5.2502 12H11.5c1.6326 0 3.0203-1.0437 3.5352-2.5H5.2501c-.6903 0-1.25-.5596-1.25-1.25S4.5598 7 5.2501 7h9.7852c-.5149-1.4562-1.9026-2.5-3.5352-2.5h-6.25c-.6903 0-1.25-.5596-1.25-1.25S4.5598 2 5.2501 2z" /></svg>;
 const ForwardRef = forwardRef(CurrencyRupeesFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('CurrencyRupeesFilledIcon', ForwardRef);

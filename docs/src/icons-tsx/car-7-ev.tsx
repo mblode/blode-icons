@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const Car7EvIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M19.5 17h.5c1.1046 0 2-.8954 2-2v-2.6577c0-1.3766-.9369-2.5765-2.2724-2.9104l-1.0387-.2597a2 2 0 0 1-1.1149-.7403L15.9 6.2A3 3 0 0 0 13.5 5H10c-.5523 0-1 .4477-1 1v4H4c-1.1046 0-2 .8954-2 2v3c0 1.1046.8954 2 2 2h.5" /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.5 17h5" /><circle cx={7} cy={16.75} r={2.25} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} /><circle cx={17} cy={16.75} r={2.25} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} /><path fill="currentColor" d="M15.7718 10.1037h-1.8921l.2609-1.848c.0322-.228-.2641-.3498-.4064-.1672l-2.6868 3.4474c-.1149.1474-.008.3604.1808.3604h1.8921l-.2609 1.848c-.0321.228.2641.3498.4064.1672l2.6868-3.4474c.1149-.1474.008-.3604-.1808-.3604" /></svg>;
 const ForwardRef = forwardRef(Car7EvIcon);
-export default ForwardRef;
+export default createLucideIcon('Car7EvIcon', ForwardRef);

@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const SparklesThreeIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M13 7c.5523 0 1 .4477 1 1 0 2.3085.5108 3.7424 1.3842 4.6158S17.6915 14 20 14c.5523 0 1 .4477 1 1s-.4477 1-1 1c-2.3085 0-3.7424.5108-4.6158 1.3842S14 19.6915 14 22c0 .5523-.4477 1-1 1s-1-.4477-1-1c0-2.3085-.5108-3.7424-1.3842-4.6158S8.3085 16 6 16c-.5523 0-1-.4477-1-1s.4477-1 1-1c2.3085 0 3.7424-.5108 4.6158-1.3842S12 10.3085 12 8c0-.5523.4477-1 1-1m0 5.7334c-.2639.4786-.5853.9119-.97 1.2966s-.818.7061-1.2966.97c.4786.2639.9119.5853 1.2966.97s.7061.818.97 1.2966c.2639-.4786.5853-.9119.97-1.2966s.818-.7061 1.2966-.97c-.4786-.2639-.9119-.5853-1.2966-.97s-.7061-.818-.97-1.2966" clipRule="evenodd" /><path fill="currentColor" d="M6 5.5a.5.5 0 0 0-1 0c0 .9806-.2172 1.5726-.5723 1.9277S3.4807 8 2.5 8a.5.5 0 0 0 0 1c.9806 0 1.5726.2172 1.9277.5723S5 10.5194 5 11.5a.5.5 0 0 0 1 0c0-.9806.2172-1.5726.5723-1.9277S7.5193 9 8.5 9a.5.5 0 0 0 0-1c-.9806 0-1.5726-.2172-1.9277-.5723S6 6.4807 6 5.5M11 1.5a.5.5 0 0 0-1 0c0 .6334-.1408.9754-.3327 1.1673C9.4753 2.8592 9.1334 3 8.5 3a.5.5 0 0 0 0 1c.6334 0 .9754.1408 1.1673.3327.1919.192.3327.5339.3327 1.1673a.5.5 0 0 0 1 0c0-.6334.1408-.9754.3327-1.1673S11.8666 4 12.5 4a.5.5 0 0 0 0-1c-.6334 0-.9754-.1408-1.1673-.3327C11.1408 2.4753 11 2.1334 11 1.5" /></svg>;
 const ForwardRef = forwardRef(SparklesThreeIcon);
-export default ForwardRef;
+export default createLucideIcon('SparklesThreeIcon', ForwardRef);

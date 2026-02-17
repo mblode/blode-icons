@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const CoinWonFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12 2c5.5228 0 10 4.4772 10 10s-4.4772 10-10 10S2 17.5228 2 12 6.4772 2 12 2m4.2471 5.8848a.9.9 0 0 0-1.083.5312l-.0293.087L14 12.4745l-1.1348-3.9717A.9.9 0 0 0 12 7.8496a.9.9 0 0 0-.8125.5147l-.0527.1386L10 12.4746 8.8652 8.5029 8.836 8.416a.9.9 0 0 0-1.083-.5312.8997.8997 0 0 0-.6386 1.0224l.0205.0899.6006 2.1025H7c-.497 0-.9004.4033-.9004.9004s.4033.9004.9004.9004h1.25l.8848 3.0967a.9004.9004 0 0 0 .8652.6533.9004.9004 0 0 0 .8652-.6533L12 12.0254l1.1348 3.9717a.9004.9004 0 0 0 .8652.6533.9004.9004 0 0 0 .8652-.6533l.8848-3.0967H17l.0918-.0049c.4539-.046.8086-.4294.8086-.8955s-.3547-.8495-.8086-.8955L17 11.0996h-.7354l.6006-2.1025.0205-.0899a.8996.8996 0 0 0-.6386-1.0224" /></svg>;
 const ForwardRef = forwardRef(CoinWonFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('CoinWonFilledIcon', ForwardRef);

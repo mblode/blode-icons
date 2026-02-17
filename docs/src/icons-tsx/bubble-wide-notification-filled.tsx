@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -9,4 +10,4 @@ const BubbleWideNotificationFilledIcon = (props: SVGProps<SVGSVGElement>, ref: R
     fillOpacity: 1
   }} /></svg>;
 const ForwardRef = forwardRef(BubbleWideNotificationFilledIcon);
-export default ForwardRef;
+export default createLucideIcon('BubbleWideNotificationFilledIcon', ForwardRef);

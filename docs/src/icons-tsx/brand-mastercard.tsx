@@ -1,3 +1,4 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
@@ -11,4 +12,4 @@ const BrandMastercardIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElem
     fill: "#f79e1b"
   }} /></svg>;
 const ForwardRef = forwardRef(BrandMastercardIcon);
-export default ForwardRef;
+export default createLucideIcon('BrandMastercardIcon', ForwardRef);

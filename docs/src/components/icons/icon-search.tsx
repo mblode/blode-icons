@@ -99,10 +99,7 @@ export const IconSearch = () => {
   return (
     <>
       <header className="container mb-2">
-        <a
-          className="flex space-x-1 xs:space-x-[5px]"
-          href="https://fingertip.com"
-        >
+        <a className="flex space-x-1 xs:space-x-[5px]" href="https://blode.co">
           <LogoIcon className="h-[19.2px] xs:h-[24px] w-[23.376px] xs:w-[29.22px] shrink-0" />
           <LogoWordmarkIcon className="relative top-[4px] h-[16px] xs:h-[20px] w-[97.566px] xs:w-[121.957px] shrink-0" />
         </a>

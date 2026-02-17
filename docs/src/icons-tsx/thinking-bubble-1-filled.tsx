@@ -1,6 +1,7 @@
+import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
 const ThinkingBubble1FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M14.3999 2c-1.5932 0-3.0415.6298-4.1081 1.6518-.0721.069-.1879.1074-.303.0873a5.55 5.55 0 0 0-.9515-.0819c-3.0624 0-5.5375 2.4921-5.5375 5.5572 0 1.7183.7784 3.2561 1.9986 4.2744a.33.33 0 0 1 .1143.2066C5.979 16.4057 8.2921 18.5 11.0998 18.5c1.3421 0 2.5747-.4804 3.5326-1.2775.0803-.0668.1871-.0925.2795-.0745a5.96 5.96 0 0 0 1.138.1093c3.2902 0 5.95-2.6776 5.95-5.9715 0-1.6025-.6304-3.06-1.6548-4.1323a.277.277 0 0 1-.0724-.1457C19.8135 4.171 17.3628 2 14.3999 2M4 17c-1.6568 0-3 1.3431-3 3s1.3432 3 3 3 3-1.3431 3-3-1.3431-3-3-3" /></svg>;
 const ForwardRef = forwardRef(ThinkingBubble1FilledIcon);
-export default ForwardRef;
+export default createLucideIcon('ThinkingBubble1FilledIcon', ForwardRef);

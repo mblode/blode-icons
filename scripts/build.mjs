@@ -411,11 +411,11 @@ function generateLucideAliases() {
   const mappingContent = fs.readFileSync(mappingFile, "utf-8");
   const entries = [];
   const entryRegex =
-    /lucideName:\s*["']([^"']+)["'],\s*fingertipName:\s*["']([^"']+)["'],\s*category:\s*["']([^"']+)["'],\s*hasMatch:\s*(true|false)/g;
+    /lucideName:\s*["']([^"']+)["'],\s*blodeName:\s*["']([^"']+)["'],\s*category:\s*["']([^"']+)["'],\s*hasMatch:\s*(true|false)/g;
   for (const match of mappingContent.matchAll(entryRegex)) {
     entries.push({
       lucideName: match[1],
-      fingertipName: match[2],
+      blodeName: match[2],
       hasMatch: match[4] === "true",
     });
   }
@@ -441,11 +441,11 @@ function generateLucideAliases() {
   const errors = [];
   const seen = new Set();
 
-  for (const { lucideName, fingertipName } of validEntries) {
-    const sourceFile = componentToFile.get(fingertipName);
+  for (const { lucideName, blodeName } of validEntries) {
+    const sourceFile = componentToFile.get(blodeName);
     if (!sourceFile) {
       errors.push(
-        `  ✗ ${lucideName} → ${fingertipName} (not found in all-icons.ts)`
+        `  ✗ ${lucideName} → ${blodeName} (not found in all-icons.ts)`
       );
       continue;
     }
@@ -471,11 +471,11 @@ function generateLucideAliases() {
     );
 
     // Filled aliases
-    const filledFingertipName = fingertipName.replace(
+    const filledBlodeName = blodeName.replace(
       ICON_SUFFIX_RE,
       "FilledIcon"
     );
-    const filledSourceFile = componentToFile.get(filledFingertipName);
+    const filledSourceFile = componentToFile.get(filledBlodeName);
     if (filledSourceFile) {
       addReExportAlias(
         `${lucideName}Filled`,
