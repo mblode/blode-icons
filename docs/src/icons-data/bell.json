@@ -1,1 +1,5 @@
-{"icon":"bell","category":"Interface General","tags":["notification","activity","alert"]}
+{
+  "icon": "bell",
+  "category": "Interface General",
+  "tags": ["notification", "activity", "alert"]
+}

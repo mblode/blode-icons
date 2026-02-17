@@ -1,8 +1,5 @@
 {
   "icon": "loading-circle",
   "category": "Interface General",
-  "tags": [
-    "quarter",
-    "spinner"
-  ]
+  "tags": ["quarter", "spinner"]
 }

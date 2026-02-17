@@ -1,1 +1,5 @@
-{"icon":"email-plus","category":"Communication","tags":["envelope","add","plus"]}
+{
+  "icon": "email-plus",
+  "category": "Communication",
+  "tags": ["envelope", "add", "plus"]
+}

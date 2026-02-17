@@ -1,1 +1,5 @@
-{"icon":"heart-beat","category":"Interface General","tags":["heart rate","pulse"]}
+{
+  "icon": "heart-beat",
+  "category": "Interface General",
+  "tags": ["heart rate", "pulse"]
+}

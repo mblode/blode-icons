@@ -1,1 +1,5 @@
-{"icon":"battery-loading","category":"Devices & Signals","tags":["power"]}
+{
+  "icon": "battery-loading",
+  "category": "Devices & Signals",
+  "tags": ["power"]
+}

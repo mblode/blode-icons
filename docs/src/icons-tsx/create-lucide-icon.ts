@@ -1,5 +1,5 @@
-import * as React from 'react'
-import type { LucideIcon, LucideProps } from './lucide-types'
+import * as React from "react";
+import type { LucideIcon, LucideProps } from "./lucide-types";
 
 /**
  * Wraps a @fingertip/icons component so it accepts lucide-react props
@@ -9,23 +9,23 @@ export function createLucideIcon(
   name: string,
   IconComponent: React.ForwardRefExoticComponent<
     React.SVGProps<SVGSVGElement> & React.RefAttributes<SVGSVGElement>
-  >,
+  >
 ): LucideIcon {
   const WrappedIcon = React.forwardRef<SVGSVGElement, LucideProps>(
     (
       {
-        color = 'currentColor',
+        color = "currentColor",
         size = 24,
         strokeWidth = 2,
         absoluteStrokeWidth,
         style,
         ...rest
       },
-      ref,
+      ref
     ) => {
       const computedStrokeWidth = absoluteStrokeWidth
         ? (Number(strokeWidth) * 24) / Number(size)
-        : strokeWidth
+        : strokeWidth;
 
       return React.createElement(IconComponent, {
         ref,
@@ -34,10 +34,10 @@ export function createLucideIcon(
         strokeWidth: computedStrokeWidth,
         style: { color, ...style },
         ...rest,
-      })
-    },
-  )
+      });
+    }
+  );
 
-  WrappedIcon.displayName = name
-  return WrappedIcon
+  WrappedIcon.displayName = name;
+  return WrappedIcon;
 }

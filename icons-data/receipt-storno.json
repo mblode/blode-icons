@@ -1,1 +1,5 @@
-{"icon":"receipt-storno","category":"Shopping & Payment","tags":["close","remove"]}
+{
+  "icon": "receipt-storno",
+  "category": "Shopping & Payment",
+  "tags": ["close", "remove"]
+}

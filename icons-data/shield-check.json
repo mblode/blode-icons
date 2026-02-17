@@ -1,1 +1,5 @@
-{"icon":"shield-check","category":"Security","tags":["security","protection"]}
+{
+  "icon": "shield-check",
+  "category": "Security",
+  "tags": ["security", "protection"]
+}

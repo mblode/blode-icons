@@ -1,1 +1,5 @@
-{"icon":"airdrop","category":"Devices & Signals","tags":["file-sharing","radar"]}
+{
+  "icon": "airdrop",
+  "category": "Devices & Signals",
+  "tags": ["file-sharing", "radar"]
+}

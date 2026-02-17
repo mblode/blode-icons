@@ -1,1 +1,5 @@
-{"icon":"television","category":"Devices & Signals","tags":["tv","monitor","video","screen","display"]}
+{
+  "icon": "television",
+  "category": "Devices & Signals",
+  "tags": ["tv", "monitor", "video", "screen", "display"]
+}

@@ -1,8 +1,5 @@
 {
   "icon": "dumbell",
   "category": "Things",
-  "tags": [
-    "fitness",
-    "training"
-  ]
+  "tags": ["fitness", "training"]
 }

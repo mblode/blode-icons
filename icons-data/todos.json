@@ -1,1 +1,5 @@
-{"icon":"todos","category":"Interface General","tags":["check","things","task"]}
+{
+  "icon": "todos",
+  "category": "Interface General",
+  "tags": ["check", "things", "task"]
+}

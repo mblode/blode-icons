@@ -1,6 +1,27 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const BezierEditIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 6v.5c0 .8284.6716 1.5 1.5 1.5h.5m-2-2v-.5c0-.8284.6716-1.5 1.5-1.5h1c.8284 0 1.5.6716 1.5 1.5v1c0 .8284-.6716 1.5-1.5 1.5H18m-2-2H8M6 8v8m2 2h2m8-10v2M5.5 20h1c.8284 0 1.5-.6716 1.5-1.5v-1c0-.8284-.6716-1.5-1.5-1.5h-1c-.8284 0-1.5.6716-1.5 1.5v1c0 .8284.6716 1.5 1.5 1.5m0-12h1C7.3284 8 8 7.3284 8 6.5v-1C8 4.6716 7.3284 4 6.5 4h-1C4.6716 4 4 4.6716 4 5.5v1C4 7.3284 4.6716 8 5.5 8m8.5 9.6667V20h2.3333l3.5-3.5c.6444-.6443.6444-1.689 0-2.3333-.6443-.6444-1.689-.6444-2.3333 0z" /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const BezierEditIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M16 6v.5c0 .8284.6716 1.5 1.5 1.5h.5m-2-2v-.5c0-.8284.6716-1.5 1.5-1.5h1c.8284 0 1.5.6716 1.5 1.5v1c0 .8284-.6716 1.5-1.5 1.5H18m-2-2H8M6 8v8m2 2h2m8-10v2M5.5 20h1c.8284 0 1.5-.6716 1.5-1.5v-1c0-.8284-.6716-1.5-1.5-1.5h-1c-.8284 0-1.5.6716-1.5 1.5v1c0 .8284.6716 1.5 1.5 1.5m0-12h1C7.3284 8 8 7.3284 8 6.5v-1C8 4.6716 7.3284 4 6.5 4h-1C4.6716 4 4 4.6716 4 5.5v1C4 7.3284 4.6716 8 5.5 8m8.5 9.6667V20h2.3333l3.5-3.5c.6444-.6443.6444-1.689 0-2.3333-.6443-.6444-1.689-.6444-2.3333 0z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(BezierEditIcon);
 export default ForwardRef;

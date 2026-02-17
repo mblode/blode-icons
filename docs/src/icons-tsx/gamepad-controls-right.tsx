@@ -1,11 +1,41 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const GamepadControlsRightIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" stroke="currentColor" strokeLinecap="square" strokeLinejoin="round" strokeWidth={2} d="M21 13.5v-3c0-.8284-.6716-1.5-1.5-1.5h-1.6287a1.5 1.5 0 0 0-1.0606.4393l-1.8536 1.8536c-.3905.3905-.3905 1.0237 0 1.4142l1.8536 1.8536A1.5 1.5 0 0 0 17.8713 15H19.5c.8284 0 1.5-.6716 1.5-1.5Z" style={{
-    fill: "currentColor",
-    fillOpacity: 1,
-    stroke: "currentColor",
-    strokeOpacity: 1
-  }} /><path stroke="currentColor" strokeLinecap="square" strokeLinejoin="round" strokeWidth={2} d="M13.5 3h-3C9.6716 3 9 3.6716 9 4.5v1.6287a1.5 1.5 0 0 0 .4393 1.0606L11.293 9.043c.3905.3905 1.0237.3905 1.4142 0l1.8536-1.8536A1.5 1.5 0 0 0 15 6.1287V4.5c0-.8284-.6716-1.5-1.5-1.5ZM10.5 21h3c.8284 0 1.5-.6716 1.5-1.5v-1.6287c0-.3978-.158-.7793-.4393-1.0606l-1.8536-1.8536c-.3905-.3905-1.0237-.3905-1.4142 0l-1.8536 1.8536A1.5 1.5 0 0 0 9 17.8713V19.5c0 .8284.6716 1.5 1.5 1.5ZM3 10.5v3c0 .8284.6716 1.5 1.5 1.5h1.6287a1.5 1.5 0 0 0 1.0606-.4393l1.8536-1.8536c.3905-.3905.3905-1.0237 0-1.4142L7.1893 9.4393A1.5 1.5 0 0 0 6.1287 9H4.5C3.6716 9 3 9.6716 3 10.5Z" /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const GamepadControlsRightIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M21 13.5v-3c0-.8284-.6716-1.5-1.5-1.5h-1.6287a1.5 1.5 0 0 0-1.0606.4393l-1.8536 1.8536c-.3905.3905-.3905 1.0237 0 1.4142l1.8536 1.8536A1.5 1.5 0 0 0 17.8713 15H19.5c.8284 0 1.5-.6716 1.5-1.5Z"
+      fill="currentColor"
+      stroke="currentColor"
+      strokeLinecap="square"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+        stroke: "currentColor",
+        strokeOpacity: 1,
+      }}
+    />
+    <path
+      d="M13.5 3h-3C9.6716 3 9 3.6716 9 4.5v1.6287a1.5 1.5 0 0 0 .4393 1.0606L11.293 9.043c.3905.3905 1.0237.3905 1.4142 0l1.8536-1.8536A1.5 1.5 0 0 0 15 6.1287V4.5c0-.8284-.6716-1.5-1.5-1.5ZM10.5 21h3c.8284 0 1.5-.6716 1.5-1.5v-1.6287c0-.3978-.158-.7793-.4393-1.0606l-1.8536-1.8536c-.3905-.3905-1.0237-.3905-1.4142 0l-1.8536 1.8536A1.5 1.5 0 0 0 9 17.8713V19.5c0 .8284.6716 1.5 1.5 1.5ZM3 10.5v3c0 .8284.6716 1.5 1.5 1.5h1.6287a1.5 1.5 0 0 0 1.0606-.4393l1.8536-1.8536c.3905-.3905.3905-1.0237 0-1.4142L7.1893 9.4393A1.5 1.5 0 0 0 6.1287 9H4.5C3.6716 9 3 9.6716 3 10.5Z"
+      stroke="currentColor"
+      strokeLinecap="square"
+      strokeLinejoin="round"
+      strokeWidth={2}
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(GamepadControlsRightIcon);
 export default ForwardRef;

@@ -1,7 +1,5 @@
 {
   "icon": "corner-radius",
   "category": "Edit",
-  "tags": [
-    "border-radius"
-  ]
+  "tags": ["border-radius"]
 }

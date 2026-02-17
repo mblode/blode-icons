@@ -1,7 +1,5 @@
 {
   "icon": "chip-simple",
   "category": "Devices & Signals",
-  "tags": [
-    "processor"
-  ]
+  "tags": ["processor"]
 }

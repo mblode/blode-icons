@@ -1,1 +1,5 @@
-{"icon":"bezier-curve","category":"Edit","tags":["bezier","vector","svg"]}
+{
+  "icon": "bezier-curve",
+  "category": "Edit",
+  "tags": ["bezier", "vector", "svg"]
+}

@@ -1,9 +1,28 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const HomeRoofFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12.4921 1.7913a2 2 0 0 0-.984 0c-.3743.095-.695.3267-.9506.5113l-.0709.051L1.918 8.4882c-.4491.3215-.5525.9462-.231 1.3952.3215.4491.9461.5525 1.3952.231L4 9.4572v5.7841c0 .805 0 1.4693.0442 2.0105.046.5621.1445 1.0788.3918 1.5642a4 4 0 0 0 1.748 1.748c.4854.2473 1.002.3459 1.5642.3918C8.2895 21 8.9538 21 9.7588 21h4.4826c.805 0 1.4693 0 2.0105-.0442.5621-.0459 1.0788-.1445 1.5642-.3918a4 4 0 0 0 1.748-1.748c.2473-.4854.3459-1.0021.3918-1.5642.0442-.5412.0442-1.2055.0442-2.0105V9.4572l.9179.6571c.4491.3215 1.0737.2181 1.3952-.231s.2181-1.0737-.231-1.3952l-8.5686-6.1344-.0709-.051c-.2556-.1847-.5763-.4164-.9506-.5114" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const HomeRoofFilledIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M12.4921 1.7913a2 2 0 0 0-.984 0c-.3743.095-.695.3267-.9506.5113l-.0709.051L1.918 8.4882c-.4491.3215-.5525.9462-.231 1.3952.3215.4491.9461.5525 1.3952.231L4 9.4572v5.7841c0 .805 0 1.4693.0442 2.0105.046.5621.1445 1.0788.3918 1.5642a4 4 0 0 0 1.748 1.748c.4854.2473 1.002.3459 1.5642.3918C8.2895 21 8.9538 21 9.7588 21h4.4826c.805 0 1.4693 0 2.0105-.0442.5621-.0459 1.0788-.1445 1.5642-.3918a4 4 0 0 0 1.748-1.748c.2473-.4854.3459-1.0021.3918-1.5642.0442-.5412.0442-1.2055.0442-2.0105V9.4572l.9179.6571c.4491.3215 1.0737.2181 1.3952-.231s.2181-1.0737-.231-1.3952l-8.5686-6.1344-.0709-.051c-.2556-.1847-.5763-.4164-.9506-.5114"
+      fill="currentColor"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(HomeRoofFilledIcon);
 export default ForwardRef;

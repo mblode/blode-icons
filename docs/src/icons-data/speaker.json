@@ -1,1 +1,5 @@
-{"icon":"speaker","category":"Devices & Signals","tags":["music","sound"]}
+{
+  "icon": "speaker",
+  "category": "Devices & Signals",
+  "tags": ["music", "sound"]
+}

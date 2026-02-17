@@ -1,1 +1,5 @@
-{"icon":"gauge","category":"Interface General","tags":["tachometer","performance","speed","scale"]}
+{
+  "icon": "gauge",
+  "category": "Interface General",
+  "tags": ["tachometer", "performance", "speed", "scale"]
+}

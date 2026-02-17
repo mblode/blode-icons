@@ -1,1 +1,5 @@
-{"icon":"studio-display","category":"Devices & Signals","tags":["thunderbolt"]}
+{
+  "icon": "studio-display",
+  "category": "Devices & Signals",
+  "tags": ["thunderbolt"]
+}

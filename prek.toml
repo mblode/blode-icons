@@ -1,9 +1,0 @@
-[[repos]]
-repo = "local"
-
-[[repos.hooks]]
-id = "ultracite"
-name = "ultracite fix"
-entry = "npx ultracite fix"
-language = "system"
-pass_filenames = false

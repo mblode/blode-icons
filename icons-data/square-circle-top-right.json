@@ -1,1 +1,5 @@
-{"icon":"square-circle-top-right","category":"Interface General","tags":["notifications","badge"]}
+{
+  "icon": "square-circle-top-right",
+  "category": "Interface General",
+  "tags": ["notifications", "badge"]
+}

@@ -1,7 +1,5 @@
 {
   "icon": "bus",
   "category": "Things",
-  "tags": [
-    "school-bus"
-  ]
+  "tags": ["school-bus"]
 }

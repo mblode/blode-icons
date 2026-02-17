@@ -1,1 +1,5 @@
-{"icon":"phone-haptic","category":"Devices & Signals","tags":["vibration"]}
+{
+  "icon": "phone-haptic",
+  "category": "Devices & Signals",
+  "tags": ["vibration"]
+}

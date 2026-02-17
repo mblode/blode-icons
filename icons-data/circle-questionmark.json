@@ -1,1 +1,5 @@
-{"icon":"circle-questionmark","category":"Interface General","tags":["faq","help","questionaire"]}
+{
+  "icon": "circle-questionmark",
+  "category": "Interface General",
+  "tags": ["faq", "help", "questionaire"]
+}

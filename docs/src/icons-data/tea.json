@@ -1,9 +1,5 @@
 {
   "icon": "tea",
   "category": "Food",
-  "tags": [
-    "cafe",
-    "coffee",
-    "vibe"
-  ]
+  "tags": ["cafe", "coffee", "vibe"]
 }

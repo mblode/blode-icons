@@ -1,1 +1,5 @@
-{"icon":"solar-panel","category":"Nature & Energy","tags":["Photovoltaics","energy","electricity"]}
+{
+  "icon": "solar-panel",
+  "category": "Nature & Energy",
+  "tags": ["Photovoltaics", "energy", "electricity"]
+}

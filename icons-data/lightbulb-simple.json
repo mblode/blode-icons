@@ -1,9 +1,5 @@
 {
   "icon": "lightbulb-simple",
   "category": "Interface General",
-  "tags": [
-    "idea",
-    "reasoning",
-    "thinkl"
-  ]
+  "tags": ["idea", "reasoning", "thinkl"]
 }

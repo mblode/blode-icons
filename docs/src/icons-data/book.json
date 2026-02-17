@@ -1,1 +1,5 @@
-{"icon":"book","category":"Communication","tags":["guide","info","faq"]}
+{
+  "icon": "book",
+  "category": "Communication",
+  "tags": ["guide", "info", "faq"]
+}

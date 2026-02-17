@@ -1,1 +1,5 @@
-{"icon":"circle-record","category":"Devices & Signals","tags":["voicemail","band","tape"]}
+{
+  "icon": "circle-record",
+  "category": "Devices & Signals",
+  "tags": ["voicemail", "band", "tape"]
+}

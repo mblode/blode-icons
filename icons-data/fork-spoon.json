@@ -1,1 +1,5 @@
-{"icon":"fork-spoon","category":"Food","tags":["cable","restaurant","cutlery"]}
+{
+  "icon": "fork-spoon",
+  "category": "Food",
+  "tags": ["cable", "restaurant", "cutlery"]
+}

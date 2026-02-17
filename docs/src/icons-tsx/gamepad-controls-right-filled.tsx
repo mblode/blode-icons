@@ -1,12 +1,38 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const GamepadControlsRightFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M10.5 2C9.1193 2 8 3.1193 8 4.5v1.6287a2.5 2.5 0 0 0 .7322 1.7677L10.5858 9.75c.781.781 2.0474.781 2.8284 0l1.8536-1.8536A2.5 2.5 0 0 0 16 6.1288V4.5C16 3.1193 14.8807 2 13.5 2zM4.5 8C3.1193 8 2 9.1193 2 10.5v3C2 14.8807 3.1193 16 4.5 16h1.6287c.663 0 1.299-.2634 1.7677-.7322L9.75 13.4142c.781-.781.781-2.0474 0-2.8284L7.8964 8.7322A2.5 2.5 0 0 0 6.1288 8zM13.4142 14.25c-.781-.781-2.0474-.781-2.8284 0l-1.8536 1.8536A2.5 2.5 0 0 0 8 17.8713V19.5c0 1.3807 1.1193 2.5 2.5 2.5h3c1.3807 0 2.5-1.1193 2.5-2.5v-1.6287a2.5 2.5 0 0 0-.7322-1.7677z" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /><path fill="currentColor" fillRule="evenodd" d="M22 13.5c0 1.3807-1.1193 2.5-2.5 2.5h-1.6287a2.5 2.5 0 0 1-1.7677-.7322L14.25 13.4142c-.781-.781-.781-2.0474 0-2.8284l1.8536-1.8536A2.5 2.5 0 0 1 17.8713 8H19.5c1.3807 0 2.5 1.1193 2.5 2.5zm-2-3a.5.5 0 0 0-.5-.5h-1.6287a.5.5 0 0 0-.3535.1464L15.6642 12l1.8536 1.8536a.5.5 0 0 0 .3535.1464H19.5a.5.5 0 0 0 .5-.5z" clipRule="evenodd" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const GamepadControlsRightFilledIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M10.5 2C9.1193 2 8 3.1193 8 4.5v1.6287a2.5 2.5 0 0 0 .7322 1.7677L10.5858 9.75c.781.781 2.0474.781 2.8284 0l1.8536-1.8536A2.5 2.5 0 0 0 16 6.1288V4.5C16 3.1193 14.8807 2 13.5 2zM4.5 8C3.1193 8 2 9.1193 2 10.5v3C2 14.8807 3.1193 16 4.5 16h1.6287c.663 0 1.299-.2634 1.7677-.7322L9.75 13.4142c.781-.781.781-2.0474 0-2.8284L7.8964 8.7322A2.5 2.5 0 0 0 6.1288 8zM13.4142 14.25c-.781-.781-2.0474-.781-2.8284 0l-1.8536 1.8536A2.5 2.5 0 0 0 8 17.8713V19.5c0 1.3807 1.1193 2.5 2.5 2.5h3c1.3807 0 2.5-1.1193 2.5-2.5v-1.6287a2.5 2.5 0 0 0-.7322-1.7677z"
+      fill="currentColor"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+    <path
+      clipRule="evenodd"
+      d="M22 13.5c0 1.3807-1.1193 2.5-2.5 2.5h-1.6287a2.5 2.5 0 0 1-1.7677-.7322L14.25 13.4142c-.781-.781-.781-2.0474 0-2.8284l1.8536-1.8536A2.5 2.5 0 0 1 17.8713 8H19.5c1.3807 0 2.5 1.1193 2.5 2.5zm-2-3a.5.5 0 0 0-.5-.5h-1.6287a.5.5 0 0 0-.3535.1464L15.6642 12l1.8536 1.8536a.5.5 0 0 0 .3535.1464H19.5a.5.5 0 0 0 .5-.5z"
+      fill="currentColor"
+      fillRule="evenodd"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(GamepadControlsRightFilledIcon);
 export default ForwardRef;

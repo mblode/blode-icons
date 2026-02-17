@@ -1,1 +1,7 @@
-{"icon":"package","category":"Shopping & Payment","tags":["delivery"]}
+{
+  "icon": "package",
+  "category": "Shopping & Payment",
+  "tags": [
+    "delivery"
+  ]
+}

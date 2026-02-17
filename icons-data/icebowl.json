@@ -1,8 +1,5 @@
 {
   "icon": "icebowl",
   "category": "Food",
-  "tags": [
-    "cooling",
-    "vibe"
-  ]
+  "tags": ["cooling", "vibe"]
 }

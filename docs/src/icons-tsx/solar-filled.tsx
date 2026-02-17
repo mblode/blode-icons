@@ -1,12 +1,38 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const SolarFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M15.0007 3c.5523 0 1.0138.4547.8776.9899C15.4378 5.7202 13.8692 7 12.0017 7s-3.436-1.2798-3.8766-3.0101C7.989 3.4547 8.4504 3 9.0027 3zM3.0017 4c0-.5523.4477-1 1-1h1c.5523 0 1 .4477 1 1s-.4477 1-1 1h-1c-.5523 0-1-.4477-1-1m15 0c0-.5523.4477-1 1-1h1c.5523 0 1 .4477 1 1s-.4477 1-1 1h-1c-.5523 0-1-.4477-1-1m-6 5c.5523 0 1 .4477 1 1v1c0 .5523-.4477 1-1 1s-1-.4477-1-1v-1c0-.5523.4477-1 1-1M7.7088 7.5429c.3905.3905.3905 1.0237 0 1.4142l-.75.75c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l.75-.75c.3905-.3905 1.0237-.3905 1.4142 0M16.2946 7.5429c-.3905.3905-.3905 1.0237 0 1.4142l.75.75c.3905.3905 1.0237.3905 1.4142 0s.3905-1.0237 0-1.4142l-.75-.75c-.3905-.3905-1.0237-.3905-1.4142 0" clipRule="evenodd" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /><path fill="currentColor" d="M11.0017 16c0-.5523-.4477-1-1-1h-4.382a2 2 0 0 0-1.7888 1.1056l-1 2C2.166 19.4354 3.133 21 4.6198 21h5.3819c.5523 0 1-.4477 1-1zM13.0017 20c0 .5523.4477 1 1 1h5.382c1.4868 0 2.4538-1.5646 1.7889-2.8944l-1-2A2 2 0 0 0 18.3837 15h-4.382c-.5523 0-1 .4477-1 1z" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const SolarFilledIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      clipRule="evenodd"
+      d="M15.0007 3c.5523 0 1.0138.4547.8776.9899C15.4378 5.7202 13.8692 7 12.0017 7s-3.436-1.2798-3.8766-3.0101C7.989 3.4547 8.4504 3 9.0027 3zM3.0017 4c0-.5523.4477-1 1-1h1c.5523 0 1 .4477 1 1s-.4477 1-1 1h-1c-.5523 0-1-.4477-1-1m15 0c0-.5523.4477-1 1-1h1c.5523 0 1 .4477 1 1s-.4477 1-1 1h-1c-.5523 0-1-.4477-1-1m-6 5c.5523 0 1 .4477 1 1v1c0 .5523-.4477 1-1 1s-1-.4477-1-1v-1c0-.5523.4477-1 1-1M7.7088 7.5429c.3905.3905.3905 1.0237 0 1.4142l-.75.75c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l.75-.75c.3905-.3905 1.0237-.3905 1.4142 0M16.2946 7.5429c-.3905.3905-.3905 1.0237 0 1.4142l.75.75c.3905.3905 1.0237.3905 1.4142 0s.3905-1.0237 0-1.4142l-.75-.75c-.3905-.3905-1.0237-.3905-1.4142 0"
+      fill="currentColor"
+      fillRule="evenodd"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+    <path
+      d="M11.0017 16c0-.5523-.4477-1-1-1h-4.382a2 2 0 0 0-1.7888 1.1056l-1 2C2.166 19.4354 3.133 21 4.6198 21h5.3819c.5523 0 1-.4477 1-1zM13.0017 20c0 .5523.4477 1 1 1h5.382c1.4868 0 2.4538-1.5646 1.7889-2.8944l-1-2A2 2 0 0 0 18.3837 15h-4.382c-.5523 0-1 .4477-1 1z"
+      fill="currentColor"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(SolarFilledIcon);
 export default ForwardRef;

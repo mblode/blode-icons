@@ -1,1 +1,5 @@
-{"icon":"auto-correct","category":"Typography","tags":["autocheck","text-correction"]}
+{
+  "icon": "auto-correct",
+  "category": "Typography",
+  "tags": ["autocheck", "text-correction"]
+}

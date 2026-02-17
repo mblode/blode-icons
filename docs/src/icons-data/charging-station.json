@@ -1,1 +1,5 @@
-{"icon":"charging-station","category":"Nature & Energy","tags":["electric-current","power","e-charge"]}
+{
+  "icon": "charging-station",
+  "category": "Nature & Energy",
+  "tags": ["electric-current", "power", "e-charge"]
+}

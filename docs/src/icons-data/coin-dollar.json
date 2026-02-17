@@ -1,8 +1,5 @@
 {
   "icon": "coin-dollar",
   "category": "Shopping & Payment",
-  "tags": [
-    "currency",
-    "money"
-  ]
+  "tags": ["currency", "money"]
 }

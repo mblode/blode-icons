@@ -1,1 +1,5 @@
-{"icon":"warning-sign","category":"Things","tags":["attention","coution"]}
+{
+  "icon": "warning-sign",
+  "category": "Things",
+  "tags": ["attention", "coution"]
+}

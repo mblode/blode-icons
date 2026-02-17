@@ -1,1 +1,5 @@
-{"icon":"arrow-rotate-counter-clockwise","category":"Arrows","tags":["rotate-left"]}
+{
+  "icon": "arrow-rotate-counter-clockwise",
+  "category": "Arrows",
+  "tags": ["rotate-left"]
+}

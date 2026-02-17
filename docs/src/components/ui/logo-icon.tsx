@@ -1,13 +1,14 @@
-import * as React from 'react'
-import { SVGProps } from 'react'
+import type { SVGProps } from "react";
 
 export const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={137}
-    height={114}
-    viewBox="0 0 137 114"
+    aria-label="Logo"
     fill="none"
+    height={114}
+    role="img"
+    viewBox="0 0 137 114"
+    width={137}
+    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <g fill="#F95828" filter="url(#a)">
@@ -17,13 +18,13 @@ export const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
     </g>
     <defs>
       <filter
-        id="a"
-        width={137}
-        height={120.642}
-        x={0}
-        y={0.597}
         colorInterpolationFilters="sRGB"
         filterUnits="userSpaceOnUse"
+        height={120.642}
+        id="a"
+        width={137}
+        x={0}
+        y={0.597}
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
@@ -40,4 +41,4 @@ export const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
       </filter>
     </defs>
   </svg>
-)
+);

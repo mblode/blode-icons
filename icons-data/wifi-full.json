@@ -1,1 +1,5 @@
-{"icon":"wifi-full","category":"Devices & Signals","tags":["spot","signal","hot spot"]}
+{
+  "icon": "wifi-full",
+  "category": "Devices & Signals",
+  "tags": ["spot", "signal", "hot spot"]
+}

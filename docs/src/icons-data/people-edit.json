@@ -1,9 +1,5 @@
 {
   "icon": "people-edit",
   "category": "People",
-  "tags": [
-    "edit-user",
-    "edit-rights",
-    "user-rights"
-  ]
+  "tags": ["edit-user", "edit-rights", "user-rights"]
 }

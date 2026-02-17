@@ -1,1 +1,5 @@
-{"icon":"arrows-all-sides","category":"Interface General","tags":["move","focus"]}
+{
+  "icon": "arrows-all-sides",
+  "category": "Interface General",
+  "tags": ["move", "focus"]
+}

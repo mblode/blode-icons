@@ -1,12 +1,38 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-import { Ref, forwardRef } from "react";
-const BoxSparkleFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={25} height={24} fill="none" viewBox="0 0 25 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M20.2741 4.1482c.4704.2895.617.9054.3276 1.3758l-2.1391 3.4759H19.75c.5523 0 1 .4477 1 1v8c0 2.2091-1.7909 4-4 4h-8c-2.2091 0-4-1.7909-4-4v-8c0-.5523.4477-1 1-1h10.3643l2.784-4.5241c.2895-.4704.9054-.617 1.3758-.3276M10.75 13c-.5523 0-1 .4477-1 1s.4477 1 1 1h4c.5523 0 1-.4477 1-1s-.4477-1-1-1z" clipRule="evenodd" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /><path fill="currentColor" d="M12.6001 3.0744a.5.5 0 0 0 .2236-.2236l.4782-.9565c.1843-.3685.7102-.3685.8945 0l.4782.9565a.5.5 0 0 0 .2236.2236l.9565.4783c.3686.1842.3686.7101 0 .8944l-.9565.4783a.5.5 0 0 0-.2236.2236l-.4782.9565c-.1843.3685-.7102.3685-.8945 0l-.4782-.9565a.5.5 0 0 0-.2236-.2237l-.9565-.4782c-.3685-.1843-.3685-.7102 0-.8944zM7.2668 4.741a.5.5 0 0 0 .2236-.2235l.3115-.6232c.1843-.3685.7102-.3685.8945 0l.3115.6232a.5.5 0 0 0 .2237.2236l.6231.3116c.3685.1842.3686.7101 0 .8944l-.6231.3116a.5.5 0 0 0-.2237.2236l-.3115.6232c-.1843.3685-.7102.3685-.8945 0l-.3115-.6232a.5.5 0 0 0-.2237-.2236l-.6231-.3116c-.3685-.1843-.3685-.7102 0-.8944z" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /></svg>;
+import { forwardRef, type Ref } from "react";
+
+const BoxSparkleFilledIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    fill="none"
+    height={24}
+    ref={ref}
+    viewBox="0 0 25 24"
+    width={25}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      clipRule="evenodd"
+      d="M20.2741 4.1482c.4704.2895.617.9054.3276 1.3758l-2.1391 3.4759H19.75c.5523 0 1 .4477 1 1v8c0 2.2091-1.7909 4-4 4h-8c-2.2091 0-4-1.7909-4-4v-8c0-.5523.4477-1 1-1h10.3643l2.784-4.5241c.2895-.4704.9054-.617 1.3758-.3276M10.75 13c-.5523 0-1 .4477-1 1s.4477 1 1 1h4c.5523 0 1-.4477 1-1s-.4477-1-1-1z"
+      fill="currentColor"
+      fillRule="evenodd"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+    <path
+      d="M12.6001 3.0744a.5.5 0 0 0 .2236-.2236l.4782-.9565c.1843-.3685.7102-.3685.8945 0l.4782.9565a.5.5 0 0 0 .2236.2236l.9565.4783c.3686.1842.3686.7101 0 .8944l-.9565.4783a.5.5 0 0 0-.2236.2236l-.4782.9565c-.1843.3685-.7102.3685-.8945 0l-.4782-.9565a.5.5 0 0 0-.2236-.2237l-.9565-.4782c-.3685-.1843-.3685-.7102 0-.8944zM7.2668 4.741a.5.5 0 0 0 .2236-.2235l.3115-.6232c.1843-.3685.7102-.3685.8945 0l.3115.6232a.5.5 0 0 0 .2237.2236l.6231.3116c.3685.1842.3686.7101 0 .8944l-.6231.3116a.5.5 0 0 0-.2237.2236l-.3115.6232c-.1843.3685-.7102.3685-.8945 0l-.3115-.6232a.5.5 0 0 0-.2237-.2236l-.6231-.3116c-.3685-.1843-.3685-.7102 0-.8944z"
+      fill="currentColor"
+      style={{
+        fill: "currentColor",
+        fillOpacity: 1,
+      }}
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(BoxSparkleFilledIcon);
 export default ForwardRef;

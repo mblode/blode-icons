@@ -1,1 +1,5 @@
-{"icon":"door-hanger","category":"Things","tags":["sign","do-not-disdurb"]}
+{
+  "icon": "door-hanger",
+  "category": "Things",
+  "tags": ["sign", "do-not-disdurb"]
+}
