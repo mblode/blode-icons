@@ -1,26 +1,6 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const EarFilledIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      clipRule="evenodd"
-      d="M5 9.5C5 5.3579 8.3579 2 12.5 2S20 5.3579 20 9.5v.1058a6.78 6.78 0 0 1-1.9858 4.7943l-2.3891 2.389a7 7 0 0 0-1.3113 1.8193l-.3945.789A4.708 4.708 0 0 1 9.7082 22C7.1079 22 5 19.8921 5 17.2918zM12.5 6C10.567 6 9 7.567 9 9.5c0 .5821.0739 1.085.158 1.53.0363.1918.0702.3548.1017.5061.048.2306.0904.4342.1269.6715.1014.6612.1104 1.3572-.315 2.421-.2052.5128.0442 1.0948.557 1.2999s1.0948-.0443 1.2999-.5571c.5745-1.4362.5835-2.4988.4349-3.4671-.0427-.2784-.1055-.5831-.1619-.8567a25 25 0 0 1-.0783-.3891C11.0511 10.277 11 9.9092 11 9.5c0-.8284.6716-1.5 1.5-1.5s1.5.6716 1.5 1.5c0 .5523.4477 1 1 1s1-.4477 1-1C16 7.567 14.433 6 12.5 6"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const EarFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M5 9.5C5 5.3579 8.3579 2 12.5 2S20 5.3579 20 9.5v.1058a6.78 6.78 0 0 1-1.9858 4.7943l-2.3891 2.389a7 7 0 0 0-1.3113 1.8193l-.3945.789A4.708 4.708 0 0 1 9.7082 22C7.1079 22 5 19.8921 5 17.2918zM12.5 6C10.567 6 9 7.567 9 9.5c0 .5821.0739 1.085.158 1.53.0363.1918.0702.3548.1017.5061.048.2306.0904.4342.1269.6715.1014.6612.1104 1.3572-.315 2.421-.2052.5128.0442 1.0948.557 1.2999s1.0948-.0443 1.2999-.5571c.5745-1.4362.5835-2.4988.4349-3.4671-.0427-.2784-.1055-.5831-.1619-.8567a25 25 0 0 1-.0783-.3891C11.0511 10.277 11 9.9092 11 9.5c0-.8284.6716-1.5 1.5-1.5s1.5.6716 1.5 1.5c0 .5523.4477 1 1 1s1-.4477 1-1C16 7.567 14.433 6 12.5 6" clipRule="evenodd" /></svg>;
 const ForwardRef = forwardRef(EarFilledIcon);
 export default ForwardRef;

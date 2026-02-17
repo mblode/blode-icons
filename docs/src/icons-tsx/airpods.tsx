@@ -1,27 +1,6 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const AirpodsIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M7 12.7439V18.5c0 .8284.6716 1.5 1.5 1.5s1.5-.6716 1.5-1.5v-10C10 6.0147 7.9853 4 5.5 4a4.5 4.5 0 0 0-1.0395.1207C3.4863 4.351 3 5.3587 3 6.3597v4.2806c0 1.0011.4863 2.0087 1.4605 2.239A4.5 4.5 0 0 0 5.5 13a4.49 4.49 0 0 0 1.5-.2561m0 0V12M17 12.7439V18.5c0 .8284-.6716 1.5-1.5 1.5s-1.5-.6716-1.5-1.5v-10C14 6.0147 16.0147 4 18.5 4c.3578 0 .7058.0418 1.0395.1207C20.5137 4.351 21 5.3587 21 6.3597v4.2806c0 1.0011-.4863 2.0087-1.4605 2.239A4.5 4.5 0 0 1 18.5 13a4.49 4.49 0 0 1-1.5-.2561m0 0V12"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const AirpodsIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12.7439V18.5c0 .8284.6716 1.5 1.5 1.5s1.5-.6716 1.5-1.5v-10C10 6.0147 7.9853 4 5.5 4a4.5 4.5 0 0 0-1.0395.1207C3.4863 4.351 3 5.3587 3 6.3597v4.2806c0 1.0011.4863 2.0087 1.4605 2.239A4.5 4.5 0 0 0 5.5 13a4.49 4.49 0 0 0 1.5-.2561m0 0V12M17 12.7439V18.5c0 .8284-.6716 1.5-1.5 1.5s-1.5-.6716-1.5-1.5v-10C14 6.0147 16.0147 4 18.5 4c.3578 0 .7058.0418 1.0395.1207C20.5137 4.351 21 5.3587 21 6.3597v4.2806c0 1.0011-.4863 2.0087-1.4605 2.239A4.5 4.5 0 0 1 18.5 13a4.49 4.49 0 0 1-1.5-.2561m0 0V12" /></svg>;
 const ForwardRef = forwardRef(AirpodsIcon);
 export default ForwardRef;

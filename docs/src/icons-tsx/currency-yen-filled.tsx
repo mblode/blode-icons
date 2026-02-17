@@ -1,24 +1,6 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const CurrencyYenFilledIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M16.797 3.4413c.4465-.5263 1.2352-.591 1.7617-.1446.5263.4466.5909 1.2353.1445 1.7618L14.1309 10.45h2.6192c.6903 0 1.25.5596 1.25 1.25-.0001.6903-.5597 1.25-1.25 1.25h-3.5v1.5498h3.5c.6903 0 1.25.5596 1.25 1.25-.0001.6903-.5597 1.25-1.25 1.25h-3.5v2.75c-.0001.6903-.5597 1.25-1.25 1.25-.6903-.0001-1.25-.5598-1.25-1.25v-2.75h-3.5c-.6903-.0001-1.25-.5598-1.25-1.25s.5597-1.2499 1.25-1.25h3.5v-1.5498h-3.5C6.5598 12.95 6 12.3903 6 11.7001s.5597-1.25 1.25-1.25h2.6191L5.297 5.0585l-.0782-.1016c-.3588-.522-.2707-1.2415.2227-1.6602.4938-.4186 1.2184-.3879 1.6748.0518l.087.0928L12 9.0975z"
-      fill="currentColor"
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const CurrencyYenFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M16.797 3.4413c.4465-.5263 1.2352-.591 1.7617-.1446.5263.4466.5909 1.2353.1445 1.7618L14.1309 10.45h2.6192c.6903 0 1.25.5596 1.25 1.25-.0001.6903-.5597 1.25-1.25 1.25h-3.5v1.5498h3.5c.6903 0 1.25.5596 1.25 1.25-.0001.6903-.5597 1.25-1.25 1.25h-3.5v2.75c-.0001.6903-.5597 1.25-1.25 1.25-.6903-.0001-1.25-.5598-1.25-1.25v-2.75h-3.5c-.6903-.0001-1.25-.5598-1.25-1.25s.5597-1.2499 1.25-1.25h3.5v-1.5498h-3.5C6.5598 12.95 6 12.3903 6 11.7001s.5597-1.25 1.25-1.25h2.6191L5.297 5.0585l-.0782-.1016c-.3588-.522-.2707-1.2415.2227-1.6602.4938-.4186 1.2184-.3879 1.6748.0518l.087.0928L12 9.0975z" /></svg>;
 const ForwardRef = forwardRef(CurrencyYenFilledIcon);
 export default ForwardRef;

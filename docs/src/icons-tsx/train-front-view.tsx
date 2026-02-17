@@ -1,40 +1,6 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const TrainFrontViewIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M6.1656 3.6953A3 3 0 0 1 8.0861 3h7.8277c.7019 0 1.3815.246 1.9206.6953l1.0862.9052A3 3 0 0 1 20 6.905V14c0 1.6569-1.3431 3-3 3H7c-1.6569 0-3-1.3431-3-3V6.9051a3 3 0 0 1 1.0794-2.3046z"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-    />
-    <path
-      d="M7.192 17a.5.5 0 0 0-.4472.2764l-2 4c-.1662.3324.0756.7236.4473.7236H6.31a.5.5 0 0 0 .4472-.2764l1.9146-3.8292a.5.5 0 0 0-.2236-.6708l-.3415-.1708A.5.5 0 0 0 7.8832 17zM16.119 17a.5.5 0 0 0-.2236.0528l-.3415.1708a.5.5 0 0 0-.2236.6708l1.9146 3.8292a.5.5 0 0 0 .4472.2764h1.118c.3717 0 .6135-.3912.4473-.7236l-2-4A.5.5 0 0 0 16.8101 17z"
-      fill="currentColor"
-    />
-    <path
-      d="M5 11h14"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-    />
-    <circle cx={8} cy={14} fill="currentColor" r={1} />
-    <circle cx={16} cy={14} fill="currentColor" r={1} />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const TrainFrontViewIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6.1656 3.6953A3 3 0 0 1 8.0861 3h7.8277c.7019 0 1.3815.246 1.9206.6953l1.0862.9052A3 3 0 0 1 20 6.905V14c0 1.6569-1.3431 3-3 3H7c-1.6569 0-3-1.3431-3-3V6.9051a3 3 0 0 1 1.0794-2.3046z" /><path fill="currentColor" d="M7.192 17a.5.5 0 0 0-.4472.2764l-2 4c-.1662.3324.0756.7236.4473.7236H6.31a.5.5 0 0 0 .4472-.2764l1.9146-3.8292a.5.5 0 0 0-.2236-.6708l-.3415-.1708A.5.5 0 0 0 7.8832 17zM16.119 17a.5.5 0 0 0-.2236.0528l-.3415.1708a.5.5 0 0 0-.2236.6708l1.9146 3.8292a.5.5 0 0 0 .4472.2764h1.118c.3717 0 .6135-.3912.4473-.7236l-2-4A.5.5 0 0 0 16.8101 17z" /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 11h14" /><circle cx={8} cy={14} r={1} fill="currentColor" /><circle cx={16} cy={14} r={1} fill="currentColor" /></svg>;
 const ForwardRef = forwardRef(TrainFrontViewIcon);
 export default ForwardRef;

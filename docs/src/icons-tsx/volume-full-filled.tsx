@@ -1,36 +1,12 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const VolumeFullFilledIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M13 5.135c0-1.6957-1.9777-2.622-3.2804-1.5365L5.9161 6.768A1 1 0 0 1 5.2759 7H4c-1.6568 0-3 1.3431-3 3v4c0 1.6568 1.3432 3 3 3h1.2759c.234 0 .4605.082.6402.2318l3.8035 3.1696C11.0223 21.4868 13 20.5605 13 18.8648zM19.7782 4.2226c-.3906-.3905-1.0237-.3905-1.4143 0s-.3905 1.0237 0 1.4142C19.9937 7.2666 21 9.5152 21 12.0008s-1.0063 4.7341-2.6361 6.3639c-.3905.3905-.3905 1.0237 0 1.4142.3906.3906 1.0237.3906 1.4143 0C21.7677 17.7894 23 15.038 23 12.0008s-1.2323-5.7887-3.2218-7.7782"
-      fill="currentColor"
-      style={{
-        fill: "currentColor",
-        fillOpacity: 1,
-      }}
-    />
-    <path
-      d="M16.5963 7.4042c-.3906-.3905-1.0237-.3905-1.4142 0-.3906.3905-.3906 1.0237 0 1.4142.8154.8155 1.318 1.9391 1.318 3.182s-.5026 2.3666-1.318 3.182c-.3906.3905-.3906 1.0237 0 1.4142s1.0236.3905 1.4142 0c1.1751-1.1752 1.9038-2.8015 1.9038-4.5962s-.7287-3.421-1.9038-4.5962"
-      fill="currentColor"
-      style={{
-        fill: "currentColor",
-        fillOpacity: 1,
-      }}
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const VolumeFullFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M13 5.135c0-1.6957-1.9777-2.622-3.2804-1.5365L5.9161 6.768A1 1 0 0 1 5.2759 7H4c-1.6568 0-3 1.3431-3 3v4c0 1.6568 1.3432 3 3 3h1.2759c.234 0 .4605.082.6402.2318l3.8035 3.1696C11.0223 21.4868 13 20.5605 13 18.8648zM19.7782 4.2226c-.3906-.3905-1.0237-.3905-1.4143 0s-.3905 1.0237 0 1.4142C19.9937 7.2666 21 9.5152 21 12.0008s-1.0063 4.7341-2.6361 6.3639c-.3905.3905-.3905 1.0237 0 1.4142.3906.3906 1.0237.3906 1.4143 0C21.7677 17.7894 23 15.038 23 12.0008s-1.2323-5.7887-3.2218-7.7782" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /><path fill="currentColor" d="M16.5963 7.4042c-.3906-.3905-1.0237-.3905-1.4142 0-.3906.3905-.3906 1.0237 0 1.4142.8154.8155 1.318 1.9391 1.318 3.182s-.5026 2.3666-1.318 3.182c-.3906.3905-.3906 1.0237 0 1.4142s1.0236.3905 1.4142 0c1.1751-1.1752 1.9038-2.8015 1.9038-4.5962s-.7287-3.421-1.9038-4.5962" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /></svg>;
 const ForwardRef = forwardRef(VolumeFullFilledIcon);
 export default ForwardRef;
