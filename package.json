@@ -9,9 +9,17 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./*": {
+    "./icons/*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.js"
+    },
+    "./dynamic": {
+      "types": "./dist/dynamic.d.ts",
+      "import": "./dist/dynamic.js"
+    },
+    "./dynamicIconImports": {
+      "types": "./dist/dynamicIconImports.d.ts",
+      "import": "./dist/dynamicIconImports.js"
     }
   },
   "files": [
