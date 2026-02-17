@@ -14,6 +14,7 @@ const srcDir = path.join(ROOT, "src");
 const distDir = path.join(ROOT, "dist");
 const manifestPath = path.join(ROOT, ".cache-manifest.json");
 const mappingFile = path.join(__dirname, "lucide-mapping.ts");
+const ICON_SUFFIX_RE = /Icon$/;
 
 const docsTsxDir = path.join(ROOT, "docs/src/icons-tsx");
 const docsSvgDir = path.join(ROOT, "docs/src/icons-svg");
@@ -342,6 +343,17 @@ async function generateIcons() {
 }
 
 // ─── Step 2: Append lucide aliases to all-icons.ts ──────────────────
+
+function addAlias(name, rawImport, aliasLines, exportedNames, seen) {
+  if (exportedNames.has(name) || seen.has(name)) {
+    return;
+  }
+  aliasLines.push(
+    `export const ${name} = createLucideIcon('${name}', _${rawImport})`
+  );
+  seen.add(name);
+}
+
 function generateLucideAliases() {
   const mappingContent = fs.readFileSync(mappingFile, "utf-8");
   const entries = [];
@@ -388,10 +400,41 @@ function generateLucideAliases() {
     }
     seen.add(lucideName);
 
-    // Reuse the raw import variable (_FingertipName) already declared above
+    // Outline alias: Search → _MagnifyingGlassIcon
     aliasLines.push(
       `export const ${lucideName} = createLucideIcon('${lucideName}', _${fingertipName})`
     );
+
+    // Icon-suffixed alias: SearchIcon → _MagnifyingGlassIcon
+    addAlias(
+      `${lucideName}Icon`,
+      fingertipName,
+      aliasLines,
+      exportedNames,
+      seen
+    );
+
+    // Filled aliases
+    const filledFingertipName = fingertipName.replace(
+      ICON_SUFFIX_RE,
+      "FilledIcon"
+    );
+    if (exportedNames.has(filledFingertipName)) {
+      addAlias(
+        `${lucideName}Filled`,
+        filledFingertipName,
+        aliasLines,
+        exportedNames,
+        seen
+      );
+      addAlias(
+        `${lucideName}FilledIcon`,
+        filledFingertipName,
+        aliasLines,
+        exportedNames,
+        seen
+      );
+    }
   }
 
   if (errors.length > 0) {
