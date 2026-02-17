@@ -1,38 +1,12 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const CatFilledIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M13.2892 16.0055c.5702-.1528.8839-.8313.7005-1.5156-.1833-.6842-.7942-1.1151-1.3644-.9623s-.8839.8314-.7005 1.5156c.1833.6843.7942 1.1151 1.3644.9623M18.0684 16.4955c.1222.4561-.3334.9746-1.0176 1.1579s-1.3381-.0378-1.4603-.494.3334-.9746 1.0176-1.1579c.6843-.1834 1.3381.0378 1.4603.494"
-      fill="currentColor"
-      style={{
-        fill: "currentColor",
-        fillOpacity: 1,
-      }}
-    />
-    <path
-      clipRule="evenodd"
-      d="M7 3C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h10c2.2091 0 4-1.7909 4-4V7c0-2.2091-1.7909-4-4-4zm7.8767 6.3188c-.8695.233-1.673.5727-2.3913.9939l-3.506-.814c-.35-.0814-.669.2222-.6051.5758l.7433 4.1162c-.3237.9443-.3841 1.9362-.1254 2.9018.1918.7159.5428 1.3567 1.0183 1.9075H17c1.1046 0 2-.8954 2-2v-2.6575c-.3983-.1084-.7494-.4687-.8809-.9592-.1833-.6843.1303-1.3628.7005-1.5156A.9.9 0 0 1 19 11.8385V7.7336c0-.088-.1054-.133-.169-.0723l-1.3862 1.3226c-.8327-.0056-1.6985.102-2.5681.3349"
-      fill="currentColor"
-      fillRule="evenodd"
-      style={{
-        fill: "currentColor",
-        fillOpacity: 1,
-      }}
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const CatFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M13.2892 16.0055c.5702-.1528.8839-.8313.7005-1.5156-.1833-.6842-.7942-1.1151-1.3644-.9623s-.8839.8314-.7005 1.5156c.1833.6843.7942 1.1151 1.3644.9623M18.0684 16.4955c.1222.4561-.3334.9746-1.0176 1.1579s-1.3381-.0378-1.4603-.494.3334-.9746 1.0176-1.1579c.6843-.1834 1.3381.0378 1.4603.494" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /><path fill="currentColor" fillRule="evenodd" d="M7 3C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h10c2.2091 0 4-1.7909 4-4V7c0-2.2091-1.7909-4-4-4zm7.8767 6.3188c-.8695.233-1.673.5727-2.3913.9939l-3.506-.814c-.35-.0814-.669.2222-.6051.5758l.7433 4.1162c-.3237.9443-.3841 1.9362-.1254 2.9018.1918.7159.5428 1.3567 1.0183 1.9075H17c1.1046 0 2-.8954 2-2v-2.6575c-.3983-.1084-.7494-.4687-.8809-.9592-.1833-.6843.1303-1.3628.7005-1.5156A.9.9 0 0 1 19 11.8385V7.7336c0-.088-.1054-.133-.169-.0723l-1.3862 1.3226c-.8327-.0056-1.6985.102-2.5681.3349" clipRule="evenodd" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /></svg>;
 const ForwardRef = forwardRef(CatFilledIcon);
 export default ForwardRef;

@@ -1,2 +1,1 @@
-export * from "./all-icons";
-export * from "./lucide";
+export * from './all-icons'

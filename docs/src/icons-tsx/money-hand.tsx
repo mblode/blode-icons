@@ -1,26 +1,6 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const MoneyHandIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M13.8949 4.21C13.5482 2.9366 12.3835 2 11 2 9.3431 2 8 3.3432 8 5s1.3431 3 3 3c.3902 0 .7631-.0745 1.1051-.21m1.7898-3.58C14.2369 4.0746 14.6098 4 15 4c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3c-1.3835 0-2.5482-.9365-2.8949-2.21m1.7898-3.58c-1.4032.5564-2.1834 2.134-1.7898 3.58M7 20h2s2.3916.9234 4 1c3.5463.1689 6.3633-1.4809 8.645-3.9902.5211-.5731.5123-1.4382.0285-2.043-.6238-.7797-1.7961-.8428-2.5782-.2221-.8618.6839-2.0055 1.4532-3.0953 1.7553-1.5053.4173-3 .5-3 .5 8-.5 5-7.0001-6-2.4999M5 21c-1.1046 0-2-.8954-2-2v-4c0-1.1046.8954-2 2-2s2 .8954 2 2v4c0 1.1046-.8954 2-2 2Z"
-      stroke="currentColor"
-      strokeLinejoin="round"
-      strokeWidth={2}
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const MoneyHandIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M13.8949 4.21C13.5482 2.9366 12.3835 2 11 2 9.3431 2 8 3.3432 8 5s1.3431 3 3 3c.3902 0 .7631-.0745 1.1051-.21m1.7898-3.58C14.2369 4.0746 14.6098 4 15 4c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3c-1.3835 0-2.5482-.9365-2.8949-2.21m1.7898-3.58c-1.4032.5564-2.1834 2.134-1.7898 3.58M7 20h2s2.3916.9234 4 1c3.5463.1689 6.3633-1.4809 8.645-3.9902.5211-.5731.5123-1.4382.0285-2.043-.6238-.7797-1.7961-.8428-2.5782-.2221-.8618.6839-2.0055 1.4532-3.0953 1.7553-1.5053.4173-3 .5-3 .5 8-.5 5-7.0001-6-2.4999M5 21c-1.1046 0-2-.8954-2-2v-4c0-1.1046.8954-2 2-2s2 .8954 2 2v4c0 1.1046-.8954 2-2 2Z" /></svg>;
 const ForwardRef = forwardRef(MoneyHandIcon);
 export default ForwardRef;

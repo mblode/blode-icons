@@ -1,38 +1,12 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const AddToBasket2FilledIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M8.8694 3.0718c.5128.2051.7622.787.5571 1.2999L7.9752 8h8.0457l-1.4513-3.6283c-.2051-.5128.0443-1.0948.5571-1.3.5127-.205 1.0947.0444 1.2998.5572L18.175 8h1.6245l.0331.0003h.1654a.996.996 0 0 1 .4502.1067c.905.3096 1.5014 1.2476 1.319 2.2508l-.6042 3.3232C20.0839 12.6402 18.6157 12 16.998 12c-3.3137 0-6 2.6863-6 6 0 1.0929.2922 2.1175.8027 3H7.5014c-1.9331 0-3.5897-1.3825-3.9355-3.2845l-1.3378-7.3577c-.1825-1.004.415-1.9428 1.3214-2.2515a.996.996 0 0 1 .4486-.106h.1646L4.196 8H5.821l1.7485-4.3711c.205-.5128.787-.7622 1.2998-.5571"
-      fill="currentColor"
-      style={{
-        fill: "currentColor",
-        fillOpacity: 1,
-      }}
-    />
-    <path
-      clipRule="evenodd"
-      d="M16.998 14c.5523 0 1 .4477 1 1v2h2c.5523 0 1 .4477 1 1s-.4477 1-1 1h-2v2c0 .5523-.4477 1-1 1s-1-.4477-1-1v-2h-2c-.5522 0-1-.4477-1-1s.4478-1 1-1h2v-2c0-.5523.4478-1 1-1"
-      fill="currentColor"
-      fillRule="evenodd"
-      style={{
-        fill: "currentColor",
-        fillOpacity: 1,
-      }}
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const AddToBasket2FilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M8.8694 3.0718c.5128.2051.7622.787.5571 1.2999L7.9752 8h8.0457l-1.4513-3.6283c-.2051-.5128.0443-1.0948.5571-1.3.5127-.205 1.0947.0444 1.2998.5572L18.175 8h1.6245l.0331.0003h.1654a.996.996 0 0 1 .4502.1067c.905.3096 1.5014 1.2476 1.319 2.2508l-.6042 3.3232C20.0839 12.6402 18.6157 12 16.998 12c-3.3137 0-6 2.6863-6 6 0 1.0929.2922 2.1175.8027 3H7.5014c-1.9331 0-3.5897-1.3825-3.9355-3.2845l-1.3378-7.3577c-.1825-1.004.415-1.9428 1.3214-2.2515a.996.996 0 0 1 .4486-.106h.1646L4.196 8H5.821l1.7485-4.3711c.205-.5128.787-.7622 1.2998-.5571" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /><path fill="currentColor" fillRule="evenodd" d="M16.998 14c.5523 0 1 .4477 1 1v2h2c.5523 0 1 .4477 1 1s-.4477 1-1 1h-2v2c0 .5523-.4477 1-1 1s-1-.4477-1-1v-2h-2c-.5522 0-1-.4477-1-1s.4478-1 1-1h2v-2c0-.5523.4478-1 1-1" clipRule="evenodd" style={{
+    fill: "currentColor",
+    fillOpacity: 1
+  }} /></svg>;
 const ForwardRef = forwardRef(AddToBasket2FilledIcon);
 export default ForwardRef;

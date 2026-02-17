@@ -1,27 +1,6 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-import { forwardRef, type Ref } from "react";
-
-const ArrowLeftRightIcon = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    fill="none"
-    height={24}
-    ref={ref}
-    viewBox="0 0 24 24"
-    width={24}
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M7.5 3 4.5607 5.9393c-.5858.5858-.5858 1.5356 0 2.1214L7.5 11m9 2 2.9393 2.9393c.5858.5858.5858 1.5356 0 2.1214L16.5 21M5 7h15M4 17h15"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-    />
-  </svg>
-);
+import { Ref, forwardRef } from "react";
+const ArrowLeftRightIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7.5 3 4.5607 5.9393c-.5858.5858-.5858 1.5356 0 2.1214L7.5 11m9 2 2.9393 2.9393c.5858.5858.5858 1.5356 0 2.1214L16.5 21M5 7h15M4 17h15" /></svg>;
 const ForwardRef = forwardRef(ArrowLeftRightIcon);
 export default ForwardRef;
