@@ -2,10 +2,9 @@ import { kebabCase, sentenceCase } from "change-case";
 import Fuse from "fuse.js";
 import React, { useCallback, useMemo, useState } from "react";
 import { toast } from "sonner";
-import { LogoWordmarkIcon, MagnifyingGlassIcon } from "@/icons-tsx";
+import { MagnifyingGlassIcon } from "@/icons-tsx";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { LogoIcon } from "../ui/logo-icon";
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 import { icons } from "./icons";
 
@@ -77,8 +76,7 @@ export const IconSearch = () => {
         toast(
           `"${sentenceCase(icon.name.replace("Icon", ""))}" ${label} copied to clipboard`
         );
-      } catch (error) {
-        console.error("Error loading file:", error);
+      } catch {
         toast.error(`Failed to copy ${icon.name}`);
       }
     },
@@ -98,10 +96,20 @@ export const IconSearch = () => {
 
   return (
     <>
-      <header className="container mb-2">
-        <a className="flex space-x-1 xs:space-x-[5px]" href="https://blode.co">
-          <LogoIcon className="h-[19.2px] xs:h-[24px] w-[23.376px] xs:w-[29.22px] shrink-0" />
-          <LogoWordmarkIcon className="relative top-[4px] h-[16px] xs:h-[20px] w-[97.566px] xs:w-[121.957px] shrink-0" />
+      <header className="container flex items-center justify-between">
+        <a
+          className="font-semibold text-lg underline-offset-2 hover:underline"
+          href="https://blode.co"
+        >
+          Blode Icons
+        </a>
+        <a
+          className="text-muted-foreground text-sm underline-offset-2 hover:text-foreground hover:underline"
+          href="https://github.com/mblode/blode-icons"
+          rel="noopener"
+          target="_blank"
+        >
+          GitHub
         </a>
       </header>
 

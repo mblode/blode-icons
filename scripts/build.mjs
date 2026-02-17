@@ -471,10 +471,7 @@ function generateLucideAliases() {
     );
 
     // Filled aliases
-    const filledBlodeName = blodeName.replace(
-      ICON_SUFFIX_RE,
-      "FilledIcon"
-    );
+    const filledBlodeName = blodeName.replace(ICON_SUFFIX_RE, "FilledIcon");
     const filledSourceFile = componentToFile.get(filledBlodeName);
     if (filledSourceFile) {
       addReExportAlias(
