@@ -70,6 +70,98 @@ function loadManifest() {
   }
 }
 
+// ─── Step 0: Write support files that src/ needs but aren't generated ─
+function generateSupportFiles() {
+  fs.mkdirSync(srcDir, { recursive: true });
+
+  fs.writeFileSync(
+    path.join(srcDir, "lucide-types.ts"),
+    `import type {
+  ForwardRefExoticComponent,
+  RefAttributes,
+  SVGProps,
+} from 'react'
+
+/**
+ * Props accepted by lucide-compatible icon components.
+ * Mirrors the lucide-react LucideProps interface.
+ */
+export interface LucideProps extends SVGProps<SVGSVGElement> {
+  /** Sets both width and height. Default: 24 */
+  size?: string | number
+  /**
+   * When true, stroke width remains constant regardless of size.
+   * The stroke width is scaled inversely to the size ratio.
+   */
+  absoluteStrokeWidth?: boolean
+}
+
+/**
+ * The type of a lucide-compatible icon component.
+ * Mirrors the lucide-react LucideIcon type.
+ */
+export type LucideIcon = ForwardRefExoticComponent<
+  Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
+>
+`
+  );
+
+  fs.writeFileSync(
+    path.join(srcDir, "create-lucide-icon.ts"),
+    `import * as React from 'react'
+import type { LucideIcon, LucideProps } from './lucide-types'
+
+/**
+ * Wraps a @fingertip/icons component so it accepts lucide-react props
+ * (size, color, strokeWidth, absoluteStrokeWidth) and supports forwardRef.
+ */
+export function createLucideIcon(
+  name: string,
+  IconComponent: React.ForwardRefExoticComponent<
+    React.SVGProps<SVGSVGElement> & React.RefAttributes<SVGSVGElement>
+  >,
+): LucideIcon {
+  const WrappedIcon = React.forwardRef<SVGSVGElement, LucideProps>(
+    (
+      {
+        color = 'currentColor',
+        size = 24,
+        strokeWidth = 2,
+        absoluteStrokeWidth,
+        style,
+        ...rest
+      },
+      ref,
+    ) => {
+      const computedStrokeWidth = absoluteStrokeWidth
+        ? (Number(strokeWidth) * 24) / Number(size)
+        : strokeWidth
+
+      return React.createElement(IconComponent, {
+        ref,
+        width: size,
+        height: size,
+        strokeWidth: computedStrokeWidth,
+        style: { color, ...style },
+        ...rest,
+      })
+    },
+  )
+
+  WrappedIcon.displayName = name
+  return WrappedIcon
+}
+`
+  );
+
+  fs.writeFileSync(
+    path.join(srcDir, "index.ts"),
+    `export * from './all-icons'
+export * from './lucide'
+`
+  );
+}
+
 // ─── Step 1: Generate icon components from SVGs ─────────────────────
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: build script with batched processing, caching, and cleanup
 async function generateIcons() {
@@ -162,7 +254,9 @@ async function generateIcons() {
       // Also remove stale dist files so they don't ship in the npm tarball
       for (const ext of [".js", ".d.ts", ".js.map"]) {
         const stale = path.join(distDir, `${iconName}${ext}`);
-        if (fs.existsSync(stale)) fs.unlinkSync(stale);
+        if (fs.existsSync(stale)) {
+          fs.unlinkSync(stale);
+        }
       }
     }
   }
@@ -310,6 +404,7 @@ function compile() {
 async function main() {
   const t0 = performance.now();
 
+  generateSupportFiles();
   await generateIcons();
   generateLucide();
   compile();
