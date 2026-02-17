@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.2.0
+
+### Minor Changes
+
+- c06db30: Add Lucide-compatible Icon, Filled, and FilledIcon aliases for all mapped icons and add OctagonX mapping
+
 ## 0.1.3
 
 ### Patch Changes
