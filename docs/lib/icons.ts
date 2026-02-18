@@ -1,13 +1,13 @@
 import { kebabCase } from "change-case";
-import * as IconComponents from "@/src/icons-tsx";
 import { getIconMetadata } from "@/lib/icon-data";
 import type { IconRecord } from "@/lib/icon-types";
+import * as IconComponents from "@/src/icons-tsx";
 
 const ICON_NAME_REGEX = /FilledIcon$|Icon$/;
 
 const isIconComponent = (
   name: string,
-  component: unknown
+  component: unknown,
 ): component is IconRecord["component"] => {
   return name.endsWith("Icon") && component !== null && component !== undefined;
 };

@@ -2,9 +2,6 @@ import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const HeartFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12.5836 3.8721a7 7 0 0 0-.5836.356 7 7 0 0 0-.5836-.356C10.6185 3.4369 9.4544 3 8 3c-1.5183 0-3.035.6086-4.167 1.816C2.6962 6.0288 2 7.786 2 10c0 3.3448 2.3728 6.1023 4.5819 7.9272 1.1315.9347 2.285 1.6793 3.2098 2.1931.4622.2567.877.4613 1.2123.605.1667.0714.3249.1327.4665.178.1079.0345.3136.0967.5295.0967s.4216-.0622.5295-.0967c.1416-.0453.2998-.1066.4665-.178.3353-.1437.7501-.3483 1.2123-.605.9248-.5138 2.0783-1.2584 3.2098-2.1931C19.6272 16.1023 22 13.3448 22 10c0-2.214-.6962-3.9713-1.833-5.184C19.035 3.6087 17.5183 3 16 3c-1.4545 0-2.6185.4369-3.4164.8721" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /></svg>;
+const HeartFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M12.5836 3.8721a7 7 0 0 0-.5836.356 7 7 0 0 0-.5836-.356C10.6185 3.4369 9.4544 3 8 3c-1.5183 0-3.035.6086-4.167 1.816C2.6962 6.0288 2 7.786 2 10c0 3.3448 2.3728 6.1023 4.5819 7.9272 1.1315.9347 2.285 1.6793 3.2098 2.1931.4622.2567.877.4613 1.2123.605.1667.0714.3249.1327.4665.178.1079.0345.3136.0967.5295.0967s.4216-.0622.5295-.0967c.1416-.0453.2998-.1066.4665-.178.3353-.1437.7501-.3483 1.2123-.605.9248-.5138 2.0783-1.2584 3.2098-2.1931C19.6272 16.1023 22 13.3448 22 10c0-2.214-.6962-3.9713-1.833-5.184C19.035 3.6087 17.5183 3 16 3c-1.4545 0-2.6185.4369-3.4164.8721" /></svg>;
 const ForwardRef = forwardRef(HeartFilledIcon);
 export default createLucideIcon('HeartFilledIcon', ForwardRef);

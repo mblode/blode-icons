@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -79,7 +81,16 @@ export default function RootLayout({
     >
       {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
-        <Providers>{children}</Providers>
+        <Providers>
+          <div
+            className="relative z-10 flex min-h-svh flex-col bg-background"
+            data-slot="layout"
+          >
+            <SiteHeader />
+            <main className="flex flex-1 flex-col">{children}</main>
+            <SiteFooter />
+          </div>
+        </Providers>
       </body>
     </html>
   );

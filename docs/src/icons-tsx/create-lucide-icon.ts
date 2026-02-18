@@ -17,7 +17,6 @@ export function createLucideIcon(
         color = 'currentColor',
         size = 24,
         strokeWidth = 2,
-        style,
         ...rest
       },
       ref,
@@ -27,7 +26,7 @@ export function createLucideIcon(
         width: size,
         height: size,
         strokeWidth,
-        style: { color, ...style },
+        color,
         ...rest,
       })
     },

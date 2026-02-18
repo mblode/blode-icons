@@ -2,15 +2,6 @@ import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const SquareChecklistBellFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M7 3C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5v-4c0-3.3137 2.6863-6 6-6 1.0929 0 2.1175.2922 3 .8027V7c0-2.2091-1.7909-4-4-4zm3.1396 3.9522c.4418.3314.5314.9582.2 1.4L8.468 10.8478a1 1 0 0 1-1.3547.232l-1.125-.75c-.4596-.3063-.5837-.9272-.2774-1.3868s.9272-.5837 1.3868-.2773l.3379.2253 1.304-1.7388c.3314-.4418.9582-.5313 1.4-.2M13.058 9c0-.5523.4477-1 1-1h2c.5522 0 1 .4477 1 1s-.4478 1-1 1h-2c-.5523 0-1-.4477-1-1m-2.9184 3.9534c.4418.3313.5314.9581.2 1.4L8.468 16.8489a1 1 0 0 1-1.3547.232l-1.125-.75c-.4596-.3063-.5837-.9272-.2774-1.3867s.9272-.5837 1.3868-.2774l.3379.2253 1.304-1.7387c.3314-.4419.9582-.5314 1.4-.2" clipRule="evenodd" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /><path fill="currentColor" fillRule="evenodd" d="M14 17c0-2.2091 1.7909-4 4-4s4 1.7909 4 4v3c0 .5523-.4477 1-1 1h-6c-.5523 0-1-.4477-1-1zm4-2c-1.1046 0-2 .8954-2 2v2h4v-2c0-1.1046-.8954-2-2-2" clipRule="evenodd" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /><path fill="currentColor" d="M18 22c1.1046 0 2-.8954 2-2h-4c0 1.1046.8954 2 2 2" style={{
-    fill: "currentColor",
-    fillOpacity: 1
-  }} /></svg>;
+const SquareChecklistBellFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M7 3C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h5v-4c0-3.3137 2.6863-6 6-6 1.0929 0 2.1175.2922 3 .8027V7c0-2.2091-1.7909-4-4-4zm3.1396 3.9522c.4418.3314.5314.9582.2 1.4L8.468 10.8478a1 1 0 0 1-1.3547.232l-1.125-.75c-.4596-.3063-.5837-.9272-.2774-1.3868s.9272-.5837 1.3868-.2773l.3379.2253 1.304-1.7388c.3314-.4418.9582-.5313 1.4-.2M13.058 9c0-.5523.4477-1 1-1h2c.5522 0 1 .4477 1 1s-.4478 1-1 1h-2c-.5523 0-1-.4477-1-1m-2.9184 3.9534c.4418.3313.5314.9581.2 1.4L8.468 16.8489a1 1 0 0 1-1.3547.232l-1.125-.75c-.4596-.3063-.5837-.9272-.2774-1.3867s.9272-.5837 1.3868-.2774l.3379.2253 1.304-1.7387c.3314-.4419.9582-.5314 1.4-.2" clipRule="evenodd" /><path fill="currentColor" fillRule="evenodd" d="M14 17c0-2.2091 1.7909-4 4-4s4 1.7909 4 4v3c0 .5523-.4477 1-1 1h-6c-.5523 0-1-.4477-1-1zm4-2c-1.1046 0-2 .8954-2 2v2h4v-2c0-1.1046-.8954-2-2-2" clipRule="evenodd" /><path fill="currentColor" d="M18 22c1.1046 0 2-.8954 2-2h-4c0 1.1046.8954 2 2 2" /></svg>;
 const ForwardRef = forwardRef(SquareChecklistBellFilledIcon);
 export default createLucideIcon('SquareChecklistBellFilledIcon', ForwardRef);
