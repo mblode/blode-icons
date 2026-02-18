@@ -41,11 +41,27 @@ const svgrConfig = {
   plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
   svgoConfig,
 };
-const FORMAT_VERSION = "2"; // bump when individual icon output format changes
+const FORMAT_VERSION = "3"; // bump when individual icon output format changes
 const configHash = crypto
   .createHash("md5")
   .update(JSON.stringify(svgrConfig) + FORMAT_VERSION)
   .digest("hex");
+
+function stripRedundantCurrentColorStyles(code) {
+  return code
+    .replace(
+      /\sstyle=\{\{\s*fill:\s*"currentColor",\s*fillOpacity:\s*1,\s*stroke:\s*"currentColor",\s*strokeOpacity:\s*1\s*\}\}/g,
+      ""
+    )
+    .replace(
+      /\sstyle=\{\{\s*fill:\s*"currentColor",\s*fillOpacity:\s*1\s*\}\}/g,
+      ""
+    )
+    .replace(
+      /\sstyle=\{\{\s*stroke:\s*"currentColor",\s*strokeOpacity:\s*1\s*\}\}/g,
+      ""
+    );
+}
 
 function toComponentName(str) {
   return `${str
@@ -126,7 +142,6 @@ export function createLucideIcon(
         color = 'currentColor',
         size = 24,
         strokeWidth = 2,
-        style,
         ...rest
       },
       ref,
@@ -136,7 +151,7 @@ export function createLucideIcon(
         width: size,
         height: size,
         strokeWidth,
-        style: { color, ...style },
+        color,
         ...rest,
       })
     },
@@ -256,11 +271,12 @@ async function generateIcons() {
           const rawCode = await transform(svgCode, svgrConfig, {
             componentName,
           });
-          const componentCode =
+          const componentCode = stripRedundantCurrentColorStyles(
             `import { createLucideIcon } from './create-lucide-icon'\n${rawCode}`.replace(
               "export default ForwardRef;",
               `export default createLucideIcon('${componentName}', ForwardRef);`
-            );
+            )
+          );
           if (!componentCode.includes("createLucideIcon(")) {
             throw new Error(
               `Failed to wrap ${componentName} with createLucideIcon`

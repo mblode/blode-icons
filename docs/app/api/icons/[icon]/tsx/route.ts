@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 
 export async function GET(
   _request: Request,
-  { params }: { params: Promise<{ icon: string }> }
+  { params }: { params: Promise<{ icon: string }> },
 ) {
   const { icon } = await params;
 

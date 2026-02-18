@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const labelVariants = cva(
-  "font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+  "font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
 );
 
 const Label = forwardRef<

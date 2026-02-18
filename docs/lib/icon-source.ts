@@ -30,9 +30,12 @@ export const loadIconSource = async ({
   }
 
   const format = SOURCE_FORMAT_BY_KIND[copyKind];
-  const response = await fetch(`/api/icons/${encodeURIComponent(iconName)}/${format}`, {
-    cache: "force-cache",
-  });
+  const response = await fetch(
+    `/api/icons/${encodeURIComponent(iconName)}/${format}`,
+    {
+      cache: "force-cache",
+    },
+  );
 
   if (!response.ok) {
     return null;

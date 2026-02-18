@@ -1,6 +1,6 @@
 import "server-only";
 
-import { readFileSync, readdirSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { type IconSourceFormat, isValidIconName } from "@/lib/icon-source";
@@ -8,9 +8,15 @@ import { type IconSourceFormat, isValidIconName } from "@/lib/icon-source";
 const normalizeIconSlug = (iconSlug: string) => iconSlug.replace(/-/g, "");
 
 const componentSourceMap = new Map<string, string>();
-const allIconsPath = path.join(process.cwd(), "src", "icons-tsx", "all-icons.ts");
+const allIconsPath = path.join(
+  process.cwd(),
+  "src",
+  "icons-tsx",
+  "all-icons.ts",
+);
 const allIconsSource = readFileSync(allIconsPath, "utf8");
-const allIconsExportPattern = /export \{ default as (\w+) \} from '\.\/([^']+)'/g;
+const allIconsExportPattern =
+  /export \{ default as (\w+) \} from ["']\.\/([^"']+)["']/g;
 for (const match of allIconsSource.matchAll(allIconsExportPattern)) {
   componentSourceMap.set(match[1], match[2]);
 }
@@ -69,7 +75,7 @@ const getSourcePath = (iconName: string, format: IconSourceFormat) => {
 
 export const readIconSource = async (
   iconName: string,
-  format: IconSourceFormat
+  format: IconSourceFormat,
 ): Promise<string | null> => {
   if (!isValidIconName(iconName)) {
     return null;

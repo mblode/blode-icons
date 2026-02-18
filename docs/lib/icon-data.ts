@@ -14,7 +14,7 @@ const metadataByNormalizedSlug = new Map<string, IconMetadata>(
   Object.entries(metadataByIcon).map(([iconSlug, metadata]) => [
     normalizeIconSlug(iconSlug),
     metadata,
-  ])
+  ]),
 );
 
 export const getIconMetadata = (iconSlug: string): IconMetadata => {

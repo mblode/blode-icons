@@ -19,5 +19,7 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "registries": {}
+  "registries": {
+    "@blode": "https://ui.blode.co/r/{name}.json"
+  }
 }

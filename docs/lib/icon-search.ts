@@ -9,8 +9,14 @@ const getSearchHaystack = (icon: IconRecord) => {
     .toLowerCase();
 };
 
-export const searchIcons = (icons: IconRecord[], query: string): IconRecord[] => {
-  const normalizedQuery = query.trim().toLowerCase().replace(NORMALIZE_SPACE, " ");
+export const searchIcons = (
+  icons: IconRecord[],
+  query: string,
+): IconRecord[] => {
+  const normalizedQuery = query
+    .trim()
+    .toLowerCase()
+    .replace(NORMALIZE_SPACE, " ");
 
   if (!normalizedQuery) {
     return icons;
