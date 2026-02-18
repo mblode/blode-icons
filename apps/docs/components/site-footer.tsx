@@ -1,8 +1,8 @@
 export function SiteFooter() {
   return (
-    <footer className="relative border-border border-t py-6 md:py-0">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-center gap-4 px-4 text-center md:h-16 md:flex-row">
-        <p className="text-center text-muted-foreground text-sm leading-loose md:text-left">
+    <footer className="relative border-border border-t py-6">
+      <div className="container flex flex-col items-center justify-between gap-4 text-center">
+        <p className="text-center text-muted-foreground text-sm leading-loose">
           Created by{" "}
           <a
             className="font-medium underline underline-offset-4"
@@ -13,7 +13,6 @@ export function SiteFooter() {
           >
             Matthew Blode
           </a>
-          .
         </p>
       </div>
     </footer>
