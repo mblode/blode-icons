@@ -2,10 +2,8 @@
 <p align="center">3,000+ open-source icons for React — drop-in lucide-react replacement.</p>
 
 <p align="center">
-  <a href="https://github.com/mblode/blode-icons/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mblode/blode-icons"></a>
   <a href="https://www.npmjs.com/package/blode-icons-react"><img alt="npm version" src="https://img.shields.io/npm/v/blode-icons-react"></a>
   <a href="https://github.com/mblode/blode-icons/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-  <a href="https://discord.com/invite/87p2vpsat5"><img alt="Discord" src="https://img.shields.io/discord/1151315619246002176"></a>
 </p>
 
 ## Highlights
