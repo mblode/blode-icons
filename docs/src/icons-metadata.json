@@ -1,0 +1,10277 @@
+[
+  {
+    "icon": "3d-sphere",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "4k",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "add-keyframe",
+    "category": "Edit",
+    "tags": [
+      "rhombus"
+    ]
+  },
+  {
+    "icon": "add-to-basket",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "add-to-basket-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "adjust-photo",
+    "category": "Photography & Video",
+    "tags": [
+      "tuning",
+      "settings"
+    ]
+  },
+  {
+    "icon": "airdrop",
+    "category": "Devices & Signals",
+    "tags": [
+      "file-sharing",
+      "radar"
+    ]
+  },
+  {
+    "icon": "airdrop-2",
+    "category": "Crypto",
+    "tags": [
+      "free",
+      "drop",
+      "parachute"
+    ]
+  },
+  {
+    "icon": "airplane",
+    "category": "Things",
+    "tags": [
+      "flight"
+    ]
+  },
+  {
+    "icon": "airplane-down",
+    "category": "Things",
+    "tags": [
+      "landing"
+    ]
+  },
+  {
+    "icon": "airplane-up",
+    "category": "Things",
+    "tags": [
+      "takeoff"
+    ]
+  },
+  {
+    "icon": "airplay",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "airplay-audio",
+    "category": "Devices & Signals",
+    "tags": [
+      "audio-stream"
+    ]
+  },
+  {
+    "icon": "airplay-video",
+    "category": "Devices & Signals",
+    "tags": [
+      "video-stream"
+    ]
+  },
+  {
+    "icon": "airpod-case",
+    "category": "Devices & Signals",
+    "tags": [
+      "airpods"
+    ]
+  },
+  {
+    "icon": "airpod-left",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "airpod-right",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "airpods",
+    "category": "Sound & Music",
+    "tags": [
+      "headphones",
+      "vibe"
+    ]
+  },
+  {
+    "icon": "albums",
+    "category": "Sound & Music",
+    "tags": [
+      "cover"
+    ]
+  },
+  {
+    "icon": "alien",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "align-horizontal-center",
+    "category": "Layout",
+    "tags": [
+      "alignment"
+    ]
+  },
+  {
+    "icon": "align-vertical-center",
+    "category": "Layout",
+    "tags": [
+      "alignment"
+    ]
+  },
+  {
+    "icon": "alignment-center",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "alignment-justify",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "alignment-left",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "alignment-left-bar",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "alignment-right",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "alpha",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "alt",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "american-football",
+    "category": "Sports",
+    "tags": [
+      "nfl"
+    ]
+  },
+  {
+    "icon": "analytics",
+    "category": "Statistics & Charts",
+    "tags": [
+      "analysis"
+    ]
+  },
+  {
+    "icon": "anchor-1",
+    "category": "Interface General",
+    "tags": [
+      "link"
+    ]
+  },
+  {
+    "icon": "anchor-2",
+    "category": "Interface General",
+    "tags": [
+      "link"
+    ]
+  },
+  {
+    "icon": "animation",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-auto",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-ease",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-ease-in",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-ease-out",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-elastic",
+    "category": "Code",
+    "tags": [
+      "bezier-curves"
+    ]
+  },
+  {
+    "icon": "animation-linear",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-none",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-overshoot",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "animation-undershoot",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "anonymous",
+    "category": "Security",
+    "tags": [
+      "anonym",
+      "hidden"
+    ]
+  },
+  {
+    "icon": "anthropic",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "api-aggregate",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "api-connection",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "apple",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "apple-intelligence",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "apple-intelligence-icon",
+    "category": "AI & Magic",
+    "tags": [
+      "ai",
+      "tools"
+    ]
+  },
+  {
+    "icon": "apple-music",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "apple-newton",
+    "category": "Food",
+    "tags": [
+      "low-hanging-fruits",
+      "fall"
+    ]
+  },
+  {
+    "icon": "apples",
+    "category": "Food",
+    "tags": [
+      "fruit"
+    ]
+  },
+  {
+    "icon": "appstore",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "ar",
+    "category": "Augmented Reality",
+    "tags": [
+      "augmented-reality",
+      "card-box",
+      "3d",
+      "virtual reality",
+      "VR"
+    ]
+  },
+  {
+    "icon": "ar-cube-1",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "ar-cube-2",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "ar-cube-3",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "ar-scan-cube-1",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "ar-scan-cube-2",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "arc",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "archive",
+    "category": "Folders & Files",
+    "tags": [
+      "folder",
+      "box"
+    ]
+  },
+  {
+    "icon": "archive-1",
+    "category": "Interface General",
+    "tags": [
+      "inbox",
+      "file"
+    ]
+  },
+  {
+    "icon": "armchair",
+    "category": "Furniture & Household",
+    "tags": [
+      "seat",
+      "chill"
+    ]
+  },
+  {
+    "icon": "around",
+    "category": "Augmented Reality",
+    "tags": [
+      "spatial"
+    ]
+  },
+  {
+    "icon": "arrow",
+    "category": "Arrows",
+    "tags": [
+      "refresh",
+      "renew"
+    ]
+  },
+  {
+    "icon": "arrow-bottom-top",
+    "category": "Arrows",
+    "tags": [
+      "sort 2",
+      "switch vertical"
+    ]
+  },
+  {
+    "icon": "arrow-box-left",
+    "category": "Interface General",
+    "tags": [
+      "logout",
+      "leave",
+      "door"
+    ]
+  },
+  {
+    "icon": "arrow-box-right",
+    "category": "Interface General",
+    "tags": [
+      "login",
+      "enter",
+      "door"
+    ]
+  },
+  {
+    "icon": "arrow-corner-down-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-down-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-left-down",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-left-up",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-right-down",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-right-up",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-up-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-corner-up-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-down",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-down-circle",
+    "category": "Arrows",
+    "tags": [
+      "arrow-bottom"
+    ]
+  },
+  {
+    "icon": "arrow-down-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-down-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-expand-hor",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-expand-ver",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-inbox",
+    "category": "Interface General",
+    "tags": [
+      "download",
+      "file",
+      "down",
+      "save"
+    ]
+  },
+  {
+    "icon": "arrow-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-left-circle",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-left-down-circle",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-left-right",
+    "category": "Arrows",
+    "tags": [
+      "sort 2",
+      "switch horizonatl"
+    ]
+  },
+  {
+    "icon": "arrow-left-up-circle",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-left-x",
+    "category": "Interface General",
+    "tags": [
+      "delete",
+      "remove",
+      "backspace"
+    ]
+  },
+  {
+    "icon": "arrow-out-of-box",
+    "category": "Interface General",
+    "tags": [
+      "upload",
+      "share"
+    ]
+  },
+  {
+    "icon": "arrow-path-down",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-path-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-path-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-path-up",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-redo-down",
+    "category": "Arrows",
+    "tags": [
+      "forward"
+    ]
+  },
+  {
+    "icon": "arrow-redo-up",
+    "category": "Arrows",
+    "tags": [
+      "forward"
+    ]
+  },
+  {
+    "icon": "arrow-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-right-circle",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-right-down-circle",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-right-left",
+    "category": "Arrows",
+    "tags": [
+      "sort 1",
+      "switch horizontal"
+    ]
+  },
+  {
+    "icon": "arrow-right-up-circle",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-rotate-clockwise",
+    "category": "Arrows",
+    "tags": [
+      "rotate-right"
+    ]
+  },
+  {
+    "icon": "arrow-rotate-counter-clockwise",
+    "category": "Arrows",
+    "tags": [
+      "rotate-left"
+    ]
+  },
+  {
+    "icon": "arrow-rotate-left-right",
+    "category": "Arrows",
+    "tags": [
+      "repeat",
+      "refresh"
+    ]
+  },
+  {
+    "icon": "arrow-rotate-right-left",
+    "category": "Arrows",
+    "tags": [
+      "repeat",
+      "refresh"
+    ]
+  },
+  {
+    "icon": "arrow-rounded",
+    "category": "Interface General",
+    "tags": [
+      "share",
+      "arrow",
+      "login"
+    ]
+  },
+  {
+    "icon": "arrow-share-left",
+    "category": "Arrows",
+    "tags": [
+      "back",
+      "last",
+      "reply"
+    ]
+  },
+  {
+    "icon": "arrow-share-right",
+    "category": "Arrows",
+    "tags": [
+      "next",
+      "forward"
+    ]
+  },
+  {
+    "icon": "arrow-split",
+    "category": "Arrows",
+    "tags": [
+      "rules",
+      "direction",
+      "split"
+    ]
+  },
+  {
+    "icon": "arrow-top-bottom",
+    "category": "Arrows",
+    "tags": [
+      "sort 1",
+      "switch vertical"
+    ]
+  },
+  {
+    "icon": "arrow-triangle-bottom",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-triangle-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-triangle-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-triangle-top",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-undo-down",
+    "category": "Arrows",
+    "tags": [
+      "back",
+      "bottom"
+    ]
+  },
+  {
+    "icon": "arrow-undo-up",
+    "category": "Arrows",
+    "tags": [
+      "back",
+      "top"
+    ]
+  },
+  {
+    "icon": "arrow-up",
+    "category": "Arrows",
+    "tags": [
+      "arrow-top"
+    ]
+  },
+  {
+    "icon": "arrow-up-circle",
+    "category": "Arrows",
+    "tags": [
+      "arrow-top"
+    ]
+  },
+  {
+    "icon": "arrow-up-down-left-right",
+    "category": "Arrows",
+    "tags": [
+      "move"
+    ]
+  },
+  {
+    "icon": "arrow-up-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-up-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "arrow-wall-2-down",
+    "category": "Arrows",
+    "tags": [
+      "align bottom"
+    ]
+  },
+  {
+    "icon": "arrow-wall-2-left",
+    "category": "Arrows",
+    "tags": [
+      "align left"
+    ]
+  },
+  {
+    "icon": "arrow-wall-2-right",
+    "category": "Arrows",
+    "tags": [
+      "align right"
+    ]
+  },
+  {
+    "icon": "arrow-wall-2-up",
+    "category": "Arrows",
+    "tags": [
+      "align top"
+    ]
+  },
+  {
+    "icon": "arrow-wall-down",
+    "category": "Arrows",
+    "tags": [
+      "align bottom"
+    ]
+  },
+  {
+    "icon": "arrow-wall-left",
+    "category": "Arrows",
+    "tags": [
+      "align left"
+    ]
+  },
+  {
+    "icon": "arrow-wall-right",
+    "category": "Arrows",
+    "tags": [
+      "align right"
+    ]
+  },
+  {
+    "icon": "arrow-wall-up",
+    "category": "Arrows",
+    "tags": [
+      "align top"
+    ]
+  },
+  {
+    "icon": "arrows-all-sides",
+    "category": "Interface General",
+    "tags": [
+      "move",
+      "focus"
+    ]
+  },
+  {
+    "icon": "arrows-all-sides-2",
+    "category": "Interface General",
+    "tags": [
+      "scan",
+      "move",
+      "focus"
+    ]
+  },
+  {
+    "icon": "arrows-repeat",
+    "category": "Arrows",
+    "tags": [
+      "repost"
+    ]
+  },
+  {
+    "icon": "arrows-repeat-circle",
+    "category": "Arrows",
+    "tags": [
+      "repost"
+    ]
+  },
+  {
+    "icon": "arrows-repeat-left-right",
+    "category": "Arrows",
+    "tags": [
+      "retweet"
+    ]
+  },
+  {
+    "icon": "arrows-repeat-right-left",
+    "category": "Arrows",
+    "tags": [
+      "repost"
+    ]
+  },
+  {
+    "icon": "arrows-repeat-right-left-off",
+    "category": "Arrows",
+    "tags": [
+      "repost-off"
+    ]
+  },
+  {
+    "icon": "artifact-news",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "aspect-ratio-1-1",
+    "category": "Photography & Video",
+    "tags": [
+      "square"
+    ]
+  },
+  {
+    "icon": "aspect-ratio-16-9",
+    "category": "Photography & Video",
+    "tags": [
+      "landscape"
+    ]
+  },
+  {
+    "icon": "aspect-ratio-21-9",
+    "category": "Photography & Video",
+    "tags": [
+      "wide",
+      "landscape"
+    ]
+  },
+  {
+    "icon": "aspect-ratio-3-4",
+    "category": "Photography & Video",
+    "tags": [
+      "portrait"
+    ]
+  },
+  {
+    "icon": "aspect-ratio-4-3",
+    "category": "Photography & Video",
+    "tags": [
+      "landscape"
+    ]
+  },
+  {
+    "icon": "asterisk",
+    "category": "Security",
+    "tags": [
+      "placeholder"
+    ]
+  },
+  {
+    "icon": "at",
+    "category": "Keyboard",
+    "tags": [
+      "handle",
+      "@"
+    ]
+  },
+  {
+    "icon": "atom",
+    "category": "Nature & Energy",
+    "tags": []
+  },
+  {
+    "icon": "audio",
+    "category": "Sound & Music",
+    "tags": [
+      "music",
+      "playlist",
+      "musical-note"
+    ]
+  },
+  {
+    "icon": "auto-correct",
+    "category": "Typography",
+    "tags": [
+      "autocheck",
+      "text-correction"
+    ]
+  },
+  {
+    "icon": "auto-flash",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "auto-size",
+    "category": "Photography & Video",
+    "tags": [
+      "automatic-size",
+      "page"
+    ]
+  },
+  {
+    "icon": "avocado",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "back",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "back-10s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "backpack",
+    "category": "Things",
+    "tags": [
+      "travel"
+    ]
+  },
+  {
+    "icon": "backward",
+    "category": "Keyboard",
+    "tags": [
+      "delete",
+      "remove",
+      "key"
+    ]
+  },
+  {
+    "icon": "bag",
+    "category": "Things",
+    "tags": [
+      "luggage",
+      "buggage"
+    ]
+  },
+  {
+    "icon": "bag-2",
+    "category": "Things",
+    "tags": [
+      "luggage",
+      "buggage"
+    ]
+  },
+  {
+    "icon": "balloon",
+    "category": "Things",
+    "tags": [
+      "birthday"
+    ]
+  },
+  {
+    "icon": "banana",
+    "category": "Food",
+    "tags": [
+      "fruit"
+    ]
+  },
+  {
+    "icon": "bank",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "banknote-1",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money",
+      "bill"
+    ]
+  },
+  {
+    "icon": "banknote-2",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money",
+      "bill"
+    ]
+  },
+  {
+    "icon": "barcode",
+    "category": "Interface General",
+    "tags": [
+      "qr code",
+      "scan"
+    ]
+  },
+  {
+    "icon": "bars-three",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "list",
+      "hamburger"
+    ]
+  },
+  {
+    "icon": "bars-three-2",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "list",
+      "hamburger"
+    ]
+  },
+  {
+    "icon": "bars-three-3",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "list",
+      "hamburger"
+    ]
+  },
+  {
+    "icon": "bars-two",
+    "category": "Interface General",
+    "tags": [
+      "menu simple",
+      "nav simple"
+    ]
+  },
+  {
+    "icon": "bars-two-2",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "nav"
+    ]
+  },
+  {
+    "icon": "baseball",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "basket-1",
+    "category": "Shopping & Payment",
+    "tags": [
+      "cart",
+      "shopping"
+    ]
+  },
+  {
+    "icon": "basket-2",
+    "category": "Shopping & Payment",
+    "tags": [
+      "shopping-bag"
+    ]
+  },
+  {
+    "icon": "basketball",
+    "category": "Sports",
+    "tags": [
+      "nba"
+    ]
+  },
+  {
+    "icon": "bath-man-1",
+    "category": "People",
+    "tags": [
+      "man",
+      "male"
+    ]
+  },
+  {
+    "icon": "bath-woman-1",
+    "category": "People",
+    "tags": [
+      "women",
+      "female"
+    ]
+  },
+  {
+    "icon": "battery-empty",
+    "category": "Devices & Signals",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "battery-error",
+    "category": "Devices & Signals",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "battery-full",
+    "category": "Devices & Signals",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "battery-loading",
+    "category": "Devices & Signals",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "battery-low",
+    "category": "Devices & Signals",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "battery-medium",
+    "category": "Devices & Signals",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "baymax",
+    "category": "Things",
+    "tags": [
+      "bot",
+      "help"
+    ]
+  },
+  {
+    "icon": "bean",
+    "category": "Things",
+    "tags": [
+      "java"
+    ]
+  },
+  {
+    "icon": "bed",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "bee",
+    "category": "Things",
+    "tags": [
+      "fly"
+    ]
+  },
+  {
+    "icon": "behance",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "bell",
+    "category": "Interface General",
+    "tags": [
+      "notification",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "icon": "bell-2",
+    "category": "Interface General",
+    "tags": [
+      "notification",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "icon": "bell-2-snooze",
+    "category": "Interface General",
+    "tags": [
+      "notification",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "icon": "bell-check",
+    "category": "Interface General",
+    "tags": [
+      "notification alarm",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "icon": "bell-off",
+    "category": "Interface General",
+    "tags": [
+      "notification off",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "icon": "beta",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "bezier",
+    "category": "Edit",
+    "tags": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "icon": "bezier-add",
+    "category": "Edit",
+    "tags": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "icon": "bezier-circle",
+    "category": "Edit",
+    "tags": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "icon": "bezier-curve",
+    "category": "Edit",
+    "tags": [
+      "bezier",
+      "vector",
+      "svg"
+    ]
+  },
+  {
+    "icon": "bezier-curves",
+    "category": "Code",
+    "tags": [
+      "animation",
+      "motion",
+      "spring"
+    ]
+  },
+  {
+    "icon": "bezier-edit",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "bezier-pointer",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "bezier-remove",
+    "category": "Edit",
+    "tags": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "icon": "bike",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "birthday-cake",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "bitcoin",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "bitcoin-logo",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "black-hole",
+    "category": "Things",
+    "tags": [
+      "galaxy",
+      "delete-forever",
+      "hide"
+    ]
+  },
+  {
+    "icon": "blackpoint",
+    "category": "Photography & Video",
+    "tags": [
+      "target"
+    ]
+  },
+  {
+    "icon": "blank-page-landscape",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "blank-page-portrait",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "blip",
+    "category": "Hands",
+    "tags": [
+      "flick",
+      "snip",
+      "snap",
+      "easy",
+      "thanos"
+    ]
+  },
+  {
+    "icon": "block",
+    "category": "Building",
+    "tags": [
+      "workspace"
+    ]
+  },
+  {
+    "icon": "blossom",
+    "category": "Nature & Energy",
+    "tags": [
+      "flower",
+      "growing"
+    ]
+  },
+  {
+    "icon": "bluesky",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "bluetooth",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "blur",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "bold",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "bolt",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "bomb",
+    "category": "Things",
+    "tags": [
+      "boom"
+    ]
+  },
+  {
+    "icon": "book",
+    "category": "Communication",
+    "tags": [
+      "guide",
+      "info",
+      "faq"
+    ]
+  },
+  {
+    "icon": "book-simple",
+    "category": "Communication",
+    "tags": [
+      "guide",
+      "info",
+      "faq"
+    ]
+  },
+  {
+    "icon": "bookmark",
+    "category": "Interface General",
+    "tags": [
+      "banner",
+      "flag",
+      "tag"
+    ]
+  },
+  {
+    "icon": "bookmark-check",
+    "category": "Interface General",
+    "tags": [
+      "add",
+      "check"
+    ]
+  },
+  {
+    "icon": "bookmark-delete",
+    "category": "Interface General",
+    "tags": [
+      "remove",
+      "banner",
+      "flag",
+      "tag",
+      "x"
+    ]
+  },
+  {
+    "icon": "bookmark-plus",
+    "category": "Interface General",
+    "tags": [
+      "banner",
+      "flag",
+      "tag"
+    ]
+  },
+  {
+    "icon": "bookmark-remove",
+    "category": "Interface General",
+    "tags": [
+      "off"
+    ]
+  },
+  {
+    "icon": "books",
+    "category": "Things",
+    "tags": [
+      "library"
+    ]
+  },
+  {
+    "icon": "boolean-group-exclude",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-intersect",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-intersect-2",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-intersect-3",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-substract",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-substract-2",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-union",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "boolean-group-union-2",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "bottle",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "bowling",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "box-2",
+    "category": "Interface General",
+    "tags": [
+      "inbox",
+      "archive",
+      "tray",
+      "shelf"
+    ]
+  },
+  {
+    "icon": "box-2-alt-fill",
+    "category": "Interface General",
+    "tags": [
+      "inbox",
+      "archive",
+      "tray",
+      "shelf"
+    ]
+  },
+  {
+    "icon": "box-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "magic box"
+    ]
+  },
+  {
+    "icon": "brackets-1",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "brackets-2",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "brain-1",
+    "category": "AI & Magic",
+    "tags": [
+      "ai",
+      "thinking",
+      "database",
+      "ki"
+    ]
+  },
+  {
+    "icon": "brain-2",
+    "category": "AI & Magic",
+    "tags": [
+      "ai",
+      "thinking",
+      "database",
+      "ki"
+    ]
+  },
+  {
+    "icon": "branch",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "breakfast",
+    "category": "Food",
+    "tags": [
+      "fried-egg"
+    ]
+  },
+  {
+    "icon": "brightness",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "brilliance",
+    "category": "Photography & Video",
+    "tags": [
+      "yin yang",
+      "ballance"
+    ]
+  },
+  {
+    "icon": "broken-chain-link-1",
+    "category": "Interface General",
+    "tags": [
+      "unlink"
+    ]
+  },
+  {
+    "icon": "broken-chain-link-2",
+    "category": "Interface General",
+    "tags": [
+      "unlink"
+    ]
+  },
+  {
+    "icon": "broken-chain-link-3",
+    "category": "Interface General",
+    "tags": [
+      "unlink"
+    ]
+  },
+  {
+    "icon": "broken-heart",
+    "category": "Interface General",
+    "tags": [
+      "delete-account"
+    ]
+  },
+  {
+    "icon": "bronce-medal",
+    "category": "Things",
+    "tags": [
+      "third-place"
+    ]
+  },
+  {
+    "icon": "broom",
+    "category": "Things",
+    "tags": [
+      "brush",
+      "clear",
+      "clean"
+    ]
+  },
+  {
+    "icon": "broom-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "clean",
+      "brush"
+    ]
+  },
+  {
+    "icon": "brush",
+    "category": "Edit",
+    "tags": [
+      "color"
+    ]
+  },
+  {
+    "icon": "bubble-2",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-3",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-4",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-5",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-6",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-alert",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-annotation-2",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-annotation-3",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-annotation-4",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-annotation-5",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-annotation-6",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-check",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-crossed",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-dots",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-heart",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-info",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-plus",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-question",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-quotes",
+    "category": "Communication",
+    "tags": []
+  },
+  {
+    "icon": "bubble-sparkle",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-text",
+    "category": "Communication",
+    "tags": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "bubble-text-6",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-wide",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-wide-annotation",
+    "category": "Communication",
+    "tags": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubble-wide-notification",
+    "category": "Communication",
+    "tags": [
+      "badge",
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "icon": "bubbles",
+    "category": "Communication",
+    "tags": [
+      "messages",
+      "chat",
+      "communicate"
+    ]
+  },
+  {
+    "icon": "bucket",
+    "category": "Interface General",
+    "tags": [
+      "trash",
+      "can"
+    ]
+  },
+  {
+    "icon": "bug",
+    "category": "Code",
+    "tags": [
+      "issue"
+    ]
+  },
+  {
+    "icon": "bug-face",
+    "category": "Code",
+    "tags": [
+      "issue"
+    ]
+  },
+  {
+    "icon": "buildings",
+    "category": "Building",
+    "tags": [
+      "company",
+      "workspace"
+    ]
+  },
+  {
+    "icon": "bullet-list",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "bun",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "burger",
+    "category": "Food",
+    "tags": [
+      "hamburger",
+      "sandwich"
+    ]
+  },
+  {
+    "icon": "bus",
+    "category": "Things",
+    "tags": [
+      "school-bus"
+    ]
+  },
+  {
+    "icon": "cabinet",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "calculator",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "calendar-1",
+    "category": "Time & Date",
+    "tags": [
+      "date"
+    ]
+  },
+  {
+    "icon": "calendar-2",
+    "category": "Time & Date",
+    "tags": [
+      "date"
+    ]
+  },
+  {
+    "icon": "calendar-3",
+    "category": "Time & Date",
+    "tags": [
+      "date"
+    ]
+  },
+  {
+    "icon": "calendar-4",
+    "category": "Time & Date",
+    "tags": [
+      "date"
+    ]
+  },
+  {
+    "icon": "calendar-add-4",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calendar-check",
+    "category": "Time & Date",
+    "tags": [
+      "date-check"
+    ]
+  },
+  {
+    "icon": "calendar-check-4",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calendar-clock",
+    "category": "Time & Date",
+    "tags": [
+      "date-time"
+    ]
+  },
+  {
+    "icon": "calendar-clock-4",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calendar-days",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calendar-edit",
+    "category": "Time & Date",
+    "tags": [
+      "date-edit"
+    ]
+  },
+  {
+    "icon": "calendar-remove-4",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calendar-repeat",
+    "category": "Time & Date",
+    "tags": [
+      "date-repeat"
+    ]
+  },
+  {
+    "icon": "calendar-search",
+    "category": "Time & Date",
+    "tags": [
+      "date-search"
+    ]
+  },
+  {
+    "icon": "calendar-search-4",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calendar-tear-off",
+    "category": "Time & Date",
+    "tags": [
+      "date"
+    ]
+  },
+  {
+    "icon": "calender-5",
+    "category": "Time & Date",
+    "tags": [
+      "date"
+    ]
+  },
+  {
+    "icon": "calender-add",
+    "category": "Time & Date",
+    "tags": [
+      "date-add"
+    ]
+  },
+  {
+    "icon": "calender-next-week",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calender-remove",
+    "category": "Time & Date",
+    "tags": [
+      "date-remove"
+    ]
+  },
+  {
+    "icon": "calender-today",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "calender-tomorrow",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "call",
+    "category": "Communication",
+    "tags": [
+      "phone"
+    ]
+  },
+  {
+    "icon": "call-cancel",
+    "category": "Communication",
+    "tags": [
+      "phone"
+    ]
+  },
+  {
+    "icon": "call-incoming",
+    "category": "Communication",
+    "tags": [
+      "phone"
+    ]
+  },
+  {
+    "icon": "call-outgoing",
+    "category": "Communication",
+    "tags": [
+      "phone"
+    ]
+  },
+  {
+    "icon": "camera-1",
+    "category": "Photography & Video",
+    "tags": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "icon": "camera-2",
+    "category": "Photography & Video",
+    "tags": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "icon": "camera-3",
+    "category": "Photography & Video",
+    "tags": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "icon": "camera-4",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "camera-5",
+    "category": "Photography & Video",
+    "tags": [
+      "action cam",
+      "GoPro"
+    ]
+  },
+  {
+    "icon": "camera-auto",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "camera-off",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "camera-off-1",
+    "category": "Photography & Video",
+    "tags": [
+      "cam-off"
+    ]
+  },
+  {
+    "icon": "candy",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "cap",
+    "category": "Things",
+    "tags": [
+      "fan"
+    ]
+  },
+  {
+    "icon": "capture",
+    "category": "Photography & Video",
+    "tags": [
+      "screen"
+    ]
+  },
+  {
+    "icon": "car",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-1",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-1-ev",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-10",
+    "category": "Things",
+    "tags": [
+      "truck"
+    ]
+  },
+  {
+    "icon": "car-10-ev",
+    "category": "Things",
+    "tags": [
+      "truck"
+    ]
+  },
+  {
+    "icon": "car-2",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-2-ev",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-3",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-3-ev",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-4",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-4-ev",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-5",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-5-ev",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-6",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-6-ev",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "car-7",
+    "category": "Things",
+    "tags": [
+      "pickup"
+    ]
+  },
+  {
+    "icon": "car-7-ev",
+    "category": "Things",
+    "tags": [
+      "pickup"
+    ]
+  },
+  {
+    "icon": "car-8",
+    "category": "Things",
+    "tags": [
+      "mini-van"
+    ]
+  },
+  {
+    "icon": "car-8-ev",
+    "category": "Things",
+    "tags": [
+      "mini-van"
+    ]
+  },
+  {
+    "icon": "car-9",
+    "category": "Things",
+    "tags": [
+      "van"
+    ]
+  },
+  {
+    "icon": "car-9-ev",
+    "category": "Things",
+    "tags": [
+      "van"
+    ]
+  },
+  {
+    "icon": "car-front-view",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "carussel",
+    "category": "Layout",
+    "tags": [
+      "slides"
+    ]
+  },
+  {
+    "icon": "cash",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "cat",
+    "category": "Photography & Video",
+    "tags": [
+      "image",
+      "animal",
+      "cute"
+    ]
+  },
+  {
+    "icon": "celebrate",
+    "category": "Things",
+    "tags": [
+      "party",
+      "confetti"
+    ]
+  },
+  {
+    "icon": "central-icon-system",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "cereals",
+    "category": "Food",
+    "tags": [
+      "wheat"
+    ]
+  },
+  {
+    "icon": "chain-link-1",
+    "category": "Interface General",
+    "tags": [
+      "url"
+    ]
+  },
+  {
+    "icon": "chain-link-2",
+    "category": "Interface General",
+    "tags": [
+      "url"
+    ]
+  },
+  {
+    "icon": "chain-link-3",
+    "category": "Interface General",
+    "tags": [
+      "url"
+    ]
+  },
+  {
+    "icon": "chain-link-4",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "chair",
+    "category": "Furniture & Household",
+    "tags": [
+      "seat"
+    ]
+  },
+  {
+    "icon": "chair-modern",
+    "category": "Furniture & Household",
+    "tags": [
+      "seat"
+    ]
+  },
+  {
+    "icon": "charging-station",
+    "category": "Nature & Energy",
+    "tags": [
+      "electric-current",
+      "power",
+      "e-charge"
+    ]
+  },
+  {
+    "icon": "chart-1",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "flipchart",
+      "presentation",
+      "graph 2"
+    ]
+  },
+  {
+    "icon": "chart-2",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "flipchart",
+      "presentation",
+      "graph"
+    ]
+  },
+  {
+    "icon": "chart-3",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph",
+      "signal"
+    ]
+  },
+  {
+    "icon": "chart-4",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "chart-5",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "chart-6",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "chart-7",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "checklist",
+    "category": "Interface General",
+    "tags": [
+      "list"
+    ]
+  },
+  {
+    "icon": "checkmark-1",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "checkmark-1-small",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "checkmark-2",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "checkmark-2-small",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "cheeseburger",
+    "category": "Food",
+    "tags": [
+      "hamburger",
+      "sandwich"
+    ]
+  },
+  {
+    "icon": "cherry",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "chevron-bottom",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-double-down",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-double-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-double-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-double-up",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-down-small",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-grabber-horizontal",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-grabber-vertical",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-large-down",
+    "category": "Arrows",
+    "tags": [
+      "chev down",
+      "down"
+    ]
+  },
+  {
+    "icon": "chevron-large-left",
+    "category": "Arrows",
+    "tags": [
+      "chev left",
+      "last"
+    ]
+  },
+  {
+    "icon": "chevron-large-right",
+    "category": "Arrows",
+    "tags": [
+      "chev right",
+      "next"
+    ]
+  },
+  {
+    "icon": "chevron-large-top",
+    "category": "Arrows",
+    "tags": [
+      "chev top",
+      "up"
+    ]
+  },
+  {
+    "icon": "chevron-left",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-left-small",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-right",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-right-small",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-top",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-top-small",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "chevron-triangle-down-small",
+    "category": "Arrows",
+    "tags": [
+      "dropdown"
+    ]
+  },
+  {
+    "icon": "chevron-triangle-up-small",
+    "category": "Arrows",
+    "tags": [
+      "dropdown"
+    ]
+  },
+  {
+    "icon": "chip",
+    "category": "Devices & Signals",
+    "tags": [
+      "esim"
+    ]
+  },
+  {
+    "icon": "chip-esim",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "chip-simple",
+    "category": "Devices & Signals",
+    "tags": [
+      "processor"
+    ]
+  },
+  {
+    "icon": "chrome",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "chromecast",
+    "category": "Devices & Signals",
+    "tags": [
+      "cast"
+    ]
+  },
+  {
+    "icon": "circle",
+    "category": "Edit",
+    "tags": [
+      "line",
+      "paint"
+    ]
+  },
+  {
+    "icon": "circle-arrow-down",
+    "category": "Interface General",
+    "tags": [
+      "download square",
+      "save"
+    ]
+  },
+  {
+    "icon": "circle-ban-sign",
+    "category": "Interface General",
+    "tags": [
+      "circle",
+      "block",
+      "ads"
+    ]
+  },
+  {
+    "icon": "circle-check",
+    "category": "Interface General",
+    "tags": [
+      "check radio",
+      "circle",
+      "checkbox",
+      "check",
+      "checkmark",
+      "confirm"
+    ]
+  },
+  {
+    "icon": "circle-dashed",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "circle-dots-center-1",
+    "category": "Interface General",
+    "tags": [
+      "menu 1",
+      "grid",
+      "circle"
+    ]
+  },
+  {
+    "icon": "circle-dots-center-2",
+    "category": "Interface General",
+    "tags": [
+      "menu 1",
+      "grid",
+      "circle"
+    ]
+  },
+  {
+    "icon": "circle-dotted",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "circle-half-fill",
+    "category": "Accessibility",
+    "tags": [
+      "contrast"
+    ]
+  },
+  {
+    "icon": "circle-info",
+    "category": "Interface General",
+    "tags": [
+      "info circle",
+      "tooltip",
+      "information"
+    ]
+  },
+  {
+    "icon": "circle-minus",
+    "category": "Interface General",
+    "tags": [
+      "remove"
+    ]
+  },
+  {
+    "icon": "circle-person",
+    "category": "Accessibility",
+    "tags": [
+      "accessibility",
+      "a11y"
+    ]
+  },
+  {
+    "icon": "circle-placeholder-off",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "circle-placeholder-on",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "circle-plus",
+    "category": "Interface General",
+    "tags": [
+      "add"
+    ]
+  },
+  {
+    "icon": "circle-questionmark",
+    "category": "Interface General",
+    "tags": [
+      "faq",
+      "help",
+      "questionaire"
+    ]
+  },
+  {
+    "icon": "circle-record",
+    "category": "Devices & Signals",
+    "tags": [
+      "voicemail",
+      "band",
+      "tape"
+    ]
+  },
+  {
+    "icon": "circle-x",
+    "category": "Interface General",
+    "tags": [
+      "close",
+      "checkbox",
+      "remove"
+    ]
+  },
+  {
+    "icon": "circles-three",
+    "category": "Things",
+    "tags": [
+      "bubbles"
+    ]
+  },
+  {
+    "icon": "clapperboard",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "claudeai",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "clipboard",
+    "category": "Interface General",
+    "tags": [
+      "copy",
+      "list"
+    ]
+  },
+  {
+    "icon": "clipboard-2",
+    "category": "Interface General",
+    "tags": [
+      "copy",
+      "list"
+    ]
+  },
+  {
+    "icon": "clock",
+    "category": "Time & Date",
+    "tags": [
+      "time",
+      "timer"
+    ]
+  },
+  {
+    "icon": "clock-alert",
+    "category": "Time & Date",
+    "tags": [
+      "timer"
+    ]
+  },
+  {
+    "icon": "clock-snooze",
+    "category": "Time & Date",
+    "tags": [
+      "timer",
+      "snooze",
+      "zz"
+    ]
+  },
+  {
+    "icon": "clock-square",
+    "category": "Time & Date",
+    "tags": [
+      "time",
+      "timer"
+    ]
+  },
+  {
+    "icon": "close-quote-1",
+    "category": "Typography",
+    "tags": [
+      "blockquote"
+    ]
+  },
+  {
+    "icon": "close-quote-2",
+    "category": "Typography",
+    "tags": [
+      "blockquote"
+    ]
+  },
+  {
+    "icon": "closed-captioning",
+    "category": "Photography & Video",
+    "tags": [
+      "cc"
+    ]
+  },
+  {
+    "icon": "cloud",
+    "category": "Weather",
+    "tags": [
+      "clouds"
+    ]
+  },
+  {
+    "icon": "cloud-",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-check",
+    "category": "Clouds",
+    "tags": [
+      "save"
+    ]
+  },
+  {
+    "icon": "cloud-download",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-off",
+    "category": "Clouds",
+    "tags": [
+      "offline"
+    ]
+  },
+  {
+    "icon": "cloud-off-2",
+    "category": "Clouds",
+    "tags": [
+      "offline"
+    ]
+  },
+  {
+    "icon": "cloud-simple",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-simple-disconnected",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-simple-download",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-simple-upload",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-snow",
+    "category": "Weather",
+    "tags": []
+  },
+  {
+    "icon": "cloud-sync",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloud-upload",
+    "category": "Clouds",
+    "tags": []
+  },
+  {
+    "icon": "cloudy",
+    "category": "Weather",
+    "tags": [
+      "clouds"
+    ]
+  },
+  {
+    "icon": "cloudy-sun",
+    "category": "Weather",
+    "tags": [
+      "clouds"
+    ]
+  },
+  {
+    "icon": "cmd",
+    "category": "Keyboard",
+    "tags": [
+      "command",
+      "apple",
+      "key"
+    ]
+  },
+  {
+    "icon": "cmd-box",
+    "category": "Keyboard",
+    "tags": [
+      "command",
+      "apple",
+      "key"
+    ]
+  },
+  {
+    "icon": "cocktail",
+    "category": "Food",
+    "tags": [
+      "drink"
+    ]
+  },
+  {
+    "icon": "code",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "code-analyze",
+    "category": "Code",
+    "tags": [
+      "vibe-coding"
+    ]
+  },
+  {
+    "icon": "code-assistant",
+    "category": "Code",
+    "tags": [
+      "vibe-coding"
+    ]
+  },
+  {
+    "icon": "code-brackets",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "code-insert",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "code-lines",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "codepen",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "coin-1",
+    "category": "Crypto",
+    "tags": [
+      "credits",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-2",
+    "category": "Crypto",
+    "tags": [
+      "credits"
+    ]
+  },
+  {
+    "icon": "coin-dollar",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-euro",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-lira",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-pesos",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-pounds",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-rand",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-rupees",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-won",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coin-yen",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "icon": "coins",
+    "category": "Crypto",
+    "tags": [
+      "money",
+      "transfer"
+    ]
+  },
+  {
+    "icon": "coins-add",
+    "category": "Crypto",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "color-palette",
+    "category": "Edit",
+    "tags": [
+      "colours"
+    ]
+  },
+  {
+    "icon": "color-picker",
+    "category": "Edit",
+    "tags": [
+      "color"
+    ]
+  },
+  {
+    "icon": "color-roll",
+    "category": "Edit",
+    "tags": [
+      "paint-roller"
+    ]
+  },
+  {
+    "icon": "color-swatch",
+    "category": "Edit",
+    "tags": [
+      "palette",
+      "colours"
+    ]
+  },
+  {
+    "icon": "colors",
+    "category": "Edit",
+    "tags": [
+      "rgb",
+      "adjustments"
+    ]
+  },
+  {
+    "icon": "column-wide",
+    "category": "Layout",
+    "tags": [
+      "colums"
+    ]
+  },
+  {
+    "icon": "column-wide-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "column-wide-half",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "column-wide-half-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "column-wide-half-remove",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "column-wide-remove",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "compass-round",
+    "category": "Interface General",
+    "tags": [
+      "browser",
+      "safari",
+      "web",
+      "internet",
+      "navigation"
+    ]
+  },
+  {
+    "icon": "compass-square",
+    "category": "Interface General",
+    "tags": [
+      "browser",
+      "safari",
+      "web",
+      "internet",
+      "navigation"
+    ]
+  },
+  {
+    "icon": "components",
+    "category": "Edit",
+    "tags": [
+      "figma"
+    ]
+  },
+  {
+    "icon": "concise",
+    "category": "Typography",
+    "tags": [
+      "text-shorten",
+      "squeeze"
+    ]
+  },
+  {
+    "icon": "console",
+    "category": "Code",
+    "tags": [
+      "terminal"
+    ]
+  },
+  {
+    "icon": "console-simple",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "construction-helmet",
+    "category": "Things",
+    "tags": [
+      "work",
+      "wip"
+    ]
+  },
+  {
+    "icon": "contacts",
+    "category": "People",
+    "tags": [
+      "address-book"
+    ]
+  },
+  {
+    "icon": "contrast",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "control",
+    "category": "Keyboard",
+    "tags": []
+  },
+  {
+    "icon": "cookies",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "cooking",
+    "category": "Food",
+    "tags": [
+      "stirring"
+    ]
+  },
+  {
+    "icon": "copilot",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "copyright",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "corner-radius",
+    "category": "Edit",
+    "tags": [
+      "border-radius"
+    ]
+  },
+  {
+    "icon": "court",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "credit-card-1",
+    "category": "Shopping & Payment",
+    "tags": [
+      "card",
+      "payment"
+    ]
+  },
+  {
+    "icon": "credit-card-2",
+    "category": "Shopping & Payment",
+    "tags": [
+      "card",
+      "payment"
+    ]
+  },
+  {
+    "icon": "credit-card-add",
+    "category": "Shopping & Payment",
+    "tags": [
+      "card",
+      "payment"
+    ]
+  },
+  {
+    "icon": "crop",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "cross-large",
+    "category": "Interface General",
+    "tags": [
+      "crossed large",
+      "close"
+    ]
+  },
+  {
+    "icon": "cross-small",
+    "category": "Interface General",
+    "tags": [
+      "crossed small",
+      "delete",
+      "remove"
+    ]
+  },
+  {
+    "icon": "crown",
+    "category": "Things",
+    "tags": [
+      "vip"
+    ]
+  },
+  {
+    "icon": "crypto",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "crypto-coin",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "crypto-wallet",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "cryptopunk",
+    "category": "Crypto",
+    "tags": [
+      "nft",
+      "pfp",
+      "profile",
+      "avatar"
+    ]
+  },
+  {
+    "icon": "cup",
+    "category": "Food",
+    "tags": [
+      "tea",
+      "coffee"
+    ]
+  },
+  {
+    "icon": "cup-hot",
+    "category": "Food",
+    "tags": [
+      "coffee",
+      "tea",
+      "milk"
+    ]
+  },
+  {
+    "icon": "currency-dollar",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "currency-euro",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "currency-pesos",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "currency-pounds",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "currency-rupees",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "currency-yen",
+    "category": "Shopping & Payment",
+    "tags": [
+      "money"
+    ]
+  },
+  {
+    "icon": "cursor",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "cursor-1",
+    "category": "Arrows",
+    "tags": [
+      "arrow"
+    ]
+  },
+  {
+    "icon": "cursor-2",
+    "category": "Arrows",
+    "tags": [
+      "arrow"
+    ]
+  },
+  {
+    "icon": "cursor-3",
+    "category": "Arrows",
+    "tags": [
+      "arrow"
+    ]
+  },
+  {
+    "icon": "cursor-click",
+    "category": "Arrows",
+    "tags": [
+      "arrow",
+      "clickbait"
+    ]
+  },
+  {
+    "icon": "cursor-list",
+    "category": "Arrows",
+    "tags": [
+      "cursor",
+      "list"
+    ]
+  },
+  {
+    "icon": "curtain",
+    "category": "Things",
+    "tags": [
+      "showtime",
+      "theater"
+    ]
+  },
+  {
+    "icon": "cute-robot",
+    "category": "AI & Magic",
+    "tags": []
+  },
+  {
+    "icon": "dashboard-fast",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "dashboard-low",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "dashboard-middle",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "date-custom",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "date-daily",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "date-monthly",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "date-weekdays",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "date-weekly",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "date-yearly",
+    "category": "Time & Date",
+    "tags": [
+      "fireworks",
+      "new-year"
+    ]
+  },
+  {
+    "icon": "debugger",
+    "category": "Code",
+    "tags": [
+      "debug"
+    ]
+  },
+  {
+    "icon": "deep-search",
+    "category": "Interface General",
+    "tags": [
+      "deep-research",
+      "focus-search"
+    ]
+  },
+  {
+    "icon": "deepseek",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "delivery-bike",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "desk-office",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "desk-office-2",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "devices",
+    "category": "Devices & Signals",
+    "tags": [
+      "macbook",
+      "iphone",
+      "phone",
+      "connected"
+    ]
+  },
+  {
+    "icon": "diamond",
+    "category": "Things",
+    "tags": [
+      "pro",
+      "premium"
+    ]
+  },
+  {
+    "icon": "diamond-shine",
+    "category": "Things",
+    "tags": [
+      "pop",
+      "polish"
+    ]
+  },
+  {
+    "icon": "dice-1",
+    "category": "Gaming",
+    "tags": [
+      "roll"
+    ]
+  },
+  {
+    "icon": "dice-2",
+    "category": "Gaming",
+    "tags": [
+      "roll"
+    ]
+  },
+  {
+    "icon": "dice-3",
+    "category": "Gaming",
+    "tags": [
+      "roll"
+    ]
+  },
+  {
+    "icon": "dice-4",
+    "category": "Gaming",
+    "tags": [
+      "roll"
+    ]
+  },
+  {
+    "icon": "dice-5",
+    "category": "Gaming",
+    "tags": [
+      "roll"
+    ]
+  },
+  {
+    "icon": "dice-6",
+    "category": "Gaming",
+    "tags": [
+      "roll"
+    ]
+  },
+  {
+    "icon": "dices",
+    "category": "Gaming",
+    "tags": [
+      "random",
+      "roll"
+    ]
+  },
+  {
+    "icon": "direction-1",
+    "category": "Location",
+    "tags": [
+      "route"
+    ]
+  },
+  {
+    "icon": "direction-2",
+    "category": "Location",
+    "tags": [
+      "route"
+    ]
+  },
+  {
+    "icon": "director-chair",
+    "category": "Things",
+    "tags": [
+      "chair"
+    ]
+  },
+  {
+    "icon": "discord",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "dishwasher",
+    "category": "Furniture & Household",
+    "tags": [
+      "clean"
+    ]
+  },
+  {
+    "icon": "divider",
+    "category": "Typography",
+    "tags": [
+      "add-line"
+    ]
+  },
+  {
+    "icon": "dollar",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money",
+      "coin",
+      "USD"
+    ]
+  },
+  {
+    "icon": "donut",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "donut-glaze",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "door",
+    "category": "Building",
+    "tags": [
+      "login",
+      "logout"
+    ]
+  },
+  {
+    "icon": "door-hanger",
+    "category": "Things",
+    "tags": [
+      "sign",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "icon": "dossier",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "dot-grid-1x3-horizontal",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "icon": "dot-grid-1x3-vertical",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "icon": "dot-grid-2x3",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "icon": "dot-grid-3x3",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "icon": "downsize",
+    "category": "Photography & Video",
+    "tags": [
+      "exit-full-screen",
+      "scale-down"
+    ]
+  },
+  {
+    "icon": "downsize-2",
+    "category": "Photography & Video",
+    "tags": [
+      "exit-full-screen",
+      "scale-down"
+    ]
+  },
+  {
+    "icon": "draft",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "drawer-1",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "drawer-2",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "drawer-3",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "drawer-4",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "dresser",
+    "category": "Furniture & Household",
+    "tags": [
+      "drawer"
+    ]
+  },
+  {
+    "icon": "dribbble",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "drilling-rig",
+    "category": "Nature & Energy",
+    "tags": [
+      "oil",
+      "gas"
+    ]
+  },
+  {
+    "icon": "drink",
+    "category": "Food",
+    "tags": [
+      "cup",
+      "straw"
+    ]
+  },
+  {
+    "icon": "drop",
+    "category": "Weather",
+    "tags": [
+      "water",
+      "precipitation",
+      "liquid"
+    ]
+  },
+  {
+    "icon": "dumbell",
+    "category": "Things",
+    "tags": [
+      "fitness",
+      "training"
+    ]
+  },
+  {
+    "icon": "duolingo",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "ear",
+    "category": "Accessibility",
+    "tags": [
+      "hearing",
+      "loud"
+    ]
+  },
+  {
+    "icon": "earth",
+    "category": "Location",
+    "tags": [
+      "globe",
+      "world"
+    ]
+  },
+  {
+    "icon": "edit-big",
+    "category": "Edit",
+    "tags": [
+      "box",
+      "pencil",
+      "pen",
+      "write",
+      "draw"
+    ]
+  },
+  {
+    "icon": "edit-small-1",
+    "category": "Edit",
+    "tags": [
+      "box",
+      "pencil",
+      "pen",
+      "write",
+      "draw"
+    ]
+  },
+  {
+    "icon": "edit-small-2",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "electrocardiogram",
+    "category": "Interface General",
+    "tags": [
+      "activity",
+      "notification",
+      "pulse",
+      "heartbeat",
+      "beat"
+    ]
+  },
+  {
+    "icon": "email-1",
+    "category": "Communication",
+    "tags": [
+      "envelope"
+    ]
+  },
+  {
+    "icon": "email-2",
+    "category": "Communication",
+    "tags": [
+      "envelope"
+    ]
+  },
+  {
+    "icon": "email-3",
+    "category": "Communication",
+    "tags": [
+      "envelope"
+    ]
+  },
+  {
+    "icon": "email-notification",
+    "category": "Communication",
+    "tags": [
+      "badge",
+      "envelope"
+    ]
+  },
+  {
+    "icon": "email-plus",
+    "category": "Communication",
+    "tags": [
+      "envelope",
+      "add",
+      "plus"
+    ]
+  },
+  {
+    "icon": "email-settings",
+    "category": "Communication",
+    "tags": [
+      "envelope",
+      "gear"
+    ]
+  },
+  {
+    "icon": "emoji-add-reaction",
+    "category": "Things",
+    "tags": [
+      "reaction"
+    ]
+  },
+  {
+    "icon": "emoji-alt",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "emoji-arc",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "emoji-sad",
+    "category": "Things",
+    "tags": [
+      "unhappy"
+    ]
+  },
+  {
+    "icon": "emoji-sleep",
+    "category": "Things",
+    "tags": [
+      "snooze"
+    ]
+  },
+  {
+    "icon": "emoji-smile",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "emoji-smiley",
+    "category": "Things",
+    "tags": [
+      "face",
+      "smile"
+    ]
+  },
+  {
+    "icon": "emoji-smiling-face",
+    "category": "Things",
+    "tags": [
+      "heart-eyes"
+    ]
+  },
+  {
+    "icon": "eraser",
+    "category": "Edit",
+    "tags": [
+      "rubber",
+      "clean-up"
+    ]
+  },
+  {
+    "icon": "eraser-simple",
+    "category": "Edit",
+    "tags": [
+      "rubber",
+      "clean-up"
+    ]
+  },
+  {
+    "icon": "esc",
+    "category": "Keyboard",
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "icon": "ethereum",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "euro",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money",
+      "coin",
+      "EURO"
+    ]
+  },
+  {
+    "icon": "expand",
+    "category": "Photography & Video",
+    "tags": [
+      "window",
+      "layout"
+    ]
+  },
+  {
+    "icon": "expand-315",
+    "category": "Arrows",
+    "tags": [
+      "enlarge"
+    ]
+  },
+  {
+    "icon": "expand-45",
+    "category": "Arrows",
+    "tags": [
+      "enlarge"
+    ]
+  },
+  {
+    "icon": "expand-simple",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "expand-simple-2",
+    "category": "Arrows",
+    "tags": []
+  },
+  {
+    "icon": "explosion",
+    "category": "Things",
+    "tags": [
+      "boom",
+      "bang",
+      "pop"
+    ]
+  },
+  {
+    "icon": "exposure-1",
+    "category": "Photography & Video",
+    "tags": [
+      "plus-minus"
+    ]
+  },
+  {
+    "icon": "exposure-2",
+    "category": "Nature & Energy",
+    "tags": [
+      "macro",
+      "flower"
+    ]
+  },
+  {
+    "icon": "eye-closed",
+    "category": "Accessibility",
+    "tags": [
+      "see",
+      "hidden"
+    ]
+  },
+  {
+    "icon": "eye-open",
+    "category": "Accessibility",
+    "tags": [
+      "show",
+      "see",
+      "reveal",
+      "look",
+      "visible"
+    ]
+  },
+  {
+    "icon": "eye-slash",
+    "category": "Accessibility",
+    "tags": [
+      "hide",
+      "eye off",
+      "see",
+      "look",
+      "not visible"
+    ]
+  },
+  {
+    "icon": "eye-slash-2",
+    "category": "Accessibility",
+    "tags": [
+      "accessibility eye",
+      "a11y"
+    ]
+  },
+  {
+    "icon": "eye-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "magic eyes"
+    ]
+  },
+  {
+    "icon": "face-id",
+    "category": "Security",
+    "tags": []
+  },
+  {
+    "icon": "facebook",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "fashion",
+    "category": "Things",
+    "tags": [
+      "wear",
+      "clothes",
+      "t-shirt"
+    ]
+  },
+  {
+    "icon": "fast-delivery",
+    "category": "Shopping & Payment",
+    "tags": [
+      "quick-commerce"
+    ]
+  },
+  {
+    "icon": "fast-forward",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "fast-forward-10s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "fast-forward-15s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "fast-forward-30s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "fast-forward-5s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "feather",
+    "category": "Edit",
+    "tags": [
+      "writing"
+    ]
+  },
+  {
+    "icon": "feature",
+    "category": "Interface General",
+    "tags": [
+      "shine"
+    ]
+  },
+  {
+    "icon": "figma",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "file-bend",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-chart",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-cloud",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-download",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-edit",
+    "category": "Folders & Files",
+    "tags": [
+      "document",
+      "cloud",
+      "sync"
+    ]
+  },
+  {
+    "icon": "file-jpg",
+    "category": "Folders & Files",
+    "tags": [
+      "image",
+      "jpeg"
+    ]
+  },
+  {
+    "icon": "file-link",
+    "category": "Folders & Files",
+    "tags": [
+      "hyperlink"
+    ]
+  },
+  {
+    "icon": "file-lock",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-pdf",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-png",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-text",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "file-zip",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "files",
+    "category": "Folders & Files",
+    "tags": [
+      "documents"
+    ]
+  },
+  {
+    "icon": "filter-1",
+    "category": "Filter & Settings",
+    "tags": [
+      "sort"
+    ]
+  },
+  {
+    "icon": "filter-2",
+    "category": "Filter & Settings",
+    "tags": [
+      "sort"
+    ]
+  },
+  {
+    "icon": "filter-asc",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "filter-ascending",
+    "category": "Filter & Settings",
+    "tags": [
+      "sort",
+      "az"
+    ]
+  },
+  {
+    "icon": "filter-circle",
+    "category": "Filter & Settings",
+    "tags": [
+      "sort"
+    ]
+  },
+  {
+    "icon": "filter-desc",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "filter-descending",
+    "category": "Filter & Settings",
+    "tags": [
+      "sort",
+      "za"
+    ]
+  },
+  {
+    "icon": "filter-timeline",
+    "category": "Filter & Settings",
+    "tags": [
+      "sort"
+    ]
+  },
+  {
+    "icon": "finder",
+    "category": "Folders & Files",
+    "tags": [
+      "files",
+      "os"
+    ]
+  },
+  {
+    "icon": "finder-face",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "finger-print-1",
+    "category": "Security",
+    "tags": [
+      "touch-id"
+    ]
+  },
+  {
+    "icon": "finger-print-2",
+    "category": "Security",
+    "tags": [
+      "touch-id"
+    ]
+  },
+  {
+    "icon": "fire-1",
+    "category": "Things",
+    "tags": [
+      "flame",
+      "hot",
+      "heat"
+    ]
+  },
+  {
+    "icon": "fire-2",
+    "category": "Things",
+    "tags": [
+      "flame",
+      "hot",
+      "heat"
+    ]
+  },
+  {
+    "icon": "fire-3",
+    "category": "Things",
+    "tags": [
+      "flame",
+      "hot",
+      "heat"
+    ]
+  },
+  {
+    "icon": "firefox",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "firewall",
+    "category": "Security",
+    "tags": [
+      "wall"
+    ]
+  },
+  {
+    "icon": "fistbump",
+    "category": "Hands",
+    "tags": [
+      "boom",
+      "hands",
+      "friends"
+    ]
+  },
+  {
+    "icon": "flag-1",
+    "category": "Things",
+    "tags": [
+      "priority"
+    ]
+  },
+  {
+    "icon": "flag-2",
+    "category": "Things",
+    "tags": [
+      "priority"
+    ]
+  },
+  {
+    "icon": "floppy-disk-1",
+    "category": "Folders & Files",
+    "tags": [
+      "save"
+    ]
+  },
+  {
+    "icon": "floppy-disk-2",
+    "category": "Folders & Files",
+    "tags": [
+      "save"
+    ]
+  },
+  {
+    "icon": "focus-auto",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-exposure",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-flash",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-lock",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-macro",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-magic",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-mode",
+    "category": "People",
+    "tags": [
+      "hearing",
+      "headphones",
+      "music",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "icon": "focus-remove",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-renew",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-square",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-zoom-in",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "focus-zoom-out",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "folder-1",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-2",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-add-left",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-add-right",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-bookmarks",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-cloud",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-delete",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-download",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-link",
+    "category": "Folders & Files",
+    "tags": [
+      "link",
+      "attachment"
+    ]
+  },
+  {
+    "icon": "folder-link-2",
+    "category": "Folders & Files",
+    "tags": [
+      "link",
+      "attachment"
+    ]
+  },
+  {
+    "icon": "folder-open",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-paper",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-restricted",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-shared",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folder-upload",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "folders",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "food-bell",
+    "category": "Food",
+    "tags": [
+      "serving-bell",
+      "glosche",
+      "serve"
+    ]
+  },
+  {
+    "icon": "food-experiences",
+    "category": "Food",
+    "tags": [
+      "plate"
+    ]
+  },
+  {
+    "icon": "footsteps",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "for-you",
+    "category": "Things",
+    "tags": [
+      "for-me",
+      "event",
+      "address",
+      "post"
+    ]
+  },
+  {
+    "icon": "fork",
+    "category": "Food",
+    "tags": [
+      "caple",
+      "food",
+      "restaurant"
+    ]
+  },
+  {
+    "icon": "fork-code",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "fork-knife",
+    "category": "Food",
+    "tags": [
+      "cable",
+      "restaurant",
+      "cutlery"
+    ]
+  },
+  {
+    "icon": "fork-spoon",
+    "category": "Food",
+    "tags": [
+      "cable",
+      "restaurant",
+      "cutlery"
+    ]
+  },
+  {
+    "icon": "fortune-teller-ball",
+    "category": "AI & Magic",
+    "tags": [
+      "future"
+    ]
+  },
+  {
+    "icon": "forwards-10s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "four-k",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "fourk",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "framer",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "fridge",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "frisbee",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "frisbee-golf",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "full-screen",
+    "category": "Photography & Video",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "icon": "fullscreen",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "galaxy",
+    "category": "Things",
+    "tags": [
+      "dark-hole"
+    ]
+  },
+  {
+    "icon": "gamepad",
+    "category": "Gaming",
+    "tags": [
+      "gaming",
+      "joystick"
+    ]
+  },
+  {
+    "icon": "gamepad-controls",
+    "category": "Gaming",
+    "tags": [
+      "joystick"
+    ]
+  },
+  {
+    "icon": "gamepad-controls-down",
+    "category": "Gaming",
+    "tags": [
+      "joystick"
+    ]
+  },
+  {
+    "icon": "gamepad-controls-left",
+    "category": "Gaming",
+    "tags": [
+      "joystick"
+    ]
+  },
+  {
+    "icon": "gamepad-controls-right",
+    "category": "Gaming",
+    "tags": [
+      "joystick"
+    ]
+  },
+  {
+    "icon": "gamepad-controls-round",
+    "category": "Gaming",
+    "tags": [
+      "joystick"
+    ]
+  },
+  {
+    "icon": "gamepad-controls-round-down",
+    "category": "Gaming",
+    "tags": []
+  },
+  {
+    "icon": "gamepad-controls-round-left",
+    "category": "Gaming",
+    "tags": []
+  },
+  {
+    "icon": "gamepad-controls-round-right",
+    "category": "Gaming",
+    "tags": []
+  },
+  {
+    "icon": "gamepad-controls-round-up",
+    "category": "Gaming",
+    "tags": []
+  },
+  {
+    "icon": "gamepad-controls-up",
+    "category": "Gaming",
+    "tags": [
+      "joystick"
+    ]
+  },
+  {
+    "icon": "garage",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "gas",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "gauge",
+    "category": "Interface General",
+    "tags": [
+      "tachometer",
+      "performance",
+      "speed",
+      "scale"
+    ]
+  },
+  {
+    "icon": "gemini",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "gender-female",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "gender-male",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "ghost",
+    "category": "Security",
+    "tags": [
+      "hidden",
+      "unknown",
+      "horror"
+    ]
+  },
+  {
+    "icon": "gif",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "gif-square",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "gift-1",
+    "category": "Shopping & Payment",
+    "tags": [
+      "present"
+    ]
+  },
+  {
+    "icon": "gift-2",
+    "category": "Shopping & Payment",
+    "tags": [
+      "present"
+    ]
+  },
+  {
+    "icon": "gift-box",
+    "category": "Shopping & Payment",
+    "tags": [
+      "present"
+    ]
+  },
+  {
+    "icon": "giftcard",
+    "category": "Shopping & Payment",
+    "tags": [
+      "present"
+    ]
+  },
+  {
+    "icon": "giro-card",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "giro-cards",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "git",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "github",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "globus",
+    "category": "Location",
+    "tags": [
+      "map",
+      "earth",
+      "globe"
+    ]
+  },
+  {
+    "icon": "gold-medal",
+    "category": "Things",
+    "tags": [
+      "first-place",
+      "win"
+    ]
+  },
+  {
+    "icon": "golf-ball",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "google",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "google-play-store",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "graduate-cap",
+    "category": "Things",
+    "tags": [
+      "study",
+      "education",
+      "academic",
+      "student"
+    ]
+  },
+  {
+    "icon": "green-power",
+    "category": "Nature & Energy",
+    "tags": [
+      "green-energy"
+    ]
+  },
+  {
+    "icon": "grok",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "group-1",
+    "category": "People",
+    "tags": [
+      "users"
+    ]
+  },
+  {
+    "icon": "group-2",
+    "category": "People",
+    "tags": [
+      "users"
+    ]
+  },
+  {
+    "icon": "group-3",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "growth",
+    "category": "Nature & Energy",
+    "tags": [
+      "grow",
+      "leafs"
+    ]
+  },
+  {
+    "icon": "gumroad",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "h1",
+    "category": "Typography",
+    "tags": [
+      "heading",
+      "headline"
+    ]
+  },
+  {
+    "icon": "h2",
+    "category": "Typography",
+    "tags": [
+      "heading",
+      "headline"
+    ]
+  },
+  {
+    "icon": "h3",
+    "category": "Typography",
+    "tags": [
+      "heading",
+      "headline"
+    ]
+  },
+  {
+    "icon": "hammer",
+    "category": "Code",
+    "tags": [
+      "craft",
+      "build"
+    ]
+  },
+  {
+    "icon": "hand-4-finger",
+    "category": "Hands",
+    "tags": [
+      "select"
+    ]
+  },
+  {
+    "icon": "hand-5-finger",
+    "category": "Hands",
+    "tags": [
+      "select"
+    ]
+  },
+  {
+    "icon": "hand-bell",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "haptic",
+    "category": "Devices & Signals",
+    "tags": [
+      "waves"
+    ]
+  },
+  {
+    "icon": "hashtag",
+    "category": "Keyboard",
+    "tags": [
+      "#"
+    ]
+  },
+  {
+    "icon": "hat-bunny",
+    "category": "AI & Magic",
+    "tags": [
+      "surprise",
+      "magic hat"
+    ]
+  },
+  {
+    "icon": "hat-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "magic hat"
+    ]
+  },
+  {
+    "icon": "hd",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "head",
+    "category": "People",
+    "tags": [
+      "avatar"
+    ]
+  },
+  {
+    "icon": "headline",
+    "category": "Typography",
+    "tags": [
+      "heading"
+    ]
+  },
+  {
+    "icon": "headphones",
+    "category": "Sound & Music",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "icon": "heart",
+    "category": "Interface General",
+    "tags": [
+      "like",
+      "health",
+      "life",
+      "favorite"
+    ]
+  },
+  {
+    "icon": "heart-2",
+    "category": "Interface General",
+    "tags": [
+      "like",
+      "health",
+      "life",
+      "fav"
+    ]
+  },
+  {
+    "icon": "heart-beat",
+    "category": "Interface General",
+    "tags": [
+      "heart rate",
+      "pulse"
+    ]
+  },
+  {
+    "icon": "highlight",
+    "category": "Edit",
+    "tags": [
+      "mark",
+      "freehand"
+    ]
+  },
+  {
+    "icon": "highlights",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "history",
+    "category": "Time & Date",
+    "tags": [
+      "back",
+      "timeline"
+    ]
+  },
+  {
+    "icon": "home",
+    "category": "Building",
+    "tags": [
+      "house"
+    ]
+  },
+  {
+    "icon": "home-circle",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "home-door",
+    "category": "Building",
+    "tags": [
+      "house"
+    ]
+  },
+  {
+    "icon": "home-energy",
+    "category": "Nature & Energy",
+    "tags": [
+      "electric current",
+      "power"
+    ]
+  },
+  {
+    "icon": "home-energy-2",
+    "category": "Nature & Energy",
+    "tags": [
+      "electric-current",
+      "power"
+    ]
+  },
+  {
+    "icon": "home-line",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "home-open",
+    "category": "Building",
+    "tags": [
+      "house"
+    ]
+  },
+  {
+    "icon": "home-personal-feed",
+    "category": "Building",
+    "tags": [
+      "for-you"
+    ]
+  },
+  {
+    "icon": "home-roof",
+    "category": "Building",
+    "tags": [
+      "house"
+    ]
+  },
+  {
+    "icon": "home-round-door",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "horizontal-alignment-bottom",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "horizontal-alignment-center",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "horizontal-alignment-top",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "hot-drink-cup",
+    "category": "Food",
+    "tags": [
+      "coffee-mug",
+      "dup"
+    ]
+  },
+  {
+    "icon": "hourglass",
+    "category": "Time & Date",
+    "tags": []
+  },
+  {
+    "icon": "human-mashine",
+    "category": "Hands",
+    "tags": [
+      "high-five",
+      "ai",
+      "hands"
+    ]
+  },
+  {
+    "icon": "ice-hockey",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "icebowl",
+    "category": "Food",
+    "tags": [
+      "cooling",
+      "vibe"
+    ]
+  },
+  {
+    "icon": "imac",
+    "category": "Devices & Signals",
+    "tags": [
+      "computer"
+    ]
+  },
+  {
+    "icon": "image-alt-text",
+    "category": "Accessibility",
+    "tags": []
+  },
+  {
+    "icon": "image-avatar-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "generated avatar",
+      "profile ai",
+      "magic avatar"
+    ]
+  },
+  {
+    "icon": "image-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "midjourney",
+      "ai generated",
+      "star"
+    ]
+  },
+  {
+    "icon": "images-1",
+    "category": "Photography & Video",
+    "tags": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "icon": "images-2",
+    "category": "Photography & Video",
+    "tags": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "icon": "images-3",
+    "category": "Photography & Video",
+    "tags": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "icon": "images-4",
+    "category": "Photography & Video",
+    "tags": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "icon": "images-5",
+    "category": "Photography & Video",
+    "tags": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "icon": "images-circle",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "import",
+    "category": "Interface General",
+    "tags": [
+      "download",
+      "save"
+    ]
+  },
+  {
+    "icon": "import-2",
+    "category": "Interface General",
+    "tags": [
+      "download",
+      "save"
+    ]
+  },
+  {
+    "icon": "inbox-checked",
+    "category": "Interface General",
+    "tags": [
+      "saved"
+    ]
+  },
+  {
+    "icon": "inbox-empty",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "incognito",
+    "category": "Security",
+    "tags": [
+      "detective",
+      "privacy",
+      "anonymous",
+      "anonym",
+      "hidden"
+    ]
+  },
+  {
+    "icon": "infinity",
+    "category": "Things",
+    "tags": [
+      "loop",
+      "boomerang"
+    ]
+  },
+  {
+    "icon": "initiatives",
+    "category": "Location",
+    "tags": [
+      "nav",
+      "rooting"
+    ]
+  },
+  {
+    "icon": "injection",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "insert-html",
+    "category": "Typography",
+    "tags": [
+      "code",
+      "brackets"
+    ]
+  },
+  {
+    "icon": "instagram",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "invite",
+    "category": "Communication",
+    "tags": [
+      "briefing"
+    ]
+  },
+  {
+    "icon": "italic",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "java",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "judge-gavel",
+    "category": "Things",
+    "tags": [
+      "legal",
+      "terms",
+      "law"
+    ]
+  },
+  {
+    "icon": "kanban-view",
+    "category": "Layout",
+    "tags": [
+      "columns"
+    ]
+  },
+  {
+    "icon": "key-1",
+    "category": "Security",
+    "tags": [
+      "password"
+    ]
+  },
+  {
+    "icon": "key-2",
+    "category": "Security",
+    "tags": [
+      "password"
+    ]
+  },
+  {
+    "icon": "keyboard",
+    "category": "Sound & Music",
+    "tags": [
+      "midi",
+      "keys",
+      "piano"
+    ]
+  },
+  {
+    "icon": "keyboard-cable",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "keyboard-down",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "keyboard-up",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "keyframe",
+    "category": "Edit",
+    "tags": [
+      "rhombus"
+    ]
+  },
+  {
+    "icon": "keyhole",
+    "category": "Security",
+    "tags": []
+  },
+  {
+    "icon": "kickball",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "lab",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "law",
+    "category": "Security",
+    "tags": [
+      "legal",
+      "terms",
+      "imprint",
+      "balance"
+    ]
+  },
+  {
+    "icon": "layers-behind",
+    "category": "Layout",
+    "tags": [
+      "slides",
+      "pages"
+    ]
+  },
+  {
+    "icon": "layers-three",
+    "category": "Layout",
+    "tags": [
+      "stack"
+    ]
+  },
+  {
+    "icon": "layers-two",
+    "category": "Layout",
+    "tags": [
+      "stack"
+    ]
+  },
+  {
+    "icon": "layout-align-bottom",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "layout-align-left",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "layout-align-right",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "layout-align-top",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "layout-bottom",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-column",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "column"
+    ]
+  },
+  {
+    "icon": "layout-dashboard",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-grid-1",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-grid-2",
+    "category": "Layout",
+    "tags": [
+      "grid"
+    ]
+  },
+  {
+    "icon": "layout-half",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "layout-left",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-right",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-sidebar",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-third",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "layout-top",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-topbar",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "layout-window",
+    "category": "Layout",
+    "tags": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "icon": "leaderboard",
+    "category": "Statistics & Charts",
+    "tags": [
+      "winner",
+      "stats",
+      "graph"
+    ]
+  },
+  {
+    "icon": "lemonsqueezy",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "library",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "life-vest",
+    "category": "Things",
+    "tags": [
+      "vest"
+    ]
+  },
+  {
+    "icon": "light-bulb",
+    "category": "Interface General",
+    "tags": [
+      "idea",
+      "light"
+    ]
+  },
+  {
+    "icon": "light-bulb-simple",
+    "category": "Interface General",
+    "tags": [
+      "idea"
+    ]
+  },
+  {
+    "icon": "lightbulb",
+    "category": "Interface General",
+    "tags": [
+      "idea",
+      "light",
+      "reasoning",
+      "think"
+    ]
+  },
+  {
+    "icon": "lightbulb-glow",
+    "category": "Interface General",
+    "tags": [
+      "idea",
+      "reasoning",
+      "think"
+    ]
+  },
+  {
+    "icon": "lightbulb-simple",
+    "category": "Interface General",
+    "tags": [
+      "idea",
+      "reasoning",
+      "thinkl"
+    ]
+  },
+  {
+    "icon": "lightning",
+    "category": "Weather",
+    "tags": [
+      "zap",
+      "flash",
+      "thunder"
+    ]
+  },
+  {
+    "icon": "limit",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "line-chart-1",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "line-chart-2",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "line-chart-3",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "line-chart-4",
+    "category": "Statistics & Charts",
+    "tags": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "icon": "line-height",
+    "category": "Typography",
+    "tags": [
+      "spacing",
+      "eleborate"
+    ]
+  },
+  {
+    "icon": "line-thickness",
+    "category": "Edit",
+    "tags": [
+      "lines",
+      "border"
+    ]
+  },
+  {
+    "icon": "linear",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "linebreak",
+    "category": "Typography",
+    "tags": [
+      "next-line"
+    ]
+  },
+  {
+    "icon": "linkedin",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "linktree",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "liquid-glass",
+    "category": "Filter & Settings",
+    "tags": [
+      "glass-effect"
+    ]
+  },
+  {
+    "icon": "list-bullets",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "list-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "ai text",
+      "text generation"
+    ]
+  },
+  {
+    "icon": "live-activity",
+    "category": "Things",
+    "tags": [
+      "fitness"
+    ]
+  },
+  {
+    "icon": "live-full",
+    "category": "Devices & Signals",
+    "tags": [
+      "signal",
+      "podcast"
+    ]
+  },
+  {
+    "icon": "live-no-signal",
+    "category": "Devices & Signals",
+    "tags": [
+      "signal"
+    ]
+  },
+  {
+    "icon": "live-weak",
+    "category": "Devices & Signals",
+    "tags": [
+      "signal"
+    ]
+  },
+  {
+    "icon": "loader",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "loading-circle",
+    "category": "Interface General",
+    "tags": [
+      "quarter",
+      "spinner"
+    ]
+  },
+  {
+    "icon": "location",
+    "category": "Location",
+    "tags": [
+      "explore",
+      "compass"
+    ]
+  },
+  {
+    "icon": "lock",
+    "category": "Security",
+    "tags": [
+      "private"
+    ]
+  },
+  {
+    "icon": "lottielab",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "lovable",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "mac-mini",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "macbook",
+    "category": "Devices & Signals",
+    "tags": [
+      "laptop",
+      "computer"
+    ]
+  },
+  {
+    "icon": "macbook-air",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "macintosh",
+    "category": "Devices & Signals",
+    "tags": [
+      "mac"
+    ]
+  },
+  {
+    "icon": "magic-book",
+    "category": "AI & Magic",
+    "tags": [
+      "magician",
+      "sparkles"
+    ]
+  },
+  {
+    "icon": "magic-edit",
+    "category": "AI & Magic",
+    "tags": [
+      "magic-writing"
+    ]
+  },
+  {
+    "icon": "magic-hands",
+    "category": "Hands",
+    "tags": [
+      "rainbow-hands"
+    ]
+  },
+  {
+    "icon": "magic-wand",
+    "category": "AI & Magic",
+    "tags": [
+      "magic stick",
+      "star"
+    ]
+  },
+  {
+    "icon": "magic-wand-2",
+    "category": "AI & Magic",
+    "tags": [
+      "magic stick",
+      "star"
+    ]
+  },
+  {
+    "icon": "magic-wand-3",
+    "category": "AI & Magic",
+    "tags": [
+      "magic stick",
+      "star"
+    ]
+  },
+  {
+    "icon": "magnet",
+    "category": "Edit",
+    "tags": [
+      "snap-pixel",
+      "snap"
+    ]
+  },
+  {
+    "icon": "magnifying-glass",
+    "category": "Interface General",
+    "tags": [
+      "search"
+    ]
+  },
+  {
+    "icon": "magnifying-glass-2",
+    "category": "Interface General",
+    "tags": [
+      "search"
+    ]
+  },
+  {
+    "icon": "maintenance",
+    "category": "Filter & Settings",
+    "tags": [
+      "settings",
+      "service"
+    ]
+  },
+  {
+    "icon": "make-it-pop",
+    "category": "Things",
+    "tags": [
+      "design"
+    ]
+  },
+  {
+    "icon": "mall",
+    "category": "Building",
+    "tags": [
+      "store",
+      "shop",
+      "business"
+    ]
+  },
+  {
+    "icon": "manus-ai",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "map",
+    "category": "Location",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "icon": "map-pin",
+    "category": "Location",
+    "tags": [
+      "location"
+    ]
+  },
+  {
+    "icon": "map-pin-flat",
+    "category": "Location",
+    "tags": [
+      "route"
+    ]
+  },
+  {
+    "icon": "markdown",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "marker",
+    "category": "Edit",
+    "tags": [
+      "highlight"
+    ]
+  },
+  {
+    "icon": "marker-circle",
+    "category": "Edit",
+    "tags": [
+      "highlight"
+    ]
+  },
+  {
+    "icon": "mask",
+    "category": "Things",
+    "tags": [
+      "theatre"
+    ]
+  },
+  {
+    "icon": "mastadon",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "math-basic",
+    "category": "Interface General",
+    "tags": [
+      "calc"
+    ]
+  },
+  {
+    "icon": "math-equals",
+    "category": "Interface General",
+    "tags": [
+      "="
+    ]
+  },
+  {
+    "icon": "math-equals-circle",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "math-greater-than",
+    "category": "Interface General",
+    "tags": [
+      ">"
+    ]
+  },
+  {
+    "icon": "math-greater-than-circle",
+    "category": "Interface General",
+    "tags": [
+      ">"
+    ]
+  },
+  {
+    "icon": "math-less-than",
+    "category": "Interface General",
+    "tags": [
+      "<"
+    ]
+  },
+  {
+    "icon": "math-less-than-circle",
+    "category": "Interface General",
+    "tags": [
+      "<"
+    ]
+  },
+  {
+    "icon": "math-multiplication",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "math-notes",
+    "category": "Interface General",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "icon": "math-scientific",
+    "category": "Interface General",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "icon": "medal",
+    "category": "Things",
+    "tags": [
+      "trophy",
+      "badge",
+      "winner",
+      "win"
+    ]
+  },
+  {
+    "icon": "medicine-pill",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "medicine-pill-2",
+    "category": "Things",
+    "tags": [
+      "tablett"
+    ]
+  },
+  {
+    "icon": "medicine-tablett",
+    "category": "Things",
+    "tags": [
+      "pill"
+    ]
+  },
+  {
+    "icon": "medium",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "megaphone",
+    "category": "Sound & Music",
+    "tags": [
+      "loud",
+      "speak",
+      "promote",
+      "feedback"
+    ]
+  },
+  {
+    "icon": "microphone",
+    "category": "Sound & Music",
+    "tags": [
+      "mic",
+      "sound",
+      "podcast"
+    ]
+  },
+  {
+    "icon": "microphone-off",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "microsoft-copilot",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "minimize",
+    "category": "Photography & Video",
+    "tags": [
+      "window",
+      "layout"
+    ]
+  },
+  {
+    "icon": "minimize-315",
+    "category": "Arrows",
+    "tags": [
+      "arrow",
+      "shrink"
+    ]
+  },
+  {
+    "icon": "minimize-45",
+    "category": "Arrows",
+    "tags": [
+      "arrow",
+      "shrink"
+    ]
+  },
+  {
+    "icon": "minus-large",
+    "category": "Interface General",
+    "tags": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "icon": "minus-small",
+    "category": "Interface General",
+    "tags": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "icon": "money-hand",
+    "category": "Hands",
+    "tags": [
+      "coins",
+      "pay"
+    ]
+  },
+  {
+    "icon": "moneybag",
+    "category": "Shopping & Payment",
+    "tags": [
+      "purse",
+      "savings"
+    ]
+  },
+  {
+    "icon": "moon",
+    "category": "Weather",
+    "tags": [
+      "dark-mode",
+      "night"
+    ]
+  },
+  {
+    "icon": "moon-star",
+    "category": "Weather",
+    "tags": [
+      "night"
+    ]
+  },
+  {
+    "icon": "morning-brief",
+    "category": "Interface General",
+    "tags": [
+      "daily-todo"
+    ]
+  },
+  {
+    "icon": "mountain-bike",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "mouse",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "mouse-scroll-down",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "mouse-scroll-up",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "mouth",
+    "category": "Things",
+    "tags": [
+      "kiss"
+    ]
+  },
+  {
+    "icon": "multi-media",
+    "category": "Photography & Video",
+    "tags": [
+      "media",
+      "image-video"
+    ]
+  },
+  {
+    "icon": "mute",
+    "category": "Sound & Music",
+    "tags": [
+      "sound-off"
+    ]
+  },
+  {
+    "icon": "nailed-it",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "newspaper",
+    "category": "Communication",
+    "tags": [
+      "News",
+      "paper"
+    ]
+  },
+  {
+    "icon": "newspaper-1",
+    "category": "Communication",
+    "tags": [
+      "guide",
+      "info",
+      "faq"
+    ]
+  },
+  {
+    "icon": "newspaper-2",
+    "category": "Communication",
+    "tags": [
+      "guide",
+      "info",
+      "faq"
+    ]
+  },
+  {
+    "icon": "newspaper-3",
+    "category": "Communication",
+    "tags": []
+  },
+  {
+    "icon": "nfc-1",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "nfc-2",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "nintendo-switch",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "no-flash",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "noise-reduction",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "note-1",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "note-2",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "note-text",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "notebook",
+    "category": "Folders & Files",
+    "tags": [
+      "cover"
+    ]
+  },
+  {
+    "icon": "notepad",
+    "category": "Folders & Files",
+    "tags": [
+      "notes"
+    ]
+  },
+  {
+    "icon": "notes",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "notion",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "notion-ai",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "nuclear-power-plant",
+    "category": "Nature & Energy",
+    "tags": [
+      "radiation"
+    ]
+  },
+  {
+    "icon": "numbered-list",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "oculus",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "offline",
+    "category": "Devices & Signals",
+    "tags": [
+      "disconnect",
+      "energy"
+    ]
+  },
+  {
+    "icon": "old-phone",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "omega",
+    "category": "Typography",
+    "tags": [
+      "special-character"
+    ]
+  },
+  {
+    "icon": "ongoing",
+    "category": "Arrows",
+    "tags": [
+      "moving"
+    ]
+  },
+  {
+    "icon": "open-quote-1",
+    "category": "Typography",
+    "tags": [
+      "blockquote"
+    ]
+  },
+  {
+    "icon": "open-quote-2",
+    "category": "Typography",
+    "tags": [
+      "blockquote"
+    ]
+  },
+  {
+    "icon": "openai",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "opera",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "opt",
+    "category": "Keyboard",
+    "tags": [
+      "option",
+      "key"
+    ]
+  },
+  {
+    "icon": "opt-alt",
+    "category": "Keyboard",
+    "tags": [
+      "option alt",
+      "key"
+    ]
+  },
+  {
+    "icon": "orange",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "organisation",
+    "category": "Things",
+    "tags": [
+      "organimgram"
+    ]
+  },
+  {
+    "icon": "package",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-add",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-block",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-ckeck",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-delivery",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "package-delivery-1",
+    "category": "Shopping & Payment",
+    "tags": [
+      "address"
+    ]
+  },
+  {
+    "icon": "package-delivery-2",
+    "category": "Shopping & Payment",
+    "tags": [
+      "address"
+    ]
+  },
+  {
+    "icon": "package-edit",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-in",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-out",
+    "category": "Shopping & Payment",
+    "tags": [
+      "return",
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-remove",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-search",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "package-security",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "page-add",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-attachment",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-check",
+    "category": "Folders & Files",
+    "tags": [
+      "signed",
+      "document"
+    ]
+  },
+  {
+    "icon": "page-cloud",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-cross",
+    "category": "Folders & Files",
+    "tags": [
+      "close",
+      "x",
+      "document",
+      "list",
+      "file"
+    ]
+  },
+  {
+    "icon": "page-cross-text",
+    "category": "Folders & Files",
+    "tags": [
+      "close",
+      "x",
+      "document",
+      "list",
+      "file"
+    ]
+  },
+  {
+    "icon": "page-edit",
+    "category": "Folders & Files",
+    "tags": [
+      "document"
+    ]
+  },
+  {
+    "icon": "page-edit-text",
+    "category": "Folders & Files",
+    "tags": [
+      "document",
+      "file"
+    ]
+  },
+  {
+    "icon": "page-empty",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-link",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-lock",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-pie-chart",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-search",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-search-lines",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text-add",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text-cloud",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text-link",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text-lock",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text-pie-chart",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "page-text-search",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "pancakes",
+    "category": "Food",
+    "tags": [
+      "maple-syrup",
+      "breakfast"
+    ]
+  },
+  {
+    "icon": "panorama-view",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "paper-plane",
+    "category": "Communication",
+    "tags": [
+      "send"
+    ]
+  },
+  {
+    "icon": "paper-plane-top-right",
+    "category": "Communication",
+    "tags": [
+      "send"
+    ]
+  },
+  {
+    "icon": "paperclip-1",
+    "category": "Interface General",
+    "tags": [
+      "attachment"
+    ]
+  },
+  {
+    "icon": "paperclip-2",
+    "category": "Interface General",
+    "tags": [
+      "attachment"
+    ]
+  },
+  {
+    "icon": "paperclip-3",
+    "category": "Interface General",
+    "tags": [
+      "attachment"
+    ]
+  },
+  {
+    "icon": "parachute",
+    "category": "Things",
+    "tags": [
+      "airdrop"
+    ]
+  },
+  {
+    "icon": "paragraph",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "parasol",
+    "category": "Things",
+    "tags": [
+      "umbrella",
+      "vacation"
+    ]
+  },
+  {
+    "icon": "passkeys",
+    "category": "Security",
+    "tags": [
+      "passkey",
+      "passwordless"
+    ]
+  },
+  {
+    "icon": "passport",
+    "category": "Security",
+    "tags": [
+      "visa"
+    ]
+  },
+  {
+    "icon": "password",
+    "category": "Security",
+    "tags": [
+      "lock",
+      "protection"
+    ]
+  },
+  {
+    "icon": "patreon",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "pause",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "payment",
+    "category": "Shopping & Payment",
+    "tags": [
+      "flow",
+      "connection"
+    ]
+  },
+  {
+    "icon": "peace",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "pencil",
+    "category": "Edit",
+    "tags": [
+      "edit",
+      "write"
+    ]
+  },
+  {
+    "icon": "pencil-line",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "pencil-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "magic pencil",
+      "magic brush"
+    ]
+  },
+  {
+    "icon": "pencil-wave",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "people",
+    "category": "People",
+    "tags": [
+      "user",
+      "person",
+      "avatar"
+    ]
+  },
+  {
+    "icon": "people-2",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "people-add",
+    "category": "People",
+    "tags": [
+      "user-add"
+    ]
+  },
+  {
+    "icon": "people-add-2",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "people-added",
+    "category": "People",
+    "tags": [
+      "user-added"
+    ]
+  },
+  {
+    "icon": "people-circle",
+    "category": "People",
+    "tags": [
+      "user-circle",
+      "avatar",
+      "profile"
+    ]
+  },
+  {
+    "icon": "people-copy",
+    "category": "People",
+    "tags": [
+      "members"
+    ]
+  },
+  {
+    "icon": "people-edit",
+    "category": "People",
+    "tags": [
+      "edit-user",
+      "edit-rights",
+      "user-rights"
+    ]
+  },
+  {
+    "icon": "people-like",
+    "category": "People",
+    "tags": [
+      "inner circle"
+    ]
+  },
+  {
+    "icon": "people-remove",
+    "category": "People",
+    "tags": [
+      "user-remove"
+    ]
+  },
+  {
+    "icon": "people-remove-2",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "people-versus",
+    "category": "People",
+    "tags": [
+      "vs",
+      "match",
+      "1v1"
+    ]
+  },
+  {
+    "icon": "percent",
+    "category": "Shopping & Payment",
+    "tags": [
+      "sales"
+    ]
+  },
+  {
+    "icon": "perplexity",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "pets",
+    "category": "Things",
+    "tags": [
+      "paw",
+      "animal"
+    ]
+  },
+  {
+    "icon": "phone",
+    "category": "Devices & Signals",
+    "tags": [
+      "iphone",
+      "mobile"
+    ]
+  },
+  {
+    "icon": "phone-dynamic-island",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "phone-haptic",
+    "category": "Devices & Signals",
+    "tags": [
+      "vibration"
+    ]
+  },
+  {
+    "icon": "php",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "phyton",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "pickelball",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "picture-in-picture",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "pie-chart-1",
+    "category": "Statistics & Charts",
+    "tags": [
+      "graph",
+      "chart",
+      "statistics"
+    ]
+  },
+  {
+    "icon": "pie-chart-2",
+    "category": "Statistics & Charts",
+    "tags": [
+      "graph",
+      "chart",
+      "statistics"
+    ]
+  },
+  {
+    "icon": "piggy-bank",
+    "category": "Things",
+    "tags": [
+      "save-money"
+    ]
+  },
+  {
+    "icon": "pillow",
+    "category": "Things",
+    "tags": [
+      "sleep",
+      "snooze"
+    ]
+  },
+  {
+    "icon": "pillow-zz",
+    "category": "Things",
+    "tags": [
+      "sleep",
+      "snooze"
+    ]
+  },
+  {
+    "icon": "pilone",
+    "category": "Things",
+    "tags": [
+      "maintenance"
+    ]
+  },
+  {
+    "icon": "pin",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "pin-circle",
+    "category": "Location",
+    "tags": [
+      "location"
+    ]
+  },
+  {
+    "icon": "pin-flag",
+    "category": "Location",
+    "tags": [
+      "location"
+    ]
+  },
+  {
+    "icon": "pin-location",
+    "category": "Location",
+    "tags": []
+  },
+  {
+    "icon": "pinch",
+    "category": "Hands",
+    "tags": []
+  },
+  {
+    "icon": "pinterest",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "pizza",
+    "category": "Food",
+    "tags": []
+  },
+  {
+    "icon": "placeholder",
+    "category": "Layout",
+    "tags": [
+      "generate"
+    ]
+  },
+  {
+    "icon": "planning",
+    "category": "Interface General",
+    "tags": [
+      "list",
+      "checklist"
+    ]
+  },
+  {
+    "icon": "play",
+    "category": "Sound & Music",
+    "tags": [
+      "go"
+    ]
+  },
+  {
+    "icon": "play-circle",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "playground",
+    "category": "Things",
+    "tags": [
+      "forms",
+      "shapes",
+      "geo"
+    ]
+  },
+  {
+    "icon": "playlist",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "playstation",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "plugin-1",
+    "category": "Things",
+    "tags": [
+      "power",
+      "adapter"
+    ]
+  },
+  {
+    "icon": "plugin-2",
+    "category": "Things",
+    "tags": [
+      "build"
+    ]
+  },
+  {
+    "icon": "plus-large",
+    "category": "Interface General",
+    "tags": [
+      "add large"
+    ]
+  },
+  {
+    "icon": "plus-small",
+    "category": "Interface General",
+    "tags": [
+      "add small"
+    ]
+  },
+  {
+    "icon": "podcast-1",
+    "category": "Sound & Music",
+    "tags": [
+      "broadcast",
+      "mic"
+    ]
+  },
+  {
+    "icon": "podcast-2",
+    "category": "Sound & Music",
+    "tags": [
+      "broadcast",
+      "mic"
+    ]
+  },
+  {
+    "icon": "point-chart",
+    "category": "Statistics & Charts",
+    "tags": [
+      "dots"
+    ]
+  },
+  {
+    "icon": "pointer",
+    "category": "Hands",
+    "tags": [
+      "hand"
+    ]
+  },
+  {
+    "icon": "pokeball",
+    "category": "Things",
+    "tags": [
+      "catch"
+    ]
+  },
+  {
+    "icon": "poop",
+    "category": "Things",
+    "tags": [
+      "spam"
+    ]
+  },
+  {
+    "icon": "popcorn",
+    "category": "Food",
+    "tags": [
+      "movies",
+      "series"
+    ]
+  },
+  {
+    "icon": "popsicle-1",
+    "category": "Food",
+    "tags": [
+      "ice-cream",
+      "sweets"
+    ]
+  },
+  {
+    "icon": "popsicle-2",
+    "category": "Food",
+    "tags": [
+      "ice-cream",
+      "sweets"
+    ]
+  },
+  {
+    "icon": "postcard-1",
+    "category": "Communication",
+    "tags": [
+      "address"
+    ]
+  },
+  {
+    "icon": "postcard-2",
+    "category": "Communication",
+    "tags": [
+      "address"
+    ]
+  },
+  {
+    "icon": "pound",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money",
+      "coin",
+      "GBP"
+    ]
+  },
+  {
+    "icon": "power-plant",
+    "category": "Nature & Energy",
+    "tags": [
+      "coal",
+      "gas",
+      "factory"
+    ]
+  },
+  {
+    "icon": "printer",
+    "category": "Devices & Signals",
+    "tags": [
+      "print"
+    ]
+  },
+  {
+    "icon": "processor",
+    "category": "Devices & Signals",
+    "tags": [
+      "chip"
+    ]
+  },
+  {
+    "icon": "producthunt",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "prompt",
+    "category": "AI & Magic",
+    "tags": [
+      "scan-text"
+    ]
+  },
+  {
+    "icon": "pull-request",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "pumpjack",
+    "category": "Nature & Energy",
+    "tags": [
+      "oil"
+    ]
+  },
+  {
+    "icon": "push",
+    "category": "Code",
+    "tags": [
+      "launch",
+      "rocket"
+    ]
+  },
+  {
+    "icon": "push-the-button",
+    "category": "Things",
+    "tags": [
+      "hot",
+      "alarm"
+    ]
+  },
+  {
+    "icon": "puzzle",
+    "category": "Things",
+    "tags": [
+      "plugin"
+    ]
+  },
+  {
+    "icon": "qm3",
+    "category": "Augmented Reality",
+    "tags": [
+      "room",
+      "transform",
+      "xyz",
+      "3d"
+    ]
+  },
+  {
+    "icon": "qr-code",
+    "category": "Interface General",
+    "tags": [
+      "barcode",
+      "scan"
+    ]
+  },
+  {
+    "icon": "quick-search",
+    "category": "Interface General",
+    "tags": [
+      "quick-menu",
+      "command-k"
+    ]
+  },
+  {
+    "icon": "quora",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "radar",
+    "category": "Location",
+    "tags": [
+      "location",
+      "search"
+    ]
+  },
+  {
+    "icon": "rainbow",
+    "category": "Nature & Energy",
+    "tags": []
+  },
+  {
+    "icon": "rainy",
+    "category": "Weather",
+    "tags": [
+      "rain"
+    ]
+  },
+  {
+    "icon": "rainy-light",
+    "category": "Weather",
+    "tags": []
+  },
+  {
+    "icon": "raising-hand-4-finger",
+    "category": "Hands",
+    "tags": [
+      "hey",
+      "hello"
+    ]
+  },
+  {
+    "icon": "raising-hand-5-finger",
+    "category": "Hands",
+    "tags": [
+      "hey",
+      "hello",
+      "high-five"
+    ]
+  },
+  {
+    "icon": "random",
+    "category": "Arrows",
+    "tags": [
+      "productivity",
+      "smart"
+    ]
+  },
+  {
+    "icon": "reading-list",
+    "category": "Things",
+    "tags": [
+      "glasses",
+      "steve-jobs"
+    ]
+  },
+  {
+    "icon": "rear",
+    "category": "Photography & Video",
+    "tags": [
+      "front-back",
+      "change-cam",
+      "lens"
+    ]
+  },
+  {
+    "icon": "rec-keyframe",
+    "category": "Edit",
+    "tags": [
+      "rhombus"
+    ]
+  },
+  {
+    "icon": "rec-keyframe-2",
+    "category": "Edit",
+    "tags": [
+      "rhombus"
+    ]
+  },
+  {
+    "icon": "receipt-bill",
+    "category": "Shopping & Payment",
+    "tags": [
+      "purchase",
+      "invoice"
+    ]
+  },
+  {
+    "icon": "receipt-check",
+    "category": "Shopping & Payment",
+    "tags": [
+      "ticket"
+    ]
+  },
+  {
+    "icon": "receipt-check-2",
+    "category": "Shopping & Payment",
+    "tags": [
+      "ticket"
+    ]
+  },
+  {
+    "icon": "receipt-storno",
+    "category": "Shopping & Payment",
+    "tags": [
+      "close",
+      "remove"
+    ]
+  },
+  {
+    "icon": "receipt-tax",
+    "category": "Shopping & Payment",
+    "tags": [
+      "discount"
+    ]
+  },
+  {
+    "icon": "receiption-bell",
+    "category": "Things",
+    "tags": [
+      "concierge"
+    ]
+  },
+  {
+    "icon": "record",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "reddit",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "remove-background",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "remove-background-2",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "remove-from-basket",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "remove-from-basket-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "remove-keyframe",
+    "category": "Edit",
+    "tags": [
+      "rhombus"
+    ]
+  },
+  {
+    "icon": "remove-textstyle",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "reorder",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "repaint",
+    "category": "Edit",
+    "tags": [
+      "recreate",
+      "redo"
+    ]
+  },
+  {
+    "icon": "repeat",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "request-closed",
+    "category": "Code",
+    "tags": []
+  },
+  {
+    "icon": "rescue-ring",
+    "category": "Things",
+    "tags": [
+      "swim-boyle",
+      "help",
+      "support"
+    ]
+  },
+  {
+    "icon": "retouch",
+    "category": "Photography & Video",
+    "tags": [
+      "face",
+      "hair"
+    ]
+  },
+  {
+    "icon": "review",
+    "category": "Interface General",
+    "tags": [
+      "star-square"
+    ]
+  },
+  {
+    "icon": "rewind",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "rewind-10s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "rewind-15s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "rewind-30s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "rewind-5s",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "rewrite",
+    "category": "Edit",
+    "tags": [
+      "re-edit",
+      "redo"
+    ]
+  },
+  {
+    "icon": "rewrite-1",
+    "category": "Edit",
+    "tags": [
+      "resummarize",
+      "text-edit"
+    ]
+  },
+  {
+    "icon": "rewrite-2",
+    "category": "Edit",
+    "tags": [
+      "write-again",
+      "text-edit"
+    ]
+  },
+  {
+    "icon": "riot-games",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "rive",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "robinhood",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "robot",
+    "category": "AI & Magic",
+    "tags": []
+  },
+  {
+    "icon": "rocket",
+    "category": "Things",
+    "tags": [
+      "startup",
+      "launch"
+    ]
+  },
+  {
+    "icon": "roller",
+    "category": "Things",
+    "tags": [
+      "scooter"
+    ]
+  },
+  {
+    "icon": "rose",
+    "category": "Nature & Energy",
+    "tags": [
+      "flower",
+      "romance",
+      "love"
+    ]
+  },
+  {
+    "icon": "rotate",
+    "category": "Augmented Reality",
+    "tags": [
+      "rotation",
+      "x-axis"
+    ]
+  },
+  {
+    "icon": "roulette-1",
+    "category": "Gaming",
+    "tags": [
+      "coincidence",
+      "gambling"
+    ]
+  },
+  {
+    "icon": "roulette-2",
+    "category": "Gaming",
+    "tags": [
+      "coincidence",
+      "gambling"
+    ]
+  },
+  {
+    "icon": "rss-feed",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "ruler",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "run-shortcut",
+    "category": "Code",
+    "tags": [
+      "slash"
+    ]
+  },
+  {
+    "icon": "safari",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "safe-simple",
+    "category": "Security",
+    "tags": [
+      "save"
+    ]
+  },
+  {
+    "icon": "sandbox",
+    "category": "Code",
+    "tags": [
+      "playground"
+    ]
+  },
+  {
+    "icon": "satellite-1",
+    "category": "Devices & Signals",
+    "tags": [
+      "radar",
+      "feed"
+    ]
+  },
+  {
+    "icon": "satellite-2",
+    "category": "Devices & Signals",
+    "tags": [
+      "radar",
+      "feed"
+    ]
+  },
+  {
+    "icon": "school",
+    "category": "Building",
+    "tags": [
+      "building"
+    ]
+  },
+  {
+    "icon": "scissors-1",
+    "category": "Things",
+    "tags": [
+      "cut"
+    ]
+  },
+  {
+    "icon": "scissors-2",
+    "category": "Things",
+    "tags": [
+      "cut"
+    ]
+  },
+  {
+    "icon": "scratch-card",
+    "category": "Gaming",
+    "tags": []
+  },
+  {
+    "icon": "screen-capture",
+    "category": "Photography & Video",
+    "tags": [
+      "recording"
+    ]
+  },
+  {
+    "icon": "script",
+    "category": "Folders & Files",
+    "tags": [
+      "paper",
+      "page",
+      "contract",
+      "file",
+      "document"
+    ]
+  },
+  {
+    "icon": "script-2",
+    "category": "Folders & Files",
+    "tags": [
+      "paper",
+      "page",
+      "contract",
+      "file",
+      "document"
+    ]
+  },
+  {
+    "icon": "sd-card",
+    "category": "Folders & Files",
+    "tags": [
+      "memory-stick"
+    ]
+  },
+  {
+    "icon": "search-menu",
+    "category": "Interface General",
+    "tags": [
+      "list-search"
+    ]
+  },
+  {
+    "icon": "secret-phrase",
+    "category": "Crypto",
+    "tags": [
+      "code",
+      "private-phrase"
+    ]
+  },
+  {
+    "icon": "send",
+    "category": "Location",
+    "tags": [
+      "email",
+      "paper-plane",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "server",
+    "category": "Folders & Files",
+    "tags": [
+      "data",
+      "storage"
+    ]
+  },
+  {
+    "icon": "server-1",
+    "category": "Devices & Signals",
+    "tags": [
+      "storage",
+      "data",
+      "coins",
+      "money"
+    ]
+  },
+  {
+    "icon": "server-2",
+    "category": "Devices & Signals",
+    "tags": [
+      "storage",
+      "data",
+      "coins",
+      "money"
+    ]
+  },
+  {
+    "icon": "settings-gear-1",
+    "category": "Filter & Settings",
+    "tags": [
+      "preferences"
+    ]
+  },
+  {
+    "icon": "settings-gear-2",
+    "category": "Filter & Settings",
+    "tags": [
+      "preferences"
+    ]
+  },
+  {
+    "icon": "settings-gear-3",
+    "category": "Filter & Settings",
+    "tags": [
+      "preferences"
+    ]
+  },
+  {
+    "icon": "settings-knob",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "settings-slider-hor",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "settings-slider-three",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "settings-slider-ver",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "settings-toggle-1",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "settings-toggle-2",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "shadows",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "shaka-1",
+    "category": "Hands",
+    "tags": [
+      "call me",
+      "hang-ten"
+    ]
+  },
+  {
+    "icon": "shaka-2",
+    "category": "Hands",
+    "tags": [
+      "call me",
+      "hang-ten"
+    ]
+  },
+  {
+    "icon": "shapes-plus-x-square-circle",
+    "category": "Interface General",
+    "tags": [
+      "icon",
+      "icons",
+      "shapes",
+      "games"
+    ]
+  },
+  {
+    "icon": "share-android",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "share-arrow-down",
+    "category": "Arrows",
+    "tags": [
+      "save"
+    ]
+  },
+  {
+    "icon": "share-os",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "share-screen",
+    "category": "Photography & Video",
+    "tags": [
+      "screen-sharing"
+    ]
+  },
+  {
+    "icon": "shield",
+    "category": "Security",
+    "tags": [
+      "security",
+      "protection"
+    ]
+  },
+  {
+    "icon": "shield-break",
+    "category": "Security",
+    "tags": [
+      "not-secure"
+    ]
+  },
+  {
+    "icon": "shield-check",
+    "category": "Security",
+    "tags": [
+      "security",
+      "protection"
+    ]
+  },
+  {
+    "icon": "shield-check-2",
+    "category": "Security",
+    "tags": [
+      "protect",
+      "security",
+      "check"
+    ]
+  },
+  {
+    "icon": "shield-check-3",
+    "category": "Security",
+    "tags": [
+      "check"
+    ]
+  },
+  {
+    "icon": "shield-crossed",
+    "category": "Security",
+    "tags": [
+      "security",
+      "protection"
+    ]
+  },
+  {
+    "icon": "shield-keyhole",
+    "category": "Security",
+    "tags": []
+  },
+  {
+    "icon": "shift",
+    "category": "Keyboard",
+    "tags": []
+  },
+  {
+    "icon": "ship",
+    "category": "Code",
+    "tags": [
+      "changelog"
+    ]
+  },
+  {
+    "icon": "shopping-bag-1",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-3",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-4",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-add-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-block-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-bookmark-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-edit-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-like-1",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shopping-bag-like-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "shovel",
+    "category": "Things",
+    "tags": [
+      "spade",
+      "pick"
+    ]
+  },
+  {
+    "icon": "shredder",
+    "category": "Interface General",
+    "tags": [
+      "permanently"
+    ]
+  },
+  {
+    "icon": "shuffle",
+    "category": "Sound & Music",
+    "tags": [
+      "random"
+    ]
+  },
+  {
+    "icon": "sidebar",
+    "category": "Interface General",
+    "tags": [
+      "menu",
+      "list",
+      "window"
+    ]
+  },
+  {
+    "icon": "sidebar-left-arrow",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "sidebar-simple-left-square",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "sidebar-simple-left-wide",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "sidebar-simple-right-square",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "sidebar-simple-right-wide",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "sidebar-wide-left-arrow",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "signal-tower",
+    "category": "Devices & Signals",
+    "tags": [
+      "live",
+      "podcast"
+    ]
+  },
+  {
+    "icon": "signature",
+    "category": "Edit",
+    "tags": [
+      "sign"
+    ]
+  },
+  {
+    "icon": "silver-medal",
+    "category": "Things",
+    "tags": [
+      "second-place",
+      "runner-up"
+    ]
+  },
+  {
+    "icon": "sim-card-1",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "sim-card-2",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "siren",
+    "category": "Security",
+    "tags": [
+      "alarm"
+    ]
+  },
+  {
+    "icon": "siri",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "sketch",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "sketchbook",
+    "category": "Folders & Files",
+    "tags": []
+  },
+  {
+    "icon": "skip",
+    "category": "Sound & Music",
+    "tags": [
+      "next"
+    ]
+  },
+  {
+    "icon": "slack",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "sleep",
+    "category": "Time & Date",
+    "tags": [
+      "snooze",
+      "zzz"
+    ]
+  },
+  {
+    "icon": "slice",
+    "category": "Edit",
+    "tags": [
+      "knife"
+    ]
+  },
+  {
+    "icon": "slide-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slide-tall-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slide-wide-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slides-tall",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slides-tall-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slides-wide",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slides-wide-add",
+    "category": "Layout",
+    "tags": []
+  },
+  {
+    "icon": "slots",
+    "category": "Gaming",
+    "tags": [
+      "slot-mashine",
+      "gambling"
+    ]
+  },
+  {
+    "icon": "smartwatch-1",
+    "category": "Devices & Signals",
+    "tags": [
+      "clock",
+      "time"
+    ]
+  },
+  {
+    "icon": "smartwatch-2",
+    "category": "Devices & Signals",
+    "tags": [
+      "clock",
+      "time"
+    ]
+  },
+  {
+    "icon": "snapchat",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "snow-flakes",
+    "category": "Weather",
+    "tags": [
+      "freeze",
+      "frozen"
+    ]
+  },
+  {
+    "icon": "soccer",
+    "category": "Sports",
+    "tags": [
+      "football",
+      "mls"
+    ]
+  },
+  {
+    "icon": "social",
+    "category": "Things",
+    "tags": [
+      "connection"
+    ]
+  },
+  {
+    "icon": "sofa",
+    "category": "Furniture & Household",
+    "tags": [
+      "couch",
+      "chill"
+    ]
+  },
+  {
+    "icon": "solar",
+    "category": "Nature & Energy",
+    "tags": []
+  },
+  {
+    "icon": "solar-panel",
+    "category": "Nature & Energy",
+    "tags": [
+      "Photovoltaics",
+      "energy",
+      "electricity"
+    ]
+  },
+  {
+    "icon": "sort-arrow-up-down",
+    "category": "Filter & Settings",
+    "tags": []
+  },
+  {
+    "icon": "sound-fx",
+    "category": "Sound & Music",
+    "tags": [
+      "sound-effects"
+    ]
+  },
+  {
+    "icon": "space",
+    "category": "Things",
+    "tags": [
+      "star"
+    ]
+  },
+  {
+    "icon": "spacer",
+    "category": "Typography",
+    "tags": [
+      "seperator"
+    ]
+  },
+  {
+    "icon": "sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "star",
+      "ai"
+    ]
+  },
+  {
+    "icon": "sparkle-2",
+    "category": "AI & Magic",
+    "tags": [
+      "star",
+      "magic",
+      "ai"
+    ]
+  },
+  {
+    "icon": "sparkles-soft",
+    "category": "AI & Magic",
+    "tags": []
+  },
+  {
+    "icon": "sparkles-three",
+    "category": "AI & Magic",
+    "tags": [
+      "ai 3 stars",
+      "sparkles",
+      "✨"
+    ]
+  },
+  {
+    "icon": "sparkles-two",
+    "category": "AI & Magic",
+    "tags": [
+      "ai 2 stars",
+      "sparkles",
+      "✨"
+    ]
+  },
+  {
+    "icon": "sparkles-two-2",
+    "category": "AI & Magic",
+    "tags": [
+      "ai 2 stars",
+      "sparkles",
+      "✨"
+    ]
+  },
+  {
+    "icon": "spatial-capture",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "speach-to-text",
+    "category": "Sound & Music",
+    "tags": [
+      "voice-to-text"
+    ]
+  },
+  {
+    "icon": "speaker",
+    "category": "Devices & Signals",
+    "tags": [
+      "music",
+      "sound"
+    ]
+  },
+  {
+    "icon": "split",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "spotify",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "square-arrow-bottom-right",
+    "category": "Arrows",
+    "tags": [
+      "resize small",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-arrow-center",
+    "category": "Arrows",
+    "tags": [
+      "resize big",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-arrow-down",
+    "category": "Interface General",
+    "tags": [
+      "download square",
+      "save"
+    ]
+  },
+  {
+    "icon": "square-arrow-in-top-left",
+    "category": "Arrows",
+    "tags": [
+      "dock",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-arrow-out-top-left",
+    "category": "Arrows",
+    "tags": [
+      "undock",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-arrow-top-right",
+    "category": "Arrows",
+    "tags": [
+      "open",
+      "new",
+      "link",
+      "open link",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-arrow-top-right-2",
+    "category": "Arrows",
+    "tags": [
+      "open",
+      "new",
+      "link",
+      "open link",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-behind-square-1",
+    "category": "Interface General",
+    "tags": [
+      "copy 1",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "icon": "square-behind-square-2",
+    "category": "Interface General",
+    "tags": [
+      "copy 2",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "icon": "square-behind-square-3",
+    "category": "Interface General",
+    "tags": [
+      "copy 3",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "icon": "square-behind-square-4",
+    "category": "Interface General",
+    "tags": [
+      "copy 4",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "icon": "square-behind-square-6",
+    "category": "Interface General",
+    "tags": [
+      "layers",
+      "copy 6",
+      "pages"
+    ]
+  },
+  {
+    "icon": "square-check",
+    "category": "Interface General",
+    "tags": [
+      "checkbox",
+      "check",
+      "checkmark",
+      "confirm"
+    ]
+  },
+  {
+    "icon": "square-checklist",
+    "category": "Interface General",
+    "tags": [
+      "checklist box",
+      "check",
+      "list"
+    ]
+  },
+  {
+    "icon": "square-checklist-bell",
+    "category": "Interface General",
+    "tags": [
+      "checklist box",
+      "check",
+      "list",
+      "search"
+    ]
+  },
+  {
+    "icon": "square-checklist-magnifying-glass",
+    "category": "Interface General",
+    "tags": [
+      "checklist box",
+      "check",
+      "list",
+      "search"
+    ]
+  },
+  {
+    "icon": "square-circle-top-right",
+    "category": "Interface General",
+    "tags": [
+      "notifications",
+      "badge"
+    ]
+  },
+  {
+    "icon": "square-cursor",
+    "category": "Arrows",
+    "tags": [
+      "cursor box",
+      "arrow"
+    ]
+  },
+  {
+    "icon": "square-doted-behind-square",
+    "category": "Interface General",
+    "tags": [
+      "copy",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "icon": "square-grid-circle",
+    "category": "Interface General",
+    "tags": [
+      "layout",
+      "grid",
+      "list",
+      "category",
+      "categories"
+    ]
+  },
+  {
+    "icon": "square-grid-maginfying-glass",
+    "category": "Interface General",
+    "tags": [
+      "layout",
+      "grid",
+      "list",
+      "search",
+      "find",
+      "magifier"
+    ]
+  },
+  {
+    "icon": "square-info",
+    "category": "Interface General",
+    "tags": [
+      "information",
+      "tooltip"
+    ]
+  },
+  {
+    "icon": "square-lines",
+    "category": "Interface General",
+    "tags": [
+      "note",
+      "card",
+      "text"
+    ]
+  },
+  {
+    "icon": "square-lines-bottom",
+    "category": "Accessibility",
+    "tags": [
+      "transcription"
+    ]
+  },
+  {
+    "icon": "square-minus",
+    "category": "Interface General",
+    "tags": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "icon": "square-placeholder",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "square-placeholder-dashed",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "square-plus",
+    "category": "Interface General",
+    "tags": [
+      "add"
+    ]
+  },
+  {
+    "icon": "square-x",
+    "category": "Interface General",
+    "tags": [
+      "close",
+      "x",
+      "checkbox",
+      "remove"
+    ]
+  },
+  {
+    "icon": "squized",
+    "category": "Arrows",
+    "tags": [
+      "centered",
+      "aligned"
+    ]
+  },
+  {
+    "icon": "stage",
+    "category": "Things",
+    "tags": [
+      "show"
+    ]
+  },
+  {
+    "icon": "stamps",
+    "category": "Things",
+    "tags": [
+      "collection"
+    ]
+  },
+  {
+    "icon": "star",
+    "category": "Interface General",
+    "tags": [
+      "favorite",
+      "award"
+    ]
+  },
+  {
+    "icon": "star-lines",
+    "category": "Interface General",
+    "tags": [
+      "features",
+      "favorite",
+      "award",
+      "to the moon"
+    ]
+  },
+  {
+    "icon": "star-wand",
+    "category": "AI & Magic",
+    "tags": [
+      "magic"
+    ]
+  },
+  {
+    "icon": "steak",
+    "category": "Food",
+    "tags": [
+      "t-bone",
+      "raw"
+    ]
+  },
+  {
+    "icon": "steak-steam-lines",
+    "category": "Food",
+    "tags": [
+      "t-bone"
+    ]
+  },
+  {
+    "icon": "steam",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "steering-wheel",
+    "category": "Things",
+    "tags": [
+      "control",
+      "navigate",
+      "boot"
+    ]
+  },
+  {
+    "icon": "step-back",
+    "category": "Arrows",
+    "tags": [
+      "undo"
+    ]
+  },
+  {
+    "icon": "step-forwards",
+    "category": "Arrows",
+    "tags": [
+      "continue"
+    ]
+  },
+  {
+    "icon": "steve-jobs",
+    "category": "People",
+    "tags": [
+      "professor",
+      "innovation"
+    ]
+  },
+  {
+    "icon": "sticker",
+    "category": "Things",
+    "tags": [
+      "badge"
+    ]
+  },
+  {
+    "icon": "stocks",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "stop",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "stop-circle",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "stopwatch",
+    "category": "Time & Date",
+    "tags": [
+      "track"
+    ]
+  },
+  {
+    "icon": "storage",
+    "category": "Devices & Signals",
+    "tags": [
+      "hdd",
+      "ssd"
+    ]
+  },
+  {
+    "icon": "store-1",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "store-2",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "store-3",
+    "category": "Building",
+    "tags": []
+  },
+  {
+    "icon": "store-4",
+    "category": "Building",
+    "tags": [
+      "shop",
+      "business"
+    ]
+  },
+  {
+    "icon": "stores",
+    "category": "Building",
+    "tags": [
+      "shops",
+      "mall"
+    ]
+  },
+  {
+    "icon": "strawberry",
+    "category": "Food",
+    "tags": [
+      "ai",
+      "dessert"
+    ]
+  },
+  {
+    "icon": "streaming",
+    "category": "People",
+    "tags": [
+      "live",
+      "stream"
+    ]
+  },
+  {
+    "icon": "strike-through",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "studio-display",
+    "category": "Devices & Signals",
+    "tags": [
+      "thunderbolt"
+    ]
+  },
+  {
+    "icon": "subscript",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "subscription-star",
+    "category": "Things",
+    "tags": [
+      "verify"
+    ]
+  },
+  {
+    "icon": "subscription-tick-1",
+    "category": "Things",
+    "tags": [
+      "verify"
+    ]
+  },
+  {
+    "icon": "subscription-tick-2",
+    "category": "Things",
+    "tags": [
+      "verify"
+    ]
+  },
+  {
+    "icon": "suitcase",
+    "category": "Things",
+    "tags": [
+      "luggage",
+      "case"
+    ]
+  },
+  {
+    "icon": "suitcase-sticker",
+    "category": "Things",
+    "tags": [
+      "vacation",
+      "travel"
+    ]
+  },
+  {
+    "icon": "suitcase-work",
+    "category": "Things",
+    "tags": [
+      "workspace"
+    ]
+  },
+  {
+    "icon": "summary",
+    "category": "Edit",
+    "tags": [
+      "summarize"
+    ]
+  },
+  {
+    "icon": "sun",
+    "category": "Weather",
+    "tags": [
+      "light-mode",
+      "day",
+      "today"
+    ]
+  },
+  {
+    "icon": "sunrise",
+    "category": "Weather",
+    "tags": []
+  },
+  {
+    "icon": "sunrise-arrow-up",
+    "category": "Weather",
+    "tags": []
+  },
+  {
+    "icon": "sunset",
+    "category": "Weather",
+    "tags": []
+  },
+  {
+    "icon": "sunset-arrow-down",
+    "category": "Weather",
+    "tags": []
+  },
+  {
+    "icon": "supabase",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "superscript",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "support",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "surfing",
+    "category": "People",
+    "tags": [
+      "wave",
+      "vibe"
+    ]
+  },
+  {
+    "icon": "sushi",
+    "category": "Food",
+    "tags": [
+      "nigiri",
+      "sashime",
+      "maki"
+    ]
+  },
+  {
+    "icon": "sword",
+    "category": "Gaming",
+    "tags": [
+      "action",
+      "gaming"
+    ]
+  },
+  {
+    "icon": "table",
+    "category": "Folders & Files",
+    "tags": [
+      "spreedsheet",
+      "chart"
+    ]
+  },
+  {
+    "icon": "tactics-1",
+    "category": "Things",
+    "tags": [
+      "game-plan",
+      "prototype",
+      "play"
+    ]
+  },
+  {
+    "icon": "tactics-2",
+    "category": "Things",
+    "tags": [
+      "game-plan",
+      "prototype",
+      "play"
+    ]
+  },
+  {
+    "icon": "tag",
+    "category": "Things",
+    "tags": [
+      "sale"
+    ]
+  },
+  {
+    "icon": "tapas",
+    "category": "Food",
+    "tags": [
+      "canabes"
+    ]
+  },
+  {
+    "icon": "tape",
+    "category": "Devices & Signals",
+    "tags": []
+  },
+  {
+    "icon": "target",
+    "category": "Interface General",
+    "tags": [
+      "focus",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "icon": "target-1",
+    "category": "Interface General",
+    "tags": [
+      "zoom",
+      "crosshair"
+    ]
+  },
+  {
+    "icon": "target-2",
+    "category": "Interface General",
+    "tags": [
+      "zoom",
+      "crosshair"
+    ]
+  },
+  {
+    "icon": "target-arrow",
+    "category": "Interface General",
+    "tags": [
+      "goal",
+      "aim",
+      "focus",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "icon": "tasks",
+    "category": "Interface General",
+    "tags": [
+      "lists",
+      "todos"
+    ]
+  },
+  {
+    "icon": "tea",
+    "category": "Food",
+    "tags": [
+      "cafe",
+      "coffee",
+      "vibe"
+    ]
+  },
+  {
+    "icon": "teacher",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "teacher-whiteboard",
+    "category": "People",
+    "tags": []
+  },
+  {
+    "icon": "teddy-bear",
+    "category": "Things",
+    "tags": [
+      "play"
+    ]
+  },
+  {
+    "icon": "telegram",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "telephone",
+    "category": "Communication",
+    "tags": [
+      "phone",
+      "contact"
+    ]
+  },
+  {
+    "icon": "telescope",
+    "category": "Things",
+    "tags": [
+      "deep-search",
+      "research"
+    ]
+  },
+  {
+    "icon": "television",
+    "category": "Devices & Signals",
+    "tags": [
+      "tv",
+      "monitor",
+      "video",
+      "screen",
+      "display"
+    ]
+  },
+  {
+    "icon": "television-old",
+    "category": "Devices & Signals",
+    "tags": [
+      "tv",
+      "monitor",
+      "video",
+      "screen",
+      "display"
+    ]
+  },
+  {
+    "icon": "tennis",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "test-tube",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "testflight",
+    "category": "Code",
+    "tags": [
+      "beta"
+    ]
+  },
+  {
+    "icon": "text-1",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-2",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-block",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-color",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-edit",
+    "category": "Edit",
+    "tags": [
+      "prompts",
+      "comment"
+    ]
+  },
+  {
+    "icon": "text-indent-left",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-indent-right",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-indicator",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-motion",
+    "category": "Typography",
+    "tags": [
+      "text-animation"
+    ]
+  },
+  {
+    "icon": "text-select",
+    "category": "Typography",
+    "tags": [
+      "lollipops"
+    ]
+  },
+  {
+    "icon": "text-select-dashed",
+    "category": "Typography",
+    "tags": [
+      "lollipops"
+    ]
+  },
+  {
+    "icon": "text-size",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "text-to-image",
+    "category": "AI & Magic",
+    "tags": []
+  },
+  {
+    "icon": "text-to-speach",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "textarea-drag",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "thermostat",
+    "category": "Weather",
+    "tags": [
+      "temprature"
+    ]
+  },
+  {
+    "icon": "thinking-bubble",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "thinking-bubble-1",
+    "category": "Things",
+    "tags": [
+      "thoughts"
+    ]
+  },
+  {
+    "icon": "thinking-bubble-2",
+    "category": "Things",
+    "tags": [
+      "thoughts"
+    ]
+  },
+  {
+    "icon": "thread",
+    "category": "Things",
+    "tags": []
+  },
+  {
+    "icon": "threads",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "three-d-sphere",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "threed-sphere",
+    "category": "Augmented Reality",
+    "tags": []
+  },
+  {
+    "icon": "thumb-down-curved",
+    "category": "Hands",
+    "tags": []
+  },
+  {
+    "icon": "thumb-up-curved",
+    "category": "Hands",
+    "tags": []
+  },
+  {
+    "icon": "thumbs-down",
+    "category": "Hands",
+    "tags": [
+      "thumb",
+      "hand",
+      "no",
+      "contra"
+    ]
+  },
+  {
+    "icon": "thumbs-up",
+    "category": "Hands",
+    "tags": [
+      "thumb",
+      "hand",
+      "yes",
+      "pro"
+    ]
+  },
+  {
+    "icon": "thumbtack",
+    "category": "Interface General",
+    "tags": [
+      "pin",
+      "location",
+      "bookmark"
+    ]
+  },
+  {
+    "icon": "thunder",
+    "category": "Weather",
+    "tags": [
+      "zap",
+      "flash"
+    ]
+  },
+  {
+    "icon": "ticket",
+    "category": "Things",
+    "tags": [
+      "admit",
+      "vip"
+    ]
+  },
+  {
+    "icon": "tiktok",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "time-flies",
+    "category": "Time & Date",
+    "tags": [
+      "speed"
+    ]
+  },
+  {
+    "icon": "title-case",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "toast",
+    "category": "Food",
+    "tags": [
+      "breakfest"
+    ]
+  },
+  {
+    "icon": "todos",
+    "category": "Interface General",
+    "tags": [
+      "check",
+      "things",
+      "task"
+    ]
+  },
+  {
+    "icon": "toggle",
+    "category": "Filter & Settings",
+    "tags": [
+      "settings",
+      "control"
+    ]
+  },
+  {
+    "icon": "toilet-paper",
+    "category": "Things",
+    "tags": [
+      "wipe"
+    ]
+  },
+  {
+    "icon": "toolbox",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "toque",
+    "category": "Food",
+    "tags": [
+      "chefs-cap",
+      "cook"
+    ]
+  },
+  {
+    "icon": "touch",
+    "category": "Hands",
+    "tags": [
+      "tab",
+      "click"
+    ]
+  },
+  {
+    "icon": "touch-grass",
+    "category": "Hands",
+    "tags": [
+      "nature",
+      "logout"
+    ]
+  },
+  {
+    "icon": "trading-view-candles",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "trading-view-line",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "trading-view-steps",
+    "category": "Crypto",
+    "tags": []
+  },
+  {
+    "icon": "train-front-view",
+    "category": "Things",
+    "tags": [
+      "tram"
+    ]
+  },
+  {
+    "icon": "translate",
+    "category": "Typography",
+    "tags": [
+      "language"
+    ]
+  },
+  {
+    "icon": "trash-can",
+    "category": "Interface General",
+    "tags": [
+      "delete",
+      "remove",
+      "garbage",
+      "waste"
+    ]
+  },
+  {
+    "icon": "trash-can-simple",
+    "category": "Interface General",
+    "tags": [
+      "delete",
+      "remove",
+      "garbage",
+      "waste"
+    ]
+  },
+  {
+    "icon": "trash-paper",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "trash-permanently",
+    "category": "Interface General",
+    "tags": [
+      "remove"
+    ]
+  },
+  {
+    "icon": "treasure",
+    "category": "Things",
+    "tags": [
+      "chest"
+    ]
+  },
+  {
+    "icon": "tree",
+    "category": "Nature & Energy",
+    "tags": []
+  },
+  {
+    "icon": "trending-1",
+    "category": "Statistics & Charts",
+    "tags": [
+      "trends"
+    ]
+  },
+  {
+    "icon": "trending-2",
+    "category": "Statistics & Charts",
+    "tags": [
+      "trends"
+    ]
+  },
+  {
+    "icon": "trending-3",
+    "category": "Statistics & Charts",
+    "tags": [
+      "trends"
+    ]
+  },
+  {
+    "icon": "trending-4",
+    "category": "Statistics & Charts",
+    "tags": [
+      "chart"
+    ]
+  },
+  {
+    "icon": "trending-5",
+    "category": "Statistics & Charts",
+    "tags": [
+      "chart",
+      "analytics"
+    ]
+  },
+  {
+    "icon": "trending-circle",
+    "category": "Statistics & Charts",
+    "tags": []
+  },
+  {
+    "icon": "triangle-exclamation",
+    "category": "Interface General",
+    "tags": [
+      "error",
+      "warning",
+      "alert"
+    ]
+  },
+  {
+    "icon": "trophy",
+    "category": "Things",
+    "tags": [
+      "win",
+      "champion"
+    ]
+  },
+  {
+    "icon": "truck",
+    "category": "Shopping & Payment",
+    "tags": [
+      "delivery"
+    ]
+  },
+  {
+    "icon": "twitch",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "twitter",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "ufo",
+    "category": "Things",
+    "tags": [
+      "beam"
+    ]
+  },
+  {
+    "icon": "umbrella-security",
+    "category": "Security",
+    "tags": []
+  },
+  {
+    "icon": "unarchiv",
+    "category": "Interface General",
+    "tags": [
+      "unbox"
+    ]
+  },
+  {
+    "icon": "unblur",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "underline",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "unicorn",
+    "category": "Things",
+    "tags": [
+      "startup",
+      "success"
+    ]
+  },
+  {
+    "icon": "unlocked",
+    "category": "Security",
+    "tags": [
+      "unlock",
+      "private"
+    ]
+  },
+  {
+    "icon": "unpin",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "untrash",
+    "category": "Interface General",
+    "tags": []
+  },
+  {
+    "icon": "usb",
+    "category": "Devices & Signals",
+    "tags": [
+      "connection",
+      "connect",
+      "save",
+      "data"
+    ]
+  },
+  {
+    "icon": "usb-c",
+    "category": "Devices & Signals",
+    "tags": [
+      "type-c"
+    ]
+  },
+  {
+    "icon": "variables",
+    "category": "Edit",
+    "tags": [
+      "figma"
+    ]
+  },
+  {
+    "icon": "vault",
+    "category": "Security",
+    "tags": [
+      "safe"
+    ]
+  },
+  {
+    "icon": "vector-logo",
+    "category": "Edit",
+    "tags": [
+      "svg"
+    ]
+  },
+  {
+    "icon": "venmo",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "vercel",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "versus-circle",
+    "category": "Sports",
+    "tags": [
+      "vs"
+    ]
+  },
+  {
+    "icon": "vertical-alignment-center",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "vertical-alignment-left",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "vertical-alignment-right",
+    "category": "Typography",
+    "tags": []
+  },
+  {
+    "icon": "vibe-coding-bird",
+    "category": "People",
+    "tags": [
+      "laptop",
+      "work"
+    ]
+  },
+  {
+    "icon": "vibe-coding-star",
+    "category": "People",
+    "tags": [
+      "working",
+      "home-office"
+    ]
+  },
+  {
+    "icon": "video",
+    "category": "Photography & Video",
+    "tags": [
+      "camera",
+      "movie",
+      "play"
+    ]
+  },
+  {
+    "icon": "video-clip",
+    "category": "Photography & Video",
+    "tags": [
+      "film",
+      "movie"
+    ]
+  },
+  {
+    "icon": "video-off",
+    "category": "Photography & Video",
+    "tags": [
+      "cam-off"
+    ]
+  },
+  {
+    "icon": "video-on",
+    "category": "Photography & Video",
+    "tags": [
+      "cam-on"
+    ]
+  },
+  {
+    "icon": "video-roll",
+    "category": "Photography & Video",
+    "tags": [
+      "movie"
+    ]
+  },
+  {
+    "icon": "video-timeline",
+    "category": "Photography & Video",
+    "tags": [
+      "edit-video"
+    ]
+  },
+  {
+    "icon": "video-trim",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "videos",
+    "category": "Photography & Video",
+    "tags": [
+      "video-playlist"
+    ]
+  },
+  {
+    "icon": "vignette",
+    "category": "Photography & Video",
+    "tags": []
+  },
+  {
+    "icon": "vision-pro",
+    "category": "Augmented Reality",
+    "tags": [
+      "goggles"
+    ]
+  },
+  {
+    "icon": "vision-pro-app",
+    "category": "Augmented Reality",
+    "tags": [
+      "window"
+    ]
+  },
+  {
+    "icon": "visual-intelligence",
+    "category": "AI & Magic",
+    "tags": []
+  },
+  {
+    "icon": "vkontakte",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "voice-1",
+    "category": "Sound & Music",
+    "tags": [
+      "wave"
+    ]
+  },
+  {
+    "icon": "voice-2",
+    "category": "Sound & Music",
+    "tags": [
+      "siri",
+      "wave"
+    ]
+  },
+  {
+    "icon": "voice-3",
+    "category": "Sound & Music",
+    "tags": [
+      "wave"
+    ]
+  },
+  {
+    "icon": "voice-and-video",
+    "category": "Communication",
+    "tags": [
+      "media"
+    ]
+  },
+  {
+    "icon": "voice-record",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "volleyball",
+    "category": "Sports",
+    "tags": []
+  },
+  {
+    "icon": "volume-down",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "volume-full",
+    "category": "Sound & Music",
+    "tags": [
+      "speaker",
+      "loud",
+      "sound"
+    ]
+  },
+  {
+    "icon": "volume-half",
+    "category": "Sound & Music",
+    "tags": [
+      "speaker",
+      "loud",
+      "sound"
+    ]
+  },
+  {
+    "icon": "volume-minimum",
+    "category": "Sound & Music",
+    "tags": [
+      "speaker",
+      "loud",
+      "sound"
+    ]
+  },
+  {
+    "icon": "volume-off",
+    "category": "Sound & Music",
+    "tags": [
+      "sound-off"
+    ]
+  },
+  {
+    "icon": "volume-up",
+    "category": "Sound & Music",
+    "tags": []
+  },
+  {
+    "icon": "wallet-1",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "wallet-2",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "wallet-3",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "wallet-4",
+    "category": "Shopping & Payment",
+    "tags": []
+  },
+  {
+    "icon": "wallpaper",
+    "category": "Photography & Video",
+    "tags": [
+      "os"
+    ]
+  },
+  {
+    "icon": "wardrobe",
+    "category": "Furniture & Household",
+    "tags": []
+  },
+  {
+    "icon": "warning-sign",
+    "category": "Things",
+    "tags": [
+      "attention",
+      "coution"
+    ]
+  },
+  {
+    "icon": "washing-machine",
+    "category": "Furniture & Household",
+    "tags": [
+      "laundry",
+      "clean"
+    ]
+  },
+  {
+    "icon": "waste",
+    "category": "Things",
+    "tags": [
+      "trash-can"
+    ]
+  },
+  {
+    "icon": "web3",
+    "category": "Crypto",
+    "tags": [
+      "crypto-space",
+      "nft"
+    ]
+  },
+  {
+    "icon": "webcam",
+    "category": "Devices & Signals",
+    "tags": [
+      "camera",
+      "view"
+    ]
+  },
+  {
+    "icon": "webflow",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "whatsapp",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "wheelchair",
+    "category": "People",
+    "tags": [
+      "bathroom accessible",
+      "toilet",
+      "wc"
+    ]
+  },
+  {
+    "icon": "whiteboard",
+    "category": "Edit",
+    "tags": [
+      "sketch",
+      "forms"
+    ]
+  },
+  {
+    "icon": "whiteboard-1",
+    "category": "Statistics & Charts",
+    "tags": [
+      "artboard"
+    ]
+  },
+  {
+    "icon": "whiteboard-2",
+    "category": "Statistics & Charts",
+    "tags": []
+  },
+  {
+    "icon": "wifi-full",
+    "category": "Devices & Signals",
+    "tags": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "icon": "wifi-no-signal",
+    "category": "Devices & Signals",
+    "tags": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "icon": "wifi-square",
+    "category": "Devices & Signals",
+    "tags": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "icon": "wifi-weak",
+    "category": "Devices & Signals",
+    "tags": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "icon": "wind",
+    "category": "Weather",
+    "tags": [
+      "windy"
+    ]
+  },
+  {
+    "icon": "wind-power",
+    "category": "Nature & Energy",
+    "tags": [
+      "electric-current",
+      "power",
+      "green-energy"
+    ]
+  },
+  {
+    "icon": "window",
+    "category": "Interface General",
+    "tags": [
+      "timeline",
+      "feed",
+      "posts"
+    ]
+  },
+  {
+    "icon": "window-2",
+    "category": "Interface General",
+    "tags": [
+      "browser",
+      "app",
+      "desktop"
+    ]
+  },
+  {
+    "icon": "window-app",
+    "category": "Interface General",
+    "tags": [
+      "browser",
+      "app",
+      "desktop"
+    ]
+  },
+  {
+    "icon": "window-cursor",
+    "category": "Interface General",
+    "tags": [
+      "visit page",
+      "open app"
+    ]
+  },
+  {
+    "icon": "window-sparkle",
+    "category": "AI & Magic",
+    "tags": [
+      "whisper",
+      "api",
+      "app",
+      "software"
+    ]
+  },
+  {
+    "icon": "windsurf",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "wip",
+    "category": "Things",
+    "tags": [
+      "work",
+      "barrier"
+    ]
+  },
+  {
+    "icon": "wizard-hat",
+    "category": "AI & Magic",
+    "tags": [
+      "magician",
+      "fantasy"
+    ]
+  },
+  {
+    "icon": "world",
+    "category": "Location",
+    "tags": [
+      "globus",
+      "internet",
+      "web",
+      "globe"
+    ]
+  },
+  {
+    "icon": "wreath",
+    "category": "Things",
+    "tags": [
+      "crown",
+      "laurel-leafs"
+    ]
+  },
+  {
+    "icon": "write",
+    "category": "Typography",
+    "tags": [
+      "edit-list",
+      "list"
+    ]
+  },
+  {
+    "icon": "write-1",
+    "category": "Edit",
+    "tags": [
+      "fountain-pen"
+    ]
+  },
+  {
+    "icon": "write-2",
+    "category": "Edit",
+    "tags": [
+      "fountain-pen"
+    ]
+  },
+  {
+    "icon": "writing",
+    "category": "Edit",
+    "tags": []
+  },
+  {
+    "icon": "x",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "xbox",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "yen",
+    "category": "Shopping & Payment",
+    "tags": [
+      "currency",
+      "money",
+      "coin"
+    ]
+  },
+  {
+    "icon": "youtube",
+    "category": "Social Media & Brands",
+    "tags": []
+  },
+  {
+    "icon": "zap",
+    "category": "Photography & Video",
+    "tags": [
+      "lightning",
+      "flash",
+      "thunder"
+    ]
+  },
+  {
+    "icon": "zip",
+    "category": "Folders & Files",
+    "tags": [
+      "rar",
+      "compressed",
+      "archive"
+    ]
+  },
+  {
+    "icon": "zoom-in",
+    "category": "Interface General",
+    "tags": [
+      "search-plus"
+    ]
+  },
+  {
+    "icon": "zoom-out",
+    "category": "Interface General",
+    "tags": [
+      "search-minus"
+    ]
+  }
+]
