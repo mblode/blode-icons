@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 node_modules
 yarn-debug.log*
@@ -45,7 +43,19 @@ yalc.lock
 yarn.lock
 .react-email
 
-src/
-!docs/src/
-tmp/
+# Generated library source (icons are built from SVGs)
+packages/blode-icons-react/src/
+
+# Generated docs icon copies
+apps/docs/src/icons-tsx/
+apps/docs/src/icons-svg/
+apps/docs/src/icons-data/
+apps/docs/src/icons-metadata.json
+
+# Build cache
 .cache-manifest.json
+
+# Turbo
+.turbo
+
+tmp/
