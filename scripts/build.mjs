@@ -19,6 +19,8 @@ const ICON_SUFFIX_RE = /Icon$/;
 const docsTsxDir = path.join(ROOT, "docs/src/icons-tsx");
 const docsSvgDir = path.join(ROOT, "docs/src/icons-svg");
 const docsDataDir = path.join(ROOT, "docs/src/icons-data");
+const docsMetadataPath = path.join(ROOT, "docs/src/icons-metadata.json");
+const docsDataMetadataPath = path.join(docsDataDir, "metadata.json");
 
 // CLI flags
 const args = process.argv.slice(2);
@@ -534,6 +536,44 @@ function generateDynamicImports() {
   console.log(`Generated dynamicIconImports.ts with ${entries.length} entries`);
 }
 
+function generateDocsIconsMetadata() {
+  const files = fs
+    .readdirSync(dataDir)
+    .filter((file) => file.endsWith(".json"))
+    .sort();
+
+  const metadata = files
+    .map((file) => {
+      const filePath = path.join(dataDir, file);
+      const parsed = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      return {
+        icon: parsed.icon || path.basename(file, ".json"),
+        category: parsed.category || "",
+        tags: Array.isArray(parsed.tags) ? parsed.tags : [],
+      };
+    })
+    .sort((a, b) => a.icon.localeCompare(b.icon));
+
+  fs.writeFileSync(docsMetadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
+  console.log(
+    `Generated docs/src/icons-metadata.json with ${metadata.length} entries`
+  );
+
+  const metadataByIcon = Object.fromEntries(
+    metadata.map((entry) => [
+      entry.icon,
+      { category: entry.category, tags: entry.tags },
+    ])
+  );
+  fs.writeFileSync(
+    docsDataMetadataPath,
+    `${JSON.stringify(metadataByIcon, null, 2)}\n`
+  );
+  console.log(
+    `Generated docs/src/icons-data/metadata.json with ${metadata.length} entries`
+  );
+}
+
 // ─── Copy to docs directories ───────────────────────────────────────
 function copyDocs() {
   if (noDocs) {
@@ -548,6 +588,7 @@ function copyDocs() {
 
   fs.rmSync(docsDataDir, { recursive: true, force: true });
   fs.cpSync(dataDir, docsDataDir, { recursive: true });
+  generateDocsIconsMetadata();
 }
 
 // ─── Step 4: Compile with tsc ───────────────────────────────────────
