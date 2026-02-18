@@ -58,4 +58,7 @@ apps/docs/src/icons-metadata.json
 # Turbo
 .turbo
 
+# Vercel
+.vercel
+
 tmp/
