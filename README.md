@@ -8,15 +8,13 @@
   <a href="https://discord.com/invite/87p2vpsat5"><img alt="Discord" src="https://img.shields.io/discord/1151315619246002176"></a>
 </p>
 
-`blode-icons-react` is a React icon library with 1,500+ icons in outline and filled variants, built with SVGR, tree-shakeable, and fully compatible with lucide-react props.
-
 ## Highlights
 
-- 3,000+ SVG icons (1,500+ outline/filled pairs) optimized with SVGO.
-- Drop-in lucide-react replacement — same props, same API.
-- Tree-shakeable with individual icon imports.
-- Dynamic icon loading with `DynamicIcon` and lazy imports.
-- Searchable docs site with copy-to-clipboard for SVG, TSX, and names.
+- 3,000+ SVG icons (1,500+ outline/filled pairs), optimized with SVGO
+- Drop-in lucide-react replacement — same props, same API
+- Tree-shakeable with individual icon imports
+- Dynamic icon loading with `DynamicIcon` and lazy imports
+- Searchable docs site with copy-to-clipboard
 
 ## Documentation
 
@@ -63,24 +61,6 @@ All icons accept the same props as `lucide-react`:
 - `color` — Icon color (default: `'currentColor'`)
 - `strokeWidth` — Stroke width (default: `2`)
 - `absoluteStrokeWidth` — Constant stroke width regardless of size
-
-## Common Commands
-
-```bash
-npm install         # Install dependencies
-npm run dev         # Start dev server (Turbopack)
-npm run build       # Build library and docs
-npm run check       # Lint and format check
-npm run fix         # Auto-fix lint and format issues
-```
-
-## Release
-
-```bash
-npx changeset            # Create a changeset
-npx changeset version    # Bump versions
-npm run release           # Build and publish to npm
-```
 
 ## Contributing
 
