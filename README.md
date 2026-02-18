@@ -60,16 +60,6 @@ All icons accept the same props as `lucide-react`:
 - `strokeWidth` — Stroke width (default: `2`)
 - `absoluteStrokeWidth` — Constant stroke width regardless of size
 
-## Contributing
-
-Read the [contributing guide](https://github.com/mblode/blode-icons/blob/main/CONTRIBUTING.md) to get started.
-
-## Authors
-
-<a href="https://github.com/mblode/blode-icons/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mblode/blode-icons" />
-</a>
-
 ## License
 
-Licensed under the [MIT license](https://github.com/mblode/blode-icons/blob/main/LICENSE.md).
+[MIT](https://github.com/mblode/blode-icons/blob/main/LICENSE.md)
