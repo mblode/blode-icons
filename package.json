@@ -1,85 +1,38 @@
 {
-  "name": "blode-icons-react",
-  "version": "0.3.0",
-  "description": "Blode icons for React — drop-in lucide-react replacement",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./icons/*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js"
-    },
-    "./dynamic": {
-      "types": "./dist/dynamic.d.ts",
-      "import": "./dist/dynamic.js"
-    },
-    "./dynamicIconImports": {
-      "types": "./dist/dynamicIconImports.d.ts",
-      "import": "./dist/dynamicIconImports.js"
-    }
-  },
-  "files": [
-    "dist"
+  "name": "blode-icons",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
   ],
-  "sideEffects": false,
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "prepublishOnly": "node scripts/build.mjs --no-docs",
-    "check:types": "tsc --noEmit",
-    "watch:types": "tsc --noEmit --incremental --watch",
-    "changeset": "changeset",
-    "changeset:version": "changeset version",
-    "release": "npm run build && changeset publish",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "check:types": "turbo run check:types",
     "check": "ultracite check",
     "fix": "ultracite fix",
+    "release": "turbo run build --filter=blode-icons-react && changeset publish",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
     "prepare": "husky"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0"
-  },
-  "keywords": [
-    "react",
-    "icons",
-    "svg",
-    "component",
-    "ui",
-    "lucide",
-    "lucide-react",
-    "blode"
-  ],
-  "author": "Matthew Blode",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mblode/blode-icons/issues"
-  },
-  "homepage": "https://github.com/mblode/blode-icons#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mblode/blode-icons.git"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.0",
     "@changesets/cli": "^2.29.8",
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@svgr/plugin-svgo": "^8.1.0",
-    "@types/react": "^18.2.79",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "typescript": "^5.4.0",
+    "turbo": "^2",
     "ultracite": "^7.2.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "npx ultracite fix",
       "npx ultracite fix"
     ]
-  }
+  },
+  "packageManager": "npm@10.9.3"
 }

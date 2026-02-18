@@ -1,0 +1,42 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "blode-icons-react#build": {
+      "outputs": ["dist/**", "src/**"]
+    },
+    "docs#copy-icons": {
+      "dependsOn": ["blode-icons-react#build"],
+      "outputs": [
+        "src/icons-tsx/**",
+        "src/icons-svg/**",
+        "src/icons-data/**",
+        "src/icons-metadata.json"
+      ]
+    },
+    "docs#build": {
+      "dependsOn": ["copy-icons"],
+      "outputs": [".next/**"],
+      "env": ["NODE_ENV"]
+    },
+    "docs#dev": {
+      "dependsOn": ["copy-icons"],
+      "persistent": true,
+      "cache": false
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
+    "lint": {},
+    "lint:fix": {},
+    "format": {},
+    "format:check": {},
+    "check:types": {
+      "dependsOn": ["^build"]
+    }
+  }
+}
