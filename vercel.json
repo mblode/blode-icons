@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "turbo run build --filter=docs",
-  "outputDirectory": "apps/docs/.next",
+  "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm install"
 }
