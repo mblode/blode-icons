@@ -1,4 +1,4 @@
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
@@ -24,8 +24,8 @@ const glide = localFont({
   display: "swap",
 });
 
-const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-PWKVQTZ6";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://blode.co";
+const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-26YW6EGLS4";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://icons.blode.co";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -79,7 +79,6 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
-      {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <Providers>
           <div
@@ -92,6 +91,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
     </html>
   );
 }
