@@ -1,6 +1,6 @@
 {
   "name": "blode-icons-react",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Blode icons for React — drop-in lucide-react replacement",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
