@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.3.3
+
+### Patch Changes
+
+- 39cba44: Replace chevron-up and chevron-down SVG icons
+
 ## 0.3.2
 
 ### Patch Changes
