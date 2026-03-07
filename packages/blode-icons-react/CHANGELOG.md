@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.3.6
+
+### Patch Changes
+
+- 9b9449e: Fix chevron-down, chevron-up, chevron-top, and chevron-bottom icons to use currentColor instead of hardcoded black stroke
+
 ## 0.3.5
 
 ### Patch Changes
