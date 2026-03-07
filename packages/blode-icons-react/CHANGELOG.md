@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.3.5
+
+### Patch Changes
+
+- 3c14b36: Update chevron-top and chevron-bottom icons, remove filled variants
+
 ## 0.3.4
 
 ### Patch Changes
