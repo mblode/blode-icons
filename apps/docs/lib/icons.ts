@@ -13,7 +13,7 @@ const isIconComponent = (
   return name.endsWith("Icon") && component !== null && component !== undefined;
 };
 
-const seenComponents = new Set<unknown>();
+const seenComponents = new Map<unknown, Set<string>>();
 
 export const icons: IconRecord[] = Object.entries(IconComponents)
   .filter(([name, component]) => {
@@ -21,11 +21,19 @@ export const icons: IconRecord[] = Object.entries(IconComponents)
       return false;
     }
 
-    if (seenComponents.has(component)) {
+    const variant = name.includes("Filled") ? "filled" : "outline";
+    const seen = seenComponents.get(component);
+
+    if (seen?.has(variant)) {
       return false;
     }
 
-    seenComponents.add(component);
+    if (seen) {
+      seen.add(variant);
+    } else {
+      seenComponents.set(component, new Set([variant]));
+    }
+
     return true;
   })
   .map(([name, component]) => {

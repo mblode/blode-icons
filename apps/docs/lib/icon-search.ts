@@ -2,7 +2,7 @@ import { sentenceCase } from "change-case";
 import type { IconRecord, IconStyle } from "@/lib/icon-types";
 
 const NORMALIZE_SPACE = /\s+/g;
-const ICON_SUFFIX_REGEX = /Icon$/;
+const ICON_SUFFIX_REGEX = /FilledIcon$|Icon$/;
 
 const getSearchHaystack = (icon: IconRecord) => {
   return [icon.name, icon.category, ...icon.categories, ...icon.tags]
