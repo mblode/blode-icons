@@ -6,6 +6,13 @@
       "outputs": ["dist/**", ".next/**"]
     },
     "blode-icons-react#build": {
+      "inputs": [
+        "icons-svg/**/*.svg",
+        "scripts/**",
+        "svgo.json",
+        "tsconfig.json",
+        "package.json"
+      ],
       "outputs": ["dist/**", "src/**"]
     },
     "docs#copy-icons": {
