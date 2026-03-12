@@ -8,12 +8,16 @@
 
 ## Highlights
 
-- **Drop-in replacement:** swap `lucide-react` imports with zero code changes
+- **Lucide-style aliases:** mapped icons can replace `lucide-react` imports with minimal code changes
 - **Tree-shakeable:** only ship the icons you use
 - **Dynamic imports:** load icons by name at runtime
 - **Lucide-compatible props:** `size`, `color`, and `strokeWidth` work out of the box
 
 ## Install
+
+```bash
+npx skills add mblode/blode-icons -g --all -y
+```
 
 ```bash
 npm install blode-icons-react
@@ -22,17 +26,17 @@ npm install blode-icons-react
 ## Quick Start
 
 ```tsx
-import { Airplane } from "blode-icons-react"
+import { AirplaneIcon } from "blode-icons-react"
 
 export default function App() {
-  return <Airplane size={32} color="#0066ff" />
+  return <AirplaneIcon size={32} color="#0066ff" />
 }
 ```
 
 ### Tree-shaking import
 
 ```tsx
-import Airplane from "blode-icons-react/icons/airplane"
+import AirplaneIcon from "blode-icons-react/icons/airplane"
 ```
 
 ### Dynamic icon
@@ -40,7 +44,7 @@ import Airplane from "blode-icons-react/icons/airplane"
 ```tsx
 import { DynamicIcon } from "blode-icons-react/dynamic"
 
-<DynamicIcon name="airplane" size={24} />
+<DynamicIcon name="AirplaneIcon" size={24} />
 ```
 
 ## Props
