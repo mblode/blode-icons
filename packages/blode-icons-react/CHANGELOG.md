@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.3.7
+
+### Patch Changes
+
+- 70f467e: Add repo skills and fix README quick starts for blode-icons-react
+
 ## 0.3.6
 
 ### Patch Changes
