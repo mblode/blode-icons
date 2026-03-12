@@ -9,7 +9,7 @@
 ## Highlights
 
 - 3,000+ SVG icons (1,500+ outline/filled pairs), optimized with SVGO
-- Drop-in lucide-react replacement — same props, same API
+- Drop-in lucide-react replacement with Lucide-style aliases and core props
 - Tree-shakeable with individual icon imports
 - Dynamic icon loading with `DynamicIcon` and lazy imports
 - Searchable docs site with copy-to-clipboard
@@ -23,11 +23,15 @@ Browse icons, search by name or category, and copy code at:
 ## Quick Start
 
 ```bash
+npx skills add mblode/blode-icons -g --all -y
+```
+
+```bash
 npm install blode-icons-react
 ```
 
 ```tsx
-import { ChevronDown, Search, Plus } from "blode-icons-react"
+import { ChevronDown } from "blode-icons-react"
 
 export default function App() {
   return <ChevronDown size={20} />
@@ -44,21 +48,27 @@ import { ChevronDown, Search, Plus } from "blode-icons-react"
 import { ChevronDownIcon, SparkleIcon } from "blode-icons-react"
 
 // Individual icon import (best for tree-shaking)
-import { ChevronDownIcon } from "blode-icons-react/icons/chevron-down"
+import ChevronDownIcon from "blode-icons-react/icons/chevron-down"
 
-// Dynamic icon loading
+// Dynamic icon loading by export name
 import { DynamicIcon } from "blode-icons-react/dynamic"
+<DynamicIcon name="SearchIcon" size={24} />
 
 // Types
 import type { LucideProps, LucideIcon } from "blode-icons-react"
 ```
 
-All icons accept the same props as `lucide-react`:
+All icons accept standard SVG props plus these Lucide-style props:
 
 - `size` — Width and height (default: `24`)
 - `color` — Icon color (default: `'currentColor'`)
 - `strokeWidth` — Stroke width (default: `2`)
-- `absoluteStrokeWidth` — Constant stroke width regardless of size
+
+## Agent Skills
+
+| Skill | Phase | Description |
+| --- | --- | --- |
+| `blode-icons-react` | Authoring | Guides work on the `blode-icons-react` package, docs examples, import paths, and release conventions in this repo. |
 
 ## License
 
