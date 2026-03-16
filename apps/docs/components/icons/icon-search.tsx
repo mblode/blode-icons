@@ -72,7 +72,7 @@ export const IconSearch = () => {
               }
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Search all icons..."
-              type="search"
+              type="text"
               value={searchQuery}
             />
 

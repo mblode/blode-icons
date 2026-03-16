@@ -2,6 +2,6 @@ import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const XFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M17.4033 3.5h2.8819l-6.2962 7.201 7.407 9.799h-5.7996l-4.5424-5.943L5.8564 20.5H2.9727l6.7344-7.7023L2.6016 3.5h5.9468l4.106 5.4322zm-1.0115 15.2738h1.5969L7.6807 5.1355H5.967z" /></svg>;
+const XFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M16.793 5.7929c.3905-.3905 1.0235-.3905 1.414 0s.3905 1.0235 0 1.414L13.414 12l4.793 4.793c.3905.3905.3905 1.0235 0 1.4141s-1.0235.3905-1.414 0L12 13.414l-4.793 4.793c-.3905.3905-1.0235.3905-1.414 0-.3906-.3906-.3906-1.0236 0-1.4141l4.7929-4.793-4.793-4.793c-.3905-.3905-.3905-1.0235 0-1.414s1.0236-.3905 1.4141 0L12 10.5859z" /></svg>;
 const ForwardRef = forwardRef(XFilledIcon);
 export default createLucideIcon('XFilledIcon', ForwardRef);

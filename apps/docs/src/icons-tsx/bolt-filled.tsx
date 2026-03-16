@@ -2,6 +2,6 @@ import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const BoltFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" fillRule="evenodd" d="M13.1981 20.0571c-1.4655 0-2.9045-.5319-3.7305-1.6754l-.2914 1.3487-5.3793 2.852.5807-2.852L8.2951 2h4.7965l-1.3857 6.2495c1.1192-1.2233 2.1584-1.6754 3.4908-1.6754 2.8779 0 4.7964 1.8882 4.7964 5.3453 0 3.5636-2.2116 8.1377-6.795 8.1377m1.8387-7.127c0 1.6487-1.1725 2.8986-2.6913 2.8986-.8528 0-1.6255-.3191-2.1318-.8776l.7461-3.2709c.5596-.5586 1.1991-.8777 1.9452-.8777 1.1459 0 2.1318.8511 2.1318 2.1276" clipRule="evenodd" /></svg>;
+const BoltFilledIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path fill="currentColor" d="M14.0019 2.4014c0-1.484-1.9249-2.0669-2.7481-.832L3.188 13.668c-.6645.9968.05 2.3321 1.2481 2.3321h5.5658v5.5986c0 1.4841 1.9248 2.0669 2.748.832l8.0658-12.0986c.6645-.9968-.0501-2.332-1.2481-2.332h-5.5657z" /></svg>;
 const ForwardRef = forwardRef(BoltFilledIcon);
 export default createLucideIcon('BoltFilledIcon', ForwardRef);

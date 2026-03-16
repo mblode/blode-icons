@@ -1411,8 +1411,21 @@
   },
   {
     "icon": "bolt",
+    "category": "Photography & Video",
+    "tags": [
+      "lightning",
+      "flash",
+      "thunder",
+      "zap"
+    ]
+  },
+  {
+    "icon": "bolt-new",
     "category": "Social Media & Brands",
-    "tags": []
+    "tags": [
+      "bolt",
+      "bolt.new"
+    ]
   },
   {
     "icon": "bomb",
@@ -3348,6 +3361,15 @@
     "tags": [
       "crossed large",
       "close"
+    ]
+  },
+  {
+    "icon": "cross-medium",
+    "category": "Interface General",
+    "tags": [
+      "crossed medium",
+      "close",
+      "dismiss"
     ]
   },
   {
@@ -10220,8 +10242,21 @@
   },
   {
     "icon": "x",
+    "category": "Interface General",
+    "tags": [
+      "crossed medium",
+      "close",
+      "dismiss"
+    ]
+  },
+  {
+    "icon": "x-twitter",
     "category": "Social Media & Brands",
-    "tags": []
+    "tags": [
+      "twitter",
+      "x",
+      "social"
+    ]
   },
   {
     "icon": "xbox",
