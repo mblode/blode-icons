@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.3.9
+
+### Patch Changes
+
+- 9add1db: Disable sourcemaps to fix "Sourcemap points to missing source files" warnings in consuming projects
+
 ## 0.3.8
 
 ### Patch Changes
