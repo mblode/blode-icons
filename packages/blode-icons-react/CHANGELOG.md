@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.3.10
+
+### Patch Changes
+
+- c163d6d: Add people-square and people-square-filled icons
+
 ## 0.3.9
 
 ### Patch Changes
