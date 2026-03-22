@@ -5957,6 +5957,14 @@
     "category": "People",
     "tags": []
   },
+  "people-square": {
+    "category": "People",
+    "tags": [
+      "user-square",
+      "avatar",
+      "profile"
+    ]
+  },
   "people-versus": {
     "category": "People",
     "tags": [

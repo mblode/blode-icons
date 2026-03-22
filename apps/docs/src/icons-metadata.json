@@ -6999,6 +6999,15 @@
     "tags": []
   },
   {
+    "icon": "people-square",
+    "category": "People",
+    "tags": [
+      "user-square",
+      "avatar",
+      "profile"
+    ]
+  },
+  {
     "icon": "people-versus",
     "category": "People",
     "tags": [
