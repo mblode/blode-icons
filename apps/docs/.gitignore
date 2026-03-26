@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# generated .well-known skill discovery
+/public/.well-known/agent-skills/
+
 # production
 /build
 

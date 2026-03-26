@@ -5,7 +5,7 @@
   "scripts": {
     "copy-icons": "node scripts/copy-icons.mjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build-well-known-skills.mjs && next build",
     "start": "next start",
     "lint": "biome check .",
     "lint:fix": "biome check --fix .",
