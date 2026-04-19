@@ -1,0 +1,83 @@
+# Blode Icons — robots.txt
+# Spec: RFC 9309 (https://www.rfc-editor.org/rfc/rfc9309)
+# Content Signals: https://contentsignals.org/
+
+# Default policy: allow crawling, disallow the dynamic icon API to spare bandwidth.
+User-agent: *
+Content-Signal: search=yes, ai-train=no, ai-input=no
+Allow: /
+Disallow: /api/
+
+# Major search engines — allow search indexing.
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# AI crawlers — disallow training, allow live agent retrieval where supported.
+User-agent: GPTBot
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: OAI-SearchBot
+Content-Signal: search=yes, ai-input=yes
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Content-Signal: ai-input=yes
+Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: Claude-Web
+Content-Signal: ai-input=yes
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-SearchBot
+Content-Signal: search=yes, ai-input=yes
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: PerplexityBot
+Content-Signal: search=yes, ai-input=yes
+Allow: /
+Disallow: /api/
+
+User-agent: Perplexity-User
+Content-Signal: ai-input=yes
+Allow: /
+Disallow: /api/
+
+User-agent: CCBot
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: anthropic-ai
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: Applebot-Extended
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: Bytespider
+Content-Signal: ai-train=no
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Content-Signal: ai-train=no
+Disallow: /
+
+Sitemap: https://icons.blode.co/sitemap.xml
