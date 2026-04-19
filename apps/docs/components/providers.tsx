@@ -3,6 +3,7 @@
 import type * as React from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { WebMcpProvider } from "@/components/webmcp-provider";
 
 interface ProvidersProps {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ export function Providers({ children }: ProvidersProps) {
     >
       {children}
       <Toaster closeButton richColors />
+      <WebMcpProvider />
     </ThemeProvider>
   );
 }
