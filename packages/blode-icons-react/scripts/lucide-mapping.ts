@@ -140,7 +140,7 @@ export const mappings: IconMapping[] = [
   },
   {
     lucideName: "X",
-    blodeName: "CrossLargeIcon",
+    blodeName: "XIcon",
     category: "Status",
     hasMatch: true,
   },
