@@ -1,1 +1,5 @@
-{ "icon": "voice-1", "category": "Sound & Music", "tags": ["wave"] }
+{
+  "icon": "voice-1",
+  "category": "Sound & Music",
+  "tags": ["wave", "audio", "sound", "speak", "talk", "microphone"]
+}

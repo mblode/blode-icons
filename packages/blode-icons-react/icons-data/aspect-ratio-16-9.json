@@ -1,5 +1,12 @@
 {
   "icon": "aspect-ratio-16-9",
   "category": "Photography & Video",
-  "tags": ["landscape"]
+  "tags": [
+    "landscape",
+    "widescreen",
+    "crop",
+    "proportion",
+    "frame",
+    "horizontal"
+  ]
 }

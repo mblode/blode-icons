@@ -1,1 +1,5 @@
-{ "icon": "settings-knob", "category": "Filter & Settings", "tags": [] }
+{
+  "icon": "settings-knob",
+  "category": "Filter & Settings",
+  "tags": ["dial", "adjust", "tune", "control", "volume", "config"]
+}

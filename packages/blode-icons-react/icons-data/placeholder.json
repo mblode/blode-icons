@@ -1,1 +1,5 @@
-{ "icon": "placeholder", "category": "Layout", "tags": ["generate"] }
+{
+  "icon": "placeholder",
+  "category": "Layout",
+  "tags": ["generate", "empty", "template", "dummy", "skeleton"]
+}

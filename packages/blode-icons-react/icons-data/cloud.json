@@ -1,1 +1,5 @@
-{ "icon": "cloud", "category": "Weather", "tags": ["clouds"] }
+{
+  "icon": "cloud",
+  "category": "Weather",
+  "tags": ["clouds", "forecast", "overcast", "sky", "climate", "weather"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "paper-plane", "category": "Communication", "tags": ["send"] }
+{
+  "icon": "paper-plane",
+  "category": "Communication",
+  "tags": ["send", "submit", "message", "deliver", "share"]
+}

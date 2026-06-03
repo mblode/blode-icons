@@ -1,5 +1,5 @@
 {
   "icon": "textarea-drag",
   "category": "Interface General",
-  "tags": []
+  "tags": ["resize", "input", "field", "stretch", "handle"]
 }

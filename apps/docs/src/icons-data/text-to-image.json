@@ -1,1 +1,5 @@
-{ "icon": "text-to-image", "category": "AI & Magic", "tags": [] }
+{
+  "icon": "text-to-image",
+  "category": "AI & Magic",
+  "tags": ["generate", "ai-art", "prompt", "render", "create"]
+}

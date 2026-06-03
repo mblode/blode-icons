@@ -1,1 +1,5 @@
-{ "icon": "people-remove", "category": "People", "tags": ["user-remove"] }
+{
+  "icon": "people-remove",
+  "category": "People",
+  "tags": ["user-remove", "unfollow", "kick", "leave", "block", "delete-user"]
+}

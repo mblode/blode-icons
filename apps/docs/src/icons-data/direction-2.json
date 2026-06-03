@@ -1,1 +1,5 @@
-{ "icon": "direction-2", "category": "Location", "tags": ["route"] }
+{
+  "icon": "direction-2",
+  "category": "Location",
+  "tags": ["route", "navigation", "turn", "gps", "wayfinding", "arrow", "path"]
+}

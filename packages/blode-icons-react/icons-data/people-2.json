@@ -1,1 +1,5 @@
-{ "icon": "people-2", "category": "People", "tags": [] }
+{
+  "icon": "people-2",
+  "category": "People",
+  "tags": ["users", "group", "team", "community", "members"]
+}

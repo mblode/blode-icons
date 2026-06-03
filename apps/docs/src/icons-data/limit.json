@@ -1,1 +1,5 @@
-{ "icon": "limit", "category": "Things", "tags": [] }
+{
+  "icon": "limit",
+  "category": "Things",
+  "tags": ["cap", "restrict", "threshold", "maximum", "boundary", "quota"]
+}

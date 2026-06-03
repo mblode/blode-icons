@@ -1,1 +1,5 @@
-{ "icon": "instagram", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "instagram",
+  "category": "Social Media & Brands",
+  "tags": ["social", "photo", "ig", "meta", "network"]
+}

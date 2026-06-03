@@ -1,5 +1,12 @@
 {
   "icon": "bus",
   "category": "Things",
-  "tags": ["school-bus"]
+  "tags": [
+    "school-bus",
+    "transit",
+    "vehicle",
+    "public-transport",
+    "commute",
+    "school"
+  ]
 }

@@ -568,6 +568,11 @@ function compile() {
 async function main() {
   const t0 = performance.now();
 
+  // Gate: validate the SVG tree before generating anything.
+  execFileSync("node", [path.join(__dirname, "validate-icons.mjs")], {
+    stdio: "inherit",
+  });
+
   generateSupportFiles();
   await generateIcons();
   generateLucideAliases();

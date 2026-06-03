@@ -1,1 +1,5 @@
-{ "icon": "volume-up", "category": "Sound & Music", "tags": [] }
+{
+  "icon": "volume-up",
+  "category": "Sound & Music",
+  "tags": ["audio", "louder", "increase", "sound", "speaker", "boost"]
+}

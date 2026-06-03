@@ -1,1 +1,5 @@
-{ "icon": "ice-hockey", "category": "Sports", "tags": [] }
+{
+  "icon": "ice-hockey",
+  "category": "Sports",
+  "tags": ["puck", "stick", "nhl", "rink", "sport"]
+}

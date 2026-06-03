@@ -1,1 +1,5 @@
-{ "icon": "backpack", "category": "Things", "tags": ["travel"] }
+{
+  "icon": "backpack",
+  "category": "Things",
+  "tags": ["travel", "bag", "luggage", "school", "hike", "carry"]
+}

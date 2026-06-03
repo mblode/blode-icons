@@ -1,1 +1,5 @@
-{ "icon": "animation-ease", "category": "Code", "tags": [] }
+{
+  "icon": "animation-ease",
+  "category": "Code",
+  "tags": ["motion", "timing", "transition", "easing", "smooth"]
+}

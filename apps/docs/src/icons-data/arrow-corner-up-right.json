@@ -1,1 +1,5 @@
-{ "icon": "arrow-corner-up-right", "category": "Arrows", "tags": [] }
+{
+  "icon": "arrow-corner-up-right",
+  "category": "Arrows",
+  "tags": ["bend", "turn", "redirect", "route", "angle"]
+}

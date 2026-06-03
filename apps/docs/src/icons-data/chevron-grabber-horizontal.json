@@ -1,1 +1,5 @@
-{ "icon": "chevron-grabber-horizontal", "category": "Arrows", "tags": [] }
+{
+  "icon": "chevron-grabber-horizontal",
+  "category": "Arrows",
+  "tags": ["resize", "drag", "handle", "slider", "adjust"]
+}

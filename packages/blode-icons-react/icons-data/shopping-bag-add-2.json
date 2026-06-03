@@ -1,1 +1,5 @@
-{ "icon": "shopping-bag-add-2", "category": "Shopping & Payment", "tags": [] }
+{
+  "icon": "shopping-bag-add-2",
+  "category": "Shopping & Payment",
+  "tags": ["add-to-cart", "new-item", "plus", "include", "buy"]
+}

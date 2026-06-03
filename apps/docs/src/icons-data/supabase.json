@@ -1,5 +1,5 @@
 {
   "icon": "supabase",
   "category": "Social Media & Brands",
-  "tags": []
+  "tags": ["database", "backend", "postgres", "baas", "brand"]
 }

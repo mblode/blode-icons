@@ -1,1 +1,5 @@
-{ "icon": "cloud-check", "category": "Clouds", "tags": ["save"] }
+{
+  "icon": "cloud-check",
+  "category": "Clouds",
+  "tags": ["save", "saved", "synced", "backup", "uploaded", "done"]
+}

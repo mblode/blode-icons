@@ -1,1 +1,5 @@
-{ "icon": "contacts", "category": "People", "tags": ["address-book"] }
+{
+  "icon": "contacts",
+  "category": "People",
+  "tags": ["address-book", "directory", "people", "phonebook", "rolodex"]
+}

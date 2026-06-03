@@ -1,1 +1,5 @@
-{ "icon": "bezier-pointer", "category": "Edit", "tags": [] }
+{
+  "icon": "bezier-pointer",
+  "category": "Edit",
+  "tags": ["vector", "curve", "path", "node", "anchor-point"]
+}

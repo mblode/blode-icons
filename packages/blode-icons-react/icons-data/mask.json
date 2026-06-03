@@ -1,1 +1,13 @@
-{ "icon": "mask", "category": "Things", "tags": ["theatre"] }
+{
+  "icon": "mask",
+  "category": "Things",
+  "tags": [
+    "theatre",
+    "drama",
+    "comedy",
+    "theater",
+    "disguise",
+    "anonymous",
+    "performance"
+  ]
+}

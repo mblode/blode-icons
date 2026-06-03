@@ -1,1 +1,5 @@
-{ "icon": "shift", "category": "Keyboard", "tags": [] }
+{
+  "icon": "shift",
+  "category": "Keyboard",
+  "tags": ["uppercase", "modifier", "caps", "keystroke", "hotkey"]
+}

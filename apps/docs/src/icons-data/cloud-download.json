@@ -1,1 +1,5 @@
-{ "icon": "cloud-download", "category": "Clouds", "tags": [] }
+{
+  "icon": "cloud-download",
+  "category": "Clouds",
+  "tags": ["fetch", "retrieve", "pull", "backup", "import"]
+}

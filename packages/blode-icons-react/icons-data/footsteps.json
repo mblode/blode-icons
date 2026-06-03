@@ -1,1 +1,5 @@
-{ "icon": "footsteps", "category": "Things", "tags": [] }
+{
+  "icon": "footsteps",
+  "category": "Things",
+  "tags": ["walk", "tracks", "trail", "steps", "path"]
+}

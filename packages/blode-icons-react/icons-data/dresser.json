@@ -1,1 +1,13 @@
-{ "icon": "dresser", "category": "Furniture & Household", "tags": ["drawer"] }
+{
+  "icon": "dresser",
+  "category": "Furniture & Household",
+  "tags": [
+    "drawer",
+    "chest",
+    "bedroom",
+    "storage",
+    "wardrobe",
+    "furniture",
+    "cabinet"
+  ]
+}

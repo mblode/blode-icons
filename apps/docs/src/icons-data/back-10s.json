@@ -1,1 +1,5 @@
-{ "icon": "back-10s", "category": "Sound & Music", "tags": [] }
+{
+  "icon": "back-10s",
+  "category": "Sound & Music",
+  "tags": ["rewind", "replay", "skip-back", "seek", "jump"]
+}

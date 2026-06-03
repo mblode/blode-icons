@@ -1,1 +1,13 @@
-{ "icon": "suitcase-work", "category": "Things", "tags": ["workspace"] }
+{
+  "icon": "suitcase-work",
+  "category": "Things",
+  "tags": [
+    "workspace",
+    "briefcase",
+    "business",
+    "job",
+    "portfolio",
+    "luggage",
+    "career"
+  ]
+}

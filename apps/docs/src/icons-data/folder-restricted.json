@@ -1,1 +1,5 @@
-{ "icon": "folder-restricted", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "folder-restricted",
+  "category": "Folders & Files",
+  "tags": ["locked", "private", "blocked", "no-access", "forbidden"]
+}

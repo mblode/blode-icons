@@ -1,5 +1,12 @@
 {
   "icon": "untrash",
   "category": "Interface General",
-  "tags": []
+  "tags": [
+    "restore",
+    "recover",
+    "retrieve",
+    "undelete",
+    "recycle",
+    "bring-back"
+  ]
 }

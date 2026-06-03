@@ -1,1 +1,5 @@
-{ "icon": "align-vertical-center", "category": "Layout", "tags": ["alignment"] }
+{
+  "icon": "align-vertical-center",
+  "category": "Layout",
+  "tags": ["alignment", "arrange", "distribute", "middle", "position", "layout"]
+}

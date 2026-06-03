@@ -1,1 +1,13 @@
-{ "icon": "linebreak", "category": "Typography", "tags": ["next-line"] }
+{
+  "icon": "linebreak",
+  "category": "Typography",
+  "tags": [
+    "next-line",
+    "enter",
+    "return",
+    "wrap",
+    "carriage",
+    "paragraph",
+    "newline"
+  ]
+}

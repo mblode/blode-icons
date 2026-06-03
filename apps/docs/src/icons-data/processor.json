@@ -1,1 +1,5 @@
-{ "icon": "processor", "category": "Devices & Signals", "tags": ["chip"] }
+{
+  "icon": "processor",
+  "category": "Devices & Signals",
+  "tags": ["chip", "cpu", "silicon", "hardware", "compute"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "horizontal-alignment-bottom", "category": "Typography", "tags": [] }
+{
+  "icon": "horizontal-alignment-bottom",
+  "category": "Typography",
+  "tags": ["text", "baseline", "arrange", "position", "layout"]
+}

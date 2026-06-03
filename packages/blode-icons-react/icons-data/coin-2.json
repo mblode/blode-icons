@@ -1,1 +1,5 @@
-{ "icon": "coin-2", "category": "Crypto", "tags": ["credits"] }
+{
+  "icon": "coin-2",
+  "category": "Crypto",
+  "tags": ["credits", "money", "token", "currency", "cash", "reward"]
+}

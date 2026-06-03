@@ -1,5 +1,12 @@
 {
   "icon": "calender-remove",
   "category": "Time & Date",
-  "tags": ["date-remove"]
+  "tags": [
+    "date-remove",
+    "delete-event",
+    "cancel",
+    "unschedule",
+    "minus",
+    "clear"
+  ]
 }

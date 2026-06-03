@@ -1,1 +1,5 @@
-{ "icon": "golf-ball", "category": "Sports", "tags": [] }
+{
+  "icon": "golf-ball",
+  "category": "Sports",
+  "tags": ["sport", "tee", "putt", "course", "game"]
+}

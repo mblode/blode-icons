@@ -1,1 +1,5 @@
-{ "icon": "car", "category": "Things", "tags": [] }
+{
+  "icon": "car",
+  "category": "Things",
+  "tags": ["vehicle", "auto", "automobile", "drive", "transport"]
+}

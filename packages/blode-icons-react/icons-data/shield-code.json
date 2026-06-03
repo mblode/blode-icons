@@ -1,0 +1,11 @@
+{
+  "icon": "shield-code",
+  "category": "Security",
+  "tags": [
+    "sandbox",
+    "secure-dev",
+    "encryption",
+    "script-safety",
+    "protected-code"
+  ]
+}

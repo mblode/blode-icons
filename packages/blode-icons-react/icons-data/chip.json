@@ -1,1 +1,13 @@
-{ "icon": "chip", "category": "Devices & Signals", "tags": ["esim"] }
+{
+  "icon": "chip",
+  "category": "Devices & Signals",
+  "tags": [
+    "esim",
+    "processor",
+    "cpu",
+    "semiconductor",
+    "microchip",
+    "silicon",
+    "hardware"
+  ]
+}

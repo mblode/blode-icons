@@ -1,1 +1,13 @@
-{ "icon": "mute", "category": "Sound & Music", "tags": ["sound-off"] }
+{
+  "icon": "mute",
+  "category": "Sound & Music",
+  "tags": [
+    "sound-off",
+    "silence",
+    "quiet",
+    "no-sound",
+    "volume-off",
+    "muffle",
+    "speaker-off"
+  ]
+}

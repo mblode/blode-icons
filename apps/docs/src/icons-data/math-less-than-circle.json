@@ -1,5 +1,5 @@
 {
   "icon": "math-less-than-circle",
   "category": "Interface General",
-  "tags": ["<"]
+  "tags": ["<", "smaller", "fewer", "comparison", "lt", "below", "operator"]
 }

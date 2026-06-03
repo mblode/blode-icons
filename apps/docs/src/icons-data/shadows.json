@@ -1,1 +1,5 @@
-{ "icon": "shadows", "category": "Photography & Video", "tags": [] }
+{
+  "icon": "shadows",
+  "category": "Photography & Video",
+  "tags": ["darkness", "exposure", "tone", "photo", "contrast", "depth"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "clock-alert", "category": "Time & Date", "tags": ["timer"] }
+{
+  "icon": "clock-alert",
+  "category": "Time & Date",
+  "tags": ["timer", "reminder", "deadline", "warning", "overdue", "urgent"]
+}

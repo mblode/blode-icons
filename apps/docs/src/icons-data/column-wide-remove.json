@@ -1,1 +1,5 @@
-{ "icon": "column-wide-remove", "category": "Layout", "tags": [] }
+{
+  "icon": "column-wide-remove",
+  "category": "Layout",
+  "tags": ["delete", "layout", "grid", "reduce", "section"]
+}

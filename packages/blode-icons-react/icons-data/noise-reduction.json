@@ -1,1 +1,5 @@
-{ "icon": "noise-reduction", "category": "Photography & Video", "tags": [] }
+{
+  "icon": "noise-reduction",
+  "category": "Photography & Video",
+  "tags": ["denoise", "grain", "clean", "smooth", "clarity"]
+}

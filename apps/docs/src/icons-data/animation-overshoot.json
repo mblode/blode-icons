@@ -1,1 +1,5 @@
-{ "icon": "animation-overshoot", "category": "Code", "tags": [] }
+{
+  "icon": "animation-overshoot",
+  "category": "Code",
+  "tags": ["motion", "bounce", "past", "timing", "spring"]
+}

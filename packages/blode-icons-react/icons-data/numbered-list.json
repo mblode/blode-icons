@@ -1,1 +1,5 @@
-{ "icon": "numbered-list", "category": "Typography", "tags": [] }
+{
+  "icon": "numbered-list",
+  "category": "Typography",
+  "tags": ["ordered", "ol", "steps", "enumerate", "sequence"]
+}

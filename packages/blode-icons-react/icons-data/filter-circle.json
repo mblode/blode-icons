@@ -1,1 +1,5 @@
-{ "icon": "filter-circle", "category": "Filter & Settings", "tags": ["sort"] }
+{
+  "icon": "filter-circle",
+  "category": "Filter & Settings",
+  "tags": ["sort", "funnel", "refine", "narrow", "options"]
+}

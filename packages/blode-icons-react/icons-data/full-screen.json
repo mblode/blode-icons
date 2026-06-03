@@ -1,1 +1,5 @@
-{ "icon": "full-screen", "category": "Photography & Video", "tags": ["focus"] }
+{
+  "icon": "full-screen",
+  "category": "Photography & Video",
+  "tags": ["focus", "expand", "maximize", "enlarge", "fit", "fullscreen"]
+}

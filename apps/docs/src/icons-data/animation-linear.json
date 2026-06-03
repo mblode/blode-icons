@@ -1,1 +1,5 @@
-{ "icon": "animation-linear", "category": "Code", "tags": [] }
+{
+  "icon": "animation-linear",
+  "category": "Code",
+  "tags": ["motion", "constant", "timing", "steady", "transition"]
+}

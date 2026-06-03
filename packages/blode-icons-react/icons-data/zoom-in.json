@@ -1,1 +1,13 @@
-{ "icon": "zoom-in", "category": "Interface General", "tags": ["search-plus"] }
+{
+  "icon": "zoom-in",
+  "category": "Interface General",
+  "tags": [
+    "search-plus",
+    "magnify",
+    "enlarge",
+    "closer",
+    "scale-up",
+    "detail",
+    "focus"
+  ]
+}

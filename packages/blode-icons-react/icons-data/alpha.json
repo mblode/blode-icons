@@ -1,1 +1,5 @@
-{ "icon": "alpha", "category": "Typography", "tags": [] }
+{
+  "icon": "alpha",
+  "category": "Typography",
+  "tags": ["greek", "letter", "symbol", "first", "math"]
+}

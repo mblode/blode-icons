@@ -1,1 +1,5 @@
-{ "icon": "notion-ai", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "notion-ai",
+  "category": "Social Media & Brands",
+  "tags": ["workspace", "productivity", "brand", "assistant", "docs"]
+}

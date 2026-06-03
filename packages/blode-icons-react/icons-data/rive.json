@@ -1,1 +1,5 @@
-{ "icon": "rive", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "rive",
+  "category": "Social Media & Brands",
+  "tags": ["animation", "interactive", "motion", "design", "tool"]
+}

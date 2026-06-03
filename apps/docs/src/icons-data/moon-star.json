@@ -1,1 +1,13 @@
-{ "icon": "moon-star", "category": "Weather", "tags": ["night"] }
+{
+  "icon": "moon-star",
+  "category": "Weather",
+  "tags": [
+    "night",
+    "dark-mode",
+    "sleep",
+    "evening",
+    "nighttime",
+    "sky",
+    "bedtime"
+  ]
+}

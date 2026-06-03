@@ -1,5 +1,5 @@
 {
   "icon": "battery-loading",
   "category": "Devices & Signals",
-  "tags": ["power"]
+  "tags": ["power", "charging", "plugged", "refill", "energy", "topping-up"]
 }

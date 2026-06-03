@@ -1,5 +1,5 @@
 {
   "icon": "calendar-search",
   "category": "Time & Date",
-  "tags": ["date-search"]
+  "tags": ["date-search", "find-event", "lookup", "schedule", "filter", "query"]
 }

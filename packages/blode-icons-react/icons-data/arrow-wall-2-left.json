@@ -1,1 +1,5 @@
-{ "icon": "arrow-wall-2-left", "category": "Arrows", "tags": ["align left"] }
+{
+  "icon": "arrow-wall-2-left",
+  "category": "Arrows",
+  "tags": ["align left", "snap", "dock", "justify", "stick", "edge"]
+}

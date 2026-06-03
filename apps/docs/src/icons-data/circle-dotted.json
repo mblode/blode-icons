@@ -1,1 +1,5 @@
-{ "icon": "circle-dotted", "category": "Interface General", "tags": [] }
+{
+  "icon": "circle-dotted",
+  "category": "Interface General",
+  "tags": ["outline", "loading", "progress", "pending", "placeholder"]
+}

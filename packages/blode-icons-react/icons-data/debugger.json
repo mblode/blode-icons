@@ -1,1 +1,13 @@
-{ "icon": "debugger", "category": "Code", "tags": ["debug"] }
+{
+  "icon": "debugger",
+  "category": "Code",
+  "tags": [
+    "debug",
+    "breakpoint",
+    "inspect",
+    "troubleshoot",
+    "fix",
+    "error",
+    "devtools"
+  ]
+}

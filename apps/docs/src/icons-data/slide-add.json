@@ -1,1 +1,5 @@
-{ "icon": "slide-add", "category": "Layout", "tags": [] }
+{
+  "icon": "slide-add",
+  "category": "Layout",
+  "tags": ["presentation", "deck", "new-page", "insert", "powerpoint"]
+}

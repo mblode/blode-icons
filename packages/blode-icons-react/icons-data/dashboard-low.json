@@ -1,1 +1,5 @@
-{ "icon": "dashboard-low", "category": "Things", "tags": [] }
+{
+  "icon": "dashboard-low",
+  "category": "Things",
+  "tags": ["speedometer", "gauge", "slow", "meter", "minimum", "performance"]
+}

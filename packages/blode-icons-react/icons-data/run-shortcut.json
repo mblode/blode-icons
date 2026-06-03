@@ -1,1 +1,5 @@
-{ "icon": "run-shortcut", "category": "Code", "tags": ["slash"] }
+{
+  "icon": "run-shortcut",
+  "category": "Code",
+  "tags": ["slash", "execute", "command", "trigger", "launch", "automation"]
+}
