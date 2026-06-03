@@ -1,1 +1,5 @@
-{ "icon": "esc", "category": "Keyboard", "tags": ["power"] }
+{
+  "icon": "esc",
+  "category": "Keyboard",
+  "tags": ["power", "escape", "cancel", "exit", "quit", "keyboard"]
+}

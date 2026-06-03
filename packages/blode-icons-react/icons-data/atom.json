@@ -1,1 +1,5 @@
-{ "icon": "atom", "category": "Nature & Energy", "tags": [] }
+{
+  "icon": "atom",
+  "category": "Nature & Energy",
+  "tags": ["science", "physics", "molecule", "nuclear", "react"]
+}

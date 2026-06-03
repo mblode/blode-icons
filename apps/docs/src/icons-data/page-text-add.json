@@ -1,1 +1,5 @@
-{ "icon": "page-text-add", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "page-text-add",
+  "category": "Folders & Files",
+  "tags": ["document", "new", "write", "content", "create"]
+}

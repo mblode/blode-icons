@@ -1,1 +1,5 @@
-{ "icon": "crypto-wallet", "category": "Crypto", "tags": [] }
+{
+  "icon": "crypto-wallet",
+  "category": "Crypto",
+  "tags": ["blockchain", "ethereum", "tokens", "defi", "cold-storage", "web3"]
+}

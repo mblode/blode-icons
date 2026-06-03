@@ -1,0 +1,47 @@
+{
+  "scrapedAt": "2026-06-02T22:38:59.468Z",
+  "origin": "https://centralicons.com",
+  "chunkUrls": [
+    "https://centralicons.com/_next/static/chunks/fc66faed2a988a60.js"
+  ],
+  "xorKeyHash": "3b9f12c6e3078e10ab56caa5aa88a3c6d54124c54c8373948449fec1448ffe83",
+  "manifestHash": "d6ac15c2b6a1aefa011f6195d2ba1cbf5d18ea8aa8f0633ec720e04a31bd311a",
+  "iconCount": 2006,
+  "variantsScraped": [
+    "round-outlined-radius-3-stroke-2",
+    "round-filled-radius-3-stroke-2"
+  ],
+  "fullVariantManifestKeys": [
+    "round-filled-radius-0-stroke-1",
+    "round-filled-radius-0-stroke-1.5",
+    "round-filled-radius-0-stroke-2",
+    "round-filled-radius-1-stroke-1",
+    "round-filled-radius-1-stroke-1.5",
+    "round-filled-radius-1-stroke-2",
+    "round-filled-radius-2-stroke-1",
+    "round-filled-radius-2-stroke-1.5",
+    "round-filled-radius-2-stroke-2",
+    "round-filled-radius-3-stroke-1",
+    "round-filled-radius-3-stroke-1.5",
+    "round-filled-radius-3-stroke-2",
+    "round-outlined-radius-0-stroke-1",
+    "round-outlined-radius-0-stroke-1.5",
+    "round-outlined-radius-0-stroke-2",
+    "round-outlined-radius-1-stroke-1",
+    "round-outlined-radius-1-stroke-1.5",
+    "round-outlined-radius-1-stroke-2",
+    "round-outlined-radius-2-stroke-1",
+    "round-outlined-radius-2-stroke-1.5",
+    "round-outlined-radius-2-stroke-2",
+    "round-outlined-radius-3-stroke-1",
+    "round-outlined-radius-3-stroke-1.5",
+    "round-outlined-radius-3-stroke-2",
+    "square-filled-radius-0-stroke-1",
+    "square-filled-radius-0-stroke-1.5",
+    "square-filled-radius-0-stroke-2",
+    "square-outlined-radius-0-stroke-1",
+    "square-outlined-radius-0-stroke-1.5",
+    "square-outlined-radius-0-stroke-2"
+  ],
+  "licenseKeyPresent": false
+}

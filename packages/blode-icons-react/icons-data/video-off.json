@@ -1,1 +1,5 @@
-{ "icon": "video-off", "category": "Photography & Video", "tags": ["cam-off"] }
+{
+  "icon": "video-off",
+  "category": "Photography & Video",
+  "tags": ["cam-off", "camera", "disable", "mute", "webcam", "call", "stop"]
+}

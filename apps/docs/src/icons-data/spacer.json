@@ -1,1 +1,5 @@
-{ "icon": "spacer", "category": "Typography", "tags": ["seperator"] }
+{
+  "icon": "spacer",
+  "category": "Typography",
+  "tags": ["seperator", "separator", "gap", "divider", "padding", "whitespace"]
+}

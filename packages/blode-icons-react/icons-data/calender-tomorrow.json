@@ -1,1 +1,5 @@
-{ "icon": "calender-tomorrow", "category": "Time & Date", "tags": [] }
+{
+  "icon": "calender-tomorrow",
+  "category": "Time & Date",
+  "tags": ["next-day", "upcoming", "schedule", "forward", "soon"]
+}

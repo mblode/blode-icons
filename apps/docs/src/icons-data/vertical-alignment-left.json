@@ -1,1 +1,5 @@
-{ "icon": "vertical-alignment-left", "category": "Typography", "tags": [] }
+{
+  "icon": "vertical-alignment-left",
+  "category": "Typography",
+  "tags": ["text", "align", "position", "layout", "justify"]
+}

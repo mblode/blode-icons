@@ -1,1 +1,5 @@
-{ "icon": "home-line", "category": "Building", "tags": [] }
+{
+  "icon": "home-line",
+  "category": "Building",
+  "tags": ["house", "main", "dashboard", "start", "outline"]
+}

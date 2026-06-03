@@ -1,1 +1,5 @@
-{ "icon": "calendar-1", "category": "Time & Date", "tags": ["date"] }
+{
+  "icon": "calendar-1",
+  "category": "Time & Date",
+  "tags": ["date", "schedule", "event", "planner", "agenda"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "pokeball", "category": "Things", "tags": ["catch"] }
+{
+  "icon": "pokeball",
+  "category": "Things",
+  "tags": ["catch", "pokemon", "game", "capture", "ball"]
+}

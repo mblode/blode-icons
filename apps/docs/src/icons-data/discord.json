@@ -1,1 +1,5 @@
-{ "icon": "discord", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "discord",
+  "category": "Social Media & Brands",
+  "tags": ["chat", "community", "gaming", "brand", "logo", "server"]
+}

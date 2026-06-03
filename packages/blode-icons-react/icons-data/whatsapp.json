@@ -1,1 +1,5 @@
-{ "icon": "whatsapp", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "whatsapp",
+  "category": "Social Media & Brands",
+  "tags": ["chat", "messaging", "contact", "social", "green"]
+}

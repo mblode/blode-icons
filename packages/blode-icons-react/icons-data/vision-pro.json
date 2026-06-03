@@ -1,1 +1,5 @@
-{ "icon": "vision-pro", "category": "Augmented Reality", "tags": ["goggles"] }
+{
+  "icon": "vision-pro",
+  "category": "Augmented Reality",
+  "tags": ["goggles", "headset", "vr", "apple", "spatial", "mixed-reality"]
+}

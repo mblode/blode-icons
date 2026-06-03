@@ -1,1 +1,5 @@
-{ "icon": "unblur", "category": "Photography & Video", "tags": [] }
+{
+  "icon": "unblur",
+  "category": "Photography & Video",
+  "tags": ["sharpen", "focus", "clear", "clarity", "deblur", "enhance"]
+}

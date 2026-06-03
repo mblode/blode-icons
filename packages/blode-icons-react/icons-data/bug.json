@@ -1,1 +1,5 @@
-{ "icon": "bug", "category": "Code", "tags": ["issue"] }
+{
+  "icon": "bug",
+  "category": "Code",
+  "tags": ["issue", "error", "debug", "defect", "insect"]
+}

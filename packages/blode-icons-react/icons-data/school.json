@@ -1,1 +1,13 @@
-{ "icon": "school", "category": "Building", "tags": ["building"] }
+{
+  "icon": "school",
+  "category": "Building",
+  "tags": [
+    "building",
+    "education",
+    "academy",
+    "university",
+    "campus",
+    "institute",
+    "learn"
+  ]
+}

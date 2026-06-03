@@ -1,1 +1,5 @@
-{ "icon": "note-1", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "note-1",
+  "category": "Folders & Files",
+  "tags": ["memo", "document", "write", "jot", "paper"]
+}

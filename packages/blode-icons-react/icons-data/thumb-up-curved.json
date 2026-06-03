@@ -1,1 +1,5 @@
-{ "icon": "thumb-up-curved", "category": "Hands", "tags": [] }
+{
+  "icon": "thumb-up-curved",
+  "category": "Hands",
+  "tags": ["like", "upvote", "approve", "good", "yes"]
+}

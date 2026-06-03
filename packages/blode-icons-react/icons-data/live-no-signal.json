@@ -1,5 +1,13 @@
 {
   "icon": "live-no-signal",
   "category": "Devices & Signals",
-  "tags": ["signal"]
+  "tags": [
+    "signal",
+    "disconnected",
+    "offline",
+    "reception",
+    "network-loss",
+    "streaming",
+    "broadcast"
+  ]
 }

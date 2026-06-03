@@ -1,1 +1,5 @@
-{ "icon": "riot-games", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "riot-games",
+  "category": "Social Media & Brands",
+  "tags": ["esports", "league", "valorant", "gaming", "studio"]
+}

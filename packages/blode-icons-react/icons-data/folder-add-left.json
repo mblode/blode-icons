@@ -1,1 +1,5 @@
-{ "icon": "folder-add-left", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "folder-add-left",
+  "category": "Folders & Files",
+  "tags": ["new", "create", "directory", "plus", "insert"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "breakfast", "category": "Food", "tags": ["fried-egg"] }
+{
+  "icon": "breakfast",
+  "category": "Food",
+  "tags": ["fried-egg", "egg", "morning", "meal", "food", "fried"]
+}

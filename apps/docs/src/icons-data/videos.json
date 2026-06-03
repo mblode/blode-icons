@@ -1,5 +1,13 @@
 {
   "icon": "videos",
   "category": "Photography & Video",
-  "tags": ["video-playlist"]
+  "tags": [
+    "video-playlist",
+    "playlist",
+    "movies",
+    "clips",
+    "library",
+    "collection",
+    "media"
+  ]
 }

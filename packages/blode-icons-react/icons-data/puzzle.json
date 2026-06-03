@@ -1,1 +1,5 @@
-{ "icon": "puzzle", "category": "Things", "tags": ["plugin"] }
+{
+  "icon": "puzzle",
+  "category": "Things",
+  "tags": ["plugin", "extension", "piece", "integration", "solve"]
+}

@@ -1,1 +1,13 @@
-{ "icon": "review", "category": "Interface General", "tags": ["star-square"] }
+{
+  "icon": "review",
+  "category": "Interface General",
+  "tags": [
+    "star-square",
+    "rating",
+    "feedback",
+    "stars",
+    "evaluate",
+    "assess",
+    "testimonial"
+  ]
+}

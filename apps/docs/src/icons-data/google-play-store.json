@@ -1,1 +1,5 @@
-{ "icon": "google-play-store", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "google-play-store",
+  "category": "Social Media & Brands",
+  "tags": ["android", "apps", "download", "marketplace", "install"]
+}

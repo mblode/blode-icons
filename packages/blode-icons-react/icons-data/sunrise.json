@@ -1,1 +1,5 @@
-{ "icon": "sunrise", "category": "Weather", "tags": [] }
+{
+  "icon": "sunrise",
+  "category": "Weather",
+  "tags": ["dawn", "morning", "sunup", "horizon", "daybreak"]
+}

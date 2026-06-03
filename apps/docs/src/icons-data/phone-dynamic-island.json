@@ -1,1 +1,5 @@
-{ "icon": "phone-dynamic-island", "category": "Devices & Signals", "tags": [] }
+{
+  "icon": "phone-dynamic-island",
+  "category": "Devices & Signals",
+  "tags": ["iphone", "smartphone", "mobile", "notch", "device"]
+}

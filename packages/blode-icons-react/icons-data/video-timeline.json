@@ -1,5 +1,13 @@
 {
   "icon": "video-timeline",
   "category": "Photography & Video",
-  "tags": ["edit-video"]
+  "tags": [
+    "edit-video",
+    "editing",
+    "clip",
+    "footage",
+    "scrubber",
+    "sequence",
+    "track"
+  ]
 }

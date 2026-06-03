@@ -1,1 +1,5 @@
-{ "icon": "pin-flag", "category": "Location", "tags": ["location"] }
+{
+  "icon": "pin-flag",
+  "category": "Location",
+  "tags": ["location", "marker", "goal", "destination", "checkpoint"]
+}

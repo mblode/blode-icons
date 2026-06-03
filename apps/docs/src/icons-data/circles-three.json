@@ -1,1 +1,5 @@
-{ "icon": "circles-three", "category": "Things", "tags": ["bubbles"] }
+{
+  "icon": "circles-three",
+  "category": "Things",
+  "tags": ["bubbles", "group", "cluster", "dots", "spheres"]
+}

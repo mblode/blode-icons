@@ -1,1 +1,5 @@
-{ "icon": "animation-elastic", "category": "Code", "tags": ["bezier-curves"] }
+{
+  "icon": "animation-elastic",
+  "category": "Code",
+  "tags": ["bezier-curves", "motion", "bounce", "spring", "timing", "curve"]
+}

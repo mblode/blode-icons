@@ -1,5 +1,12 @@
 {
   "icon": "linear",
   "category": "Social Media & Brands",
-  "tags": []
+  "tags": [
+    "issue-tracker",
+    "project-tool",
+    "workflow",
+    "tickets",
+    "logo",
+    "saas"
+  ]
 }

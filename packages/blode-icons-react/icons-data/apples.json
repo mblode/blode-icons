@@ -1,1 +1,5 @@
-{ "icon": "apples", "category": "Food", "tags": ["fruit"] }
+{
+  "icon": "apples",
+  "category": "Food",
+  "tags": ["fruit", "food", "produce", "healthy", "snack"]
+}

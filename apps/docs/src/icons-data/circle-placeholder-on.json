@@ -1,1 +1,5 @@
-{ "icon": "circle-placeholder-on", "category": "Interface General", "tags": [] }
+{
+  "icon": "circle-placeholder-on",
+  "category": "Interface General",
+  "tags": ["selected", "active", "filled", "enabled", "radio"]
+}

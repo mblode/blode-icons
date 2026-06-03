@@ -1,1 +1,12 @@
-{ "icon": "shredder", "category": "Interface General", "tags": ["permanently"] }
+{
+  "icon": "shredder",
+  "category": "Interface General",
+  "tags": [
+    "permanently",
+    "destroy",
+    "permanent-delete",
+    "shred",
+    "dispose",
+    "erase"
+  ]
+}

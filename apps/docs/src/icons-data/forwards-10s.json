@@ -1,1 +1,5 @@
-{ "icon": "forwards-10s", "category": "Sound & Music", "tags": [] }
+{
+  "icon": "forwards-10s",
+  "category": "Sound & Music",
+  "tags": ["skip", "seek", "jump-ahead", "fast-forward", "scrub"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "ar-cube-3", "category": "Augmented Reality", "tags": [] }
+{
+  "icon": "ar-cube-3",
+  "category": "Augmented Reality",
+  "tags": ["augmented", "3d", "block", "box", "spatial"]
+}

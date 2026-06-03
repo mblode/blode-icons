@@ -1,1 +1,5 @@
-{ "icon": "battery-error", "category": "Devices & Signals", "tags": ["power"] }
+{
+  "icon": "battery-error",
+  "category": "Devices & Signals",
+  "tags": ["power", "fault", "warning", "fail", "charge-issue", "broken"]
+}

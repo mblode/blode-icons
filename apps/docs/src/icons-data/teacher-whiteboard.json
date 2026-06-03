@@ -1,1 +1,12 @@
-{ "icon": "teacher-whiteboard", "category": "People", "tags": [] }
+{
+  "icon": "teacher-whiteboard",
+  "category": "People",
+  "tags": [
+    "instructor",
+    "lecture",
+    "classroom",
+    "education",
+    "presenter",
+    "tutor"
+  ]
+}

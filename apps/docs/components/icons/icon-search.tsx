@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,8 +11,7 @@ import {
   searchIcons,
 } from "@/lib/icon-search";
 import { loadIconSource } from "@/lib/icon-source";
-import type { IconCopyKind, IconStyle } from "@/lib/icon-types";
-import { icons } from "@/lib/icons";
+import type { IconCopyKind, IconStyle, SearchDoc } from "@/lib/icon-types";
 import MagnifyingGlassIcon from "@/src/icons-tsx/magnifying-glass";
 
 const COPY_KIND_LABEL: Record<IconCopyKind, string> = {
@@ -21,40 +20,163 @@ const COPY_KIND_LABEL: Record<IconCopyKind, string> = {
   TSX: "TSX",
 };
 
+const ICON_SUFFIX_REGEX = /Icon$/;
+const FILLED_SUFFIX = "FilledIcon";
+
+// Module-level cache so toggling style / re-searching never re-fetches an SVG.
+const svgCache = new Map<string, string>();
+
+const useInViewport = <T extends Element>(rootMargin = "300px") => {
+  const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (inView || !ref.current) {
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [inView, rootMargin]);
+
+  return { ref, inView };
+};
+
+const resolveVariant = (doc: SearchDoc, style: IconStyle) => {
+  const solid = style === "SOLID" && doc.hasFilled;
+  return {
+    slug: solid ? `${doc.slug}-filled` : doc.slug,
+    name: solid ? doc.name.replace(ICON_SUFFIX_REGEX, FILLED_SUFFIX) : doc.name,
+  };
+};
+
+const IconCell = ({
+  doc,
+  style,
+  onCopy,
+}: {
+  doc: SearchDoc;
+  style: IconStyle;
+  onCopy: (slug: string, name: string, copyKind: IconCopyKind) => void;
+}) => {
+  const { ref, inView } = useInViewport<HTMLDivElement>();
+  const { slug, name } = resolveVariant(doc, style);
+  const [markup, setMarkup] = useState<string | null>(
+    svgCache.get(slug) ?? null
+  );
+  const svgRef = useRef<HTMLDivElement>(null);
+
+  // Load (or swap to) the SVG for the current slug — runs on first viewport
+  // entry and whenever the style toggle changes the slug.
+  useEffect(() => {
+    if (!inView) {
+      return;
+    }
+    const cached = svgCache.get(slug);
+    setMarkup(cached ?? null);
+    if (cached) {
+      return;
+    }
+    let active = true;
+    loadIconSource({ iconName: slug, copyKind: "SVG" }).then((svg) => {
+      if (svg && active) {
+        svgCache.set(slug, svg);
+        setMarkup(svg);
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, [inView, slug]);
+
+  // Inject the fetched markup via ref so currentColor theming is preserved
+  // without dangerouslySetInnerHTML.
+  useEffect(() => {
+    if (svgRef.current) {
+      svgRef.current.innerHTML = markup ?? "";
+    }
+  }, [markup]);
+
+  return (
+    <div>
+      <div
+        className="group relative flex h-[104px] flex-col items-center justify-center overflow-hidden rounded-xl border border-border px-2 [contain-intrinsic-size:104px] [content-visibility:auto]"
+        ref={ref}
+      >
+        {markup ? (
+          <div
+            className="flex size-6 items-center justify-center [&_svg]:size-6"
+            ref={svgRef}
+          />
+        ) : (
+          <div className="size-6 rounded-md bg-muted/40" />
+        )}
+
+        <div className="absolute inset-0 flex size-full flex-col gap-2 p-2 opacity-0 group-hover:opacity-100">
+          <Button
+            className="w-full flex-1 cursor-pointer"
+            onClick={() => onCopy(slug, name, "SVG")}
+            variant="secondary"
+          >
+            Copy SVG
+          </Button>
+          <Button
+            className="w-full flex-1 cursor-pointer"
+            onClick={() => onCopy(slug, name, "NAME")}
+            variant="secondary"
+          >
+            Copy name
+          </Button>
+        </div>
+      </div>
+
+      <span className="mt-2 line-clamp-2 text-center text-muted-foreground text-xs">
+        {getIconDisplayName(name)}
+      </span>
+    </div>
+  );
+};
+
 export const IconSearch = () => {
   const [iconStyle, setIconStyle] = useState<IconStyle>("OUTLINE");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const searchResults = useMemo(
-    () => searchIcons(icons, searchQuery),
-    [searchQuery]
-  );
+  const searchResults = useMemo(() => searchIcons(searchQuery), [searchQuery]);
   const filteredIcons = useMemo(
     () => filterIconsByStyle(searchResults, iconStyle),
     [iconStyle, searchResults]
   );
 
   const handleIconCopy = async (
-    icon: (typeof icons)[number],
+    slug: string,
+    name: string,
     copyKind: IconCopyKind
   ) => {
     try {
       const value =
         copyKind === "NAME"
-          ? icon.name
-          : await loadIconSource({ iconName: icon.name, copyKind });
+          ? name
+          : await loadIconSource({ iconName: slug, copyKind });
 
       if (!value) {
-        toast.error(`Failed to copy ${icon.name}`);
+        toast.error(`Failed to copy ${name}`);
         return;
       }
 
       await navigator.clipboard.writeText(value);
       toast(
-        `"${getIconDisplayName(icon.name)}" ${COPY_KIND_LABEL[copyKind]} copied to clipboard`
+        `"${getIconDisplayName(name)}" ${COPY_KIND_LABEL[copyKind]} copied to clipboard`
       );
     } catch {
-      toast.error(`Failed to copy ${icon.name}`);
+      toast.error(`Failed to copy ${name}`);
     }
   };
 
@@ -98,43 +220,14 @@ export const IconSearch = () => {
 
       <div className="mx-auto w-full max-w-[1400px] px-4 pb-12">
         <div className="grid grid-cols-2 gap-2 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {filteredIcons.map((icon) => {
-            const IconComponent = icon.component;
-
-            return (
-              <div key={icon.name}>
-                <div className="group relative flex h-[104px] flex-col items-center justify-center overflow-hidden rounded-xl border border-border px-2">
-                  <IconComponent />
-
-                  <div className="absolute inset-0 flex size-full flex-col gap-2 p-2 opacity-0 group-hover:opacity-100">
-                    <Button
-                      className="w-full flex-1 cursor-pointer"
-                      onClick={() => {
-                        handleIconCopy(icon, "SVG");
-                      }}
-                      variant="secondary"
-                    >
-                      Copy SVG
-                    </Button>
-
-                    <Button
-                      className="w-full flex-1 cursor-pointer"
-                      onClick={() => {
-                        handleIconCopy(icon, "NAME");
-                      }}
-                      variant="secondary"
-                    >
-                      Copy name
-                    </Button>
-                  </div>
-                </div>
-
-                <span className="mt-2 line-clamp-2 text-center text-muted-foreground text-xs">
-                  {getIconDisplayName(icon.name)}
-                </span>
-              </div>
-            );
-          })}
+          {filteredIcons.map((doc) => (
+            <IconCell
+              doc={doc}
+              key={doc.slug}
+              onCopy={handleIconCopy}
+              style={iconStyle}
+            />
+          ))}
         </div>
       </div>
     </>

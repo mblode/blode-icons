@@ -1,1 +1,5 @@
-{ "icon": "coins-add", "category": "Crypto", "tags": ["money"] }
+{
+  "icon": "coins-add",
+  "category": "Crypto",
+  "tags": ["money", "deposit", "earn", "top-up", "savings", "credits"]
+}

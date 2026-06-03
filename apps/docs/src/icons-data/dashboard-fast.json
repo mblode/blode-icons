@@ -1,1 +1,5 @@
-{ "icon": "dashboard-fast", "category": "Things", "tags": [] }
+{
+  "icon": "dashboard-fast",
+  "category": "Things",
+  "tags": ["speedometer", "gauge", "performance", "speed", "meter", "high"]
+}

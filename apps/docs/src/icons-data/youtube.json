@@ -1,1 +1,5 @@
-{ "icon": "youtube", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "youtube",
+  "category": "Social Media & Brands",
+  "tags": ["video", "streaming", "watch", "channel", "play", "social"]
+}

@@ -1,5 +1,13 @@
 {
   "icon": "share-screen",
   "category": "Photography & Video",
-  "tags": ["screen-sharing"]
+  "tags": [
+    "screen-sharing",
+    "present",
+    "cast",
+    "broadcast",
+    "meeting",
+    "monitor",
+    "display"
+  ]
 }

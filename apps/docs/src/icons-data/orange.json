@@ -1,1 +1,5 @@
-{ "icon": "orange", "category": "Food", "tags": [] }
+{
+  "icon": "orange",
+  "category": "Food",
+  "tags": ["fruit", "citrus", "food", "tangerine", "vitamin-c"]
+}

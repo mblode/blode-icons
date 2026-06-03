@@ -1,1 +1,5 @@
-{ "icon": "newspaper-3", "category": "Communication", "tags": [] }
+{
+  "icon": "newspaper-3",
+  "category": "Communication",
+  "tags": ["news", "press", "article", "journal", "headlines", "media"]
+}

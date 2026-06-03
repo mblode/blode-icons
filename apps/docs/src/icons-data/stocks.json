@@ -1,1 +1,5 @@
-{ "icon": "stocks", "category": "Things", "tags": [] }
+{
+  "icon": "stocks",
+  "category": "Things",
+  "tags": ["shares", "market", "trading", "investment", "portfolio", "equity"]
+}

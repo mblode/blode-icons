@@ -1,5 +1,13 @@
 {
   "icon": "morning-brief",
   "category": "Interface General",
-  "tags": ["daily-todo"]
+  "tags": [
+    "daily-todo",
+    "agenda",
+    "summary",
+    "standup",
+    "digest",
+    "schedule",
+    "overview"
+  ]
 }

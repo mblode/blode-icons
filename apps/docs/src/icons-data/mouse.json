@@ -1,1 +1,5 @@
-{ "icon": "mouse", "category": "Devices & Signals", "tags": [] }
+{
+  "icon": "mouse",
+  "category": "Devices & Signals",
+  "tags": ["pointer", "cursor", "peripheral", "device", "click", "input"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "percent", "category": "Shopping & Payment", "tags": ["sales"] }
+{
+  "icon": "percent",
+  "category": "Shopping & Payment",
+  "tags": ["sales", "discount", "offer", "interest", "rate"]
+}

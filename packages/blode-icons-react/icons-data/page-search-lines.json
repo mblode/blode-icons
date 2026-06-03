@@ -1,1 +1,5 @@
-{ "icon": "page-search-lines", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "page-search-lines",
+  "category": "Folders & Files",
+  "tags": ["document", "find", "scan", "lookup", "inspect"]
+}

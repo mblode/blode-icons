@@ -1,1 +1,5 @@
-{ "icon": "layout-align-bottom", "category": "Layout", "tags": [] }
+{
+  "icon": "layout-align-bottom",
+  "category": "Layout",
+  "tags": ["arrange", "position", "grid", "structure", "frame"]
+}

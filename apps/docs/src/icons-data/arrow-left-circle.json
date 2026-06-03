@@ -1,1 +1,5 @@
-{ "icon": "arrow-left-circle", "category": "Arrows", "tags": [] }
+{
+  "icon": "arrow-left-circle",
+  "category": "Arrows",
+  "tags": ["back", "previous", "return", "rewind", "west"]
+}

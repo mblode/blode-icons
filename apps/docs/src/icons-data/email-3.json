@@ -1,1 +1,5 @@
-{ "icon": "email-3", "category": "Communication", "tags": ["envelope"] }
+{
+  "icon": "email-3",
+  "category": "Communication",
+  "tags": ["envelope", "mail", "message", "letter", "inbox", "contact", "send"]
+}

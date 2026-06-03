@@ -1,1 +1,5 @@
-{ "icon": "stage", "category": "Things", "tags": ["show"] }
+{
+  "icon": "stage",
+  "category": "Things",
+  "tags": ["show", "performance", "theater", "event", "concert"]
+}

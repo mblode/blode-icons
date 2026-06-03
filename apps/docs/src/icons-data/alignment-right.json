@@ -1,1 +1,5 @@
-{ "icon": "alignment-right", "category": "Typography", "tags": [] }
+{
+  "icon": "alignment-right",
+  "category": "Typography",
+  "tags": ["text", "paragraph", "format", "ragged", "end"]
+}

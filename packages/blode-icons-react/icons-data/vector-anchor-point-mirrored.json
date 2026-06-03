@@ -1,0 +1,13 @@
+{
+  "icon": "vector-anchor-point-mirrored",
+  "category": "Edit",
+  "tags": [
+    "mirror-angle",
+    "node",
+    "path",
+    "bezier",
+    "symmetric",
+    "pen-tool",
+    "reflect"
+  ]
+}

@@ -28,6 +28,10 @@
   "sideEffects": false,
   "scripts": {
     "build": "node scripts/build.mjs",
+    "scrape": "node scripts/scrape-central.mjs",
+    "validate": "node scripts/validate-icons.mjs",
+    "validate:icons-data": "node scripts/validate-icons-data.mjs",
+    "enrich": "node scripts/enrich-icons-data.mjs",
     "prepublishOnly": "node scripts/build.mjs",
     "check:types": "tsc --noEmit",
     "lint": "biome check .",

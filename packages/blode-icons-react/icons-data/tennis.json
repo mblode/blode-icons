@@ -1,1 +1,5 @@
-{ "icon": "tennis", "category": "Sports", "tags": [] }
+{
+  "icon": "tennis",
+  "category": "Sports",
+  "tags": ["racket", "sport", "ball", "court", "wimbledon"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "nfc-2", "category": "Devices & Signals", "tags": [] }
+{
+  "icon": "nfc-2",
+  "category": "Devices & Signals",
+  "tags": ["tap", "contactless", "wireless", "payment", "near-field", "scan"]
+}

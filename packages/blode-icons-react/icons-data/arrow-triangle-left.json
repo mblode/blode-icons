@@ -1,1 +1,5 @@
-{ "icon": "arrow-triangle-left", "category": "Arrows", "tags": [] }
+{
+  "icon": "arrow-triangle-left",
+  "category": "Arrows",
+  "tags": ["caret", "previous", "back", "rewind", "collapse"]
+}

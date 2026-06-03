@@ -1,1 +1,5 @@
-{ "icon": "figma", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "figma",
+  "category": "Social Media & Brands",
+  "tags": ["design", "tool", "prototype", "ui", "logo"]
+}
