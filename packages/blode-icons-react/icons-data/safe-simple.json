@@ -1,1 +1,13 @@
-{ "icon": "safe-simple", "category": "Security", "tags": ["save"] }
+{
+  "icon": "safe-simple",
+  "category": "Security",
+  "tags": [
+    "save",
+    "vault",
+    "secure",
+    "deposit",
+    "strongbox",
+    "protect",
+    "money"
+  ]
+}

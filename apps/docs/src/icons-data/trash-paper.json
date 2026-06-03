@@ -1,1 +1,5 @@
-{ "icon": "trash-paper", "category": "Interface General", "tags": [] }
+{
+  "icon": "trash-paper",
+  "category": "Interface General",
+  "tags": ["delete", "discard", "shred", "document", "bin"]
+}

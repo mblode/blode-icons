@@ -1,1 +1,5 @@
-{ "icon": "artifact-news", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "artifact-news",
+  "category": "Social Media & Brands",
+  "tags": ["headlines", "press", "article", "feed", "media"]
+}

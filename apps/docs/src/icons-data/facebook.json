@@ -1,1 +1,5 @@
-{ "icon": "facebook", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "facebook",
+  "category": "Social Media & Brands",
+  "tags": ["fb", "social", "meta", "network", "profile"]
+}

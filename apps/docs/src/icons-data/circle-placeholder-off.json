@@ -1,5 +1,5 @@
 {
   "icon": "circle-placeholder-off",
   "category": "Interface General",
-  "tags": []
+  "tags": ["empty", "unselected", "inactive", "disabled", "blank"]
 }

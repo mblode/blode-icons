@@ -1,1 +1,13 @@
-{ "icon": "math-notes", "category": "Interface General", "tags": ["function"] }
+{
+  "icon": "math-notes",
+  "category": "Interface General",
+  "tags": [
+    "function",
+    "formula",
+    "equation",
+    "calculation",
+    "scratchpad",
+    "worksheet",
+    "solve"
+  ]
+}

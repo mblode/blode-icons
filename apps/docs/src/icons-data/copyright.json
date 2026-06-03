@@ -1,1 +1,5 @@
-{ "icon": "copyright", "category": "Things", "tags": [] }
+{
+  "icon": "copyright",
+  "category": "Things",
+  "tags": ["legal", "license", "ip", "trademark", "ownership", "rights"]
+}

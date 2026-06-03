@@ -1,1 +1,5 @@
-{ "icon": "firefox", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "firefox",
+  "category": "Social Media & Brands",
+  "tags": ["browser", "mozilla", "web", "internet", "logo"]
+}

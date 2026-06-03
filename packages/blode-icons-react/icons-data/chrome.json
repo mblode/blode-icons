@@ -1,1 +1,5 @@
-{ "icon": "chrome", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "chrome",
+  "category": "Social Media & Brands",
+  "tags": ["browser", "google", "web", "internet", "surf"]
+}

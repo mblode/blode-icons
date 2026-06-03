@@ -1,1 +1,5 @@
-{ "icon": "math-equals-circle", "category": "Interface General", "tags": [] }
+{
+  "icon": "math-equals-circle",
+  "category": "Interface General",
+  "tags": ["equal", "result", "sum", "compare", "equivalent", "balance"]
+}

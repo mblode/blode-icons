@@ -1,1 +1,5 @@
-{ "icon": "step-forwards", "category": "Arrows", "tags": ["continue"] }
+{
+  "icon": "step-forwards",
+  "category": "Arrows",
+  "tags": ["continue", "next", "advance", "proceed", "skip", "ahead"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "slides-wide", "category": "Layout", "tags": [] }
+{
+  "icon": "slides-wide",
+  "category": "Layout",
+  "tags": ["presentation", "landscape", "deck", "carousel", "pages"]
+}

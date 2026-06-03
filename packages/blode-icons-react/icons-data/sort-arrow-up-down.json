@@ -1,1 +1,5 @@
-{ "icon": "sort-arrow-up-down", "category": "Filter & Settings", "tags": [] }
+{
+  "icon": "sort-arrow-up-down",
+  "category": "Filter & Settings",
+  "tags": ["order", "ascending", "descending", "arrange", "reorder"]
+}

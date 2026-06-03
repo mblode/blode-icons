@@ -1,1 +1,5 @@
-{ "icon": "code-brackets", "category": "Code", "tags": [] }
+{
+  "icon": "code-brackets",
+  "category": "Code",
+  "tags": ["syntax", "programming", "developer", "markup", "script"]
+}

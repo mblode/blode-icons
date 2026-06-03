@@ -1,1 +1,5 @@
-{ "icon": "opera", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "opera",
+  "category": "Social Media & Brands",
+  "tags": ["browser", "web", "brand", "internet", "surf"]
+}

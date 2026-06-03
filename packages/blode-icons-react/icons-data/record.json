@@ -1,1 +1,5 @@
-{ "icon": "record", "category": "Sound & Music", "tags": [] }
+{
+  "icon": "record",
+  "category": "Sound & Music",
+  "tags": ["capture", "rec", "circle", "dot", "film", "start"]
+}

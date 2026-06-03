@@ -1,1 +1,5 @@
-{ "icon": "java", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "java",
+  "category": "Social Media & Brands",
+  "tags": ["programming", "language", "jvm", "backend", "developer"]
+}

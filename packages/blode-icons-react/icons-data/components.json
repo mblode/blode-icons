@@ -1,1 +1,5 @@
-{ "icon": "components", "category": "Edit", "tags": ["figma"] }
+{
+  "icon": "components",
+  "category": "Edit",
+  "tags": ["figma", "module", "reusable", "building-blocks", "ui-kit"]
+}

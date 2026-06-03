@@ -1,1 +1,5 @@
-{ "icon": "file-cloud", "category": "Folders & Files", "tags": ["document"] }
+{
+  "icon": "file-cloud",
+  "category": "Folders & Files",
+  "tags": ["document", "storage", "backup", "sync", "online", "upload"]
+}

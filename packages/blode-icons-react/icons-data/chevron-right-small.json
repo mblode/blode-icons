@@ -1,1 +1,5 @@
-{ "icon": "chevron-right-small", "category": "Arrows", "tags": [] }
+{
+  "icon": "chevron-right-small",
+  "category": "Arrows",
+  "tags": ["next", "forward", "continue", "caret", "navigate"]
+}

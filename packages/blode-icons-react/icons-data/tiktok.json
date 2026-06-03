@@ -1,1 +1,5 @@
-{ "icon": "tiktok", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "tiktok",
+  "category": "Social Media & Brands",
+  "tags": ["video", "social", "app", "music", "brand"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "chromecast", "category": "Devices & Signals", "tags": ["cast"] }
+{
+  "icon": "chromecast",
+  "category": "Devices & Signals",
+  "tags": ["cast", "stream", "mirror", "screen-share", "tv"]
+}

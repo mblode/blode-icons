@@ -1,1 +1,5 @@
-{ "icon": "page-lock", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "page-lock",
+  "category": "Folders & Files",
+  "tags": ["document", "secure", "private", "protect", "restricted"]
+}

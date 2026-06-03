@@ -1,1 +1,13 @@
-{ "icon": "thermostat", "category": "Weather", "tags": ["temprature"] }
+{
+  "icon": "thermostat",
+  "category": "Weather",
+  "tags": [
+    "temprature",
+    "temperature",
+    "climate",
+    "heat",
+    "cold",
+    "gauge",
+    "nest"
+  ]
+}

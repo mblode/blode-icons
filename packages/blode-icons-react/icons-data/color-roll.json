@@ -1,1 +1,5 @@
-{ "icon": "color-roll", "category": "Edit", "tags": ["paint-roller"] }
+{
+  "icon": "color-roll",
+  "category": "Edit",
+  "tags": ["paint-roller", "fill", "decorate", "brush", "wall"]
+}

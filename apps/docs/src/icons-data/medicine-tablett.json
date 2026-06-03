@@ -1,1 +1,13 @@
-{ "icon": "medicine-tablett", "category": "Things", "tags": ["pill"] }
+{
+  "icon": "medicine-tablett",
+  "category": "Things",
+  "tags": [
+    "pill",
+    "capsule",
+    "drug",
+    "medication",
+    "prescription",
+    "dose",
+    "pharmacy"
+  ]
+}

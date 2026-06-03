@@ -1,1 +1,5 @@
-{ "icon": "focus-auto", "category": "Photography & Video", "tags": [] }
+{
+  "icon": "focus-auto",
+  "category": "Photography & Video",
+  "tags": ["autofocus", "sharpen", "lens", "camera", "automatic"]
+}

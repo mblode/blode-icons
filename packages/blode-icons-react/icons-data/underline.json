@@ -1,1 +1,5 @@
-{ "icon": "underline", "category": "Typography", "tags": [] }
+{
+  "icon": "underline",
+  "category": "Typography",
+  "tags": ["text", "format", "style", "emphasis", "decoration"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "haptic", "category": "Devices & Signals", "tags": ["waves"] }
+{
+  "icon": "haptic",
+  "category": "Devices & Signals",
+  "tags": ["waves", "vibrate", "pulse", "ripple", "sensation", "feedback"]
+}

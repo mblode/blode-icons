@@ -1,1 +1,5 @@
-{ "icon": "mountain-bike", "category": "Things", "tags": [] }
+{
+  "icon": "mountain-bike",
+  "category": "Things",
+  "tags": ["cycling", "bicycle", "offroad", "trail", "sport", "ride"]
+}

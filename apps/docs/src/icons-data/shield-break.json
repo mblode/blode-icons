@@ -1,1 +1,12 @@
-{ "icon": "shield-break", "category": "Security", "tags": ["not-secure"] }
+{
+  "icon": "shield-break",
+  "category": "Security",
+  "tags": [
+    "not-secure",
+    "breach",
+    "vulnerable",
+    "unprotected",
+    "compromised",
+    "cracked"
+  ]
+}

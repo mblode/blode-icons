@@ -1,1 +1,5 @@
-{ "icon": "linkedin", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "linkedin",
+  "category": "Social Media & Brands",
+  "tags": ["network", "professional", "resume", "jobs", "social", "logo"]
+}

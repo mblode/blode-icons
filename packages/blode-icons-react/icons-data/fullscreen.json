@@ -1,1 +1,5 @@
-{ "icon": "fullscreen", "category": "Devices & Signals", "tags": [] }
+{
+  "icon": "fullscreen",
+  "category": "Devices & Signals",
+  "tags": ["expand", "maximize", "enlarge", "resize", "window"]
+}

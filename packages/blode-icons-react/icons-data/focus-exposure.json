@@ -1,1 +1,5 @@
-{ "icon": "focus-exposure", "category": "Photography & Video", "tags": [] }
+{
+  "icon": "focus-exposure",
+  "category": "Photography & Video",
+  "tags": ["light", "brightness", "lens", "camera", "metering"]
+}

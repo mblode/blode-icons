@@ -1,1 +1,5 @@
-{ "icon": "pinch", "category": "Hands", "tags": [] }
+{
+  "icon": "pinch",
+  "category": "Hands",
+  "tags": ["zoom", "gesture", "squeeze", "touch", "scale"]
+}

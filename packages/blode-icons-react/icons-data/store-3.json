@@ -1,1 +1,5 @@
-{ "icon": "store-3", "category": "Building", "tags": [] }
+{
+  "icon": "store-3",
+  "category": "Building",
+  "tags": ["shop", "retail", "market", "boutique", "commerce"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "mastadon", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "mastadon",
+  "category": "Social Media & Brands",
+  "tags": ["fediverse", "social", "decentralized", "toot", "logo", "microblog"]
+}

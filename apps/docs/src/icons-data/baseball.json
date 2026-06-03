@@ -1,1 +1,5 @@
-{ "icon": "baseball", "category": "Sports", "tags": [] }
+{
+  "icon": "baseball",
+  "category": "Sports",
+  "tags": ["sport", "mlb", "ball", "pitch", "game"]
+}

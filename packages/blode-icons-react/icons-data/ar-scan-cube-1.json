@@ -1,1 +1,5 @@
-{ "icon": "ar-scan-cube-1", "category": "Augmented Reality", "tags": [] }
+{
+  "icon": "ar-scan-cube-1",
+  "category": "Augmented Reality",
+  "tags": ["augmented", "detect", "3d", "capture", "spatial"]
+}

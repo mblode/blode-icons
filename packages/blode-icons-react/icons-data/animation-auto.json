@@ -1,1 +1,5 @@
-{ "icon": "animation-auto", "category": "Code", "tags": [] }
+{
+  "icon": "animation-auto",
+  "category": "Code",
+  "tags": ["motion", "timing", "transition", "easing", "default"]
+}

@@ -1,5 +1,5 @@
 {
   "icon": "closed-captioning",
   "category": "Photography & Video",
-  "tags": ["cc"]
+  "tags": ["cc", "subtitles", "a11y", "transcript", "text"]
 }

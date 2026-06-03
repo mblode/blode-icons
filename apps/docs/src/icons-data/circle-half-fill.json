@@ -1,5 +1,5 @@
 {
   "icon": "circle-half-fill",
   "category": "Accessibility",
-  "tags": ["contrast"]
+  "tags": ["contrast", "a11y", "theme", "brightness", "dark-light", "balance"]
 }

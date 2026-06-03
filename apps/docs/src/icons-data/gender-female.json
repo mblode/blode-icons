@@ -1,1 +1,5 @@
-{ "icon": "gender-female", "category": "People", "tags": [] }
+{
+  "icon": "gender-female",
+  "category": "People",
+  "tags": ["woman", "venus", "sex", "girl", "symbol"]
+}

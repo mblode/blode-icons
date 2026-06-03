@@ -1,5 +1,13 @@
 {
   "icon": "receipt-check-2",
   "category": "Shopping & Payment",
-  "tags": ["ticket"]
+  "tags": [
+    "ticket",
+    "invoice",
+    "paid",
+    "bill",
+    "purchase",
+    "confirmed",
+    "proof"
+  ]
 }

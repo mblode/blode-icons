@@ -1,0 +1,5 @@
+{
+  "icon": "gyroscope-sensor",
+  "category": "Devices & Signals",
+  "tags": ["motion", "orientation", "balance", "accelerometer", "tilt"]
+}

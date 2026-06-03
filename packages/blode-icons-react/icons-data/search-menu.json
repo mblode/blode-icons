@@ -1,5 +1,12 @@
 {
   "icon": "search-menu",
   "category": "Interface General",
-  "tags": ["list-search"]
+  "tags": [
+    "list-search",
+    "find-list",
+    "lookup",
+    "filter-list",
+    "browse",
+    "query"
+  ]
 }

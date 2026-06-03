@@ -1,1 +1,5 @@
-{ "icon": "pencil-wave", "category": "Edit", "tags": [] }
+{
+  "icon": "pencil-wave",
+  "category": "Edit",
+  "tags": ["edit", "write", "signature", "sketch", "scribble"]
+}

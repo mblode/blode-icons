@@ -1,1 +1,5 @@
-{ "icon": "head", "category": "People", "tags": ["avatar"] }
+{
+  "icon": "head",
+  "category": "People",
+  "tags": ["avatar", "profile", "user", "face", "person", "silhouette"]
+}

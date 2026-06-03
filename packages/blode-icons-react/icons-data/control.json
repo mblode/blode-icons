@@ -1,1 +1,5 @@
-{ "icon": "control", "category": "Keyboard", "tags": [] }
+{
+  "icon": "control",
+  "category": "Keyboard",
+  "tags": ["ctrl", "shortcut", "modifier", "hotkey", "key"]
+}

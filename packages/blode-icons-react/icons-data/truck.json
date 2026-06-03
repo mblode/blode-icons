@@ -1,1 +1,13 @@
-{ "icon": "truck", "category": "Shopping & Payment", "tags": ["delivery"] }
+{
+  "icon": "truck",
+  "category": "Shopping & Payment",
+  "tags": [
+    "delivery",
+    "shipping",
+    "freight",
+    "transport",
+    "cargo",
+    "logistics",
+    "lorry"
+  ]
+}

@@ -1,1 +1,5 @@
-{ "icon": "text-indent-right", "category": "Typography", "tags": [] }
+{
+  "icon": "text-indent-right",
+  "category": "Typography",
+  "tags": ["tab", "margin", "paragraph", "increase"]
+}

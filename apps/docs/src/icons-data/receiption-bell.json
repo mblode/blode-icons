@@ -1,1 +1,13 @@
-{ "icon": "receiption-bell", "category": "Things", "tags": ["concierge"] }
+{
+  "icon": "receiption-bell",
+  "category": "Things",
+  "tags": [
+    "concierge",
+    "hotel",
+    "service",
+    "front-desk",
+    "ring",
+    "help",
+    "reception"
+  ]
+}

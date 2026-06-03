@@ -1,1 +1,5 @@
-{ "icon": "pin-circle", "category": "Location", "tags": ["location"] }
+{
+  "icon": "pin-circle",
+  "category": "Location",
+  "tags": ["location", "marker", "place", "gps", "destination"]
+}

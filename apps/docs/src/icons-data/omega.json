@@ -1,1 +1,5 @@
-{ "icon": "omega", "category": "Typography", "tags": ["special-character"] }
+{
+  "icon": "omega",
+  "category": "Typography",
+  "tags": ["special-character", "greek", "symbol", "letter", "math", "ohm"]
+}

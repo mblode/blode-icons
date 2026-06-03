@@ -1,1 +1,5 @@
-{ "icon": "edit-small-2", "category": "Edit", "tags": [] }
+{
+  "icon": "edit-small-2",
+  "category": "Edit",
+  "tags": ["pencil", "modify", "write", "compose", "change", "pen"]
+}

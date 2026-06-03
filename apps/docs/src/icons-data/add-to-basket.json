@@ -1,1 +1,5 @@
-{ "icon": "add-to-basket", "category": "Shopping & Payment", "tags": [] }
+{
+  "icon": "add-to-basket",
+  "category": "Shopping & Payment",
+  "tags": ["cart", "buy", "purchase", "shop", "ecommerce"]
+}

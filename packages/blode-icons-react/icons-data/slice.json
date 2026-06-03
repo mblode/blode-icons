@@ -1,1 +1,5 @@
-{ "icon": "slice", "category": "Edit", "tags": ["knife"] }
+{
+  "icon": "slice",
+  "category": "Edit",
+  "tags": ["knife", "cut", "crop", "trim", "divide"]
+}

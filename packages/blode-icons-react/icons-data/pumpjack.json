@@ -1,1 +1,5 @@
-{ "icon": "pumpjack", "category": "Nature & Energy", "tags": ["oil"] }
+{
+  "icon": "pumpjack",
+  "category": "Nature & Energy",
+  "tags": ["oil", "petroleum", "drill", "fossil", "energy"]
+}

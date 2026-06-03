@@ -1,1 +1,5 @@
-{ "icon": "american-football", "category": "Sports", "tags": ["nfl"] }
+{
+  "icon": "american-football",
+  "category": "Sports",
+  "tags": ["nfl", "sport", "game", "gridiron", "ball"]
+}

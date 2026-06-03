@@ -1,1 +1,5 @@
-{ "icon": "arrows-repeat-right-left", "category": "Arrows", "tags": ["repost"] }
+{
+  "icon": "arrows-repeat-right-left",
+  "category": "Arrows",
+  "tags": ["repost", "swap", "exchange", "share", "shuffle", "cycle"]
+}

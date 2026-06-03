@@ -1,1 +1,5 @@
-{ "icon": "files", "category": "Folders & Files", "tags": ["documents"] }
+{
+  "icon": "files",
+  "category": "Folders & Files",
+  "tags": ["documents", "copies", "stack", "multiple", "duplicate"]
+}

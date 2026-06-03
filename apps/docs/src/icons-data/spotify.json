@@ -1,1 +1,5 @@
-{ "icon": "spotify", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "spotify",
+  "category": "Social Media & Brands",
+  "tags": ["music", "streaming", "audio", "podcast", "playlist"]
+}

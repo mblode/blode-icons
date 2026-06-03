@@ -1,1 +1,5 @@
-{ "icon": "pilone", "category": "Things", "tags": ["maintenance"] }
+{
+  "icon": "pilone",
+  "category": "Things",
+  "tags": ["maintenance", "pylon", "cone", "construction", "traffic"]
+}

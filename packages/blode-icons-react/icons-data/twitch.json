@@ -1,1 +1,5 @@
-{ "icon": "twitch", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "twitch",
+  "category": "Social Media & Brands",
+  "tags": ["streaming", "gaming", "live", "broadcast", "brand", "logo"]
+}

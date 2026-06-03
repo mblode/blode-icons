@@ -1,1 +1,5 @@
-{ "icon": "math-multiplication", "category": "Interface General", "tags": [] }
+{
+  "icon": "math-multiplication",
+  "category": "Interface General",
+  "tags": ["times", "product", "multiply", "x", "arithmetic", "operator"]
+}

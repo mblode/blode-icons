@@ -1,1 +1,5 @@
-{ "icon": "vault", "category": "Security", "tags": ["safe"] }
+{
+  "icon": "vault",
+  "category": "Security",
+  "tags": ["safe", "secure", "storage", "lockbox", "bank", "protect"]
+}

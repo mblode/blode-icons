@@ -1,1 +1,5 @@
-{ "icon": "shopping-bag-block-2", "category": "Shopping & Payment", "tags": [] }
+{
+  "icon": "shopping-bag-block-2",
+  "category": "Shopping & Payment",
+  "tags": ["forbidden", "unavailable", "restricted", "out-of-stock", "deny"]
+}

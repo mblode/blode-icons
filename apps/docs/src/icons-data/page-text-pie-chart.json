@@ -1,1 +1,5 @@
-{ "icon": "page-text-pie-chart", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "page-text-pie-chart",
+  "category": "Folders & Files",
+  "tags": ["document", "report", "analytics", "statistics", "data"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "chevron-top", "category": "Arrows", "tags": [] }
+{
+  "icon": "chevron-top",
+  "category": "Arrows",
+  "tags": ["up", "collapse", "scroll", "caret", "expand"]
+}

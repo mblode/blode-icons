@@ -1,1 +1,13 @@
-{ "icon": "map", "category": "Location", "tags": ["paper"] }
+{
+  "icon": "map",
+  "category": "Location",
+  "tags": [
+    "paper",
+    "navigation",
+    "geography",
+    "directions",
+    "atlas",
+    "route",
+    "explore"
+  ]
+}

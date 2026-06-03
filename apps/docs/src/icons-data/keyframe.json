@@ -1,1 +1,5 @@
-{ "icon": "keyframe", "category": "Edit", "tags": ["rhombus"] }
+{
+  "icon": "keyframe",
+  "category": "Edit",
+  "tags": ["rhombus", "animation", "timeline", "motion", "diamond", "node"]
+}

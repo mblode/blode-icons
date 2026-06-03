@@ -1,1 +1,5 @@
-{ "icon": "dossier", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "dossier",
+  "category": "Folders & Files",
+  "tags": ["folder", "file", "document", "case", "record", "portfolio"]
+}

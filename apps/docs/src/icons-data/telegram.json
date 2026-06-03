@@ -1,1 +1,5 @@
-{ "icon": "telegram", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "telegram",
+  "category": "Social Media & Brands",
+  "tags": ["messaging", "chat", "app", "social", "brand"]
+}

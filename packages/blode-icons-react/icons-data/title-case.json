@@ -1,1 +1,5 @@
-{ "icon": "title-case", "category": "Typography", "tags": [] }
+{
+  "icon": "title-case",
+  "category": "Typography",
+  "tags": ["capitalize", "heading", "format", "letters", "uppercase"]
+}

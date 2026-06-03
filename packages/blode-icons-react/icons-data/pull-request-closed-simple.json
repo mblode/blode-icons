@@ -1,0 +1,5 @@
+{
+  "icon": "pull-request-closed-simple",
+  "category": "Code",
+  "tags": ["merge", "git", "rejected", "declined", "branch"]
+}

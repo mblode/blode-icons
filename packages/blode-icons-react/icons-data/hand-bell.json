@@ -1,1 +1,5 @@
-{ "icon": "hand-bell", "category": "Interface General", "tags": [] }
+{
+  "icon": "hand-bell",
+  "category": "Interface General",
+  "tags": ["ring", "alert", "notification", "service", "alarm"]
+}

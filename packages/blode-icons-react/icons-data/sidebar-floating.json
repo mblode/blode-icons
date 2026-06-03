@@ -1,0 +1,12 @@
+{
+  "icon": "sidebar-floating",
+  "category": "Layout",
+  "tags": [
+    "floating-window",
+    "panel",
+    "overlay",
+    "window",
+    "detached",
+    "drawer"
+  ]
+}

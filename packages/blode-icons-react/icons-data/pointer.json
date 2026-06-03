@@ -1,1 +1,5 @@
-{ "icon": "pointer", "category": "Hands", "tags": ["hand"] }
+{
+  "icon": "pointer",
+  "category": "Hands",
+  "tags": ["hand", "cursor", "tap", "select", "click"]
+}

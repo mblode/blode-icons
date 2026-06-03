@@ -1,1 +1,5 @@
-{ "icon": "trading-view-candles", "category": "Crypto", "tags": [] }
+{
+  "icon": "trading-view-candles",
+  "category": "Crypto",
+  "tags": ["candlestick", "stocks", "market", "ohlc", "finance"]
+}

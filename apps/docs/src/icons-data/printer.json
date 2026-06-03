@@ -1,1 +1,5 @@
-{ "icon": "printer", "category": "Devices & Signals", "tags": ["print"] }
+{
+  "icon": "printer",
+  "category": "Devices & Signals",
+  "tags": ["print", "document", "output", "paper", "hardcopy"]
+}

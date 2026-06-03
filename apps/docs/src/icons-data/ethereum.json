@@ -1,1 +1,5 @@
-{ "icon": "ethereum", "category": "Crypto", "tags": [] }
+{
+  "icon": "ethereum",
+  "category": "Crypto",
+  "tags": ["eth", "coin", "blockchain", "token", "cryptocurrency"]
+}

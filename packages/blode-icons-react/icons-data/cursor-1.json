@@ -1,1 +1,5 @@
-{ "icon": "cursor-1", "category": "Arrows", "tags": ["arrow"] }
+{
+  "icon": "cursor-1",
+  "category": "Arrows",
+  "tags": ["arrow", "pointer", "click", "select", "mouse", "navigate"]
+}

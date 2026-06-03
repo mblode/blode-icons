@@ -1,1 +1,5 @@
-{ "icon": "snapchat", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "snapchat",
+  "category": "Social Media & Brands",
+  "tags": ["ghost", "social", "messaging", "stories", "photo"]
+}

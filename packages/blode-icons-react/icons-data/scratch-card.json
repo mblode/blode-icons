@@ -1,1 +1,5 @@
-{ "icon": "scratch-card", "category": "Gaming", "tags": [] }
+{
+  "icon": "scratch-card",
+  "category": "Gaming",
+  "tags": ["lottery", "reveal", "win", "ticket", "prize", "gamble"]
+}

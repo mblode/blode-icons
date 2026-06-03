@@ -1,1 +1,5 @@
-{ "icon": "arrow-left-up-circle", "category": "Arrows", "tags": [] }
+{
+  "icon": "arrow-left-up-circle",
+  "category": "Arrows",
+  "tags": ["diagonal", "northwest", "rise", "return", "ascend"]
+}

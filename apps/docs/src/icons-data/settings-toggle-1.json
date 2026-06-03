@@ -1,1 +1,5 @@
-{ "icon": "settings-toggle-1", "category": "Filter & Settings", "tags": [] }
+{
+  "icon": "settings-toggle-1",
+  "category": "Filter & Settings",
+  "tags": ["switch", "on-off", "options", "control", "preferences", "flip"]
+}

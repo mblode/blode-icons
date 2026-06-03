@@ -1,1 +1,5 @@
-{ "icon": "api-aggregate", "category": "Code", "tags": [] }
+{
+  "icon": "api-aggregate",
+  "category": "Code",
+  "tags": ["combine", "merge", "endpoint", "data", "collect"]
+}

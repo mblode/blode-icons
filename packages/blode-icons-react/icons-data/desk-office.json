@@ -1,1 +1,5 @@
-{ "icon": "desk-office", "category": "Furniture & Household", "tags": [] }
+{
+  "icon": "desk-office",
+  "category": "Furniture & Household",
+  "tags": ["workspace", "table", "workstation", "furniture", "work"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "treasure", "category": "Things", "tags": ["chest"] }
+{
+  "icon": "treasure",
+  "category": "Things",
+  "tags": ["chest", "gold", "loot", "reward", "pirate", "riches"]
+}

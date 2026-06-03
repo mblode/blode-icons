@@ -1,1 +1,5 @@
-{ "icon": "wardrobe", "category": "Furniture & Household", "tags": [] }
+{
+  "icon": "wardrobe",
+  "category": "Furniture & Household",
+  "tags": ["closet", "clothes", "furniture", "storage", "cabinet", "armoire"]
+}

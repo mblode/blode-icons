@@ -1,5 +1,12 @@
 {
   "icon": "speach-to-text",
   "category": "Sound & Music",
-  "tags": ["voice-to-text"]
+  "tags": [
+    "voice-to-text",
+    "transcription",
+    "dictation",
+    "voice-input",
+    "stt",
+    "recognition"
+  ]
 }

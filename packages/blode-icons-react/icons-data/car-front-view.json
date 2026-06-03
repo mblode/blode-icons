@@ -1,5 +1,5 @@
 {
   "icon": "car-front-view",
   "category": "Things",
-  "tags": []
+  "tags": ["vehicle", "auto", "headlights", "driving", "facing"]
 }

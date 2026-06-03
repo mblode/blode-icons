@@ -1,1 +1,5 @@
-{ "icon": "key-2", "category": "Security", "tags": ["password"] }
+{
+  "icon": "key-2",
+  "category": "Security",
+  "tags": ["password", "unlock", "access", "login", "credential", "secret"]
+}

@@ -1,5 +1,5 @@
 <h3 align="center">blode-icons-react</h3>
-<p align="center">3,000+ icons for React — drop-in lucide-react replacement.</p>
+<p align="center">4,000+ icons for React — drop-in lucide-react replacement.</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/blode-icons-react"><img alt="npm version" src="https://img.shields.io/npm/v/blode-icons-react"></a>
@@ -37,6 +37,18 @@ export default function App() {
 
 ```tsx
 import AirplaneIcon from "blode-icons-react/icons/airplane"
+```
+
+### Faster builds in Next.js
+
+Add the package to `optimizePackageImports` so barrel imports are rewritten to
+per-icon deep imports automatically — no need to change your import style:
+
+```ts
+// next.config.ts
+export default {
+  experimental: { optimizePackageImports: ["blode-icons-react"] },
+}
 ```
 
 ### Dynamic icon

@@ -1,1 +1,5 @@
-{ "icon": "share-android", "category": "Interface General", "tags": [] }
+{
+  "icon": "share-android",
+  "category": "Interface General",
+  "tags": ["send", "distribute", "social", "network", "nodes", "connect"]
+}

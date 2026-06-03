@@ -1,1 +1,5 @@
-{ "icon": "call-outgoing", "category": "Communication", "tags": ["phone"] }
+{
+  "icon": "call-outgoing",
+  "category": "Communication",
+  "tags": ["phone", "dialing", "outbound", "calling", "ring", "contact"]
+}

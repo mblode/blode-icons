@@ -1,1 +1,5 @@
-{ "icon": "arrow-path-up", "category": "Arrows", "tags": [] }
+{
+  "icon": "arrow-path-up",
+  "category": "Arrows",
+  "tags": ["route", "flow", "branch", "ascend", "step"]
+}

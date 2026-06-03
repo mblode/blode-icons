@@ -1,1 +1,5 @@
-{ "icon": "console", "category": "Code", "tags": ["terminal"] }
+{
+  "icon": "console",
+  "category": "Code",
+  "tags": ["terminal", "shell", "command-line", "prompt", "cli", "bash"]
+}

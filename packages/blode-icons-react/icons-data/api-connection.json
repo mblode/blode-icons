@@ -1,1 +1,5 @@
-{ "icon": "api-connection", "category": "Code", "tags": [] }
+{
+  "icon": "api-connection",
+  "category": "Code",
+  "tags": ["endpoint", "integration", "link", "request", "service"]
+}

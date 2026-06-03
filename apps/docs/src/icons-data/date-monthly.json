@@ -1,1 +1,5 @@
-{ "icon": "date-monthly", "category": "Time & Date", "tags": [] }
+{
+  "icon": "date-monthly",
+  "category": "Time & Date",
+  "tags": ["calendar", "recurring", "schedule", "month", "billing", "frequency"]
+}

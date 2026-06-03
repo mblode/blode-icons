@@ -1,1 +1,5 @@
-{ "icon": "feather", "category": "Edit", "tags": ["writing"] }
+{
+  "icon": "feather",
+  "category": "Edit",
+  "tags": ["writing", "quill", "pen", "compose", "author", "draft"]
+}

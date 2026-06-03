@@ -1,1 +1,5 @@
-{ "icon": "airplane-down", "category": "Things", "tags": ["landing"] }
+{
+  "icon": "airplane-down",
+  "category": "Things",
+  "tags": ["landing", "arrival", "descend", "flight", "travel"]
+}

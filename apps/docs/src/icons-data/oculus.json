@@ -1,1 +1,5 @@
-{ "icon": "oculus", "category": "Augmented Reality", "tags": [] }
+{
+  "icon": "oculus",
+  "category": "Augmented Reality",
+  "tags": ["vr", "headset", "virtual-reality", "meta", "goggles"]
+}

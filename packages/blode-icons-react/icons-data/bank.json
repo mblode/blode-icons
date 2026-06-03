@@ -1,1 +1,5 @@
-{ "icon": "bank", "category": "Building", "tags": [] }
+{
+  "icon": "bank",
+  "category": "Building",
+  "tags": ["finance", "money", "institution", "savings", "deposit"]
+}

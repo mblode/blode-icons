@@ -1,5 +1,5 @@
 {
   "icon": "receipt-tax",
   "category": "Shopping & Payment",
-  "tags": ["discount"]
+  "tags": ["discount", "invoice", "vat", "bill", "percent", "deduction", "sale"]
 }

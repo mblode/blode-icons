@@ -1,1 +1,13 @@
-{ "icon": "lock", "category": "Security", "tags": ["private"] }
+{
+  "icon": "lock",
+  "category": "Security",
+  "tags": [
+    "private",
+    "secure",
+    "protected",
+    "password",
+    "locked",
+    "encrypt",
+    "privacy"
+  ]
+}

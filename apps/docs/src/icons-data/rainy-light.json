@@ -1,1 +1,5 @@
-{ "icon": "rainy-light", "category": "Weather", "tags": [] }
+{
+  "icon": "rainy-light",
+  "category": "Weather",
+  "tags": ["drizzle", "forecast", "showers", "wet", "sprinkle"]
+}

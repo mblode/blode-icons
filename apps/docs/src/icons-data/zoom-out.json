@@ -1,5 +1,13 @@
 {
   "icon": "zoom-out",
   "category": "Interface General",
-  "tags": ["search-minus"]
+  "tags": [
+    "search-minus",
+    "shrink",
+    "reduce",
+    "wider",
+    "scale-down",
+    "overview",
+    "distance"
+  ]
 }

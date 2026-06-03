@@ -1,1 +1,5 @@
-{ "icon": "quora", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "quora",
+  "category": "Social Media & Brands",
+  "tags": ["q-and-a", "questions", "forum", "knowledge", "community"]
+}

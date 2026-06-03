@@ -1,1 +1,5 @@
-{ "icon": "chevron-double-left", "category": "Arrows", "tags": [] }
+{
+  "icon": "chevron-double-left",
+  "category": "Arrows",
+  "tags": ["previous", "rewind", "back", "first", "caret"]
+}

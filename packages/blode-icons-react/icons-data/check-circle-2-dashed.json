@@ -1,0 +1,5 @@
+{
+  "icon": "check-circle-2-dashed",
+  "category": "Interface General",
+  "tags": ["progress", "pending", "loading", "approved", "done", "tick"]
+}

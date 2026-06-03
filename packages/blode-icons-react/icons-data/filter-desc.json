@@ -1,1 +1,5 @@
-{ "icon": "filter-desc", "category": "Filter & Settings", "tags": [] }
+{
+  "icon": "filter-desc",
+  "category": "Filter & Settings",
+  "tags": ["sort", "descending", "order", "arrange", "down"]
+}

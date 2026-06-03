@@ -1,5 +1,5 @@
 {
   "icon": "settings-gear-2",
   "category": "Filter & Settings",
-  "tags": ["preferences"]
+  "tags": ["preferences", "config", "options", "cog", "setup", "controls"]
 }

@@ -1,1 +1,5 @@
-{ "icon": "twitter", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "twitter",
+  "category": "Social Media & Brands",
+  "tags": ["x", "tweet", "social", "bird", "brand", "logo"]
+}

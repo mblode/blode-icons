@@ -1,1 +1,5 @@
-{ "icon": "shopping-bag-like-2", "category": "Shopping & Payment", "tags": [] }
+{
+  "icon": "shopping-bag-like-2",
+  "category": "Shopping & Payment",
+  "tags": ["favorite", "wishlist", "love", "heart", "save"]
+}

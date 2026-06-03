@@ -1,1 +1,5 @@
-{ "icon": "animation-ease-out", "category": "Code", "tags": [] }
+{
+  "icon": "animation-ease-out",
+  "category": "Code",
+  "tags": ["motion", "timing", "transition", "easing", "decelerate"]
+}

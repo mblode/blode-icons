@@ -1,1 +1,5 @@
-{ "icon": "arrow-expand-ver", "category": "Arrows", "tags": [] }
+{
+  "icon": "arrow-expand-ver",
+  "category": "Arrows",
+  "tags": ["heighten", "stretch", "resize", "vertical", "spread"]
+}

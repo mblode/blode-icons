@@ -1,1 +1,13 @@
-{ "icon": "life-vest", "category": "Things", "tags": ["vest"] }
+{
+  "icon": "life-vest",
+  "category": "Things",
+  "tags": [
+    "vest",
+    "safety",
+    "rescue",
+    "flotation",
+    "jacket",
+    "buoyancy",
+    "swim"
+  ]
+}

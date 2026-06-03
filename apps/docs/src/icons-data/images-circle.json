@@ -1,1 +1,5 @@
-{ "icon": "images-circle", "category": "Photography & Video", "tags": [] }
+{
+  "icon": "images-circle",
+  "category": "Photography & Video",
+  "tags": ["photos", "gallery", "pictures", "album", "media"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "plus-large", "category": "Interface General", "tags": ["add large"] }
+{
+  "icon": "plus-large",
+  "category": "Interface General",
+  "tags": ["add large", "add-large", "create", "new", "increase", "insert"]
+}

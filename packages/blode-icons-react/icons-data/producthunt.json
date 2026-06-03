@@ -1,1 +1,5 @@
-{ "icon": "producthunt", "category": "Social Media & Brands", "tags": [] }
+{
+  "icon": "producthunt",
+  "category": "Social Media & Brands",
+  "tags": ["launch", "startup", "brand", "upvote", "community"]
+}

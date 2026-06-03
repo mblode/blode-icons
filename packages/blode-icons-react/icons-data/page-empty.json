@@ -1,1 +1,5 @@
-{ "icon": "page-empty", "category": "Folders & Files", "tags": [] }
+{
+  "icon": "page-empty",
+  "category": "Folders & Files",
+  "tags": ["blank", "document", "new", "sheet", "white"]
+}

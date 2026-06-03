@@ -1,1 +1,5 @@
-{ "icon": "thumb-down-curved", "category": "Hands", "tags": [] }
+{
+  "icon": "thumb-down-curved",
+  "category": "Hands",
+  "tags": ["dislike", "downvote", "reject", "bad", "disapprove"]
+}

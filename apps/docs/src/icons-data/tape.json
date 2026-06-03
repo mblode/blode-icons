@@ -1,1 +1,5 @@
-{ "icon": "tape", "category": "Devices & Signals", "tags": [] }
+{
+  "icon": "tape",
+  "category": "Devices & Signals",
+  "tags": ["cassette", "recording", "reel", "audio", "sticky"]
+}

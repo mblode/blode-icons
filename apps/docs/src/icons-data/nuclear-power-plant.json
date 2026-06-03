@@ -1,5 +1,12 @@
 {
   "icon": "nuclear-power-plant",
   "category": "Nature & Energy",
-  "tags": ["radiation"]
+  "tags": [
+    "radiation",
+    "energy",
+    "reactor",
+    "atomic",
+    "cooling-tower",
+    "electricity"
+  ]
 }

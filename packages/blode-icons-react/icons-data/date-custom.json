@@ -1,1 +1,5 @@
-{ "icon": "date-custom", "category": "Time & Date", "tags": [] }
+{
+  "icon": "date-custom",
+  "category": "Time & Date",
+  "tags": ["calendar", "schedule", "range", "recurrence", "appointment"]
+}

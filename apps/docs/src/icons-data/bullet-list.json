@@ -1,1 +1,5 @@
-{ "icon": "bullet-list", "category": "Typography", "tags": [] }
+{
+  "icon": "bullet-list",
+  "category": "Typography",
+  "tags": ["points", "unordered", "items", "outline", "ul"]
+}

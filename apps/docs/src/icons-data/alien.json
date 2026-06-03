@@ -1,1 +1,5 @@
-{ "icon": "alien", "category": "Things", "tags": [] }
+{
+  "icon": "alien",
+  "category": "Things",
+  "tags": ["ufo", "extraterrestrial", "space", "martian", "et"]
+}

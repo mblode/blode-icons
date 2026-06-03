@@ -1,1 +1,5 @@
-{ "icon": "text-select", "category": "Typography", "tags": ["lollipops"] }
+{
+  "icon": "text-select",
+  "category": "Typography",
+  "tags": ["lollipops", "highlight", "cursor", "choose", "mark", "caret"]
+}

@@ -1,1 +1,5 @@
-{ "icon": "anchor-1", "category": "Interface General", "tags": ["link"] }
+{
+  "icon": "anchor-1",
+  "category": "Interface General",
+  "tags": ["link", "ship", "nautical", "hyperlink", "fixed"]
+}
