@@ -472,7 +472,12 @@ async function main() {
       const category = OPTS.overwriteCategory
         ? entry.category
         : (existing.category ?? entry.category);
-      const content = formatMetadata({ ...existing, icon: slug, category, tags });
+      const content = formatMetadata({
+        ...existing,
+        icon: slug,
+        category,
+        tags,
+      });
       if (readFileSafe(metaFile) !== content) {
         metaWrites.push({ file: metaFile, content });
       }
