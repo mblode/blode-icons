@@ -86,12 +86,26 @@ const IconCell = ({
       return;
     }
     let active = true;
-    loadIconSource({ iconName: slug, copyKind: "SVG" }).then((svg) => {
-      if (svg && active) {
-        svgCache.set(slug, svg);
-        setMarkup(svg);
+    // Retry transient failures (e.g. the API route still compiling on first
+    // paint, when dozens of cells fetch at once) so an icon never gets stuck as
+    // a placeholder. Swallow errors — a missing icon just keeps its placeholder.
+    const load = async (attempt = 0) => {
+      try {
+        const svg = await loadIconSource({ iconName: slug, copyKind: "SVG" });
+        if (!active) {
+          return;
+        }
+        if (svg) {
+          svgCache.set(slug, svg);
+          setMarkup(svg);
+        }
+      } catch {
+        if (active && attempt < 3) {
+          setTimeout(() => load(attempt + 1), 250 * (attempt + 1));
+        }
       }
-    });
+    };
+    load();
     return () => {
       active = false;
     };
