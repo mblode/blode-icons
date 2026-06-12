@@ -126,28 +126,32 @@ const IconCell = ({
         ref={ref}
       >
         {markup ? (
+          // Zoom the glyph on hover/focus instead of hiding it behind the copy
+          // buttons, so you can actually see the icon while deciding (issue #14).
           <div
-            className="flex size-6 items-center justify-center [&_svg]:size-6"
+            className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
             ref={svgRef}
           />
         ) : (
           <div className="size-6 rounded-md bg-muted/40" />
         )}
 
-        <div className="absolute inset-0 flex size-full flex-col gap-2 p-2 opacity-0 group-hover:opacity-100">
+        <div className="absolute inset-x-0 bottom-0 flex gap-1 bg-gradient-to-t from-background via-background/95 to-transparent p-1.5 opacity-0 transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100">
           <Button
-            className="w-full flex-1 cursor-pointer"
+            aria-label={`Copy ${getIconDisplayName(name)} SVG`}
+            className="h-7 flex-1 cursor-pointer px-2 text-xs"
             onClick={() => onCopy(slug, name, "SVG")}
             variant="secondary"
           >
-            Copy SVG
+            SVG
           </Button>
           <Button
-            className="w-full flex-1 cursor-pointer"
+            aria-label={`Copy ${getIconDisplayName(name)} name`}
+            className="h-7 flex-1 cursor-pointer px-2 text-xs"
             onClick={() => onCopy(slug, name, "NAME")}
             variant="secondary"
           >
-            Copy name
+            Name
           </Button>
         </div>
       </div>
