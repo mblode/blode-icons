@@ -73,3 +73,7 @@ All icons accept standard SVG props plus these Lucide-style props:
 ## License
 
 [MIT](https://github.com/mblode/blode-icons/blob/main/LICENSE.md)
+
+---
+
+Crafted by [<img src="https://matthewblode.com/avatar-sm.png" width="20" align="top" />](https://matthewblode.com) [Matthew Blode](https://matthewblode.com)
