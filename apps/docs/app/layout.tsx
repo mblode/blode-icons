@@ -36,13 +36,19 @@ export const viewport: Viewport = {
   ],
 };
 
+const siteDescription =
+  "Blode Icons is a free, open-source SVG icon library with 2,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Blode Icons",
+    default: "Blode Icons — Open-Source SVG Icon Library for React",
     template: "%s - Blode Icons",
   },
-  description: "A beautifully crafted icon library. Open source.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -58,15 +64,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Blode Icons",
-    description: "A beautifully crafted icon library. Open source.",
+    url: siteUrl,
+    title: "Blode Icons — Open-Source SVG Icon Library for React",
+    description: siteDescription,
     siteName: "Blode Icons",
     images: [{ url: "/opengraph-image" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blode Icons",
-    description: "A beautifully crafted icon library. Open source.",
+    title: "Blode Icons — Open-Source SVG Icon Library for React",
+    description: siteDescription,
     images: ["/twitter-image"],
   },
 };

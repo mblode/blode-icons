@@ -23,7 +23,7 @@ const DYNAMIC_EXAMPLE = `import { DynamicIcon } from "blode-icons-react/dynamic"
 export function GettingStarted() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-8">
-      <h2 className="font-semibold text-lg">Installation</h2>
+      <h1 className="font-semibold text-lg">Installation</h1>
       <div className="mt-3">
         <InstallTabs />
       </div>

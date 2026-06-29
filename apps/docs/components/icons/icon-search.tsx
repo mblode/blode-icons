@@ -23,6 +23,11 @@ const COPY_KIND_LABEL: Record<IconCopyKind, string> = {
 const ICON_SUFFIX_REGEX = /Icon$/;
 const FILLED_SUFFIX = "FilledIcon";
 
+// Render the grid in batches so the initial HTML document stays small (a full
+// 2,000+ cell render blows past Googlebot's crawl budget). More batches reveal
+// as the sentinel scrolls into view; search/style changes reset to the first.
+const PAGE_SIZE = 120;
+
 // Module-level cache so toggling style / re-searching never re-fetches an SVG.
 const svgCache = new Map<string, string>();
 
@@ -173,6 +178,38 @@ export const IconSearch = () => {
     [iconStyle, searchResults]
   );
 
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
+  // Reset to the first batch whenever the result set changes.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: reset tracks the query/style inputs, not the derived list.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [searchQuery, iconStyle]);
+
+  // Reveal the next batch as the sentinel approaches the viewport.
+  useEffect(() => {
+    if (visibleCount >= filteredIcons.length) {
+      return;
+    }
+    const el = sentinelRef.current;
+    if (!el) {
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisibleCount((count) => count + PAGE_SIZE);
+        }
+      },
+      { rootMargin: "600px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [visibleCount, filteredIcons.length]);
+
+  const visibleIcons = filteredIcons.slice(0, visibleCount);
+
   const handleIconCopy = async (
     slug: string,
     name: string,
@@ -200,6 +237,9 @@ export const IconSearch = () => {
 
   return (
     <>
+      <h1 className="sr-only">
+        Blode Icons — open-source SVG icon library for React
+      </h1>
       <div className="relative sticky top-0 z-10 mb-4 bg-background py-4">
         <div className="absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         <div className="mx-auto w-full max-w-[1400px] px-4">
@@ -238,7 +278,7 @@ export const IconSearch = () => {
 
       <div className="mx-auto w-full max-w-[1400px] px-4 pb-12">
         <div className="grid grid-cols-2 gap-2 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {filteredIcons.map((doc) => (
+          {visibleIcons.map((doc) => (
             <IconCell
               doc={doc}
               key={doc.slug}
@@ -247,6 +287,9 @@ export const IconSearch = () => {
             />
           ))}
         </div>
+        {visibleCount < filteredIcons.length ? (
+          <div aria-hidden className="h-px w-full" ref={sentinelRef} />
+        ) : null}
       </div>
     </>
   );
