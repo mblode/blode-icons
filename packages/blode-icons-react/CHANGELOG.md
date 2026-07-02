@@ -1,5 +1,11 @@
 # blode-icons-react
 
+## 0.4.1
+
+### Patch Changes
+
+- b6a5379: Point the package homepage at icons.blode.co
+
 ## 0.4.0
 
 ### Minor Changes
