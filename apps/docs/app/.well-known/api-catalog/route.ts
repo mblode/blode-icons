@@ -34,8 +34,8 @@ export function GET() {
 
   return new Response(JSON.stringify(linkset, null, 2), {
     headers: {
-      "Content-Type": "application/linkset+json",
       "Cache-Control": "public, max-age=0, s-maxage=3600",
+      "Content-Type": "application/linkset+json",
     },
   });
 }

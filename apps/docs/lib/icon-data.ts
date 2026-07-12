@@ -8,7 +8,7 @@ const EMPTY_ICON_METADATA: IconMetadata = {
 
 const metadataByIcon = iconsMetadata as Record<string, IconMetadata>;
 
-const normalizeIconSlug = (iconSlug: string) => iconSlug.replace(/-/g, "");
+const normalizeIconSlug = (iconSlug: string) => iconSlug.replaceAll("-", "");
 
 const metadataByNormalizedSlug = new Map<string, IconMetadata>(
   Object.entries(metadataByIcon).map(([iconSlug, metadata]) => [
@@ -17,10 +17,7 @@ const metadataByNormalizedSlug = new Map<string, IconMetadata>(
   ])
 );
 
-export const getIconMetadata = (iconSlug: string): IconMetadata => {
-  return (
-    metadataByIcon[iconSlug] ??
-    metadataByNormalizedSlug.get(normalizeIconSlug(iconSlug)) ??
-    EMPTY_ICON_METADATA
-  );
-};
+export const getIconMetadata = (iconSlug: string): IconMetadata =>
+  metadataByIcon[iconSlug] ??
+  metadataByNormalizedSlug.get(normalizeIconSlug(iconSlug)) ??
+  EMPTY_ICON_METADATA;

@@ -11,9 +11,9 @@ Blode Icons React intentionally supports Lucide-style usage, but the compatibili
 **Incorrect (file-name keys and unverified prop claims):**
 
 ```tsx
-import { DynamicIcon } from "blode-icons-react/dynamic"
+import { DynamicIcon } from "blode-icons-react/dynamic";
 
-<DynamicIcon name="airplane" absoluteStrokeWidth />
+<DynamicIcon name="airplane" absoluteStrokeWidth />;
 ```
 
 **Correct (real export keys and verified wrapper props):**

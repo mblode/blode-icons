@@ -91,7 +91,7 @@ export function GettingStarted() {
         <a
           className="text-foreground underline underline-offset-2"
           href="https://github.com/mblode/blode-icons"
-          rel="noopener"
+          rel="noopener noreferrer"
           target="_blank"
         >
           GitHub

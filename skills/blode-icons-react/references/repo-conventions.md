@@ -2,10 +2,8 @@
 
 ## Monorepo Structure
 
-- `packages/blode-icons-react`
-  Published npm package and the only package built by `npm run release`
-- `apps/docs`
-  Docs site for browsing icons and showing installation and usage examples
+- `packages/blode-icons-react` Published npm package and the only package built by `npm run release`
+- `apps/docs` Docs site for browsing icons and showing installation and usage examples
 
 ## Root Commands
 

@@ -1,4 +1,5 @@
 import { codeToHtml } from "shiki";
+
 import { CopyButton } from "@/components/copy-button";
 
 export async function CodeBlock({
@@ -9,12 +10,12 @@ export async function CodeBlock({
   lang?: string;
 }) {
   const html = await codeToHtml(code, {
+    defaultColor: false,
     lang,
     themes: {
-      light: "github-light",
       dark: "github-dark",
+      light: "github-light",
     },
-    defaultColor: false,
   });
 
   return (

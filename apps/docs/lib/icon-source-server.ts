@@ -1,11 +1,12 @@
 import "server-only";
-
 import { readdirSync, readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { type IconSourceFormat, isValidIconName } from "@/lib/icon-source";
 
-const normalizeIconSlug = (iconSlug: string) => iconSlug.replace(/-/g, "");
+import { isValidIconName } from "@/lib/icon-source";
+import type { IconSourceFormat } from "@/lib/icon-source";
+
+const normalizeIconSlug = (iconSlug: string) => iconSlug.replaceAll("-", "");
 
 const componentSourceMap = new Map<string, string>();
 const allIconsPath = path.join(
@@ -14,7 +15,7 @@ const allIconsPath = path.join(
   "icons-tsx",
   "all-icons.ts"
 );
-const allIconsSource = readFileSync(allIconsPath, "utf8");
+const allIconsSource = readFileSync(allIconsPath, "utf-8");
 const allIconsExportPattern =
   /export \{ default as (\w+) \} from ["']\.\/([^"']+)["']/g;
 for (const match of allIconsSource.matchAll(allIconsExportPattern)) {
@@ -35,10 +36,10 @@ const readIconFileNames = (format: IconSourceFormat) => {
   }
 
   return {
-    sourceDir,
     extension,
-    stems: new Set(stems),
     normalized,
+    sourceDir,
+    stems: new Set(stems),
   };
 };
 
@@ -87,7 +88,7 @@ export const readIconSource = async (
   }
 
   try {
-    return await readFile(sourcePath, "utf8");
+    return await readFile(sourcePath, "utf-8");
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       return null;

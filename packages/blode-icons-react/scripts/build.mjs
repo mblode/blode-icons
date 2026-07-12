@@ -3,9 +3,10 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
 import { transform } from "@svgr/core";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
 
 const svgDir = path.join(ROOT, "icons-svg");
@@ -24,15 +25,15 @@ const filterPattern = filterArg ? filterArg.split("=")[1] : null;
 
 // Load SVGO config
 const svgoConfig = JSON.parse(
-  fs.readFileSync(path.join(ROOT, "svgo.json"), "utf8")
+  fs.readFileSync(path.join(ROOT, "svgo.json"), "utf-8")
 );
 
 // SVGR options — hash includes config so cache busts on config changes
 const svgrConfig = {
-  typescript: true,
-  ref: true,
   plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
+  ref: true,
   svgoConfig,
+  typescript: true,
 };
 const FORMAT_VERSION = "3"; // bump when individual icon output format changes
 const configHash = crypto
@@ -42,15 +43,15 @@ const configHash = crypto
 
 function stripRedundantCurrentColorStyles(code) {
   return code
-    .replace(
+    .replaceAll(
       /\sstyle=\{\{\s*fill:\s*"currentColor",\s*fillOpacity:\s*1,\s*stroke:\s*"currentColor",\s*strokeOpacity:\s*1\s*\}\}/g,
       ""
     )
-    .replace(
+    .replaceAll(
       /\sstyle=\{\{\s*fill:\s*"currentColor",\s*fillOpacity:\s*1\s*\}\}/g,
       ""
     )
-    .replace(
+    .replaceAll(
       /\sstyle=\{\{\s*stroke:\s*"currentColor",\s*strokeOpacity:\s*1\s*\}\}/g,
       ""
     );
@@ -68,8 +69,8 @@ function matchesFilter(name) {
     return true;
   }
   if (filterPattern.includes("*")) {
-    const escaped = filterPattern.replace(/[-/\\^$+?.()|[\]{}]/g, "\\$&");
-    const regex = new RegExp(`^${escaped.replace(/\\\*/g, ".*")}$`);
+    const escaped = filterPattern.replaceAll(/[-/\\^$+?.()|[\]{}]/g, "\\$&");
+    const regex = new RegExp(`^${escaped.replaceAll("\\*", ".*")}$`);
     return regex.test(name);
   }
   return name.includes(filterPattern);
@@ -77,7 +78,7 @@ function matchesFilter(name) {
 
 function loadManifest() {
   try {
-    return JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+    return JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
   } catch {
     return {};
   }
@@ -247,7 +248,7 @@ async function generateIcons() {
         const componentFilePath = path.join(srcDir, `${iconName}.tsx`);
 
         try {
-          const svgCode = fs.readFileSync(svgFilePath, "utf8");
+          const svgCode = fs.readFileSync(svgFilePath, "utf-8");
           const hash = crypto
             .createHash("md5")
             .update(svgCode + configHash)
@@ -258,7 +259,7 @@ async function generateIcons() {
             oldManifest[iconName] === hash &&
             fs.existsSync(componentFilePath)
           ) {
-            return { iconName, hash, cached: true };
+            return { cached: true, hash, iconName };
           }
 
           const rawCode = await transform(svgCode, svgrConfig, {
@@ -276,17 +277,17 @@ async function generateIcons() {
             );
           }
           fs.writeFileSync(componentFilePath, `${componentCode}\n`);
-          return { iconName, hash, cached: false };
-        } catch (err) {
-          console.error(`  Failed: ${file} - ${err.message}`);
-          return { iconName, error: err.message };
+          return { cached: false, hash, iconName };
+        } catch (error) {
+          console.error(`  Failed: ${file} - ${error.message}`);
+          return { error: error.message, iconName };
         }
       })
     );
 
     for (const r of results) {
       if (r.error) {
-        errors.push({ file: r.iconName, error: r.error });
+        errors.push({ error: r.error, file: r.iconName });
       } else {
         newManifest[r.iconName] = r.hash;
         if (r.cached) {
@@ -326,7 +327,7 @@ async function generateIcons() {
 
     if (
       !fs.existsSync(aliasFilePath) ||
-      fs.readFileSync(aliasFilePath, "utf8") !== aliasContent
+      fs.readFileSync(aliasFilePath, "utf-8") !== aliasContent
     ) {
       fs.writeFileSync(aliasFilePath, aliasContent);
       aliasCount++;
@@ -370,7 +371,7 @@ async function generateIcons() {
   for (const alias of filledAliases) {
     allExportNames.push(alias);
   }
-  const sortedNames = allExportNames.sort();
+  const sortedNames = allExportNames.toSorted();
 
   const iconLines = [];
   for (const name of sortedNames) {
@@ -425,9 +426,9 @@ function generateLucideAliases() {
     /lucideName:\s*["']([^"']+)["'],\s*blodeName:\s*["']([^"']+)["'],\s*category:\s*["']([^"']+)["'],\s*hasMatch:\s*(true|false)/g;
   for (const match of mappingContent.matchAll(entryRegex)) {
     entries.push({
-      lucideName: match[1],
       blodeName: match[2],
       hasMatch: match[4] === "true",
+      lucideName: match[1],
     });
   }
 
@@ -550,14 +551,14 @@ function compile() {
   const t0 = performance.now();
 
   if (force) {
-    fs.rmSync(distDir, { recursive: true, force: true });
+    fs.rmSync(distDir, { force: true, recursive: true });
     fs.rmSync(path.join(ROOT, ".tsbuildinfo"), { force: true });
   }
 
   console.log("Compiling with tsc...");
   execFileSync("npx", ["tsc", "--project", path.join(ROOT, "tsconfig.json")], {
-    stdio: "inherit",
     cwd: ROOT,
+    stdio: "inherit",
   });
 
   const elapsed = ((performance.now() - t0) / 1000).toFixed(1);
@@ -583,7 +584,7 @@ async function main() {
   console.log(`\nBuild complete in ${elapsed}s`);
 }
 
-main().catch((err) => {
-  console.error(err);
+main().catch((error) => {
+  console.error(error);
   process.exit(1);
 });

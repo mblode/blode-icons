@@ -21,8 +21,8 @@ export async function GET(
 
   return new Response(source, {
     headers: {
-      "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=0, s-maxage=31536000",
+      "Content-Type": "text/plain; charset=utf-8",
     },
   });
 }

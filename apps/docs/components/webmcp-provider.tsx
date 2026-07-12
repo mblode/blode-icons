@@ -6,7 +6,7 @@ import { useEffect } from "react";
 // Spec: https://webmachinelearning.github.io/webmcp/
 
 interface McpToolResult {
-  content: Array<{ type: "text"; text: string }>;
+  content: { type: "text"; text: string }[];
 }
 
 interface McpTool {
@@ -44,52 +44,52 @@ async function fetchIconSource(
 
 const tools: McpTool[] = [
   {
-    name: "get_icon_svg",
     description:
       "Fetch the raw SVG source for a Blode icon by its kebab-case slug (e.g. 'check', 'arrow-right').",
-    inputSchema: {
-      type: "object",
-      properties: {
-        name: {
-          type: "string",
-          description: "Kebab-case icon slug, e.g. 'check' or 'arrow-right'.",
-          pattern: "^[a-z0-9-]+$",
-        },
-      },
-      required: ["name"],
-    },
     async execute(args) {
       const name = String(args.name ?? "");
       const svg = await fetchIconSource(name, "svg");
-      return { content: [{ type: "text", text: svg }] };
+      return { content: [{ text: svg, type: "text" }] };
     },
-  },
-  {
-    name: "get_icon_tsx",
-    description:
-      "Fetch the React (TSX) component source for a Blode icon by its kebab-case slug.",
     inputSchema: {
-      type: "object",
       properties: {
         name: {
-          type: "string",
           description: "Kebab-case icon slug, e.g. 'check' or 'arrow-right'.",
           pattern: "^[a-z0-9-]+$",
+          type: "string",
         },
       },
       required: ["name"],
+      type: "object",
     },
+    name: "get_icon_svg",
+  },
+  {
+    description:
+      "Fetch the React (TSX) component source for a Blode icon by its kebab-case slug.",
     async execute(args) {
       const name = String(args.name ?? "");
       const tsx = await fetchIconSource(name, "tsx");
-      return { content: [{ type: "text", text: tsx }] };
+      return { content: [{ text: tsx, type: "text" }] };
     },
+    inputSchema: {
+      properties: {
+        name: {
+          description: "Kebab-case icon slug, e.g. 'check' or 'arrow-right'.",
+          pattern: "^[a-z0-9-]+$",
+          type: "string",
+        },
+      },
+      required: ["name"],
+      type: "object",
+    },
+    name: "get_icon_tsx",
   },
 ];
 
 export function WebMcpProvider() {
   useEffect(() => {
-    const modelContext = navigator.modelContext;
+    const { modelContext } = navigator;
     if (!modelContext?.provideContext) {
       return;
     }

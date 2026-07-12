@@ -32,7 +32,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
 const SVG_DIR = path.join(ROOT, "icons-svg");
 const DATA_DIR = path.join(ROOT, "icons-data");
@@ -53,12 +53,12 @@ const opt = (name, fallback) => {
 };
 const OPTS = {
   dryRun: flag("dry-run"),
-  resync: flag("resync"),
-  prune: flag("prune"),
-  mergeTags: flag("merge-tags"),
-  overwriteCategory: flag("overwrite-category"),
   json: flag("json"),
+  mergeTags: flag("merge-tags"),
   only: opt("only", null),
+  overwriteCategory: flag("overwrite-category"),
+  prune: flag("prune"),
+  resync: flag("resync"),
   variants: opt("variants", DEFAULT_VARIANTS.join(","))
     .split(",")
     .map((s) => s.trim())
@@ -117,7 +117,7 @@ function canonicalizeName(raw) {
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: a single-pass string/brace scanner is inherently branchy; splitting it would obscure the parse
 function extractLiteralAfter(src, marker) {
   const at = src.indexOf(marker);
-  if (at < 0) {
+  if (at === -1) {
     return null;
   }
   let i = at + marker.length;
@@ -180,11 +180,11 @@ function parseIconMetadata(literal) {
       .filter(Boolean);
     const rawSlug = (title.split(",")[0] || "").trim();
     entries.push({
-      key: match[1],
-      rawSlug,
-      keywords: tokens.slice(1),
       category: fieldStr(body, "category") || "",
       createdAt: fieldStr(body, "createdAt") || "",
+      key: match[1],
+      keywords: tokens.slice(1),
+      rawSlug,
     });
   }
   return entries;
@@ -262,10 +262,10 @@ async function discoverChunkData() {
   }
 
   return {
-    variantManifest,
-    variantXorKey,
     iconEntries,
     usedChunks: [...new Set(usedChunks)],
+    variantManifest,
+    variantXorKey,
   };
 }
 
@@ -330,7 +330,7 @@ function matchesOnly(name) {
 
 function readJsonSafe(file, fallback) {
   try {
-    return JSON.parse(fs.readFileSync(file, "utf8"));
+    return JSON.parse(fs.readFileSync(file, "utf-8"));
   } catch {
     return fallback;
   }
@@ -435,11 +435,11 @@ async function main() {
       const prev = readFileSafe(file);
       if (prev == null) {
         added.push(slug);
-        writes.push({ file, content });
+        writes.push({ content, file });
       } else if (prev !== content) {
         changed.push(slug);
         if (OPTS.resync) {
-          writes.push({ file, content });
+          writes.push({ content, file });
         }
       }
     }
@@ -450,7 +450,7 @@ async function main() {
       const content = wrapSvg(decoded[FILLED_VARIANT][idx]);
       const prev = readFileSafe(file);
       if (prev == null || (prev !== content && OPTS.resync)) {
-        writes.push({ file, content });
+        writes.push({ content, file });
       }
     }
 
@@ -459,11 +459,11 @@ async function main() {
     const existing = readJsonSafe(metaFile, null);
     if (!existing) {
       const content = formatMetadata({
-        icon: slug,
         category: entry.category,
+        icon: slug,
         tags: entry.keywords,
       });
-      metaWrites.push({ file: metaFile, content });
+      metaWrites.push({ content, file: metaFile });
       metaScaffolded++;
     } else if (OPTS.mergeTags || OPTS.overwriteCategory) {
       const tags = OPTS.mergeTags
@@ -474,12 +474,12 @@ async function main() {
         : (existing.category ?? entry.category);
       const content = formatMetadata({
         ...existing,
-        icon: slug,
         category,
+        icon: slug,
         tags,
       });
       if (readFileSafe(metaFile) !== content) {
-        metaWrites.push({ file: metaFile, content });
+        metaWrites.push({ content, file: metaFile });
       }
     }
   }
@@ -490,10 +490,10 @@ async function main() {
 
   // Report.
   const report = {
-    added: added.sort(),
-    changed: changed.sort(),
-    removed: removed.sort(),
+    added: added.toSorted(),
+    changed: changed.toSorted(),
     metaScaffolded,
+    removed: removed.toSorted(),
     totalCentral: centralSlugs.size,
   };
   if (OPTS.json) {
@@ -554,26 +554,26 @@ async function main() {
     : [...new Set([...centralSlugs, ...ledger])];
   fs.writeFileSync(
     LEDGER_PATH,
-    `${JSON.stringify(nextLedger.sort(), null, 2)}\n`
+    `${JSON.stringify(nextLedger.toSorted(), null, 2)}\n`
   );
 
   // Provenance — hashes only, never the raw key or license.
   const provenance = {
-    scrapedAt: new Date().toISOString(),
-    origin: ORIGIN,
     chunkUrls: usedChunks.map((c) => `${ORIGIN}${c}`),
-    xorKeyHash: crypto
-      .createHash("sha256")
-      .update(Uint8Array.from(variantXorKey))
-      .digest("hex"),
+    fullVariantManifestKeys: Object.keys(variantManifest).toSorted(),
+    iconCount: iconEntries.length,
+    licenseKeyPresent: Boolean(process.env.CENTRAL_LICENSE_KEY),
     manifestHash: crypto
       .createHash("sha256")
       .update(JSON.stringify(variantManifest))
       .digest("hex"),
-    iconCount: iconEntries.length,
+    origin: ORIGIN,
+    scrapedAt: new Date().toISOString(),
     variantsScraped: OPTS.variants,
-    fullVariantManifestKeys: Object.keys(variantManifest).sort(),
-    licenseKeyPresent: Boolean(process.env.CENTRAL_LICENSE_KEY),
+    xorKeyHash: crypto
+      .createHash("sha256")
+      .update(Uint8Array.from(variantXorKey))
+      .digest("hex"),
   };
   fs.writeFileSync(PROVENANCE_PATH, `${JSON.stringify(provenance, null, 2)}\n`);
 
@@ -584,13 +584,13 @@ async function main() {
 
 function readFileSafe(file) {
   try {
-    return fs.readFileSync(file, "utf8");
+    return fs.readFileSync(file, "utf-8");
   } catch {
     return null;
   }
 }
 
-main().catch((err) => {
-  console.error(err);
+main().catch((error) => {
+  console.error(error);
   process.exit(1);
 });

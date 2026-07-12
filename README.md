@@ -31,10 +31,10 @@ npm install blode-icons-react
 ```
 
 ```tsx
-import { ChevronDown } from "blode-icons-react"
+import { ChevronDown } from "blode-icons-react";
 
 export default function App() {
-  return <ChevronDown size={20} />
+  return <ChevronDown size={20} />;
 }
 ```
 
@@ -42,20 +42,20 @@ export default function App() {
 
 ```tsx
 // Lucide-compatible icons (same names as lucide-react)
-import { ChevronDown, Search, Plus } from "blode-icons-react"
+import { ChevronDown, Search, Plus } from "blode-icons-react";
 
 // Full icon library (with Icon suffix)
-import { ChevronDownIcon, SparkleIcon } from "blode-icons-react"
+import { ChevronDownIcon, SparkleIcon } from "blode-icons-react";
 
 // Individual icon import (best for tree-shaking)
-import ChevronDownIcon from "blode-icons-react/icons/chevron-down"
+import ChevronDownIcon from "blode-icons-react/icons/chevron-down";
 
 // Dynamic icon loading by export name
-import { DynamicIcon } from "blode-icons-react/dynamic"
-<DynamicIcon name="SearchIcon" size={24} />
+import { DynamicIcon } from "blode-icons-react/dynamic";
+<DynamicIcon name="SearchIcon" size={24} />;
 
 // Types
-import type { LucideProps, LucideIcon } from "blode-icons-react"
+import type { LucideProps, LucideIcon } from "blode-icons-react";
 ```
 
 All icons accept standard SVG props plus these Lucide-style props:

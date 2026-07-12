@@ -20,10 +20,10 @@ Default answer: use the `npm` example unless the user names a different package 
 Use the root entrypoint for named exports:
 
 ```tsx
-import { SearchIcon, PlusIcon } from "blode-icons-react"
+import { SearchIcon, PlusIcon } from "blode-icons-react";
 
 export function Example() {
-  return <SearchIcon size={32} />
+  return <SearchIcon size={32} />;
 }
 ```
 
@@ -32,7 +32,7 @@ export function Example() {
 Use aliases without the `Icon` suffix only when the task is about Lucide compatibility or the mapped subset:
 
 ```tsx
-import { ChevronDown, Search, Plus } from "blode-icons-react"
+import { ChevronDown, Search, Plus } from "blode-icons-react";
 ```
 
 ### Individual icon import
@@ -40,7 +40,7 @@ import { ChevronDown, Search, Plus } from "blode-icons-react"
 Use the per-icon path for the best tree-shaking story and import the default export:
 
 ```tsx
-import AirplaneIcon from "blode-icons-react/icons/airplane"
+import AirplaneIcon from "blode-icons-react/icons/airplane";
 ```
 
 ### Dynamic icon loading
@@ -48,9 +48,9 @@ import AirplaneIcon from "blode-icons-react/icons/airplane"
 `DynamicIcon` loads from the generated import map and expects export keys, not file names:
 
 ```tsx
-import { DynamicIcon } from "blode-icons-react/dynamic"
+import { DynamicIcon } from "blode-icons-react/dynamic";
 
-<DynamicIcon name="SearchIcon" size={24} />
+<DynamicIcon name="SearchIcon" size={24} />;
 ```
 
 ## Props

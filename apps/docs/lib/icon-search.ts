@@ -1,5 +1,6 @@
 import { sentenceCase } from "change-case";
 import Fuse from "fuse.js";
+
 import type { IconStyle, SearchDoc } from "@/lib/icon-types";
 import searchIndex from "@/src/icons-search-index.json";
 
@@ -11,15 +12,15 @@ const docs = searchIndex as SearchDoc[];
 // category is a weak tiebreaker. Mirrors lucide.dev's Fuse setup with explicit
 // weights tuned for this data.
 const fuse = new Fuse(docs, {
+  ignoreLocation: true,
   keys: [
     { name: "title", weight: 0.5 },
     { name: "slug", weight: 0.3 },
     { name: "tags", weight: 0.2 },
     { name: "category", weight: 0.05 },
   ],
-  threshold: 0.3,
-  ignoreLocation: true,
   minMatchCharLength: 2,
+  threshold: 0.3,
 });
 
 export const searchIcons = (query: string): SearchDoc[] => {
@@ -40,6 +41,5 @@ export const filterIconsByStyle = (
   return icons;
 };
 
-export const getIconDisplayName = (iconName: string) => {
-  return sentenceCase(iconName.replace(ICON_SUFFIX_REGEX, ""));
-};
+export const getIconDisplayName = (iconName: string) =>
+  sentenceCase(iconName.replace(ICON_SUFFIX_REGEX, ""));

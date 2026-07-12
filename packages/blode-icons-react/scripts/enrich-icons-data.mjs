@@ -12,7 +12,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "icons-data");
 
@@ -62,7 +62,7 @@ function main() {
     console.error(`Enrichment input not found: ${inputPath}`);
     process.exit(1);
   }
-  const enrichments = JSON.parse(fs.readFileSync(inputPath, "utf8"));
+  const enrichments = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
   if (!Array.isArray(enrichments)) {
     console.error("Enrichment input must be an array of { slug, keywords }.");
     process.exit(1);
@@ -79,7 +79,7 @@ function main() {
       missing++;
       continue;
     }
-    const data = JSON.parse(fs.readFileSync(file, "utf8"));
+    const data = JSON.parse(fs.readFileSync(file, "utf-8"));
     const existing = Array.isArray(data.tags) ? data.tags : [];
 
     // Idempotency guard: leave already-tagged icons alone unless forced.
@@ -105,7 +105,7 @@ function main() {
 
     const merged = [...existing, ...additions].slice(0, 10);
     const next = formatMetadata({ ...data, icon: slug, tags: merged });
-    if (fs.readFileSync(file, "utf8") !== next) {
+    if (fs.readFileSync(file, "utf-8") !== next) {
       fs.writeFileSync(file, next);
       updated++;
       addedTags += additions.length;

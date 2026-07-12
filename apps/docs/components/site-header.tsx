@@ -17,7 +17,7 @@ export function SiteHeader() {
         <a
           className="text-muted-foreground text-sm underline-offset-2 hover:text-foreground hover:underline"
           href="https://github.com/mblode/blode-icons"
-          rel="noopener"
+          rel="noopener noreferrer"
           target="_blank"
         >
           GitHub
