@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt = "Blode Icons";
-export const size = { width: 1200, height: 628 };
+export const size = { height: 628, width: 1200 };
 export const contentType = "image/png";
 export const runtime = "edge";
 
@@ -15,16 +15,16 @@ async function loadAssets(): Promise<
 
   return [
     {
-      name: "Geist",
       data: Buffer.from(normal, "base64"),
-      weight: 400 as const,
+      name: "Geist",
       style: "normal" as const,
+      weight: 400 as const,
     },
     {
-      name: "Geist",
       data: Buffer.from(semibold, "base64"),
-      weight: 600 as const,
+      name: "Geist",
       style: "normal" as const,
+      weight: 600 as const,
     },
   ];
 }
@@ -52,10 +52,10 @@ export default async function Image() {
       <div tw="flex flex-col absolute w-[896px] justify-center inset-32">
         <div
           style={{
-            textWrap: "balance",
-            fontWeight: 600,
             fontSize: 80,
+            fontWeight: 600,
             letterSpacing: "-0.04em",
+            textWrap: "balance",
           }}
           tw="tracking-tight flex-grow-1 flex flex-col justify-center leading-[1.1]"
         >

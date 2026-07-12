@@ -7,16 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: `${SITE_URL}/`,
-      lastModified,
       changeFrequency: "weekly",
+      lastModified,
       priority: 1,
+      url: `${SITE_URL}/`,
     },
     {
-      url: `${SITE_URL}/installation`,
-      lastModified,
       changeFrequency: "monthly",
+      lastModified,
       priority: 0.8,
+      url: `${SITE_URL}/installation`,
     },
   ];
 }

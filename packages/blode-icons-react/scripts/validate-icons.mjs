@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
 const SVG_DIR = path.join(ROOT, "icons-svg");
 
@@ -57,7 +57,7 @@ function main() {
       componentToSlugs.set(component, [slug]);
     }
 
-    const svg = fs.readFileSync(path.join(SVG_DIR, `${slug}.svg`), "utf8");
+    const svg = fs.readFileSync(path.join(SVG_DIR, `${slug}.svg`), "utf-8");
     if (!(svg.includes("<svg") && svg.includes("viewBox"))) {
       errors.push(`${slug}: malformed SVG (missing <svg> or viewBox).`);
     }

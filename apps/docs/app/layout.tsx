@@ -2,79 +2,81 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+
 import { Providers } from "@/components/providers";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+
 import "./globals.css";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-geist-sans",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 const glide = localFont({
+  display: "swap",
   src: [{ path: "../public/fonts/Glide-Variable.woff2" }],
   variable: "--font-glide",
   weight: "400 900",
-  display: "swap",
 });
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-26YW6EGLS4";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://icons.blode.co";
 
 export const viewport: Viewport = {
-  width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+    { color: "#ffffff", media: "(prefers-color-scheme: light)" },
+    { color: "#09090b", media: "(prefers-color-scheme: dark)" },
   ],
+  width: "device-width",
 };
 
 const siteDescription =
   "Blode Icons is a free, open-source SVG icon library with 2,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  description: siteDescription,
+  icons: {
+    apple: [{ sizes: "180x180", url: "/apple-touch-icon.png" }],
+    icon: [
+      { url: "/favicon.ico" },
+      { type: "image/svg+xml", url: "/favicon.svg" },
+      { sizes: "96x96", type: "image/png", url: "/favicon-96x96.png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   metadataBase: new URL(siteUrl),
+  openGraph: {
+    description: siteDescription,
+    images: [{ url: "/opengraph-image" }],
+    locale: "en_US",
+    siteName: "Blode Icons",
+    title: "Blode Icons — Open-Source SVG Icon Library for React",
+    type: "website",
+    url: siteUrl,
+  },
   title: {
     default: "Blode Icons — Open-Source SVG Icon Library for React",
     template: "%s - Blode Icons",
   },
-  description: siteDescription,
-  alternates: {
-    canonical: "/",
-  },
-  manifest: "/site.webmanifest",
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  twitter: {
+    card: "summary_large_image",
+    description: siteDescription,
+    images: ["/twitter-image"],
+    title: "Blode Icons — Open-Source SVG Icon Library for React",
   },
   verification: {
     google: "mFwyBIbXTaKK4uF_NA0MzVWFyY40hPgBjFObg3rje04",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteUrl,
-    title: "Blode Icons — Open-Source SVG Icon Library for React",
-    description: siteDescription,
-    siteName: "Blode Icons",
-    images: [{ url: "/opengraph-image" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blode Icons — Open-Source SVG Icon Library for React",
-    description: siteDescription,
-    images: ["/twitter-image"],
   },
 };
 

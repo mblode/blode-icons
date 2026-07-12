@@ -2,6 +2,31 @@
   "name": "blode-icons-react",
   "version": "0.4.1",
   "description": "Blode icons for React — drop-in lucide-react replacement",
+  "keywords": [
+    "blode",
+    "component",
+    "icons",
+    "lucide",
+    "lucide-react",
+    "react",
+    "svg",
+    "ui"
+  ],
+  "homepage": "https://icons.blode.co",
+  "bugs": {
+    "url": "https://github.com/mblode/blode-icons/issues"
+  },
+  "license": "MIT",
+  "author": "Matthew Blode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mblode/blode-icons.git",
+    "directory": "packages/blode-icons-react"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -22,10 +47,10 @@
       "import": "./dist/dynamicIconImports.js"
     }
   },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "validate": "node scripts/validate-icons.mjs",
@@ -33,48 +58,20 @@
     "enrich": "node scripts/enrich-icons-data.mjs",
     "prepublishOnly": "node scripts/build.mjs",
     "check:types": "tsc --noEmit",
-    "lint": "biome check .",
-    "lint:fix": "biome check --fix .",
-    "format": "biome format --write .",
-    "format:check": "biome format ."
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0"
-  },
-  "keywords": [
-    "react",
-    "icons",
-    "svg",
-    "component",
-    "ui",
-    "lucide",
-    "lucide-react",
-    "blode"
-  ],
-  "author": "Matthew Blode",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mblode/blode-icons/issues"
-  },
-  "homepage": "https://icons.blode.co",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mblode/blode-icons.git",
-    "directory": "packages/blode-icons-react"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "lint": "ultracite check",
+    "lint:fix": "ultracite fix",
+    "format": "ultracite fix",
+    "format:check": "ultracite check"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.2",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
-    "@types/react": "^18.2.79",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "typescript": "^5.4.0",
-    "ultracite": "^7.2.3"
+    "@types/react": "^19.2.17",
+    "typescript": "7.0.2",
+    "ultracite": "7.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
   }
 }

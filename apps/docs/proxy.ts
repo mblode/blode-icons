@@ -1,4 +1,5 @@
-import { type NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export const config = {
   matcher: ["/", "/installation"],
@@ -110,12 +111,12 @@ function prefersMarkdown(accept: string | null): boolean {
     const [type, ...params] = part.trim().split(";");
     const qParam = params.find((p) => p.trim().startsWith("q="));
     const q = qParam ? Number.parseFloat(qParam.trim().slice(2)) : 1;
-    return { type: type.trim().toLowerCase(), q: Number.isNaN(q) ? 0 : q };
+    return { q: Number.isNaN(q) ? 0 : q, type: type.trim().toLowerCase() };
   });
 
   const best = entries.reduce((acc, e) => (e.q > acc.q ? e : acc), {
-    type: "",
     q: 0,
+    type: "",
   });
 
   return best.type === "text/markdown";
@@ -134,11 +135,11 @@ export function proxy(request: NextRequest) {
   }
 
   const headers = new Headers({
+    "Cache-Control": "public, max-age=0, s-maxage=3600",
     "Content-Type": "text/markdown; charset=utf-8",
     Vary: "Accept",
-    "Cache-Control": "public, max-age=0, s-maxage=3600",
     "x-markdown-tokens": String(Math.ceil(body.length / 4)),
   });
 
-  return new NextResponse(body, { status: 200, headers });
+  return new NextResponse(body, { headers, status: 200 });
 }

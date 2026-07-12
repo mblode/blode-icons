@@ -17,9 +17,8 @@ export type IconSourceFormat = (typeof SOURCE_FORMAT_BY_KIND)[Exclude<
 
 const VALID_ICON_NAME_PATTERN = /^[A-Za-z0-9-]+$/;
 
-export const isValidIconName = (iconName: string) => {
-  return VALID_ICON_NAME_PATTERN.test(iconName);
-};
+export const isValidIconName = (iconName: string) =>
+  VALID_ICON_NAME_PATTERN.test(iconName);
 
 export const loadIconSource = async ({
   iconName,

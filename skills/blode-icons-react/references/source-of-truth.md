@@ -4,20 +4,10 @@ Use this file when repo docs, examples, or habits disagree.
 
 ## Precedence
 
-1. Public package implementation:
-   `packages/blode-icons-react/package.json`,
-   `packages/blode-icons-react/scripts/build.mjs`,
-   `packages/blode-icons-react/src/all-icons.ts`,
-   `packages/blode-icons-react/dist/*`
-2. Docs app install and usage UI:
-   `apps/docs/app/installation/page.tsx`,
-   `apps/docs/components/getting-started.tsx`,
-   `apps/docs/components/install-tabs.tsx`
-3. Repo conventions:
-   `AGENTS.md`
-4. READMEs:
-   `packages/blode-icons-react/README.md`,
-   `README.md`
+1. Public package implementation: `packages/blode-icons-react/package.json`, `packages/blode-icons-react/scripts/build.mjs`, `packages/blode-icons-react/src/all-icons.ts`, `packages/blode-icons-react/dist/*`
+2. Docs app install and usage UI: `apps/docs/app/installation/page.tsx`, `apps/docs/components/getting-started.tsx`, `apps/docs/components/install-tabs.tsx`
+3. Repo conventions: `AGENTS.md`
+4. READMEs: `packages/blode-icons-react/README.md`, `README.md`
 
 ## Current Drift And Known Pitfalls
 

@@ -1,5 +1,3 @@
 import { IconSearch } from "@/components/icons/icon-search";
 
-export const App = () => {
-  return <IconSearch />;
-};
+export const App = () => <IconSearch />;

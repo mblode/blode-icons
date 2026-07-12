@@ -9,7 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "icons-data");
 
@@ -18,8 +18,9 @@ const SLUG_RE = /^[a-z][a-z0-9-]*$/;
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: a flat sequence of independent per-file checks
 function main() {
   const categories = new Set(
-    JSON.parse(fs.readFileSync(path.join(DATA_DIR, "_categories.json"), "utf8"))
-      .categories
+    JSON.parse(
+      fs.readFileSync(path.join(DATA_DIR, "_categories.json"), "utf-8")
+    ).categories
   );
 
   const files = fs
@@ -32,9 +33,9 @@ function main() {
     const where = `${file}`;
     let data;
     try {
-      data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf8"));
-    } catch (e) {
-      errors.push(`${where}: invalid JSON (${e.message})`);
+      data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf-8"));
+    } catch (error) {
+      errors.push(`${where}: invalid JSON (${error.message})`);
       continue;
     }
 

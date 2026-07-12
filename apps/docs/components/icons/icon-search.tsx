@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -15,8 +16,8 @@ import type { IconCopyKind, IconStyle, SearchDoc } from "@/lib/icon-types";
 import MagnifyingGlassIcon from "@/src/icons-tsx/magnifying-glass";
 
 const COPY_KIND_LABEL: Record<IconCopyKind, string> = {
-  SVG: "SVG",
   NAME: "name",
+  SVG: "SVG",
   TSX: "TSX",
 };
 
@@ -52,14 +53,14 @@ const useInViewport = <T extends Element>(rootMargin = "300px") => {
     return () => observer.disconnect();
   }, [inView, rootMargin]);
 
-  return { ref, inView };
+  return { inView, ref };
 };
 
 const resolveVariant = (doc: SearchDoc, style: IconStyle) => {
   const solid = style === "SOLID" && doc.hasFilled;
   return {
-    slug: solid ? `${doc.slug}-filled` : doc.slug,
     name: solid ? doc.name.replace(ICON_SUFFIX_REGEX, FILLED_SUFFIX) : doc.name,
+    slug: solid ? `${doc.slug}-filled` : doc.slug,
   };
 };
 
@@ -96,7 +97,7 @@ const IconCell = ({
     // a placeholder. Swallow errors — a missing icon just keeps its placeholder.
     const load = async (attempt = 0) => {
       try {
-        const svg = await loadIconSource({ iconName: slug, copyKind: "SVG" });
+        const svg = await loadIconSource({ copyKind: "SVG", iconName: slug });
         if (!active) {
           return;
         }
@@ -219,7 +220,7 @@ export const IconSearch = () => {
       const value =
         copyKind === "NAME"
           ? name
-          : await loadIconSource({ iconName: slug, copyKind });
+          : await loadIconSource({ copyKind, iconName: slug });
 
       if (!value) {
         toast.error(`Failed to copy ${name}`);

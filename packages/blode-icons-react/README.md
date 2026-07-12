@@ -26,37 +26,36 @@ npm install blode-icons-react
 ## Quick Start
 
 ```tsx
-import { AirplaneIcon } from "blode-icons-react"
+import { AirplaneIcon } from "blode-icons-react";
 
 export default function App() {
-  return <AirplaneIcon size={32} color="#0066ff" />
+  return <AirplaneIcon size={32} color="#0066ff" />;
 }
 ```
 
 ### Tree-shaking import
 
 ```tsx
-import AirplaneIcon from "blode-icons-react/icons/airplane"
+import AirplaneIcon from "blode-icons-react/icons/airplane";
 ```
 
 ### Faster builds in Next.js
 
-Add the package to `optimizePackageImports` so barrel imports are rewritten to
-per-icon deep imports automatically — no need to change your import style:
+Add the package to `optimizePackageImports` so barrel imports are rewritten to per-icon deep imports automatically — no need to change your import style:
 
 ```ts
 // next.config.ts
 export default {
   experimental: { optimizePackageImports: ["blode-icons-react"] },
-}
+};
 ```
 
 ### Dynamic icon
 
 ```tsx
-import { DynamicIcon } from "blode-icons-react/dynamic"
+import { DynamicIcon } from "blode-icons-react/dynamic";
 
-<DynamicIcon name="AirplaneIcon" size={24} />
+<DynamicIcon name="AirplaneIcon" size={24} />;
 ```
 
 ## Props

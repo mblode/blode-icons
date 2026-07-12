@@ -1,5 +1,6 @@
 import type React from "react";
-import { type ChangeEvent, type KeyboardEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import type { ChangeEvent, KeyboardEvent } from "react";
 
 interface Props {
   initial: string;

@@ -15,22 +15,22 @@ async function loadAssets(): Promise<
 
   return [
     {
-      name: "Geist",
       data: Buffer.from(normal, "base64"),
-      weight: 400 as const,
-      style: "normal" as const,
-    },
-    {
-      name: "Geist Mono",
-      data: Buffer.from(mono, "base64"),
-      weight: 400 as const,
-      style: "normal" as const,
-    },
-    {
       name: "Geist",
-      data: Buffer.from(semibold, "base64"),
-      weight: 600 as const,
       style: "normal" as const,
+      weight: 400 as const,
+    },
+    {
+      data: Buffer.from(mono, "base64"),
+      name: "Geist Mono",
+      style: "normal" as const,
+      weight: 400 as const,
+    },
+    {
+      data: Buffer.from(semibold, "base64"),
+      name: "Geist",
+      style: "normal" as const,
+      weight: 600 as const,
     },
   ];
 }
@@ -62,10 +62,10 @@ export async function GET(request: Request) {
       <div tw="flex flex-col absolute w-[896px] justify-center inset-32">
         <div
           style={{
-            textWrap: "balance",
-            fontWeight: 600,
             fontSize: title && title.length > 20 ? 64 : 80,
+            fontWeight: 600,
             letterSpacing: "-0.04em",
+            textWrap: "balance",
           }}
           tw="tracking-tight flex-grow-1 flex flex-col justify-center leading-[1.1]"
         >
@@ -83,9 +83,9 @@ export async function GET(request: Request) {
       </div>
     </div>,
     {
-      width: 1200,
-      height: 628,
       fonts,
+      height: 628,
+      width: 1200,
     }
   );
 }

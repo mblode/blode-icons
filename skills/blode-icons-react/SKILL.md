@@ -24,11 +24,11 @@ Load only what the task needs.
 
 Load the relevant rule files before writing code snippets, docs copy, or package-surface changes.
 
-| Priority | Category | Impact | Prefix | Rules |
-| --- | --- | --- | --- | --- |
-| 1 | Public API and naming | CRITICAL | `api-` | 2 |
-| 2 | Docs and quick starts | HIGH | `docs-` | 1 |
-| 3 | Repo workflow and releases | HIGH | `repo-` | 1 |
+| Priority | Category                   | Impact   | Prefix  | Rules |
+| -------- | -------------------------- | -------- | ------- | ----- |
+| 1        | Public API and naming      | CRITICAL | `api-`  | 2     |
+| 2        | Docs and quick starts      | HIGH     | `docs-` | 1     |
+| 3        | Repo workflow and releases | HIGH     | `repo-` | 1     |
 
 See `rules/_sections.md` for category definitions before loading an individual rule file.
 

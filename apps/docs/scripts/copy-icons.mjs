@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 const DOCS_ROOT = path.join(__dirname, "..");
 const LIB_ROOT = path.join(
   DOCS_ROOT,
@@ -36,7 +36,7 @@ function toComponentName(slug) {
 }
 
 function copyDirectory(src, dest) {
-  fs.rmSync(dest, { recursive: true, force: true });
+  fs.rmSync(dest, { force: true, recursive: true });
   fs.cpSync(src, dest, { recursive: true });
 }
 
@@ -44,19 +44,19 @@ function generateDocsIconsMetadata() {
   const files = fs
     .readdirSync(libDataDir)
     .filter((file) => file.endsWith(".json"))
-    .sort();
+    .toSorted();
 
   const metadata = files
     .map((file) => {
       const filePath = path.join(libDataDir, file);
-      const parsed = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      const parsed = JSON.parse(fs.readFileSync(filePath, "utf-8"));
       return {
-        icon: parsed.icon || path.basename(file, ".json"),
         category: parsed.category || "",
+        icon: parsed.icon || path.basename(file, ".json"),
         tags: Array.isArray(parsed.tags) ? parsed.tags : [],
       };
     })
-    .sort((a, b) => a.icon.localeCompare(b.icon));
+    .toSorted((a, b) => a.icon.localeCompare(b.icon));
 
   fs.writeFileSync(docsMetadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
   console.log(
@@ -89,7 +89,7 @@ function generateSearchIndex() {
       continue;
     }
     const parsed = JSON.parse(
-      fs.readFileSync(path.join(libDataDir, file), "utf8")
+      fs.readFileSync(path.join(libDataDir, file), "utf-8")
     );
     metaBySlug.set(path.basename(file, ".json"), parsed);
   }
@@ -100,17 +100,19 @@ function generateSearchIndex() {
       .filter((f) => f.endsWith(".svg"))
       .map((f) => path.basename(f, ".svg"))
   );
-  const baseSlugs = [...svgNames].filter((n) => !n.endsWith("-filled")).sort();
+  const baseSlugs = [...svgNames]
+    .filter((n) => !n.endsWith("-filled"))
+    .toSorted();
 
   const docs = baseSlugs.map((slug) => {
     const meta = metaBySlug.get(slug) ?? {};
     return {
+      category: meta.category || "",
+      hasFilled: svgNames.has(`${slug}-filled`),
       name: toComponentName(slug),
       slug,
-      title: slug.replace(/-/g, " "),
-      category: meta.category || "",
       tags: Array.isArray(meta.tags) ? meta.tags : [],
-      hasFilled: svgNames.has(`${slug}-filled`),
+      title: slug.replaceAll(/-/g, " "),
     };
   });
 

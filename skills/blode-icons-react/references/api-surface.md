@@ -2,14 +2,10 @@
 
 ## Public Entrypoints
 
-- `blode-icons-react`
-  Exports the full icon library as named components with the `Icon` suffix, Lucide-compatible aliases from the mapping file, and the `LucideProps` and `LucideIcon` types.
-- `blode-icons-react/icons/<kebab-name>`
-  Exports a single icon component as the default export for that file.
-- `blode-icons-react/dynamic`
-  Exports `DynamicIcon` for client-side lazy loading by export name.
-- `blode-icons-react/dynamicIconImports`
-  Exports the generated import map keyed by root export names.
+- `blode-icons-react` Exports the full icon library as named components with the `Icon` suffix, Lucide-compatible aliases from the mapping file, and the `LucideProps` and `LucideIcon` types.
+- `blode-icons-react/icons/<kebab-name>` Exports a single icon component as the default export for that file.
+- `blode-icons-react/dynamic` Exports `DynamicIcon` for client-side lazy loading by export name.
+- `blode-icons-react/dynamicIconImports` Exports the generated import map keyed by root export names.
 
 ## Naming Rules
 
@@ -30,8 +26,8 @@ When validating or changing the API, inspect these files first:
 ## Canonical Import Shapes
 
 ```tsx
-import { SearchIcon, type LucideProps } from "blode-icons-react"
-import AirplaneIcon from "blode-icons-react/icons/airplane"
-import { DynamicIcon } from "blode-icons-react/dynamic"
-import dynamicIconImports from "blode-icons-react/dynamicIconImports"
+import { SearchIcon, type LucideProps } from "blode-icons-react";
+import AirplaneIcon from "blode-icons-react/icons/airplane";
+import { DynamicIcon } from "blode-icons-react/dynamic";
+import dynamicIconImports from "blode-icons-react/dynamicIconImports";
 ```

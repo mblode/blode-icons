@@ -1,7 +1,9 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Toaster as Sonner, type ToasterProps } from "sonner";
+import { Toaster as Sonner } from "sonner";
+import type { ToasterProps } from "sonner";
+
 import CircleCheckIcon from "@/src/icons-tsx/circle-check";
 import CircleXFilledIcon from "@/src/icons-tsx/circle-x-filled";
 import InfoIcon from "@/src/icons-tsx/info";
@@ -15,18 +17,18 @@ const Toaster = ({ ...props }: ToasterProps) => {
     <Sonner
       className="toaster group"
       icons={{
-        success: <CircleCheckIcon className="size-4" />,
-        info: <InfoIcon className="size-4" />,
-        warning: <WarningSignIcon className="size-4" />,
         error: <CircleXFilledIcon className="size-4" />,
+        info: <InfoIcon className="size-4" />,
         loading: <LoaderIcon className="size-4 animate-spin" />,
+        success: <CircleCheckIcon className="size-4" />,
+        warning: <WarningSignIcon className="size-4" />,
       }}
       style={
         {
-          "--normal-bg": "var(--popover)",
-          "--normal-text": "var(--popover-foreground)",
-          "--normal-border": "var(--border)",
           "--border-radius": "var(--radius)",
+          "--normal-bg": "var(--popover)",
+          "--normal-border": "var(--border)",
+          "--normal-text": "var(--popover-foreground)",
         } as React.CSSProperties
       }
       theme={theme as ToasterProps["theme"]}
