@@ -10,12 +10,12 @@ export const SiteFooter = () => (
         rel="author noopener noreferrer"
         target="_blank"
       >
-        {/* biome-ignore lint/performance/noImgElement: external avatar served from matthewblode.com */}
+        {/* biome-ignore lint/performance/noImgElement: self-hosted 20px avatar, plain img avoids next/image overhead */}
         <img
           alt="Avatar of Matthew Blode"
           className="rounded-full"
           height={20}
-          src="https://matthewblode.com/avatar-sm.png"
+          src="/avatar-sm.png"
           width={20}
         />
         Matthew Blode
