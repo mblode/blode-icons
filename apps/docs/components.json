@@ -20,6 +20,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@blode": "https://ui.blode.co/r/{name}.json"
+    "@blode": "https://blode.co/ui/r/{name}.json"
   }
 }

@@ -1,4 +1,3 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
@@ -6,6 +5,7 @@ import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { asset, siteUrl } from "@/lib/config";
 
 import "./globals.css";
 
@@ -26,9 +26,6 @@ const glide = localFont({
   weight: "400 900",
 });
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-26YW6EGLS4";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://icons.blode.co";
-
 export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
@@ -43,18 +40,22 @@ const siteDescription =
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
   description: siteDescription,
   icons: {
-    apple: [{ sizes: "180x180", url: "/apple-touch-icon.png" }],
+    apple: [{ sizes: "180x180", url: asset("/apple-touch-icon.png") }],
     icon: [
-      { url: "/favicon.ico" },
-      { type: "image/svg+xml", url: "/favicon.svg" },
-      { sizes: "96x96", type: "image/png", url: "/favicon-96x96.png" },
+      { url: asset("/favicon.ico") },
+      { type: "image/svg+xml", url: asset("/favicon.svg") },
+      {
+        sizes: "96x96",
+        type: "image/png",
+        url: asset("/favicon-96x96.png"),
+      },
     ],
   },
-  manifest: "/site.webmanifest",
+  manifest: asset("/site.webmanifest"),
   metadataBase: new URL(siteUrl),
   openGraph: {
     description: siteDescription,
@@ -91,6 +92,10 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
+      <head>
+        <link href="https://us.i.posthog.com" rel="preconnect" />
+        <link href="https://us-assets.i.posthog.com" rel="dns-prefetch" />
+      </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <Providers>
           <div
@@ -103,7 +108,6 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
-      {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
     </html>
   );
 }

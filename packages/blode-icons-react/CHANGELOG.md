@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- b6a5379: Point the package homepage at icons.blode.co
+- b6a5379: Point the package homepage at blode.co/icons
 
 ## 0.4.0
 

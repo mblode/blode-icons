@@ -6,16 +6,16 @@
 User-agent: *
 Content-Signal: search=yes, ai-train=no, ai-input=no
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 # Major search engines — allow search indexing.
 User-agent: Googlebot
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: Bingbot
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 # AI crawlers — disallow training, allow live agent retrieval where supported.
 User-agent: GPTBot
@@ -25,12 +25,12 @@ Disallow: /
 User-agent: OAI-SearchBot
 Content-Signal: search=yes, ai-input=yes
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: ChatGPT-User
 Content-Signal: ai-input=yes
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: ClaudeBot
 Content-Signal: ai-train=no
@@ -39,12 +39,12 @@ Disallow: /
 User-agent: Claude-Web
 Content-Signal: ai-input=yes
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: Claude-SearchBot
 Content-Signal: search=yes, ai-input=yes
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: Google-Extended
 Content-Signal: ai-train=no
@@ -53,12 +53,12 @@ Disallow: /
 User-agent: PerplexityBot
 Content-Signal: search=yes, ai-input=yes
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: Perplexity-User
 Content-Signal: ai-input=yes
 Allow: /
-Disallow: /api/
+Disallow: /icons/api/
 
 User-agent: CCBot
 Content-Signal: ai-train=no
@@ -80,4 +80,4 @@ User-agent: Meta-ExternalAgent
 Content-Signal: ai-train=no
 Disallow: /
 
-Sitemap: https://icons.blode.co/sitemap.xml
+Sitemap: https://blode.co/icons/sitemap.xml
