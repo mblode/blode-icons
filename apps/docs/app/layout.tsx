@@ -93,7 +93,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link href="https://r.blode.co" rel="preconnect" />
+        <link href={process.env.NEXT_PUBLIC_POSTHOG_HOST} rel="preconnect" />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <Providers>
