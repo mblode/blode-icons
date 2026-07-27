@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 };
 
 const siteDescription =
-  "Blode Icons is a free, open-source SVG icon library with 2,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
+  "A free, open-source SVG icon library with 2,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
 
 export const metadata: Metadata = {
   alternates: {
