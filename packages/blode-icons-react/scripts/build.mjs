@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { transform } from "@svgr/core";
 
@@ -419,23 +419,31 @@ function addReExportAlias(name, sourceFile, aliasLines, exportedNames, seen) {
   seen.add(name);
 }
 
-function generateLucideAliases() {
-  const mappingContent = fs.readFileSync(mappingFile, "utf-8");
-  const entries = [];
-  const entryRegex =
-    /lucideName:\s*["']([^"']+)["'],\s*blodeName:\s*["']([^"']+)["'],\s*category:\s*["']([^"']+)["'],\s*hasMatch:\s*(true|false)/g;
-  for (const match of mappingContent.matchAll(entryRegex)) {
-    entries.push({
-      blodeName: match[2],
-      hasMatch: match[4] === "true",
-      lucideName: match[1],
-    });
-  }
+async function generateLucideAliases() {
+  // Import the module rather than regex the file. The previous version matched
+  // `lucideName, blodeName, category, hasMatch` in that exact order, so when
+  // the formatter alphabetised the object keys it silently matched nothing and
+  // the build dropped every alias while still exiting 0. Node strips the types
+  // natively, so the mapping is read as data and key order stops mattering.
+  const { mappings } = await import(pathToFileURL(mappingFile).href);
+  const entries = mappings.map(({ blodeName, hasMatch, lucideName }) => ({
+    blodeName,
+    hasMatch,
+    lucideName,
+  }));
 
   console.log(`Found ${entries.length} mappings in lucide-mapping.ts`);
 
   const validEntries = entries.filter((e) => e.hasMatch);
   console.log(`${validEntries.length} entries with hasMatch: true`);
+
+  // A build step whose failure mode is "produces less output" never throws, so
+  // assert a floor. Zero aliases means the mapping stopped being readable.
+  if (validEntries.length === 0) {
+    throw new Error(
+      `No usable entries in ${path.basename(mappingFile)}: expected at least one mapping with hasMatch: true, found ${entries.length} total.`
+    );
+  }
 
   // Read all-icons.ts to build component→file lookup and exported names set
   const allIconsFile = path.join(srcDir, "all-icons.ts");
@@ -576,7 +584,7 @@ async function main() {
 
   generateSupportFiles();
   await generateIcons();
-  generateLucideAliases();
+  await generateLucideAliases();
   generateDynamicImports();
   compile();
 
