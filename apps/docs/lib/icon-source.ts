@@ -1,3 +1,4 @@
+import { asset } from "@/lib/config";
 import type { IconCopyKind } from "@/lib/icon-types";
 
 interface IconSourceRequest {
@@ -30,7 +31,7 @@ export const loadIconSource = async ({
 
   const format = SOURCE_FORMAT_BY_KIND[copyKind];
   const response = await fetch(
-    `/api/icons/${encodeURIComponent(iconName)}/${format}`,
+    asset(`/api/icons/${encodeURIComponent(iconName)}/${format}`),
     {
       cache: "force-cache",
     }

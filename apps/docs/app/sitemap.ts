@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://icons.blode.co";
+import { siteUrl } from "@/lib/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -10,13 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       lastModified,
       priority: 1,
-      url: `${SITE_URL}/`,
+      url: siteUrl,
     },
     {
       changeFrequency: "monthly",
       lastModified,
       priority: 0.8,
-      url: `${SITE_URL}/installation`,
+      url: `${siteUrl}/installation`,
     },
   ];
 }

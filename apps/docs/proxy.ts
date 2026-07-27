@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+import { basePath, siteUrl } from "@/lib/config";
+
 export const config = {
   matcher: ["/", "/installation"],
 };
@@ -16,7 +18,7 @@ Blode Icons is a collection of SVG icons distributed as a React component
 library. Every icon ships as a tree-shakeable React component with both
 outline and filled variants.
 
-- Site: https://icons.blode.co
+- Site: ${siteUrl}
 - Source: https://github.com/mblode/blode-icons
 - Package: \`blode-icons-react\` on npm
 
@@ -26,7 +28,7 @@ outline and filled variants.
 npm install blode-icons-react
 \`\`\`
 
-See [/installation](https://icons.blode.co/installation) for full setup.
+See [${basePath}/installation](${siteUrl}/installation) for full setup.
 
 ## Usage
 
@@ -42,16 +44,16 @@ export function Example() {
 
 Each icon is retrievable directly as SVG or TSX:
 
-- \`GET /api/icons/{name}/svg\` — SVG source
-- \`GET /api/icons/{name}/tsx\` — React component source
-- OpenAPI spec: \`/api/openapi.json\`
-- API catalog: \`/.well-known/api-catalog\`
+- \`GET ${basePath}/api/icons/{name}/svg\` — SVG source
+- \`GET ${basePath}/api/icons/{name}/tsx\` — React component source
+- OpenAPI spec: \`${basePath}/api/openapi.json\`
+- API catalog: \`${basePath}/.well-known/api-catalog\`
 
 ## Agent discovery
 
-- \`/robots.txt\` — crawl policy + Content-Signal directives
-- \`/sitemap.xml\` — canonical URL list
-- \`/.well-known/agent-skills/index.json\` — agent skills index
+- \`${basePath}/robots.txt\` — crawl policy + Content-Signal directives
+- \`${basePath}/sitemap.xml\` — canonical URL list
+- \`${basePath}/.well-known/agent-skills/index.json\` — agent skills index
 `,
   "/installation": `# Installation
 
@@ -98,8 +100,8 @@ import { HeartIcon, HeartFilledIcon } from "blode-icons-react";
 
 Fetch an icon's source directly:
 
-- \`https://icons.blode.co/api/icons/{name}/svg\`
-- \`https://icons.blode.co/api/icons/{name}/tsx\`
+- \`${siteUrl}/api/icons/{name}/svg\`
+- \`${siteUrl}/api/icons/{name}/tsx\`
 `,
 };
 

@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+import { asset } from "@/lib/config";
+
 // WebMCP — exposes site tools to AI agents via navigator.modelContext.
 // Spec: https://webmachinelearning.github.io/webmcp/
 
@@ -26,16 +28,11 @@ declare global {
   }
 }
 
-const ORIGIN =
-  typeof window === "undefined"
-    ? "https://icons.blode.co"
-    : window.location.origin;
-
 async function fetchIconSource(
   name: string,
   format: "svg" | "tsx"
 ): Promise<string> {
-  const response = await fetch(`${ORIGIN}/api/icons/${name}/${format}`);
+  const response = await fetch(asset(`/api/icons/${name}/${format}`));
   if (!response.ok) {
     throw new Error(`Icon "${name}" not found (${response.status})`);
   }

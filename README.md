@@ -18,7 +18,7 @@
 
 Browse icons, search by name or category, and copy code at:
 
-- https://icons.blode.co
+- https://blode.co/icons
 
 ## Quick Start
 
@@ -76,4 +76,4 @@ All icons accept standard SVG props plus these Lucide-style props:
 
 ---
 
-Crafted by [<img src="https://matthewblode.com/avatar-circle.png" width="20" align="top" />](https://matthewblode.com) [Matthew Blode](https://matthewblode.com)
+Crafted by [<img src="https://blode.co/avatar-circle.png" width="20" align="top" />](https://blode.co) [Matthew Blode](https://blode.co)

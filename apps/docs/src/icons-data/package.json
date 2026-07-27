@@ -1,5 +1,12 @@
 {
   "icon": "package",
   "category": "Shopping & Payment",
-  "tags": ["delivery", "parcel", "box", "shipping", "courier", "mail"]
+  "tags": [
+    "delivery",
+    "parcel",
+    "box",
+    "shipping",
+    "courier",
+    "mail"
+  ]
 }

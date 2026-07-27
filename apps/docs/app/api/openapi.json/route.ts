@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://icons.blode.co";
+import { siteUrl } from "@/lib/config";
 
 export const dynamic = "force-static";
 
@@ -77,7 +77,7 @@ export function GET() {
         },
       },
     },
-    servers: [{ url: SITE_URL }],
+    servers: [{ url: siteUrl }],
   };
 
   return new Response(JSON.stringify(spec, null, 2), {
