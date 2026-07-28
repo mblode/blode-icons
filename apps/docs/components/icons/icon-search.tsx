@@ -238,9 +238,11 @@ export const IconSearch = () => {
 
   return (
     <>
-      <h1 className="sr-only">
-        Blode Icons — open-source SVG icon library for React
-      </h1>
+      {/*
+       * Says what this page does, rather than restating the title tag. A screen
+       * reader lands on the search field next, so the heading should name that.
+       */}
+      <h1 className="sr-only">Search the Blode Icons library</h1>
       <div className="relative sticky top-0 z-10 mb-4 bg-background py-4">
         <div className="absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         <div className="mx-auto w-full max-w-[1400px] px-4">
