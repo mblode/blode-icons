@@ -1,8 +1,6 @@
 import { isValidIconName } from "@/lib/icon-source";
 import { readIconSource } from "@/lib/icon-source-server";
 
-export const runtime = "nodejs";
-
 export async function GET(
   _request: Request,
   { params }: { params: Promise<{ icon: string }> }

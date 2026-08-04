@@ -3,8 +3,6 @@
 
 import { siteUrl } from "@/lib/config";
 
-export const dynamic = "force-static";
-
 export function GET() {
   const linkset = {
     linkset: [

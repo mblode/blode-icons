@@ -3,7 +3,6 @@ import { ImageResponse } from "next/og";
 export const alt = "Blode Icons";
 export const size = { height: 628, width: 1200 };
 export const contentType = "image/png";
-export const runtime = "edge";
 
 async function loadAssets(): Promise<
   { name: string; data: Buffer; weight: 400 | 600; style: "normal" }[]
