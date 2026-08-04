@@ -153,6 +153,18 @@ function main() {
   generateDocsIconsMetadata();
   generateSearchIndex();
 
+  // JSON.stringify(_, null, 2) puts every array element on its own line, but
+  // oxfmt keeps short arrays inline, so the generated files disagreed with
+  // their committed shape: regenerating expanded ~2000 `tags` arrays and
+  // showed a ~12k-line diff that was byte-identical once parsed. Formatting
+  // the output here means what the generator writes is already what the
+  // formatter wants, so a rebuild leaves a clean tree. The search index is
+  // excluded in oxfmt.config.ts, so it is deliberately not passed.
+  execFileSync("npx", ["oxfmt", docsMetadataPath, docsDataMetadataPath], {
+    stdio: "inherit",
+  });
+  console.log("  Formatted generated JSON");
+
   const elapsed = ((performance.now() - t0) / 1000).toFixed(1);
   console.log(`\nDocs icon copy complete in ${elapsed}s`);
 }
