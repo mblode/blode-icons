@@ -64,12 +64,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(import.meta.dirname, "../.."),
   },
-  typescript: {
-    // TypeScript 7's native compiler doesn't expose the legacy programmatic
-    // API that Next's built-in build-time type check relies on. Types are
-    // still enforced separately via `npm run check:types` (tsc --noEmit).
-    ignoreBuildErrors: true,
-  },
 };
 
 export default nextConfig;
