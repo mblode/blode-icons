@@ -49,15 +49,15 @@ const nextConfig: NextConfig = {
         basePath: false,
         destination: `https://blode.co${basePath}`,
         has: [{ type: "host" as const, value: "icons.blode.co" }],
-        permanent: true,
         source: "/",
+        statusCode: 301,
       },
       {
         basePath: false,
         destination: `https://blode.co${basePath}/:path*`,
         has: [{ type: "host" as const, value: "icons.blode.co" }],
-        permanent: true,
         source: "/:path*",
+        statusCode: 301,
       },
     ];
   },
