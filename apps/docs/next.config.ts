@@ -15,6 +15,20 @@ const AGENT_LINK_HEADER = [
 const nextConfig: NextConfig = {
   assetPrefix: basePath,
   basePath,
+  cacheComponents: true,
+  // The sitemap stamps `lastModified`, and a prerender cannot read the clock.
+  // next.config runs in Node at build time, outside any prerender.
+  env: { BUILD_DATE: new Date().toISOString() },
+  experimental: {
+    // A bail-out from prerendering throws. Without this every cached GET logs a
+    // stack trace during the build that means nothing.
+    hideLogsAfterAbort: true,
+    // Runs the React Compiler inside Turbopack rather than Babel.
+    turbopackRustReactCompiler: true,
+    // Hold a navigation pending through a connectivity drop and retry on
+    // reconnect, instead of throwing.
+    useOffline: true,
+  },
   async headers() {
     return [
       {
@@ -27,6 +41,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  partialPrefetching: true,
   reactCompiler: true,
   async redirects() {
     return [

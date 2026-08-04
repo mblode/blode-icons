@@ -3,7 +3,10 @@ import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // Prerendered, so this cannot read the clock. `BUILD_DATE` is stamped in
+  // next.config.ts and moves on every deploy, which is when these two pages
+  // can actually change.
+  const lastModified = process.env.BUILD_DATE;
 
   return [
     {
