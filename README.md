@@ -1,78 +1,83 @@
-<h3 align="center">Blode Icons</h3>
-<p align="center">3,000+ open-source icons for React — drop-in lucide-react replacement.</p>
+<div align="center">
+
+# [Blode Icons](https://blode.co/icons)
+
+**4,193 icons for React in matched outline and filled pairs, with [Lucide](https://lucide.dev)-compatible props**
+
+Import one icon by name, or load any of them on demand at runtime.
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/blode-icons-react"><img alt="npm version" src="https://img.shields.io/npm/v/blode-icons-react"></a>
-  <a href="https://github.com/mblode/blode-icons/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="https://www.npmjs.com/package/blode-icons-react">
+    <img src="https://img.shields.io/npm/v/blode-icons-react?style=flat&colorA=000000&colorB=000000" />
+  </a>
+  <a href="https://github.com/mblode/blode-icons/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/mblode/blode-icons?style=flat&colorA=000000&colorB=000000" />
+  </a>
 </p>
 
-## Highlights
+</div>
 
-- 3,000+ SVG icons (1,500+ outline/filled pairs), optimized with SVGO
-- Drop-in lucide-react replacement with Lucide-style aliases and core props
-- Tree-shakeable with individual icon imports
-- Dynamic icon loading with `DynamicIcon` and lazy imports
-- Searchable docs site with copy-to-clipboard
+## Demo
 
-## Documentation
+Search every icon by name or category and copy the import.
 
-Browse icons, search by name or category, and copy code at:
+<p>
+<a href="https://blode.co/icons">
+<img alt="View demo" src=".github/assets/demo.svg" width="200" />
+</a>
+</p>
 
-- https://blode.co/icons
-
-## Quick Start
-
-```bash
-npx skills add mblode/blode-icons -g --all -y
-```
+## Install
 
 ```bash
 npm install blode-icons-react
 ```
 
-```tsx
-import { ChevronDown } from "blode-icons-react";
+## Quickstart
 
-export default function App() {
-  return <ChevronDown size={20} />;
+```tsx
+import { ChevronDownIcon } from "blode-icons-react";
+
+export function Disclosure() {
+  return <ChevronDownIcon size={20} strokeWidth={1.5} />;
 }
 ```
 
-## Usage
+## Import paths
 
 ```tsx
-// Lucide-compatible icons (same names as lucide-react)
-import { ChevronDown, Search, Plus } from "blode-icons-react";
-
-// Full icon library (with Icon suffix)
+// The whole library, every name carrying an Icon suffix
 import { ChevronDownIcon, SparkleIcon } from "blode-icons-react";
 
-// Individual icon import (best for tree-shaking)
+// A single icon, for the tightest bundle
 import ChevronDownIcon from "blode-icons-react/icons/chevron-down";
 
-// Dynamic icon loading by export name
+// Any icon by name, code-split and loaded on demand
 import { DynamicIcon } from "blode-icons-react/dynamic";
-<DynamicIcon name="SearchIcon" size={24} />;
 
-// Types
-import type { LucideProps, LucideIcon } from "blode-icons-react";
+<DynamicIcon name="SearchIcon" size={24} />;
 ```
 
-All icons accept standard SVG props plus these Lucide-style props:
+## Props
 
-- `size` — Width and height (default: `24`)
-- `color` — Icon color (default: `'currentColor'`)
-- `strokeWidth` — Stroke width (default: `2`)
+Every icon forwards its ref and accepts any SVG attribute, plus these three.
 
-## Agent Skills
+| Prop | Default | Description |
+|------|---------|-------------|
+| `size` | `24` | Sets both width and height |
+| `color` | `currentColor` | Passed to the SVG `color` attribute |
+| `strokeWidth` | `2` | Outline thickness |
 
-| Skill | Phase | Description |
-| --- | --- | --- |
-| `blode-icons-react` | Authoring | Guides work on the `blode-icons-react` package, docs examples, import paths, and release conventions in this repo. |
+## Notes
+
+- Common icons are also exported under their `lucide-react` names, so `ChevronDown` and `Search` resolve without the suffix.
+- `LucideProps` and `LucideIcon` are exported, and match the `lucide-react` types of the same name.
+- Every icon is generated from SVGO-optimised source, so nothing arrives with editor cruft in it.
+- Part of [Blode](https://blode.co).
 
 ## License
 
-[MIT](https://github.com/mblode/blode-icons/blob/main/LICENSE.md)
+MIT
 
 ---
 
