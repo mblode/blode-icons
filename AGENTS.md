@@ -36,3 +36,11 @@ Uses Ultracite (Biome) for linting and formatting. Run `npm run fix` before comm
 - IMPORTANT: `npm run release` only builds `blode-icons-react` (via `--filter=blode-icons-react`), not the docs app
 - This is a turborepo — run commands from root, not from individual packages
 - Husky is configured via `prepare` script — runs on `npm install`
+
+## Agent skills
+
+`skills/blode-icons-react` guides work on the `blode-icons-react` package: import paths, docs examples, export changes, and release conventions. Install it with:
+
+```bash
+npx skills add mblode/blode-icons -g --all -y
+```
