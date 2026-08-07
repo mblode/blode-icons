@@ -27,7 +27,7 @@ Search every icon by name or category and copy the import.
 
 <p>
 <a href="https://blode.co/icons">
-<img alt="View demo" src=".github/assets/demo.svg" width="200" />
+<img alt="Browse the icons" src=".github/assets/demo.svg" width="200" />
 </a>
 </p>
 
