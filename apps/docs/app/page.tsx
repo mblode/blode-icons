@@ -1,5 +1,12 @@
 import { App } from "@/components/app";
+import { JsonLd } from "@/components/json-ld";
+import { zoneRootJsonLd } from "@/lib/zone-schema";
 
 export default function Home() {
-  return <App />;
+  return (
+    <>
+      <JsonLd data={zoneRootJsonLd} />
+      <App />
+    </>
+  );
 }
