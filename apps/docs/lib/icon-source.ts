@@ -21,6 +21,34 @@ const VALID_ICON_NAME_PATTERN = /^[A-Za-z0-9-]+$/;
 export const isValidIconName = (iconName: string) =>
   VALID_ICON_NAME_PATTERN.test(iconName);
 
+/**
+ * Fetch a batch of SVGs in one request.
+ *
+ * The grid renders 120 cells at a time. Fetching each icon separately meant
+ * 120 round-trips per batch, so the grid stayed blank until they finished.
+ * Returns the slugs it found; a missing icon is simply absent from the map.
+ */
+export const loadIconSvgBatch = async (
+  iconNames: string[]
+): Promise<Record<string, string>> => {
+  const valid = iconNames.filter(isValidIconName);
+
+  if (valid.length === 0) {
+    return {};
+  }
+
+  const response = await fetch(
+    asset(`/api/icons/svg?names=${valid.map(encodeURIComponent).join(",")}`),
+    { cache: "force-cache" }
+  );
+
+  if (!response.ok) {
+    return {};
+  }
+
+  return (await response.json()) as Record<string, string>;
+};
+
 export const loadIconSource = async ({
   iconName,
   copyKind,

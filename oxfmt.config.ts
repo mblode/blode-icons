@@ -8,5 +8,8 @@ export default defineConfig({
   ignorePatterns: [
     ...(ultracite.ignorePatterns ?? []),
     "apps/docs/src/icons-search-index.json",
+    // The MIT text is hard-wrapped at 80 columns by convention. Reflowing it
+    // into single long lines is what the formatter wants and it should not win.
+    "LICENSE.md",
   ],
 });
