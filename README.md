@@ -17,6 +17,10 @@ Import one icon by name, or load any of them on demand at runtime.
 
 </div>
 
+<p align="center">
+  <img alt="A grid of outline icons with their names underneath" src=".github/assets/screenshot.jpg" width="800" />
+</p>
+
 ## Demo
 
 Search every icon by name or category and copy the import.
