@@ -66,11 +66,11 @@ import { DynamicIcon } from "blode-icons-react/dynamic";
 
 Every icon forwards its ref and accepts any SVG attribute, plus these three.
 
-| Prop | Default | Description |
-|------|---------|-------------|
-| `size` | `24` | Sets both width and height |
-| `color` | `currentColor` | Passed to the SVG `color` attribute |
-| `strokeWidth` | `2` | Outline thickness |
+| Prop          | Default        | Description                         |
+| ------------- | -------------- | ----------------------------------- |
+| `size`        | `24`           | Sets both width and height          |
+| `color`       | `currentColor` | Passed to the SVG `color` attribute |
+| `strokeWidth` | `2`            | Outline thickness                   |
 
 ## Notes
 

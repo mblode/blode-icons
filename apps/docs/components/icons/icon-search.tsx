@@ -6,12 +6,13 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PAGE_SIZE } from "@/lib/icon-grid";
 import {
   filterIconsByStyle,
   getIconDisplayName,
   searchIcons,
 } from "@/lib/icon-search";
-import { loadIconSource } from "@/lib/icon-source";
+import { loadIconSource, loadIconSvgBatch } from "@/lib/icon-source";
 import type { IconCopyKind, IconStyle, SearchDoc } from "@/lib/icon-types";
 import MagnifyingGlassIcon from "@/src/icons-tsx/magnifying-glass";
 
@@ -24,37 +25,8 @@ const COPY_KIND_LABEL: Record<IconCopyKind, string> = {
 const ICON_SUFFIX_REGEX = /Icon$/;
 const FILLED_SUFFIX = "FilledIcon";
 
-// Render the grid in batches so the initial HTML document stays small (a full
-// 2,000+ cell render blows past Googlebot's crawl budget). More batches reveal
-// as the sentinel scrolls into view; search/style changes reset to the first.
-const PAGE_SIZE = 120;
-
 // Module-level cache so toggling style / re-searching never re-fetches an SVG.
 const svgCache = new Map<string, string>();
-
-const useInViewport = <T extends Element>(rootMargin = "300px") => {
-  const ref = useRef<T>(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    if (inView || !ref.current) {
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [inView, rootMargin]);
-
-  return { inView, ref };
-};
 
 const resolveVariant = (doc: SearchDoc, style: IconStyle) => {
   const solid = style === "SOLID" && doc.hasFilled;
@@ -67,76 +39,32 @@ const resolveVariant = (doc: SearchDoc, style: IconStyle) => {
 const IconCell = ({
   doc,
   style,
+  markup,
   onCopy,
 }: {
   doc: SearchDoc;
   style: IconStyle;
+  markup: string | null;
   onCopy: (slug: string, name: string, copyKind: IconCopyKind) => void;
 }) => {
-  const { ref, inView } = useInViewport<HTMLDivElement>();
   const { slug, name } = resolveVariant(doc, style);
-  const [markup, setMarkup] = useState<string | null>(
-    svgCache.get(slug) ?? null
-  );
-  const svgRef = useRef<HTMLDivElement>(null);
-
-  // Load (or swap to) the SVG for the current slug — runs on first viewport
-  // entry and whenever the style toggle changes the slug.
-  useEffect(() => {
-    if (!inView) {
-      return;
-    }
-    const cached = svgCache.get(slug);
-    setMarkup(cached ?? null);
-    if (cached) {
-      return;
-    }
-    let active = true;
-    // Retry transient failures (e.g. the API route still compiling on first
-    // paint, when dozens of cells fetch at once) so an icon never gets stuck as
-    // a placeholder. Swallow errors — a missing icon just keeps its placeholder.
-    const load = async (attempt = 0) => {
-      try {
-        const svg = await loadIconSource({ copyKind: "SVG", iconName: slug });
-        if (!active) {
-          return;
-        }
-        if (svg) {
-          svgCache.set(slug, svg);
-          setMarkup(svg);
-        }
-      } catch {
-        if (active && attempt < 3) {
-          setTimeout(() => load(attempt + 1), 250 * (attempt + 1));
-        }
-      }
-    };
-    load();
-    return () => {
-      active = false;
-    };
-  }, [inView, slug]);
-
-  // Inject the fetched markup via ref so currentColor theming is preserved
-  // without dangerouslySetInnerHTML.
-  useEffect(() => {
-    if (svgRef.current) {
-      svgRef.current.innerHTML = markup ?? "";
-    }
-  }, [markup]);
 
   return (
     <div>
-      <div
-        className="group relative flex h-[104px] flex-col items-center justify-center overflow-hidden rounded-xl border border-border px-2 [contain-intrinsic-size:104px] [content-visibility:auto]"
-        ref={ref}
-      >
+      <div className="group relative flex h-[104px] flex-col items-center justify-center overflow-hidden rounded-xl border border-border px-2 [contain-intrinsic-size:104px] [content-visibility:auto]">
         {markup ? (
           // Zoom the glyph on hover/focus instead of hiding it behind the copy
           // buttons, so you can actually see the icon while deciding (issue #14).
+          //
+          // dangerouslySetInnerHTML rather than assigning innerHTML in an
+          // effect: the effect only runs after hydration, so the server HTML
+          // shipped an empty div and the whole grid stayed blank until the
+          // bundle booted. This renders the glyph into the document itself.
+          // The markup is this repo's own src/icons-svg files, never user input.
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: build-time SVG from this repo, not user input.
           <div
             className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
-            ref={svgRef}
+            dangerouslySetInnerHTML={{ __html: markup }}
           />
         ) : (
           <div className="size-6 rounded-md bg-muted/40" />
@@ -169,7 +97,12 @@ const IconCell = ({
   );
 };
 
-export const IconSearch = () => {
+export const IconSearch = ({
+  initialSvgs,
+}: {
+  /** First batch, rendered on the server so the opening screen costs no requests. */
+  initialSvgs: Record<string, string>;
+}) => {
   const [iconStyle, setIconStyle] = useState<IconStyle>("OUTLINE");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -210,6 +143,57 @@ export const IconSearch = () => {
   }, [visibleCount, filteredIcons.length]);
 
   const visibleIcons = filteredIcons.slice(0, visibleCount);
+
+  const visibleSlugs = useMemo(
+    () => visibleIcons.map((doc) => resolveVariant(doc, iconStyle).slug),
+    [visibleIcons, iconStyle]
+  );
+
+  // Markup that has arrived so far. Seeded from the server payload, so the
+  // opening screen paints from the document instead of waiting on the network.
+  // The module-level svgCache survives unmount; this state is what React
+  // re-renders on.
+  const [markupBySlug, setMarkupBySlug] = useState(() => {
+    for (const [slug, markup] of Object.entries(initialSvgs)) {
+      svgCache.set(slug, markup);
+    }
+    return new Map(svgCache);
+  });
+
+  // One request per batch, not one per icon.
+  useEffect(() => {
+    const missing = visibleSlugs.filter((slug) => !svgCache.has(slug));
+    if (missing.length === 0) {
+      // Style toggles and searches surface slugs already cached from an earlier
+      // batch, so publish those without going to the network.
+      setMarkupBySlug((current) =>
+        visibleSlugs.every((slug) => current.has(slug))
+          ? current
+          : new Map(svgCache)
+      );
+      return;
+    }
+
+    let active = true;
+    (async () => {
+      try {
+        const batch = await loadIconSvgBatch(missing);
+        if (!active) {
+          return;
+        }
+        for (const [slug, markup] of Object.entries(batch)) {
+          svgCache.set(slug, markup);
+        }
+        setMarkupBySlug(new Map(svgCache));
+      } catch {
+        // A failed batch leaves placeholders; the next scroll or search retries.
+      }
+    })();
+
+    return () => {
+      active = false;
+    };
+  }, [visibleSlugs]);
 
   const handleIconCopy = async (
     slug: string,
@@ -285,6 +269,9 @@ export const IconSearch = () => {
             <IconCell
               doc={doc}
               key={doc.slug}
+              markup={
+                markupBySlug.get(resolveVariant(doc, iconStyle).slug) ?? null
+              }
               onCopy={handleIconCopy}
               style={iconStyle}
             />
