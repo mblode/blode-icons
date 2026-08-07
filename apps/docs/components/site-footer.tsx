@@ -28,15 +28,15 @@ export const SiteFooter = () => (
       </a>
     </div>
     <div className="flex items-center gap-2 text-muted-foreground/30">
-      <span className="text-muted-foreground">v{siteConfig.version}</span>{" "}
-      &bull;
+      <span className="text-muted-foreground">v{siteConfig.version}</span>
+      <span aria-hidden="true">·</span>
       <a
         className="text-muted-foreground transition-colors hover:text-foreground"
         href="https://blode.co/projects"
       >
         All projects
-      </a>{" "}
-      &bull;
+      </a>
+      <span aria-hidden="true">·</span>
       <a
         className="text-muted-foreground transition-colors hover:text-foreground"
         href={siteConfig.links.github}
