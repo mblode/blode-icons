@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { asset, siteUrl } from "@/lib/config";
+import { siteUrl } from "@/lib/config";
 
 import "./globals.css";
 
@@ -41,20 +41,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  description: siteDescription,
-  icons: {
-    apple: [{ sizes: "180x180", url: asset("/apple-touch-icon.png") }],
-    icon: [
-      { url: asset("/favicon.ico") },
-      { type: "image/svg+xml", url: asset("/favicon.svg") },
-      {
-        sizes: "96x96",
-        type: "image/png",
-        url: asset("/favicon-96x96.png"),
-      },
-    ],
+  appleWebApp: {
+    title: "Blode Icons",
   },
-  manifest: asset("/site.webmanifest"),
+  description: siteDescription,
   metadataBase: new URL(siteUrl),
   openGraph: {
     description: siteDescription,
