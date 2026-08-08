@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import { Providers } from "@/components/providers";
@@ -9,21 +8,21 @@ import { asset, siteUrl } from "@/lib/config";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
-
 const glide = localFont({
   display: "swap",
-  src: [{ path: "../public/fonts/Glide-Variable.woff2" }],
+  src: [
+    { path: "./fonts/glide-variable.woff2", style: "normal" },
+    { path: "./fonts/glide-variable-italic.woff2", style: "italic" },
+  ],
   variable: "--font-glide",
-  weight: "400 900",
+  weight: "100 950",
+});
+
+const glideMono = localFont({
+  display: "swap",
+  src: "./fonts/glide-mono.woff2",
+  variable: "--font-glide-mono",
+  weight: "400",
 });
 
 export const viewport: Viewport = {
@@ -88,7 +87,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${geistSans.variable} ${geistMono.variable} ${glide.variable}`}
+      className={`${glide.variable} ${glideMono.variable}`}
       lang="en"
       suppressHydrationWarning
     >
