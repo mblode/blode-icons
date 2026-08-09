@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 
+import { getAgentUsageMarkdown } from "@/lib/agent-usage";
 import { asset } from "@/lib/config";
 
 // WebMCP — exposes site tools to AI agents via navigator.modelContext.
@@ -122,6 +123,20 @@ const tools: McpTool[] = [
       type: "object",
     },
     name: "get_icon_tsx",
+  },
+  {
+    description:
+      "Return the Blode Icons agent usage guide: MIT license, install commands, import shapes, and MCP workflow.",
+    async execute() {
+      return {
+        content: [{ text: getAgentUsageMarkdown(), type: "text" }],
+      };
+    },
+    inputSchema: {
+      properties: {},
+      type: "object",
+    },
+    name: "get_usage",
   },
 ];
 

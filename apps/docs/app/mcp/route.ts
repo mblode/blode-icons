@@ -2,6 +2,7 @@ import { createMcpHandler } from "mcp-handler";
 import { z } from "zod";
 
 import { recordAgentEvent } from "@/lib/agent-stats";
+import { getAgentUsageMarkdown } from "@/lib/agent-usage";
 import { siteConfig } from "@/lib/config";
 import { buildIconPayload, searchIconDocs } from "@/lib/icon-resolve";
 
@@ -101,6 +102,38 @@ const handler = createMcpHandler(
           ],
         };
       }
+    );
+
+    server.registerTool(
+      "get_usage",
+      {
+        description:
+          "Return the Blode Icons agent usage guide: MIT license, install commands, import shapes, MCP workflow, and registry URLs.",
+        inputSchema: z.object({}),
+        title: "Get Usage Guide",
+      },
+      async () => ({
+        content: [{ text: getAgentUsageMarkdown(), type: "text" }],
+      })
+    );
+
+    server.registerResource(
+      "usage-guide",
+      "blode-icons://docs/usage",
+      {
+        description: "How agents should install and use Blode Icons (MIT).",
+        mimeType: "text/markdown",
+        title: "Blode Icons usage",
+      },
+      async (uri) => ({
+        contents: [
+          {
+            mimeType: "text/markdown",
+            text: getAgentUsageMarkdown(),
+            uri: uri.href,
+          },
+        ],
+      })
     );
   },
   {

@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/code-block";
 import { InstallTabs } from "@/components/install-tabs";
+import { asset } from "@/lib/config";
 
 const USAGE_EXAMPLE = `import { SearchIcon, PlusIcon } from "blode-icons-react";
 
@@ -20,6 +21,25 @@ const DYNAMIC_EXAMPLE = `import { DynamicIcon } from "blode-icons-react/dynamic"
   fallback={<span>Loading...</span>}
 />`;
 
+const MCP_EXAMPLE = `# Cursor / Claude Code / other MCP clients
+{
+  "mcpServers": {
+    "blode-icons": {
+      "url": "https://blode.co/icons/mcp"
+    }
+  }
+}`;
+
+const REGISTRY_EXAMPLE = `# Single icon (package-backed re-export)
+npx shadcn@latest add https://blode.co/icons/r/magnifying-glass.json
+
+# Or configure once in components.json
+{
+  "registries": {
+    "@blode": "https://blode.co/icons/r/{name}.json"
+  }
+}`;
+
 export function GettingStarted() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-8">
@@ -38,7 +58,9 @@ export function GettingStarted() {
 
       <h2 className="mt-10 font-semibold text-lg">Lucide Compatibility</h2>
       <p className="mt-1 text-muted-foreground text-sm">
-        Drop-in replacement for lucide-react. Same names, same props.
+        Drop-in replacement for lucide-react. Same names, same props — including
+        historical aliases like{" "}
+        <code className="text-foreground">AlertCircle</code>.
       </p>
       <div className="mt-3">
         <CodeBlock code={LUCIDE_EXAMPLE} />
@@ -68,10 +90,15 @@ export function GettingStarted() {
               <td className="px-4 py-2.5">string</td>
               <td className="px-4 py-2.5">currentColor</td>
             </tr>
-            <tr>
+            <tr className="border-border/50 border-b">
               <td className="px-4 py-2.5">strokeWidth</td>
               <td className="px-4 py-2.5">string | number</td>
               <td className="px-4 py-2.5">2</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-2.5">absoluteStrokeWidth</td>
+              <td className="px-4 py-2.5">boolean</td>
+              <td className="px-4 py-2.5">false</td>
             </tr>
           </tbody>
         </table>
@@ -84,6 +111,49 @@ export function GettingStarted() {
       </p>
       <div className="mt-3">
         <CodeBlock code={DYNAMIC_EXAMPLE} />
+      </div>
+
+      <h2 className="mt-10 font-semibold text-lg">For agents</h2>
+      <p className="mt-1 text-muted-foreground text-sm">
+        MIT licensed. Prefer{" "}
+        <code className="text-foreground">npm install blode-icons-react</code>,
+        then search and fetch via MCP. License is returned on every{" "}
+        <code className="text-foreground">get_icon</code> response.
+      </p>
+      <div className="mt-3">
+        <CodeBlock code={MCP_EXAMPLE} />
+      </div>
+      <ul className="mt-3 list-disc space-y-1 pl-5 text-muted-foreground text-sm">
+        <li>
+          <a
+            className="text-foreground underline underline-offset-2"
+            href={asset("/llms.txt")}
+          >
+            llms.txt
+          </a>{" "}
+          — agent summary
+        </li>
+        <li>
+          MCP tools: <code className="text-foreground">search_icons</code>,{" "}
+          <code className="text-foreground">get_icon</code>,{" "}
+          <code className="text-foreground">get_usage</code>
+        </li>
+        <li>
+          Skill:{" "}
+          <code className="text-foreground">
+            npx skills add mblode/blode-icons -g --all -y
+          </code>
+        </li>
+      </ul>
+
+      <h2 className="mt-10 font-semibold text-lg">shadcn registry</h2>
+      <p className="mt-1 text-muted-foreground text-sm">
+        Install a single icon as a thin re-export of{" "}
+        <code className="text-foreground">blode-icons-react</code> (keeps
+        tree-shaking).
+      </p>
+      <div className="mt-3">
+        <CodeBlock code={REGISTRY_EXAMPLE} />
       </div>
 
       <p className="mt-10 text-muted-foreground text-sm">

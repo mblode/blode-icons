@@ -3,7 +3,7 @@ import { siteConfig, siteUrl } from "@/lib/config";
 export function GET() {
   const body = {
     capabilities: {
-      tools: ["search_icons", "get_icon"],
+      tools: ["search_icons", "get_icon", "get_usage"],
     },
     description:
       "Search and fetch Blode Icons (MIT) as SVG or React TSX, with Lucide-compatible import snippets.",

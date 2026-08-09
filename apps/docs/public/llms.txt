@@ -50,6 +50,7 @@ import { DynamicIcon } from "blode-icons-react/dynamic";
 
 1. `search_icons` — fuzzy search by name, tag, category, or Lucide alias
 2. `get_icon` — fetch SVG and/or React TSX plus a ready-to-paste import (license: MIT)
+3. `get_usage` — install commands, import shapes, MCP workflow, and registry URLs
 
 ## Pages
 

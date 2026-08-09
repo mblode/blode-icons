@@ -29,10 +29,10 @@ export function Example() {
 
 ### Lucide-compatible aliases
 
-Use aliases without the `Icon` suffix only when the task is about Lucide compatibility or the mapped subset:
+Use aliases without the `Icon` suffix for Lucide drop-in replacement. The package maps the full Lucide export surface (canonical names and historical aliases such as `AlertCircle`):
 
 ```tsx
-import { ChevronDown, Search, Plus } from "blode-icons-react";
+import { ChevronDown, Search, Plus, AlertCircle } from "blode-icons-react";
 ```
 
 ### Individual icon import
@@ -60,5 +60,13 @@ The package wrapper explicitly sets the same core props the docs surface today:
 - `size`: default `24`
 - `color`: default `"currentColor"`
 - `strokeWidth`: default `2`
+- `absoluteStrokeWidth`: default `false` (scales stroke with `size` when `true`)
 
 Standard SVG props are also passed through. Keep compatibility claims aligned with the actual wrapper implementation when editing docs.
+
+## Agents
+
+- MCP endpoint: `https://blode.co/icons/mcp` (`search_icons`, `get_icon`, `get_usage`)
+- Summary: `https://blode.co/icons/llms.txt`
+- Prefer `npm install blode-icons-react`, then emit named imports from search/get results
+- License is MIT and is included on every `get_icon` response

@@ -84,6 +84,12 @@ Arguments:
 
 Returns MIT license, import snippet, component name, and source.
 
+### get_usage
+
+Return the agent usage guide (install commands, import shapes, MCP workflow, registry URLs). No arguments.
+
+Resource: `blode-icons://docs/usage` (same markdown).
+
 ## shadcn registry
 
 ```bash

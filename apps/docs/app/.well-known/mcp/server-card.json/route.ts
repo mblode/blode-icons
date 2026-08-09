@@ -13,7 +13,11 @@ export function GET() {
       version: siteConfig.version,
       websiteUrl: `${siteUrl}/mcp`,
     },
-    tools: [{ name: "search_icons" }, { name: "get_icon" }],
+    tools: [
+      { name: "search_icons" },
+      { name: "get_icon" },
+      { name: "get_usage" },
+    ],
     transport: {
       type: "http",
       url: `${siteUrl}/mcp`,

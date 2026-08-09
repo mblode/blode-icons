@@ -53,7 +53,7 @@ Each icon is retrievable directly as SVG or TSX:
 
 - \`${basePath}/llms.txt\` — agent summary
 - \`${basePath}/llms-full.txt\` — full agent guide
-- \`${basePath}/mcp\` — remote MCP server (\`search_icons\`, \`get_icon\`)
+- \`${basePath}/mcp\` — remote MCP server (\`search_icons\`, \`get_icon\`, \`get_usage\`)
 - \`${basePath}/.well-known/mcp.json\` — MCP discovery
 - \`${basePath}/robots.txt\` — crawl policy
 - \`${basePath}/sitemap.xml\` — canonical URL list
