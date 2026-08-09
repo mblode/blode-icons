@@ -1,50 +1,17 @@
 import { ImageResponse } from "next/og";
 
-async function loadAssets(): Promise<
-  { name: string; data: Buffer; weight: 400 | 600; style: "normal" }[]
-> {
-  const [
-    { base64Font: normal },
-    { base64Font: mono },
-    { base64Font: semibold },
-  ] = await Promise.all([
-    import("./geist-regular-otf.json").then((mod) => mod.default || mod),
-    import("./geistmono-regular-otf.json").then((mod) => mod.default || mod),
-    import("./geist-semibold-otf.json").then((mod) => mod.default || mod),
-  ]);
-
-  return [
-    {
-      data: Buffer.from(normal, "base64"),
-      name: "Geist",
-      style: "normal" as const,
-      weight: 400 as const,
-    },
-    {
-      data: Buffer.from(mono, "base64"),
-      name: "Geist Mono",
-      style: "normal" as const,
-      weight: 400 as const,
-    },
-    {
-      data: Buffer.from(semibold, "base64"),
-      name: "Geist",
-      style: "normal" as const,
-      weight: 600 as const,
-    },
-  ];
-}
+import { loadGlideFonts } from "./glide-fonts";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get("title");
   const description = searchParams.get("description");
 
-  const [fonts] = await Promise.all([loadAssets()]);
+  const fonts = await loadGlideFonts();
 
   return new ImageResponse(
     <div
-      style={{ fontFamily: "Geist Sans" }}
+      style={{ fontFamily: "Glide" }}
       tw="flex h-full w-full bg-black text-white"
     >
       <div tw="flex border absolute border-neutral-800 border-dashed inset-y-0 left-16 w-[1px]" />
@@ -73,7 +40,7 @@ export async function GET(request: Request) {
         </div>
         <div
           style={{
-            fontWeight: 500,
+            fontWeight: 400,
             textWrap: "balance",
           }}
           tw="text-[40px] leading-[1.5] flex-grow-1 text-neutral-400"

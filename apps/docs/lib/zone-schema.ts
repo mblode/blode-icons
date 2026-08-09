@@ -21,7 +21,7 @@ const breadcrumbId = `${siteUrl}/#breadcrumb`;
 
 const name = "Blode Icons";
 const description =
-  "A free, open-source SVG icon library with 2,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
+  "A free, open-source SVG icon library with 4,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
 
 /** Emitted on the zone root only, where the WebPage and breadcrumb are true. */
 export const zoneRootJsonLd = {
@@ -53,7 +53,15 @@ export const zoneRootJsonLd = {
       "@id": breadcrumbId,
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", item: `${host}/`, name: "Home", position: 1 },
+        {
+          "@type": "ListItem",
+          item: `${host}/`,
+          // Rule 4: "Matthew Blode", never "Home", and identical to the visible
+          // trail in `components/zone-breadcrumb.tsx`. Google reads a mismatch
+          // between the two as a markup error.
+          name: "Matthew Blode",
+          position: 1,
+        },
         {
           "@type": "ListItem",
           item: `${host}/projects`,

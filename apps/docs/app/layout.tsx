@@ -34,8 +34,12 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
+// Rule 8: `Product: what it does`, under 60 characters, and no em dash. The
+// repo-wide em-dash ban was being applied to prose and skipped in metadata.
+const siteTitle = "Blode Icons: open-source SVG icon library for React";
+
 const siteDescription =
-  "A free, open-source SVG icon library with 2,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
+  "A free, open-source SVG icon library with 4,000+ outline and solid icons. Search, copy, and drop them into React with a Lucide-compatible package.";
 
 export const metadata: Metadata = {
   alternates: {
@@ -44,26 +48,31 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: "Blode Icons",
   },
+  authors: [{ name: "Matthew Blode", url: "https://blode.co" }],
+  creator: "Matthew Blode",
   description: siteDescription,
   metadataBase: new URL(siteUrl),
   openGraph: {
     description: siteDescription,
     images: [{ url: "/opengraph-image" }],
     locale: "en_US",
-    siteName: "Blode Icons",
-    title: "Blode Icons — Open-Source SVG Icon Library for React",
+    // Rule 9: every blode.co path is one site. The product name is already in
+    // og:title, so this is the only slot left to say who made the thing.
+    siteName: "Matthew Blode",
+    title: siteTitle,
     type: "website",
     url: siteUrl,
   },
   title: {
-    default: "Blode Icons — Open-Source SVG Icon Library for React",
-    template: "%s - Blode Icons",
+    default: siteTitle,
+    template: "%s | Blode Icons",
   },
   twitter: {
     card: "summary_large_image",
+    creator: "@mattblode",
     description: siteDescription,
     images: ["/twitter-image"],
-    title: "Blode Icons — Open-Source SVG Icon Library for React",
+    title: siteTitle,
   },
   verification: {
     google: "mFwyBIbXTaKK4uF_NA0MzVWFyY40hPgBjFObg3rje04",
