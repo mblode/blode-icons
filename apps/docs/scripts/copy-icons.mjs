@@ -82,6 +82,38 @@ function generateDocsIconsMetadata() {
 // icon. Derived from icons-svg so it stays complete even when an icon lacks a
 // metadata JSON. Drives both the weighted Fuse search and the grid (no live
 // component imports needed on the client).
+function loadLucideAliasesBySlug() {
+  const mappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
+  if (!fs.existsSync(mappingPath)) {
+    return new Map();
+  }
+  const src = fs.readFileSync(mappingPath, "utf-8");
+  /** @type {Map<string, string[]>} */
+  const byComponent = new Map();
+  const blockRe =
+    /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
+  for (const match of src.matchAll(blockRe)) {
+    const blodeName = match[1];
+    const lucideName = match[2];
+    const list = byComponent.get(blodeName) ?? [];
+    list.push(lucideName);
+    byComponent.set(blodeName, list);
+  }
+
+  /** @type {Map<string, string[]>} */
+  const bySlug = new Map();
+  for (const [blodeName, aliases] of byComponent) {
+    const slug = blodeName
+      .replace(/Icon$/, "")
+      .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
+      .replaceAll(/([A-Z])([A-Z][a-z])/g, "$1-$2")
+      .toLowerCase();
+    const existing = bySlug.get(slug) ?? [];
+    bySlug.set(slug, [...new Set([...existing, ...aliases])].toSorted());
+  }
+  return bySlug;
+}
+
 function generateSearchIndex() {
   const metaBySlug = new Map();
   for (const file of fs.readdirSync(libDataDir)) {
@@ -103,18 +135,53 @@ function generateSearchIndex() {
   const baseSlugs = [...svgNames]
     .filter((n) => !n.endsWith("-filled"))
     .toSorted();
+  const lucideBySlug = loadLucideAliasesBySlug();
 
   const docs = baseSlugs.map((slug) => {
     const meta = metaBySlug.get(slug) ?? {};
+    const name = toComponentName(slug);
     return {
       category: meta.category || "",
       hasFilled: svgNames.has(`${slug}-filled`),
-      name: toComponentName(slug),
+      lucideAliases:
+        lucideBySlug.get(slug) ??
+        lucideBySlug.get(
+          // component→slug conversion can disagree for digits; also try name key
+          name
+            .replace(/Icon$/, "")
+            .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
+            .toLowerCase()
+        ) ??
+        [],
+      name,
       slug,
       tags: Array.isArray(meta.tags) ? meta.tags : [],
       title: slug.replaceAll(/-/g, " "),
     };
   });
+
+  // Attach aliases keyed by component name when slug conversion missed
+  for (const [blodeName, aliases] of (() => {
+    const mappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
+    const src = fs.readFileSync(mappingPath, "utf-8");
+    const map = new Map();
+    const blockRe =
+      /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
+    for (const match of src.matchAll(blockRe)) {
+      const list = map.get(match[1]) ?? [];
+      list.push(match[2]);
+      map.set(match[1], list);
+    }
+    return map;
+  })()) {
+    const doc = docs.find((d) => d.name === blodeName);
+    if (!doc) {
+      continue;
+    }
+    doc.lucideAliases = [
+      ...new Set([...doc.lucideAliases, ...aliases]),
+    ].toSorted();
+  }
 
   fs.writeFileSync(docsSearchIndexPath, `${JSON.stringify(docs)}\n`);
   console.log(
@@ -160,10 +227,18 @@ function main() {
   // the output here means what the generator writes is already what the
   // formatter wants, so a rebuild leaves a clean tree. The search index is
   // excluded in oxfmt.config.ts, so it is deliberately not passed.
-  execFileSync("npx", ["oxfmt", docsMetadataPath, docsDataMetadataPath], {
-    stdio: "inherit",
-  });
-  console.log("  Formatted generated JSON");
+  try {
+    execFileSync("npx", ["oxfmt", docsMetadataPath, docsDataMetadataPath], {
+      stdio: "inherit",
+    });
+    console.log("  Formatted generated JSON");
+  } catch {
+    // oxfmt may fail on older Node (TS config requires >=22.18). The JSON is
+    // still valid; pre-commit formatting will normalize when available.
+    console.warn(
+      "  Skipping oxfmt (formatter unavailable in this environment)"
+    );
+  }
 
   const elapsed = ((performance.now() - t0) / 1000).toFixed(1);
   console.log(`\nDocs icon copy complete in ${elapsed}s`);

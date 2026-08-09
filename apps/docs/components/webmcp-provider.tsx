@@ -39,7 +39,48 @@ async function fetchIconSource(
   return response.text();
 }
 
+async function searchIcons(query: string, limit = 25): Promise<unknown> {
+  const params = new URLSearchParams({
+    limit: String(limit),
+    q: query,
+  });
+  const response = await fetch(asset(`/api/icons/search?${params}`));
+  if (!response.ok) {
+    throw new Error(`Search failed (${response.status})`);
+  }
+  return response.json();
+}
+
 const tools: McpTool[] = [
+  {
+    description:
+      "Search Blode Icons by keyword, kebab slug, tag, category, or Lucide alias.",
+    async execute(args) {
+      const query = String(args.query ?? "");
+      const limit = Number(args.limit ?? 25);
+      const result = await searchIcons(query, limit);
+      return {
+        content: [{ text: JSON.stringify(result, null, 2), type: "text" }],
+      };
+    },
+    inputSchema: {
+      properties: {
+        limit: {
+          description: "Max results (1-100).",
+          maximum: 100,
+          minimum: 1,
+          type: "number",
+        },
+        query: {
+          description: "Search query, e.g. 'settings' or 'HelpCircle'.",
+          type: "string",
+        },
+      },
+      required: ["query"],
+      type: "object",
+    },
+    name: "search_icons",
+  },
   {
     description:
       "Fetch the raw SVG source for a Blode icon by its kebab-case slug (e.g. 'check', 'arrow-right').",

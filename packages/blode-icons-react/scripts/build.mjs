@@ -101,6 +101,11 @@ function generateSupportFiles() {
  * Compatible with the lucide-react LucideProps interface.
  */
 export interface LucideProps extends SVGProps<SVGSVGElement> {
+  /**
+   * When true, stroke width scales with \`size\` so icons look consistent
+   * at any size (lucide-react compatible).
+   */
+  absoluteStrokeWidth?: boolean
   /** Sets both width and height. Default: 24 */
   size?: string | number
 }
@@ -122,7 +127,7 @@ import type { LucideIcon, LucideProps } from './lucide-types'
 
 /**
  * Wraps an icon component so it accepts lucide-compatible props
- * (size, color, strokeWidth) and supports forwardRef.
+ * (size, color, strokeWidth, absoluteStrokeWidth) and supports forwardRef.
  */
 export function createLucideIcon(
   name: string,
@@ -133,6 +138,7 @@ export function createLucideIcon(
   const WrappedIcon = React.forwardRef<SVGSVGElement, LucideProps>(
     (
       {
+        absoluteStrokeWidth = false,
         color = 'currentColor',
         size = 24,
         strokeWidth = 2,
@@ -140,11 +146,21 @@ export function createLucideIcon(
       },
       ref,
     ) => {
+      const numericSize = Number(size)
+      const numericStroke = Number(strokeWidth)
+      const calculatedStrokeWidth =
+        absoluteStrokeWidth &&
+        Number.isFinite(numericSize) &&
+        numericSize > 0 &&
+        Number.isFinite(numericStroke)
+          ? (numericStroke * 24) / numericSize
+          : strokeWidth
+
       return React.createElement(IconComponent, {
         ref,
         width: size,
         height: size,
-        strokeWidth,
+        strokeWidth: calculatedStrokeWidth,
         color,
         ...rest,
       })

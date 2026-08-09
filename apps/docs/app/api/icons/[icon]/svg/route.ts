@@ -1,8 +1,9 @@
+import { clientFromRequest, recordAgentEvent } from "@/lib/agent-stats";
 import { isValidIconName } from "@/lib/icon-source";
 import { readIconSource } from "@/lib/icon-source-server";
 
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ icon: string }> }
 ) {
   const { icon } = await params;
@@ -16,6 +17,15 @@ export async function GET(
   if (!source) {
     return Response.json({ error: "Icon not found" }, { status: 404 });
   }
+
+  recordAgentEvent({
+    client: clientFromRequest(request),
+    format: "svg",
+    slug: icon,
+    source: "api",
+    type: "get",
+    userAgent: request.headers.get("user-agent"),
+  });
 
   return new Response(source, {
     headers: {

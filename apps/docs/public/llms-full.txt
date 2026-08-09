@@ -1,0 +1,126 @@
+# Blode Icons — full agent guide
+
+> Beautifully crafted SVG icons for React — MIT licensed, Lucide-compatible, tree-shakeable.
+
+## Overview
+
+Blode Icons is a curated SVG icon library (~2,000 outline icons with filled variants) published as the npm package `blode-icons-react`. The docs site lives at https://blode.co/icons.
+
+Design goals for agents:
+
+1. Discover the library via `llms.txt` / MCP server card
+2. Search by natural language, kebab slug, or Lucide name
+3. Install via npm (preferred) or copy TSX from the registry/API
+4. Confirm license is MIT on every `get_icon` response
+
+## License
+
+MIT. Free for personal and commercial use. No attribution required.
+
+## Package API
+
+Public entrypoints:
+
+| Path | Exports |
+| --- | --- |
+| `blode-icons-react` | Named icon components (`*Icon`), Lucide aliases, `LucideProps`, `LucideIcon` |
+| `blode-icons-react/icons/<kebab>` | Default export for one icon |
+| `blode-icons-react/dynamic` | `DynamicIcon` lazy loader |
+| `blode-icons-react/dynamicIconImports` | Import map keyed by export names |
+
+Naming:
+
+- Full library: PascalCase + `Icon` suffix (`SearchIcon`, `ChevronDownIcon`)
+- Lucide aliases: PascalCase without suffix when mapped (`Search`, `ChevronDown`)
+- File paths: kebab-case (`blode-icons-react/icons/airplane`)
+- Filled variants: `{Name}FilledIcon`
+
+Props (Lucide-compatible):
+
+- `size` — width and height (default `24`)
+- `color` — stroke/fill color (default `currentColor`)
+- `strokeWidth` — stroke width (default `2`)
+- `absoluteStrokeWidth` — scale stroke with size like lucide-react
+
+## HTTP API
+
+Base URL: `https://blode.co/icons`
+
+```
+GET /api/icons/search?q={query}&limit={n}&style={OUTLINE|SOLID}
+GET /api/icons/{slug}/svg
+GET /api/icons/{slug}/tsx
+GET /api/openapi.json
+GET /api/health
+GET /api/stats
+```
+
+Search returns JSON documents with `slug`, `name`, `title`, `tags`, `category`, `hasFilled`, and `lucideAliases`.
+
+## MCP
+
+Endpoint: `https://blode.co/icons/mcp` (Streamable HTTP)
+
+Tools:
+
+### search_icons
+
+Search icons by keyword, Lucide name, tag, or category.
+
+Arguments:
+
+- `query` (string, required)
+- `limit` (number, optional, default 25, max 100)
+- `style` (`OUTLINE` | `SOLID`, optional)
+
+### get_icon
+
+Fetch one icon by kebab slug (or Lucide PascalCase name).
+
+Arguments:
+
+- `name` (string, required) — e.g. `settings-gear-1` or `Settings`
+- `format` (`svg` | `tsx` | `both`, optional, default `both`)
+
+Returns MIT license, import snippet, component name, and source.
+
+## shadcn registry
+
+```bash
+npx shadcn@latest add https://blode.co/icons/r/magnifying-glass.json
+```
+
+Registry index: https://blode.co/icons/r/registry.json
+
+Configure in `components.json`:
+
+```json
+{
+  "registries": {
+    "@blode": "https://blode.co/icons/r/{name}.json"
+  }
+}
+```
+
+## Agent discovery links
+
+- https://blode.co/icons/llms.txt
+- https://blode.co/icons/llms-full.txt
+- https://blode.co/icons/.well-known/mcp.json
+- https://blode.co/icons/.well-known/mcp/server-card.json
+- https://blode.co/icons/.well-known/api-catalog
+- https://blode.co/icons/.well-known/agent-skills/index.json
+- https://blode.co/icons/sitemap.xml
+- https://blode.co/icons/robots.txt
+- https://blode.co/icons/stats
+
+## Skill install
+
+```bash
+npx skills add mblode/blode-icons -g --all -y
+```
+
+## Source
+
+- GitHub: https://github.com/mblode/blode-icons
+- npm: https://www.npmjs.com/package/blode-icons-react

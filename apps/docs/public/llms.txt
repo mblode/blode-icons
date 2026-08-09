@@ -1,0 +1,61 @@
+# Blode Icons
+
+> Beautifully crafted SVG icons for React — MIT licensed, Lucide-compatible, tree-shakeable.
+
+Blode Icons is a curated icon set distributed as `blode-icons-react` on npm. Every icon ships as a React component with outline and filled variants. Agents can search and fetch icons via MCP or the HTTP API.
+
+## License
+
+MIT — free for personal and commercial use. No attribution required.
+
+## Install
+
+```bash
+npm install blode-icons-react
+```
+
+Agent skill (optional):
+
+```bash
+npx skills add mblode/blode-icons -g --all -y
+```
+
+## Usage
+
+Prefer named imports from the package root. Full-library exports use the `Icon` suffix. Lucide-style aliases (no suffix) are also exported for drop-in replacement:
+
+```tsx
+import { SearchIcon, Search, type LucideProps } from "blode-icons-react";
+import AirplaneIcon from "blode-icons-react/icons/airplane";
+import { DynamicIcon } from "blode-icons-react/dynamic";
+
+<SearchIcon size={24} />
+<Search size={20} color="currentColor" strokeWidth={1.5} />
+<DynamicIcon name="SearchIcon" size={24} />
+```
+
+## Agent tools
+
+- MCP server: https://blode.co/icons/mcp
+- MCP discovery: https://blode.co/icons/.well-known/mcp.json
+- MCP server card: https://blode.co/icons/.well-known/mcp/server-card.json
+- Search API: `GET https://blode.co/icons/api/icons/search?q=settings`
+- Icon SVG: `GET https://blode.co/icons/api/icons/{slug}/svg`
+- Icon TSX: `GET https://blode.co/icons/api/icons/{slug}/tsx`
+- OpenAPI: https://blode.co/icons/api/openapi.json
+- Skills index: https://blode.co/icons/.well-known/agent-skills/index.json
+- shadcn registry: https://blode.co/icons/r/registry.json
+
+## MCP tools
+
+1. `search_icons` — fuzzy search by name, tag, category, or Lucide alias
+2. `get_icon` — fetch SVG and/or React TSX plus a ready-to-paste import (license: MIT)
+
+## Pages
+
+- [Browse icons](https://blode.co/icons)
+- [Installation](https://blode.co/icons/installation)
+- [Agent stats](https://blode.co/icons/stats)
+- [llms-full.txt](https://blode.co/icons/llms-full.txt)
+
+Any page returns markdown when requested with `Accept: text/markdown`.

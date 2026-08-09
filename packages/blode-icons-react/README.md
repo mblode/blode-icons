@@ -8,10 +8,10 @@
 
 ## Highlights
 
-- **Lucide-style aliases:** mapped icons can replace `lucide-react` imports with minimal code changes
+- **Lucide-style aliases:** full Lucide export surface (canonical names + historical aliases) for drop-in replacement
 - **Tree-shakeable:** only ship the icons you use
 - **Dynamic imports:** load icons by name at runtime
-- **Lucide-compatible props:** `size`, `color`, and `strokeWidth` work out of the box
+- **Lucide-compatible props:** `size`, `color`, `strokeWidth`, and `absoluteStrokeWidth`
 
 ## Install
 
@@ -65,6 +65,14 @@ All icons accept standard SVG attributes plus:
 - `size` — width and height in pixels (default: `24`)
 - `color` — stroke/fill color (default: `"currentColor"`)
 - `strokeWidth` — stroke width (default: `2`)
+- `absoluteStrokeWidth` — scale stroke with size like lucide-react (default: `false`)
+
+## Agents
+
+- Site: https://blode.co/icons
+- MCP: https://blode.co/icons/mcp (`search_icons`, `get_icon`)
+- `llms.txt`: https://blode.co/icons/llms.txt
+- shadcn registry: `npx shadcn@latest add https://blode.co/icons/r/<slug>.json`
 
 ## License
 

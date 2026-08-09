@@ -5,11 +5,16 @@ import type { NextConfig } from "next";
 import { basePath } from "./lib/config";
 
 const AGENT_LINK_HEADER = [
+  `<${basePath}/llms.txt>; rel="llms-txt"; type="text/plain"`,
+  `<${basePath}/llms-full.txt>; rel="llms-full-txt"; type="text/plain"`,
+  `<${basePath}/.well-known/mcp.json>; rel="mcp"; type="application/json"`,
+  `<${basePath}/.well-known/mcp/server-card.json>; rel="mcp-server-card"; type="application/json"`,
   `<${basePath}/.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"`,
   `<${basePath}/api/openapi.json>; rel="service-desc"; type="application/json"`,
   `<${basePath}/installation>; rel="service-doc"; type="text/html"`,
   `<${basePath}/sitemap.xml>; rel="sitemap"; type="application/xml"`,
   `<${basePath}/.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"`,
+  `<${basePath}/r/registry.json>; rel="describedby"; type="application/json"`,
 ].join(", ");
 
 const nextConfig: NextConfig = {

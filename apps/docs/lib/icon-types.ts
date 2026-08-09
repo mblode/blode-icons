@@ -19,6 +19,8 @@ export interface SearchDoc {
   category: string;
   /** Whether a distinct filled variant exists (drives the Solid style filter). */
   hasFilled: boolean;
+  /** Lucide PascalCase aliases that map to this icon (e.g. "Search", "HelpCircle"). */
+  lucideAliases: string[];
   /** Outline component name, e.g. "AgentIcon". */
   name: string;
   /** Kebab slug, e.g. "agent" — used for SVG fetch + filled-variant lookup. */

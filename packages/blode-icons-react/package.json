@@ -52,7 +52,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node --experimental-strip-types scripts/build.mjs",
+    "generate:lucide-mapping": "node --experimental-strip-types scripts/generate-lucide-mapping.mjs",
     "validate": "node scripts/validate-icons.mjs",
     "validate:icons-data": "node scripts/validate-icons-data.mjs",
     "enrich": "node scripts/enrich-icons-data.mjs",
