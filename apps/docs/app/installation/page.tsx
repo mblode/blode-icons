@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description,
   openGraph: {
     description,
+    // Restate the house card: declaring `openGraph` opts the page out of the
+    // root file-convention injection.
     images: [{ url: "/opengraph-image" }],
     locale: "en_US",
     siteName: "Matthew Blode",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@mattblode",
     description,
-    images: ["/twitter-image"],
+    images: ["/opengraph-image"],
     title: cardTitle,
   },
 };

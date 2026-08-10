@@ -88,7 +88,7 @@ const nextConfig: NextConfig = {
       // The share cards are fetched by other origins, so they opt out of the
       // same-origin CORP the catch-all sets. These are generated routes, so
       // they serve without a file extension.
-      ...["/opengraph-image", "/twitter-image", "/og"].map((source) => ({
+      ...["/opengraph-image"].map((source) => ({
         headers: [
           { key: "Cross-Origin-Resource-Policy", value: "cross-origin" },
         ],

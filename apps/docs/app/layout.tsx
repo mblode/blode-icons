@@ -54,7 +54,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   openGraph: {
     description: siteDescription,
-    images: [{ url: "/opengraph-image" }],
     locale: "en_US",
     // Rule 9: every blode.co path is one site. The product name is already in
     // og:title, so this is the only slot left to say who made the thing.
@@ -65,6 +64,8 @@ export const metadata: Metadata = {
     // inherits the zone root and share cards collapse onto one URL. Absent
     // beats wrong: consumers fall back to the fetched URL, and
     // `alternates.canonical` is already per-page.
+    // No `images` here: `app/opengraph-image.tsx` is the card. Next reuses it
+    // for `twitter:image` too when there is no `twitter-image` file.
   },
   title: {
     default: siteTitle,
@@ -74,7 +75,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@mattblode",
     description: siteDescription,
-    images: ["/twitter-image"],
     title: siteTitle,
   },
   verification: {
