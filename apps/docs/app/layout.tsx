@@ -61,7 +61,10 @@ export const metadata: Metadata = {
     siteName: "Matthew Blode",
     title: siteTitle,
     type: "website",
-    url: siteUrl,
+    // Never set `openGraph.url` here. It is not per-page, so every route
+    // inherits the zone root and share cards collapse onto one URL. Absent
+    // beats wrong: consumers fall back to the fetched URL, and
+    // `alternates.canonical` is already per-page.
   },
   title: {
     default: siteTitle,
