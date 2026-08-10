@@ -2,6 +2,7 @@ import "server-only";
 import {
   filterIconsByStyle,
   getIconByNameOrSlug,
+  preferredLucideAlias,
   searchIcons,
 } from "@/lib/icon-search";
 import { readIconSource } from "@/lib/icon-source-server";
@@ -43,8 +44,7 @@ export async function buildIconPayload(
     return null;
   }
 
-  const lucideAlias = doc.lucideAliases[0];
-  const importName = lucideAlias ?? doc.name;
+  const importName = preferredLucideAlias(doc.lucideAliases) ?? doc.name;
   const payload: IconPayload = {
     category: doc.category,
     componentName: doc.name,
@@ -57,12 +57,16 @@ export async function buildIconPayload(
     tags: doc.tags,
   };
 
-  if (format === "svg" || format === "both") {
-    payload.svg = (await readIconSource(doc.slug, "svg")) ?? undefined;
-  }
-  if (format === "tsx" || format === "both") {
-    payload.tsx = (await readIconSource(doc.slug, "tsx")) ?? undefined;
-  }
+  const [svg, tsx] = await Promise.all([
+    format === "svg" || format === "both"
+      ? readIconSource(doc.slug, "svg")
+      : null,
+    format === "tsx" || format === "both"
+      ? readIconSource(doc.slug, "tsx")
+      : null,
+  ]);
+  payload.svg = svg ?? undefined;
+  payload.tsx = tsx ?? undefined;
 
   return payload;
 }

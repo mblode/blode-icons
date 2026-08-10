@@ -13,3 +13,15 @@ export const siteConfig = {
   },
   version: packageJson.version,
 };
+
+/**
+ * Shared by both MCP discovery documents so the advertised tool list cannot
+ * drift from what `app/mcp/route.ts` actually registers.
+ */
+export const mcpServer = {
+  description:
+    "Search and fetch Blode Icons (MIT) as SVG or React TSX, with Lucide-compatible import snippets.",
+  name: "blode-icons",
+  toolNames: ["search_icons", "get_icon", "get_usage"],
+  url: `${siteUrl}/mcp`,
+};

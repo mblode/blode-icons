@@ -1,4 +1,4 @@
-import { siteConfig, siteUrl } from "@/lib/config";
+import { mcpServer, siteConfig } from "@/lib/config";
 
 export function GET() {
   const body = {
@@ -7,20 +7,15 @@ export function GET() {
     },
     protocolVersion: "2024-11-05",
     serverInfo: {
-      description:
-        "Search and fetch Blode Icons (MIT) as SVG or React TSX, with Lucide-compatible import snippets.",
-      name: "blode-icons",
+      description: mcpServer.description,
+      name: mcpServer.name,
       version: siteConfig.version,
-      websiteUrl: `${siteUrl}/mcp`,
+      websiteUrl: mcpServer.url,
     },
-    tools: [
-      { name: "search_icons" },
-      { name: "get_icon" },
-      { name: "get_usage" },
-    ],
+    tools: mcpServer.toolNames.map((name) => ({ name })),
     transport: {
       type: "http",
-      url: `${siteUrl}/mcp`,
+      url: mcpServer.url,
     },
   };
 

@@ -5,6 +5,7 @@ import { recordAgentEvent } from "@/lib/agent-stats";
 import { getAgentUsageMarkdown } from "@/lib/agent-usage";
 import { siteConfig } from "@/lib/config";
 import { buildIconPayload, searchIconDocs } from "@/lib/icon-resolve";
+import { preferredLucideAlias } from "@/lib/icon-search";
 
 const handler = createMcpHandler(
   (server) => {
@@ -86,8 +87,9 @@ const handler = createMcpHandler(
         }
 
         recordAgentEvent({
+          client: "mcp",
           format,
-          lucideAlias: payload.lucideAliases[0],
+          lucideAlias: preferredLucideAlias(payload.lucideAliases),
           slug: payload.slug,
           source: "mcp",
           type: "get",

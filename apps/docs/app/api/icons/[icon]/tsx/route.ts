@@ -1,4 +1,4 @@
-import { clientFromRequest, recordAgentEvent } from "@/lib/agent-stats";
+import { recordAgentEvent } from "@/lib/agent-stats";
 import { isValidIconName } from "@/lib/icon-source";
 import { readIconSource } from "@/lib/icon-source-server";
 
@@ -19,7 +19,6 @@ export async function GET(
   }
 
   recordAgentEvent({
-    client: clientFromRequest(request),
     format: "tsx",
     slug: icon,
     source: "api",

@@ -1,4 +1,4 @@
-import { clientFromRequest, recordAgentEvent } from "@/lib/agent-stats";
+import { recordAgentEvent } from "@/lib/agent-stats";
 import { buildRegistryItem } from "@/lib/registry";
 
 export async function GET(
@@ -21,8 +21,6 @@ export async function GET(
   }
 
   recordAgentEvent({
-    client: clientFromRequest(request),
-    format: "registry",
     slug,
     source: "registry",
     type: "registry",

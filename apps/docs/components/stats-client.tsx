@@ -2,17 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-interface AgentStatsSnapshot {
-  clients: { client: string; count: number }[];
-  distinctIcons: number;
-  since: string | null;
-  topIcons: { count: number; slug: string }[];
-  topQueries: { count: number; query: string }[];
-  totalEvents: number;
-  totalGets: number;
-  totalRegistry: number;
-  totalSearches: number;
-}
+// Type-only import — erased at compile time, so the `server-only` module it
+// lives in is never pulled into the client bundle.
+import type { AgentStatsSnapshot } from "@/lib/agent-stats";
 
 export function StatsClient({
   apiUrl,

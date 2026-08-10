@@ -35,16 +35,11 @@ const nextConfig: NextConfig = {
     useOffline: true,
   },
   async headers() {
-    return [
-      {
-        headers: [{ key: "Link", value: AGENT_LINK_HEADER }],
-        source: "/",
-      },
-      {
-        headers: [{ key: "Link", value: AGENT_LINK_HEADER }],
-        source: "/installation",
-      },
-    ];
+    // Same pages `proxy.ts` serves markdown for.
+    return ["/", "/installation"].map((source) => ({
+      headers: [{ key: "Link", value: AGENT_LINK_HEADER }],
+      source,
+    }));
   },
   partialPrefetching: true,
   reactCompiler: true,

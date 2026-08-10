@@ -1,4 +1,4 @@
-import { siteUrl } from "@/lib/config";
+import { siteConfig, siteUrl } from "@/lib/config";
 
 export function GET() {
   const spec = {
@@ -7,6 +7,7 @@ export function GET() {
         "Read-only endpoints for searching and retrieving Blode Icons as SVG or React TSX. MIT licensed.",
       license: { name: "MIT" },
       title: "Blode Icons API",
+      version: siteConfig.version,
     },
     openapi: "3.1.0",
     paths: {

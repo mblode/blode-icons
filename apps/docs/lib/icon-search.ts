@@ -10,7 +10,6 @@ const docs = searchIndex as SearchDoc[];
 
 const fuse = new Fuse(docs, {
   ignoreLocation: true,
-  includeScore: true,
   keys: [
     { name: "title", weight: 0.35 },
     { name: "slug", weight: 0.25 },
@@ -22,20 +21,57 @@ const fuse = new Fuse(docs, {
   threshold: 0.35,
 });
 
-const bySlug = new Map(docs.map((doc) => [doc.slug, doc]));
-const byAlias = new Map<string, SearchDoc>();
+const NON_ALPHANUMERIC_REGEX = /[^a-zA-Z0-9]/g;
+const SEPARATOR_REGEX = /[-\s_]/g;
+const CAMEL_BOUNDARY_REGEX = /([a-z0-9])([A-Z])/g;
+
+// Every lookup below is precomputed once at module load. Queries then cost a
+// map hit rather than a scan over the whole icon set.
+const byExact = new Map<string, SearchDoc[]>();
+const byCompact = new Map<string, SearchDoc[]>();
+
+function index(map: Map<string, SearchDoc[]>, key: string, doc: SearchDoc) {
+  const bucket = map.get(key);
+  if (bucket) {
+    bucket.push(doc);
+    return;
+  }
+  map.set(key, [doc]);
+}
+
 for (const doc of docs) {
-  byAlias.set(doc.name.toLowerCase(), doc);
-  byAlias.set(doc.slug.toLowerCase(), doc);
-  byAlias.set(doc.title.toLowerCase(), doc);
+  index(byExact, doc.name.toLowerCase(), doc);
+  index(byExact, doc.slug.toLowerCase(), doc);
+  index(byExact, doc.title.toLowerCase(), doc);
+  index(byCompact, doc.slug.replaceAll("-", ""), doc);
   for (const alias of doc.lucideAliases ?? []) {
-    byAlias.set(alias.toLowerCase(), doc);
-    byAlias.set(
-      alias.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(),
+    index(byExact, alias.toLowerCase(), doc);
+    index(
+      byExact,
+      alias.replace(CAMEL_BOUNDARY_REGEX, "$1-$2").toLowerCase(),
+      doc
+    );
+    index(
+      byCompact,
+      alias.replaceAll(NON_ALPHANUMERIC_REGEX, "").toLowerCase(),
       doc
     );
   }
 }
+
+/** Parallel to `docs` — the joined haystack `tokenMatches` scans. */
+const searchTexts = docs.map((doc) =>
+  [
+    doc.slug,
+    doc.title,
+    doc.name,
+    doc.category,
+    ...(doc.tags ?? []),
+    ...(doc.lucideAliases ?? []),
+  ]
+    .join(" ")
+    .toLowerCase()
+);
 
 function normalizeQuery(query: string) {
   return query.trim().replaceAll(/\s+/g, " ");
@@ -48,54 +84,20 @@ function tokenize(query: string) {
     .filter((token) => token.length > 0);
 }
 
-function docSearchText(doc: SearchDoc) {
-  return [
-    doc.slug,
-    doc.title,
-    doc.name,
-    doc.category,
-    ...(doc.tags ?? []),
-    ...(doc.lucideAliases ?? []),
-  ]
-    .join(" ")
-    .toLowerCase();
-}
-
 function exactMatches(query: string): SearchDoc[] {
   const key = query.toLowerCase();
-  const compact = key.replaceAll(/[\s-_]/g, "");
   const hits: SearchDoc[] = [];
   const seen = new Set<string>();
 
-  const push = (doc: SearchDoc | undefined) => {
-    if (!doc || seen.has(doc.slug)) {
-      return;
-    }
-    seen.add(doc.slug);
-    hits.push(doc);
-  };
-
-  push(byAlias.get(key));
-  push(bySlug.get(key));
-
-  for (const doc of docs) {
+  for (const doc of [
+    ...(byExact.get(key) ?? []),
+    ...(byCompact.get(key.replaceAll(SEPARATOR_REGEX, "")) ?? []),
+  ]) {
     if (seen.has(doc.slug)) {
       continue;
     }
-    const aliases = doc.lucideAliases ?? [];
-    if (
-      doc.slug === key ||
-      doc.title === key ||
-      doc.name.toLowerCase() === key ||
-      aliases.some((alias) => alias.toLowerCase() === key) ||
-      doc.slug.replaceAll("-", "") === compact ||
-      aliases.some(
-        (alias) =>
-          alias.replaceAll(/[^a-zA-Z0-9]/g, "").toLowerCase() === compact
-      )
-    ) {
-      push(doc);
-    }
+    seen.add(doc.slug);
+    hits.push(doc);
   }
 
   return hits;
@@ -106,10 +108,9 @@ function tokenMatches(query: string): SearchDoc[] {
   if (tokens.length === 0) {
     return [];
   }
-  return docs.filter((doc) => {
-    const haystack = docSearchText(doc);
-    return tokens.every((token) => haystack.includes(token));
-  });
+  return docs.filter((_doc, i) =>
+    tokens.every((token) => searchTexts[i].includes(token))
+  );
 }
 
 /**
@@ -167,3 +168,11 @@ export const getIconDisplayName = (iconName: string) =>
   sentenceCase(iconName.replace(ICON_SUFFIX_REGEX, ""));
 
 export const getAllSearchDocs = () => docs;
+
+/**
+ * The alias to put in front of a user. `lucideAliases` is sorted, so the raw
+ * first entry is often lucide-react's `Lucide`-prefixed secondary export
+ * (`LucideSearch`) rather than the name people actually write (`Search`).
+ */
+export const preferredLucideAlias = (aliases: string[]): string | undefined =>
+  aliases.find((alias) => !alias.startsWith("Lucide")) ?? aliases[0];

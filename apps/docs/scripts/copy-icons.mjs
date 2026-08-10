@@ -78,42 +78,34 @@ function generateDocsIconsMetadata() {
   );
 }
 
-// Build the prebuilt client search index — one document per base (outline)
-// icon. Derived from icons-svg so it stays complete even when an icon lacks a
-// metadata JSON. Drives both the weighted Fuse search and the grid (no live
-// component imports needed on the client).
-function loadLucideAliasesBySlug() {
-  const mappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
-  if (!fs.existsSync(mappingPath)) {
+const lucideMappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
+
+// `lucide-mapping.ts` is generated TypeScript and this script runs on bare
+// node, so the entries are scraped rather than imported. Keep this regex in
+// step with the emitter in blode-icons-react/scripts/generate-lucide-mapping.mjs.
+const LUCIDE_ENTRY_REGEX =
+  /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
+
+/** Lucide aliases keyed by Blode component name, e.g. "SearchIcon" → ["Search"]. */
+function loadLucideAliasesByComponent() {
+  if (!fs.existsSync(lucideMappingPath)) {
     return new Map();
   }
-  const src = fs.readFileSync(mappingPath, "utf-8");
+  const src = fs.readFileSync(lucideMappingPath, "utf-8");
   /** @type {Map<string, string[]>} */
   const byComponent = new Map();
-  const blockRe =
-    /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
-  for (const match of src.matchAll(blockRe)) {
-    const blodeName = match[1];
-    const lucideName = match[2];
+  for (const [, blodeName, lucideName] of src.matchAll(LUCIDE_ENTRY_REGEX)) {
     const list = byComponent.get(blodeName) ?? [];
     list.push(lucideName);
     byComponent.set(blodeName, list);
   }
-
-  /** @type {Map<string, string[]>} */
-  const bySlug = new Map();
-  for (const [blodeName, aliases] of byComponent) {
-    const slug = blodeName
-      .replace(/Icon$/, "")
-      .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
-      .replaceAll(/([A-Z])([A-Z][a-z])/g, "$1-$2")
-      .toLowerCase();
-    const existing = bySlug.get(slug) ?? [];
-    bySlug.set(slug, [...new Set([...existing, ...aliases])].toSorted());
-  }
-  return bySlug;
+  return byComponent;
 }
 
+// Build the prebuilt client search index — one document per base (outline)
+// icon. Derived from icons-svg so it stays complete even when an icon lacks a
+// metadata JSON. Drives both the weighted Fuse search and the grid (no live
+// component imports needed on the client).
 function generateSearchIndex() {
   const metaBySlug = new Map();
   for (const file of fs.readdirSync(libDataDir)) {
@@ -135,53 +127,46 @@ function generateSearchIndex() {
   const baseSlugs = [...svgNames]
     .filter((n) => !n.endsWith("-filled"))
     .toSorted();
-  const lucideBySlug = loadLucideAliasesBySlug();
+  const lucideByComponent = loadLucideAliasesByComponent();
+  /** @type {Map<string, string[]>} */
+  const lucideBySlug = new Map();
+  for (const [blodeName, aliases] of lucideByComponent) {
+    const slug = blodeName
+      .replace(/Icon$/, "")
+      .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
+      .replaceAll(/([A-Z])([A-Z][a-z])/g, "$1-$2")
+      .toLowerCase();
+    const existing = lucideBySlug.get(slug) ?? [];
+    lucideBySlug.set(slug, [...new Set([...existing, ...aliases])].toSorted());
+  }
 
   const docs = baseSlugs.map((slug) => {
     const meta = metaBySlug.get(slug) ?? {};
     const name = toComponentName(slug);
+    const slugAliases =
+      lucideBySlug.get(slug) ??
+      lucideBySlug.get(
+        // component→slug conversion can disagree for digits; also try name key
+        name
+          .replace(/Icon$/, "")
+          .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
+          .toLowerCase()
+      ) ??
+      [];
+    // An exact component-name hit is authoritative; the slug lookups above are
+    // heuristics for names the round-trip mangles.
     return {
       category: meta.category || "",
       hasFilled: svgNames.has(`${slug}-filled`),
-      lucideAliases:
-        lucideBySlug.get(slug) ??
-        lucideBySlug.get(
-          // component→slug conversion can disagree for digits; also try name key
-          name
-            .replace(/Icon$/, "")
-            .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
-            .toLowerCase()
-        ) ??
-        [],
+      lucideAliases: [
+        ...new Set([...slugAliases, ...(lucideByComponent.get(name) ?? [])]),
+      ].toSorted(),
       name,
       slug,
       tags: Array.isArray(meta.tags) ? meta.tags : [],
       title: slug.replaceAll(/-/g, " "),
     };
   });
-
-  // Attach aliases keyed by component name when slug conversion missed
-  for (const [blodeName, aliases] of (() => {
-    const mappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
-    const src = fs.readFileSync(mappingPath, "utf-8");
-    const map = new Map();
-    const blockRe =
-      /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
-    for (const match of src.matchAll(blockRe)) {
-      const list = map.get(match[1]) ?? [];
-      list.push(match[2]);
-      map.set(match[1], list);
-    }
-    return map;
-  })()) {
-    const doc = docs.find((d) => d.name === blodeName);
-    if (!doc) {
-      continue;
-    }
-    doc.lucideAliases = [
-      ...new Set([...doc.lucideAliases, ...aliases]),
-    ].toSorted();
-  }
 
   fs.writeFileSync(docsSearchIndexPath, `${JSON.stringify(docs)}\n`);
   console.log(

@@ -59,4 +59,4 @@ import { DynamicIcon } from "blode-icons-react/dynamic";
 - [Agent stats](https://blode.co/icons/stats)
 - [llms-full.txt](https://blode.co/icons/llms-full.txt)
 
-Any page returns markdown when requested with `Accept: text/markdown`.
+The index and installation pages return markdown when requested with `Accept: text/markdown`.

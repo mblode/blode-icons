@@ -1,4 +1,4 @@
-import { clientFromRequest, recordAgentEvent } from "@/lib/agent-stats";
+import { recordAgentEvent } from "@/lib/agent-stats";
 import { searchIconDocs } from "@/lib/icon-resolve";
 import type { IconStyle } from "@/lib/icon-types";
 
@@ -20,7 +20,6 @@ export async function GET(request: Request) {
   });
 
   recordAgentEvent({
-    client: clientFromRequest(request),
     query,
     source: "api",
     type: "search",

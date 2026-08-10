@@ -1,8 +1,7 @@
 import "server-only";
 import { siteUrl } from "@/lib/config";
-import { getAllSearchDocs } from "@/lib/icon-search";
+import { getAllSearchDocs, preferredLucideAlias } from "@/lib/icon-search";
 import { readIconSource } from "@/lib/icon-source-server";
-import type { SearchDoc } from "@/lib/icon-types";
 
 export interface RegistryItem {
   $schema: string;
@@ -19,10 +18,6 @@ export interface RegistryItem {
   type: "registry:ui";
 }
 
-export function listRegistryIcons(): SearchDoc[] {
-  return getAllSearchDocs();
-}
-
 export async function buildRegistryItem(
   slug: string
 ): Promise<RegistryItem | null> {
@@ -37,9 +32,8 @@ export async function buildRegistryItem(
     return null;
   }
 
-  const namedExports = doc.lucideAliases[0]
-    ? `${doc.name}, ${doc.lucideAliases[0]}`
-    : doc.name;
+  const alias = preferredLucideAlias(doc.lucideAliases);
+  const namedExports = alias ? `${doc.name}, ${alias}` : doc.name;
 
   // Thin wrapper that re-exports from the npm package (tree-shake friendly).
   const content = `export { ${namedExports} } from "blode-icons-react";
@@ -65,11 +59,10 @@ export { ${doc.name} as default } from "blode-icons-react";
 }
 
 export function buildRegistryIndex() {
-  const icons = listRegistryIcons();
   return {
     $schema: "https://ui.shadcn.com/schema/registry.json",
     homepage: siteUrl,
-    items: icons.map((icon) => ({
+    items: getAllSearchDocs().map((icon) => ({
       description: `Blode icon ${icon.slug}`,
       name: icon.slug,
       title: icon.title,

@@ -52,6 +52,29 @@ async function searchIcons(query: string, limit = 25): Promise<unknown> {
   return response.json();
 }
 
+/** `get_icon_svg` and `get_icon_tsx` differ only by the format they fetch. */
+function sourceTool(format: "svg" | "tsx", description: string): McpTool {
+  return {
+    description,
+    async execute(args) {
+      const source = await fetchIconSource(String(args.name ?? ""), format);
+      return { content: [{ text: source, type: "text" }] };
+    },
+    inputSchema: {
+      properties: {
+        name: {
+          description: "Kebab-case icon slug, e.g. 'check' or 'arrow-right'.",
+          pattern: "^[a-z0-9-]+$",
+          type: "string",
+        },
+      },
+      required: ["name"],
+      type: "object",
+    },
+    name: `get_icon_${format}`,
+  };
+}
+
 const tools: McpTool[] = [
   {
     description:
@@ -82,48 +105,14 @@ const tools: McpTool[] = [
     },
     name: "search_icons",
   },
-  {
-    description:
-      "Fetch the raw SVG source for a Blode icon by its kebab-case slug (e.g. 'check', 'arrow-right').",
-    async execute(args) {
-      const name = String(args.name ?? "");
-      const svg = await fetchIconSource(name, "svg");
-      return { content: [{ text: svg, type: "text" }] };
-    },
-    inputSchema: {
-      properties: {
-        name: {
-          description: "Kebab-case icon slug, e.g. 'check' or 'arrow-right'.",
-          pattern: "^[a-z0-9-]+$",
-          type: "string",
-        },
-      },
-      required: ["name"],
-      type: "object",
-    },
-    name: "get_icon_svg",
-  },
-  {
-    description:
-      "Fetch the React (TSX) component source for a Blode icon by its kebab-case slug.",
-    async execute(args) {
-      const name = String(args.name ?? "");
-      const tsx = await fetchIconSource(name, "tsx");
-      return { content: [{ text: tsx, type: "text" }] };
-    },
-    inputSchema: {
-      properties: {
-        name: {
-          description: "Kebab-case icon slug, e.g. 'check' or 'arrow-right'.",
-          pattern: "^[a-z0-9-]+$",
-          type: "string",
-        },
-      },
-      required: ["name"],
-      type: "object",
-    },
-    name: "get_icon_tsx",
-  },
+  sourceTool(
+    "svg",
+    "Fetch the raw SVG source for a Blode icon by its kebab-case slug (e.g. 'check', 'arrow-right')."
+  ),
+  sourceTool(
+    "tsx",
+    "Fetch the React (TSX) component source for a Blode icon by its kebab-case slug."
+  ),
   {
     description:
       "Return the Blode Icons agent usage guide: MIT license, install commands, import shapes, and MCP workflow.",

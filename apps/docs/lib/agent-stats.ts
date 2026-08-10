@@ -158,15 +158,19 @@ function recordLocal(event: AgentStatEvent) {
  * Fire-and-forget agent usage tracking. Safe to call from route handlers —
  * never throws to callers.
  */
-export function recordAgentEvent(
-  partial: Omit<AgentStatEvent, "client" | "ts"> & {
-    client?: string;
-    userAgent?: string | null;
-  }
-) {
+export function recordAgentEvent({
+  client,
+  userAgent,
+  ...partial
+}: Omit<AgentStatEvent, "client" | "ts"> & {
+  client?: string;
+  userAgent?: string | null;
+}) {
+  // `userAgent` is destructured out so the raw header never reaches the stored
+  // event or PostHog — only the coarse client bucket it resolves to.
   const event: AgentStatEvent = {
     ...partial,
-    client: partial.client ?? inferClient(partial.userAgent),
+    client: client ?? inferClient(userAgent),
     ts: Date.now(),
   };
 
@@ -206,8 +210,4 @@ export function getAgentStatsSnapshot(limit = 20): AgentStatsSnapshot {
     totalRegistry: state.totalRegistry,
     totalSearches: state.totalSearches,
   };
-}
-
-export function clientFromRequest(request: Request) {
-  return inferClient(request.headers.get("user-agent"));
 }
