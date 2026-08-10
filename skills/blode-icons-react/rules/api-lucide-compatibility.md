@@ -32,4 +32,4 @@ Apply these rules:
 - Use Lucide-style aliases only when the mapped subset actually exposes them
 - Use full `*Icon` exports for the complete library naming scheme
 - Treat `DynamicIcon` names as keys from `dynamicIconImports`, such as `Search`, `SearchIcon`, or `ChevronDownIcon`
-- Do not claim special `absoluteStrokeWidth` behavior unless the wrapper implementation is updated to support it
+- `absoluteStrokeWidth` is supported on the Lucide-compatible wrapper and scales stroke with `size`

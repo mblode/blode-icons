@@ -18,9 +18,9 @@ export const SiteFooter = () => (
       >
         {/*
           Decorative: the link's own text already reads "Matthew Blode", so any
-          alt here makes its accessible name say the name twice.
+          alt here makes its accessible name say the name twice. Self-hosted
+          20px avatar; a plain img avoids next/image overhead.
         */}
-        {/* biome-ignore lint/performance/noImgElement: self-hosted 20px avatar, plain img avoids next/image overhead */}
         <img
           alt=""
           className="rounded-full"

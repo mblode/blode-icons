@@ -1,5 +1,5 @@
 <h3 align="center">blode-icons-react</h3>
-<p align="center">4,000+ icons for React — drop-in lucide-react replacement.</p>
+<p align="center">2,000+ icons for React, with Lucide-compatible names and props.</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/blode-icons-react"><img alt="npm version" src="https://img.shields.io/npm/v/blode-icons-react"></a>
@@ -8,10 +8,13 @@
 
 ## Highlights
 
-- **Lucide-style aliases:** mapped icons can replace `lucide-react` imports with minimal code changes
+- **Lucide-style aliases:** 579 Lucide names (canonical + historical aliases) import straight from this package
+- **Verified, not guessed:** every alias is checked by rendering both icons and comparing them, so a Lucide name never resolves to an unrelated drawing
 - **Tree-shakeable:** only ship the icons you use
 - **Dynamic imports:** load icons by name at runtime
-- **Lucide-compatible props:** `size`, `color`, and `strokeWidth` work out of the box
+- **Lucide-compatible props:** `size`, `color`, `strokeWidth`, and `absoluteStrokeWidth`
+
+Blode is its own icon set rather than a Lucide clone, so it is not a full drop-in replacement: Lucide names without a genuine Blode counterpart are deliberately not exported, and fail at build time instead of silently rendering the wrong icon. Run `npm run verify:lucide-mapping` to see the score behind any pair.
 
 ## Install
 
@@ -65,6 +68,14 @@ All icons accept standard SVG attributes plus:
 - `size` — width and height in pixels (default: `24`)
 - `color` — stroke/fill color (default: `"currentColor"`)
 - `strokeWidth` — stroke width (default: `2`)
+- `absoluteStrokeWidth` — scale stroke with size like lucide-react (default: `false`)
+
+## Agents
+
+- Site: https://blode.co/icons
+- MCP: https://blode.co/icons/mcp (`search_icons`, `get_icon`)
+- `llms.txt`: https://blode.co/icons/llms.txt
+- shadcn registry: `npx shadcn@latest add https://blode.co/icons/r/<slug>.json`
 
 ## License
 

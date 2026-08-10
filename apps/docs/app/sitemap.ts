@@ -21,5 +21,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       url: `${siteUrl}/installation`,
     },
+    {
+      changeFrequency: "daily",
+      lastModified,
+      priority: 0.5,
+      url: `${siteUrl}/stats`,
+    },
+    {
+      changeFrequency: "monthly",
+      lastModified,
+      priority: 0.4,
+      url: `${siteUrl}/llms.txt`,
+    },
   ];
 }

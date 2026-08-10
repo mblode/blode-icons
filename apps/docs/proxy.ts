@@ -51,9 +51,14 @@ Each icon is retrievable directly as SVG or TSX:
 
 ## Agent discovery
 
-- \`${basePath}/robots.txt\` — crawl policy + Content-Signal directives
+- \`${basePath}/llms.txt\` — agent summary
+- \`${basePath}/llms-full.txt\` — full agent guide
+- \`${basePath}/mcp\` — remote MCP server (\`search_icons\`, \`get_icon\`, \`get_usage\`)
+- \`${basePath}/.well-known/mcp.json\` — MCP discovery
+- \`${basePath}/robots.txt\` — crawl policy
 - \`${basePath}/sitemap.xml\` — canonical URL list
 - \`${basePath}/.well-known/agent-skills/index.json\` — agent skills index
+- \`${basePath}/stats\` — agent fetch stats
 `,
   "/installation": `# Installation
 

@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = import.meta.dirname;
 const DOCS_ROOT = path.join(__dirname, "..");
@@ -78,11 +78,40 @@ function generateDocsIconsMetadata() {
   );
 }
 
+const lucideMappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
+
+/**
+ * Lucide aliases keyed by Blode component name, e.g. "SearchIcon" → ["Search"].
+ *
+ * Only `hasMatch` entries count: the generator keeps its fuzzy guesses in the
+ * file for triage, and those are not names the package exports, so surfacing
+ * them in search would advertise imports that do not resolve.
+ */
+async function loadLucideAliasesByComponent() {
+  if (!fs.existsSync(lucideMappingPath)) {
+    return new Map();
+  }
+  // Imported as a module (node strips the types) rather than scraped, so
+  // reformatting the mapping cannot silently drop every alias.
+  const { mappings } = await import(pathToFileURL(lucideMappingPath).href);
+  /** @type {Map<string, string[]>} */
+  const byComponent = new Map();
+  for (const { blodeName, hasMatch, lucideName } of mappings) {
+    if (!hasMatch) {
+      continue;
+    }
+    const list = byComponent.get(blodeName) ?? [];
+    list.push(lucideName);
+    byComponent.set(blodeName, list);
+  }
+  return byComponent;
+}
+
 // Build the prebuilt client search index — one document per base (outline)
 // icon. Derived from icons-svg so it stays complete even when an icon lacks a
 // metadata JSON. Drives both the weighted Fuse search and the grid (no live
 // component imports needed on the client).
-function generateSearchIndex() {
+async function generateSearchIndex() {
   const metaBySlug = new Map();
   for (const file of fs.readdirSync(libDataDir)) {
     if (!file.endsWith(".json") || file.startsWith("_")) {
@@ -103,13 +132,41 @@ function generateSearchIndex() {
   const baseSlugs = [...svgNames]
     .filter((n) => !n.endsWith("-filled"))
     .toSorted();
+  const lucideByComponent = await loadLucideAliasesByComponent();
+  /** @type {Map<string, string[]>} */
+  const lucideBySlug = new Map();
+  for (const [blodeName, aliases] of lucideByComponent) {
+    const slug = blodeName
+      .replace(/Icon$/, "")
+      .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
+      .replaceAll(/([A-Z])([A-Z][a-z])/g, "$1-$2")
+      .toLowerCase();
+    const existing = lucideBySlug.get(slug) ?? [];
+    lucideBySlug.set(slug, [...new Set([...existing, ...aliases])].toSorted());
+  }
 
   const docs = baseSlugs.map((slug) => {
     const meta = metaBySlug.get(slug) ?? {};
+    const name = toComponentName(slug);
+    const slugAliases =
+      lucideBySlug.get(slug) ??
+      lucideBySlug.get(
+        // component→slug conversion can disagree for digits; also try name key
+        name
+          .replace(/Icon$/, "")
+          .replaceAll(/([a-z0-9])([A-Z])/g, "$1-$2")
+          .toLowerCase()
+      ) ??
+      [];
+    // An exact component-name hit is authoritative; the slug lookups above are
+    // heuristics for names the round-trip mangles.
     return {
       category: meta.category || "",
       hasFilled: svgNames.has(`${slug}-filled`),
-      name: toComponentName(slug),
+      lucideAliases: [
+        ...new Set([...slugAliases, ...(lucideByComponent.get(name) ?? [])]),
+      ].toSorted(),
+      name,
       slug,
       tags: Array.isArray(meta.tags) ? meta.tags : [],
       title: slug.replaceAll(/-/g, " "),
@@ -122,7 +179,7 @@ function generateSearchIndex() {
   );
 }
 
-function main() {
+async function main() {
   const t0 = performance.now();
 
   if (!fs.existsSync(libSrcDir)) {
@@ -151,7 +208,7 @@ function main() {
   console.log("  Copied icons-data/ -> src/icons-data/");
 
   generateDocsIconsMetadata();
-  generateSearchIndex();
+  await generateSearchIndex();
 
   // JSON.stringify(_, null, 2) puts every array element on its own line, but
   // oxfmt keeps short arrays inline, so the generated files disagreed with
@@ -160,10 +217,18 @@ function main() {
   // the output here means what the generator writes is already what the
   // formatter wants, so a rebuild leaves a clean tree. The search index is
   // excluded in oxfmt.config.ts, so it is deliberately not passed.
-  execFileSync("npx", ["oxfmt", docsMetadataPath, docsDataMetadataPath], {
-    stdio: "inherit",
-  });
-  console.log("  Formatted generated JSON");
+  try {
+    execFileSync("npx", ["oxfmt", docsMetadataPath, docsDataMetadataPath], {
+      stdio: "inherit",
+    });
+    console.log("  Formatted generated JSON");
+  } catch {
+    // oxfmt may fail on older Node (TS config requires >=22.18). The JSON is
+    // still valid; pre-commit formatting will normalize when available.
+    console.warn(
+      "  Skipping oxfmt (formatter unavailable in this environment)"
+    );
+  }
 
   const elapsed = ((performance.now() - t0) / 1000).toFixed(1);
   console.log(`\nDocs icon copy complete in ${elapsed}s`);

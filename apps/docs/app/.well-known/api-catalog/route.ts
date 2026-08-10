@@ -19,10 +19,23 @@ export function GET() {
             href: `${siteUrl}/installation`,
             type: "text/html",
           },
+          {
+            href: `${siteUrl}/llms.txt`,
+            type: "text/plain",
+          },
         ],
         status: [
           {
             href: `${siteUrl}/api/health`,
+            type: "application/json",
+          },
+        ],
+      },
+      {
+        anchor: `${siteUrl}/mcp`,
+        "service-desc": [
+          {
+            href: `${siteUrl}/.well-known/mcp.json`,
             type: "application/json",
           },
         ],

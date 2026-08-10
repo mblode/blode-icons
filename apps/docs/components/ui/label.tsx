@@ -1,4 +1,3 @@
-// biome-ignore lint/performance/noNamespaceImport: standard radix-ui pattern
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";

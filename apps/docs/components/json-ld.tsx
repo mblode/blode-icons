@@ -1,6 +1,6 @@
 export const JsonLd = ({ data }: { data: Record<string, unknown> }) => (
   <script
-    // biome-ignore lint/security/noDangerouslySetInnerHtml: Next.js recommends a native script for JSON-LD
+    // Next.js recommends a native script element for JSON-LD.
     dangerouslySetInnerHTML={{
       __html: JSON.stringify(data).replaceAll("<", "\\u003c"),
     }}

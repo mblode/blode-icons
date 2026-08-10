@@ -1,7 +1,7 @@
 {
   "name": "blode-icons-react",
   "version": "0.4.1",
-  "description": "Blode icons for React — drop-in lucide-react replacement",
+  "description": "Blode icons for React, with verified Lucide-compatible names and props",
   "keywords": [
     "blode",
     "component",
@@ -52,22 +52,26 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "validate": "node scripts/validate-icons.mjs",
-    "validate:icons-data": "node scripts/validate-icons-data.mjs",
-    "enrich": "node scripts/enrich-icons-data.mjs",
-    "prepublishOnly": "node scripts/build.mjs",
+    "build": "node --experimental-strip-types scripts/build.mjs",
     "check:types": "tsc --noEmit",
+    "enrich": "node scripts/enrich-icons-data.mjs",
+    "format": "ultracite fix",
+    "format:check": "ultracite check",
+    "generate:lucide-mapping": "node --experimental-strip-types scripts/generate-lucide-mapping.mjs",
     "lint": "ultracite check",
     "lint:fix": "ultracite fix",
-    "format": "ultracite fix",
-    "format:check": "ultracite check"
+    "prepublishOnly": "node --experimental-strip-types scripts/build.mjs",
+    "validate": "node scripts/validate-icons.mjs",
+    "validate:icons-data": "node scripts/validate-icons-data.mjs",
+    "verify:lucide-mapping": "node --experimental-strip-types scripts/verify-lucide-mapping.mjs"
   },
   "devDependencies": {
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
     "@types/react": "^19.2.17",
+    "lucide-static": "^1.31.0",
+    "sharp": "^0.34.5",
     "typescript": "6.0.3",
     "ultracite": "7.9.3"
   },
