@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = import.meta.dirname;
 const DOCS_ROOT = path.join(__dirname, "..");
@@ -80,21 +80,26 @@ function generateDocsIconsMetadata() {
 
 const lucideMappingPath = path.join(LIB_ROOT, "scripts", "lucide-mapping.ts");
 
-// `lucide-mapping.ts` is generated TypeScript and this script runs on bare
-// node, so the entries are scraped rather than imported. Keep this regex in
-// step with the emitter in blode-icons-react/scripts/generate-lucide-mapping.mjs.
-const LUCIDE_ENTRY_REGEX =
-  /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
-
-/** Lucide aliases keyed by Blode component name, e.g. "SearchIcon" → ["Search"]. */
-function loadLucideAliasesByComponent() {
+/**
+ * Lucide aliases keyed by Blode component name, e.g. "SearchIcon" → ["Search"].
+ *
+ * Only `hasMatch` entries count: the generator keeps its fuzzy guesses in the
+ * file for triage, and those are not names the package exports, so surfacing
+ * them in search would advertise imports that do not resolve.
+ */
+async function loadLucideAliasesByComponent() {
   if (!fs.existsSync(lucideMappingPath)) {
     return new Map();
   }
-  const src = fs.readFileSync(lucideMappingPath, "utf-8");
+  // Imported as a module (node strips the types) rather than scraped, so
+  // reformatting the mapping cannot silently drop every alias.
+  const { mappings } = await import(pathToFileURL(lucideMappingPath).href);
   /** @type {Map<string, string[]>} */
   const byComponent = new Map();
-  for (const [, blodeName, lucideName] of src.matchAll(LUCIDE_ENTRY_REGEX)) {
+  for (const { blodeName, hasMatch, lucideName } of mappings) {
+    if (!hasMatch) {
+      continue;
+    }
     const list = byComponent.get(blodeName) ?? [];
     list.push(lucideName);
     byComponent.set(blodeName, list);
@@ -106,7 +111,7 @@ function loadLucideAliasesByComponent() {
 // icon. Derived from icons-svg so it stays complete even when an icon lacks a
 // metadata JSON. Drives both the weighted Fuse search and the grid (no live
 // component imports needed on the client).
-function generateSearchIndex() {
+async function generateSearchIndex() {
   const metaBySlug = new Map();
   for (const file of fs.readdirSync(libDataDir)) {
     if (!file.endsWith(".json") || file.startsWith("_")) {
@@ -127,7 +132,7 @@ function generateSearchIndex() {
   const baseSlugs = [...svgNames]
     .filter((n) => !n.endsWith("-filled"))
     .toSorted();
-  const lucideByComponent = loadLucideAliasesByComponent();
+  const lucideByComponent = await loadLucideAliasesByComponent();
   /** @type {Map<string, string[]>} */
   const lucideBySlug = new Map();
   for (const [blodeName, aliases] of lucideByComponent) {
@@ -174,7 +179,7 @@ function generateSearchIndex() {
   );
 }
 
-function main() {
+async function main() {
   const t0 = performance.now();
 
   if (!fs.existsSync(libSrcDir)) {
@@ -203,7 +208,7 @@ function main() {
   console.log("  Copied icons-data/ -> src/icons-data/");
 
   generateDocsIconsMetadata();
-  generateSearchIndex();
+  await generateSearchIndex();
 
   // JSON.stringify(_, null, 2) puts every array element on its own line, but
   // oxfmt keeps short arrays inline, so the generated files disagreed with

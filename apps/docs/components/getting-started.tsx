@@ -58,9 +58,12 @@ export function GettingStarted() {
 
       <h2 className="mt-10 font-semibold text-lg">Lucide Compatibility</h2>
       <p className="mt-1 text-muted-foreground text-sm">
-        Drop-in replacement for lucide-react. Same names, same props — including
-        historical aliases like{" "}
-        <code className="text-foreground">AlertCircle</code>.
+        Same props as lucide-react, and 579 Lucide names — including historical
+        aliases like <code className="text-foreground">AlertCircle</code> —
+        import straight from this package. Each one is verified by rendering
+        both icons, so a Lucide name never resolves to an unrelated drawing.
+        Names without a real Blode counterpart are left out rather than mapped
+        to something that merely sounds similar.
       </p>
       <div className="mt-3">
         <CodeBlock code={LUCIDE_EXAMPLE} />

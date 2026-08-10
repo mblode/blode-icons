@@ -33,7 +33,7 @@ export async function CodeBlock({
     <div className="group relative overflow-hidden rounded-xl bg-code text-code-foreground">
       <div
         className="overflow-x-auto px-4 py-3.5 font-mono text-sm"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: shiki outputs sanitized HTML
+        // Shiki outputs sanitized HTML.
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <CopyButton value={code} />

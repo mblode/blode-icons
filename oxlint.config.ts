@@ -16,6 +16,10 @@ export default defineConfig({
     "apps/docs/src/icons-data",
     "apps/docs/src/icons-metadata.json",
     "apps/docs/src/icons-search-index.json",
+    // Generated Lucide mapping. Its `visualScore` values are data, but a few
+    // land near a Math constant (0.434 vs LOG10E), so approx-constant fires on
+    // rows nobody wrote and nobody can edit.
+    "packages/blode-icons-react/scripts/lucide-mapping.ts",
   ],
   // Rules relaxed for this codebase during the biome -> oxlint (ultracite)
   // migration. Each flags a pre-existing pattern in the icon build scripts or

@@ -1,6 +1,6 @@
 # Blode Icons
 
-> Beautifully crafted SVG icons for React — MIT licensed, Lucide-compatible, tree-shakeable.
+> Beautifully crafted SVG icons for React — MIT licensed, tree-shakeable, with 579 verified Lucide-compatible names.
 
 Blode Icons is a curated icon set distributed as `blode-icons-react` on npm. Every icon ships as a React component with outline and filled variants. Agents can search and fetch icons via MCP or the HTTP API.
 
@@ -22,7 +22,7 @@ npx skills add mblode/blode-icons -g --all -y
 
 ## Usage
 
-Prefer named imports from the package root. Full-library exports use the `Icon` suffix. Lucide-style aliases (no suffix) are also exported for drop-in replacement:
+Prefer named imports from the package root. Full-library exports use the `Icon` suffix. 579 Lucide names (no suffix) are also exported — each verified by rendering both icons, so a Lucide name never resolves to an unrelated drawing. Lucide names without a real Blode counterpart are deliberately not exported:
 
 ```tsx
 import { SearchIcon, Search, type LucideProps } from "blode-icons-react";

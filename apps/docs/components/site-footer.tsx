@@ -16,7 +16,7 @@ export const SiteFooter = () => (
         href={siteConfig.links.author}
         rel="author"
       >
-        {/* biome-ignore lint/performance/noImgElement: self-hosted 20px avatar, plain img avoids next/image overhead */}
+        {/* Self-hosted 20px avatar; a plain img avoids next/image overhead. */}
         <img
           alt="Avatar of Matthew Blode"
           className="rounded-full"

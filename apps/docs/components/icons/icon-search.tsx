@@ -61,7 +61,6 @@ const IconCell = ({
           // shipped an empty div and the whole grid stayed blank until the
           // bundle booted. This renders the glyph into the document itself.
           // The markup is this repo's own src/icons-svg files, never user input.
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: build-time SVG from this repo, not user input.
           <div
             className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
             dangerouslySetInnerHTML={{ __html: markup }}
@@ -115,8 +114,8 @@ export const IconSearch = ({
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const sentinelRef = useRef<HTMLDivElement>(null);
 
-  // Reset to the first batch whenever the result set changes.
-  // biome-ignore lint/correctness/useExhaustiveDependencies: reset tracks the query/style inputs, not the derived list.
+  // Reset to the first batch whenever the result set changes. The deps track
+  // the query and style inputs, not the derived list.
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
   }, [searchQuery, iconStyle]);

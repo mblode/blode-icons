@@ -3,12 +3,22 @@
  * Lucide canonical icon name (+ historical aliases) with a Blode counterpart.
  *
  * Matching priority:
- * 1. Existing curated mappings in lucide-mapping.ts
+ * 1. Existing curated mappings in lucide-mapping.seed.ts
  * 2. Exact kebab slug match
  * 3. Curated high-traffic synonyms in this file
- * 4. Fuse fuzzy match against Blode slugs/tags
+ * 4. Same words in a different order (`circle-arrow-left` = `arrow-left-circle`)
+ * 5. Fuse fuzzy match against Blode slugs/tags
+ *
+ * Only 1–4 are exported from the package. Fuse accepts any best match, so a
+ * fuzzy hit means "closest of 2000 icons", not "the same icon" — those are
+ * written with `hasMatch: false` so `build.mjs` skips them. Promote one by
+ * adding it to CURATED once a human has eyeballed the pair.
+ *
+ * The Lucide catalog comes from the `lucide-static` devDependency, so this is
+ * reproducible on a clean checkout and the version is pinned in package.json.
  */
 import fs from "node:fs";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -20,10 +30,18 @@ const mappingOut = path.join(__dirname, "lucide-mapping.ts");
 const svgDir = path.join(packageRoot, "icons-svg");
 const dataDir = path.join(packageRoot, "icons-data");
 
-// Prefer a local lucide-static extract when present (agent/dev), else download names.
-const lucideTagsPath = "/tmp/lucide-icons/package/tags.json";
-const lucideAliasesPath = "/tmp/lucide-aliases.json";
-const lucideCanonicalPath = "/tmp/lucide-canonical.json";
+const require = createRequire(import.meta.url);
+
+/** Match kinds a human (or an exact slug) stands behind. Everything else is a guess. */
+const TRUSTED_MATCHES = new Set(["existing", "exact", "curated", "reordered"]);
+
+/**
+ * A historical alias is exactly as trustworthy as the canonical name it
+ * redirects to, so its match kind is recorded as `alias:<canonical kind>`.
+ */
+function isTrustedMatch(match) {
+  return TRUSTED_MATCHES.has(match.replace(/^alias:/, ""));
+}
 
 function kebabToPascal(kebab) {
   return kebab
@@ -469,42 +487,48 @@ const CURATED = {
   AirVent: "airplay",
 };
 
-function loadExistingMappings(sourcePath) {
+async function loadExistingMappings(sourcePath) {
   if (!fs.existsSync(sourcePath)) {
     return new Map();
   }
-  // Parse with regex so we do not need type-stripping on a multi-thousand-line
-  // .ts file.
-  const src = fs.readFileSync(sourcePath, "utf-8");
-  const parsed = [];
-  const blockRe =
-    /\{\s*blodeName:\s*"([^"]+)",\s*category:\s*"[^"]*",\s*hasMatch:\s*true,\s*lucideName:\s*"([^"]+)",\s*\}/g;
-  for (const match of src.matchAll(blockRe)) {
-    parsed.push({
-      blodeName: match[1],
-      hasMatch: true,
-      lucideName: match[2],
-    });
-  }
-  return new Map(parsed.map((m) => [m.lucideName, m]));
+  // Read as a module (node strips the types) rather than scraping the source,
+  // so reformatting the mapping cannot silently yield zero seeds.
+  const { mappings } = await import(pathToFileURL(sourcePath).href);
+  return new Map(
+    mappings
+      .filter((entry) => entry.hasMatch)
+      .map((entry) => [entry.lucideName, entry])
+  );
 }
 
 function loadLucideCatalog() {
-  if (!fs.existsSync(lucideTagsPath)) {
+  const tags = require("lucide-static/tags.json");
+  const canonicalPascal = Object.keys(tags).map(kebabToPascal);
+
+  // lucide-static's declaration file ends in one `export { ... }` listing every
+  // public name. Historical aliases appear there as `Canonical as Alias`, which
+  // is the only machine-readable alias map Lucide publishes.
+  const declarationPath =
+    require.resolve("lucide-static/dist/lucide-static.d.ts");
+  const declaration = fs.readFileSync(declarationPath, "utf-8");
+  const exportBlock = declaration.match(/export \{([^}]*)\};?\s*$/m);
+  if (!exportBlock) {
     throw new Error(
-      `Missing ${lucideTagsPath}. Extract lucide-static tags.json there first.`
+      `Could not find the export list in ${declarationPath}. The lucide-static layout changed; update this parser.`
     );
   }
-  const tags = JSON.parse(fs.readFileSync(lucideTagsPath, "utf-8"));
-  const canonicalKebab = Object.keys(tags);
-  const canonicalPascal = canonicalKebab.map(kebabToPascal);
 
-  let aliasToCanonical = {};
-  if (fs.existsSync(lucideAliasesPath)) {
-    aliasToCanonical = JSON.parse(fs.readFileSync(lucideAliasesPath, "utf-8"));
-  } else if (fs.existsSync(lucideCanonicalPath)) {
-    // aliases optional
+  const aliasToCanonical = {};
+  for (const entry of exportBlock[1].split(",")) {
+    const aliased = entry.trim().match(/^(\w+) as (\w+)$/);
+    if (aliased) {
+      aliasToCanonical[aliased[2]] = aliased[1];
+    }
   }
+
+  console.log(
+    `Lucide catalog: ${canonicalPascal.length} canonical names, ${Object.keys(aliasToCanonical).length} historical aliases (lucide-static ${require("lucide-static/package.json").version})`
+  );
 
   return { aliasToCanonical, canonicalPascal, tags };
 }
@@ -553,7 +577,7 @@ function resolveSlug(candidate, slugSet) {
 async function main() {
   // Seed from the original curated file when present; otherwise from current.
   const seedPath = path.join(__dirname, "lucide-mapping.seed.ts");
-  const existing = loadExistingMappings(
+  const existing = await loadExistingMappings(
     fs.existsSync(seedPath) ? seedPath : mappingOut
   );
   const { aliasToCanonical, canonicalPascal, tags } = loadLucideCatalog();
@@ -586,7 +610,7 @@ async function main() {
     out.set(lucideName, {
       blodeName: doc.name,
       category: inferCategory(slug, doc.category),
-      hasMatch: true,
+      hasMatch: isTrustedMatch(match),
       lucideName,
       match,
     });
@@ -627,7 +651,32 @@ async function main() {
     }
   }
 
-  // 4) Fuzzy fallback for remaining canonical icons — always take best match
+  // 4) Same words, different order. Blode writes `arrow-left-circle` where
+  // Lucide writes `circle-arrow-left`; an identical multiset of words is a
+  // strong signal, so these are exported like an exact hit. Without this the
+  // whole circle-arrow/square-arrow family falls through to a fuzzy guess.
+  const bySortedWords = new Map();
+  for (const doc of docs) {
+    const key = doc.slug.split("-").toSorted().join("-");
+    if (!bySortedWords.has(key)) {
+      bySortedWords.set(key, doc.slug);
+    }
+  }
+  let reorderedCount = 0;
+  for (const lucideName of canonicalPascal) {
+    if (out.has(lucideName)) {
+      continue;
+    }
+    const key = pascalToKebab(lucideName).split("-").toSorted().join("-");
+    const slug = bySortedWords.get(key);
+    if (slug) {
+      setMapping(lucideName, slug, "reordered");
+      reorderedCount++;
+    }
+  }
+  console.log(`  ${reorderedCount} matched on reordered words`);
+
+  // 5) Fuzzy fallback for remaining canonical icons — always take best match
   let fuzzyCount = 0;
   for (const lucideName of canonicalPascal) {
     if (out.has(lucideName)) {
@@ -658,7 +707,7 @@ async function main() {
     if (!doc) {
       continue;
     }
-    setMapping(alias, doc.slug, "alias");
+    setMapping(alias, doc.slug, `alias:${canonicalEntry.match}`);
     aliasCount++;
   }
 
@@ -676,17 +725,23 @@ async function main() {
     return acc;
   }, {});
 
+  const exported = entries.filter((entry) => entry.hasMatch);
+
   const lines = [
     "export interface IconMapping {",
     "  blodeName: string;",
     "  category: string;",
+    "  /** Whether the pair is trustworthy enough to export. Fuzzy guesses are false. */",
     "  hasMatch: boolean;",
     "  isChanged?: boolean;",
     "  lucideName: string;",
+    "  /** How the pair was found: exact | curated | existing | fuzzy | alias:<kind>. */",
+    "  match: string;",
     "}",
     "",
-    "// Generated by scripts/generate-lucide-mapping.mjs",
-    `// ${entries.length} Lucide names → Blode icons`,
+    "// Generated by scripts/generate-lucide-mapping.mjs — do not edit by hand.",
+    `// ${exported.length} of ${entries.length} Lucide names export (the rest are`,
+    "// fuzzy guesses kept for triage; promote one via CURATED in the generator).",
     `// match breakdown: ${JSON.stringify(counts)}`,
     "export const mappings: IconMapping[] = [",
   ];
@@ -696,8 +751,9 @@ async function main() {
       (entry) => `  {
     blodeName: "${entry.blodeName}",
     category: "${entry.category.replaceAll('"', '\\"')}",
-    hasMatch: true,
+    hasMatch: ${entry.hasMatch},
     lucideName: "${entry.lucideName}",
+    match: "${entry.match}",
   },`
     )
     .join("\n");
@@ -712,6 +768,9 @@ export const categories = [...new Set(mappings.map((m) => m.category))];
   fs.writeFileSync(mappingOut, output);
   console.log(
     `Wrote ${entries.length} mappings (${JSON.stringify(counts)}; fuzzy=${fuzzyCount}; aliases=${aliasCount})`
+  );
+  console.log(
+    `  ${exported.length} export (hasMatch: true); ${entries.length - exported.length} held back as unverified guesses`
   );
 }
 

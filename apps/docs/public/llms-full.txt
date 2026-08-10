@@ -1,6 +1,6 @@
 # Blode Icons — full agent guide
 
-> Beautifully crafted SVG icons for React — MIT licensed, Lucide-compatible, tree-shakeable.
+> Beautifully crafted SVG icons for React — MIT licensed, tree-shakeable, with 579 verified Lucide-compatible names.
 
 ## Overview
 
@@ -31,7 +31,7 @@ Public entrypoints:
 Naming:
 
 - Full library: PascalCase + `Icon` suffix (`SearchIcon`, `ChevronDownIcon`)
-- Lucide aliases: PascalCase without suffix when mapped (`Search`, `ChevronDown`)
+- Lucide aliases: PascalCase without suffix for the 579 verified names (`Search`, `ChevronDown`). Unverified names are not exported, so a bad import fails at build time rather than rendering the wrong icon
 - File paths: kebab-case (`blode-icons-react/icons/airplane`)
 - Filled variants: `{Name}FilledIcon`
 

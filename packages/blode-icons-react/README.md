@@ -1,5 +1,5 @@
 <h3 align="center">blode-icons-react</h3>
-<p align="center">4,000+ icons for React — drop-in lucide-react replacement.</p>
+<p align="center">2,000+ icons for React, with Lucide-compatible names and props.</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/blode-icons-react"><img alt="npm version" src="https://img.shields.io/npm/v/blode-icons-react"></a>
@@ -8,10 +8,17 @@
 
 ## Highlights
 
-- **Lucide-style aliases:** full Lucide export surface (canonical names + historical aliases) for drop-in replacement
+- **Lucide-style aliases:** 579 Lucide names (canonical + historical aliases) import straight from this package
+- **Verified, not guessed:** every alias is checked by rendering both icons and comparing them, so a Lucide name never resolves to an unrelated drawing
 - **Tree-shakeable:** only ship the icons you use
 - **Dynamic imports:** load icons by name at runtime
 - **Lucide-compatible props:** `size`, `color`, `strokeWidth`, and `absoluteStrokeWidth`
+
+Blode is its own icon set rather than a Lucide clone, so it is not a full
+drop-in replacement: Lucide names without a genuine Blode counterpart are
+deliberately not exported, and fail at build time instead of silently
+rendering the wrong icon. Run `npm run verify:lucide-mapping` to see the
+score behind any pair.
 
 ## Install
 
