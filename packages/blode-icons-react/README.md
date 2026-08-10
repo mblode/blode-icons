@@ -14,11 +14,7 @@
 - **Dynamic imports:** load icons by name at runtime
 - **Lucide-compatible props:** `size`, `color`, `strokeWidth`, and `absoluteStrokeWidth`
 
-Blode is its own icon set rather than a Lucide clone, so it is not a full
-drop-in replacement: Lucide names without a genuine Blode counterpart are
-deliberately not exported, and fail at build time instead of silently
-rendering the wrong icon. Run `npm run verify:lucide-mapping` to see the
-score behind any pair.
+Blode is its own icon set rather than a Lucide clone, so it is not a full drop-in replacement: Lucide names without a genuine Blode counterpart are deliberately not exported, and fail at build time instead of silently rendering the wrong icon. Run `npm run verify:lucide-mapping` to see the score behind any pair.
 
 ## Install
 

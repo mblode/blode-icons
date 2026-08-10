@@ -16,9 +16,13 @@ export const SiteFooter = () => (
         href={siteConfig.links.author}
         rel="author"
       >
-        {/* Self-hosted 20px avatar; a plain img avoids next/image overhead. */}
+        {/*
+          Decorative: the link's own text already reads "Matthew Blode", so any
+          alt here makes its accessible name say the name twice. Self-hosted
+          20px avatar; a plain img avoids next/image overhead.
+        */}
         <img
-          alt="Avatar of Matthew Blode"
+          alt=""
           className="rounded-full"
           height={20}
           src={asset("/avatar-sm.png")}
