@@ -1,21 +1,13 @@
 # Blode Icons robots.txt
 # Spec: RFC 9309 (https://www.rfc-editor.org/rfc/rfc9309)
+# Content Signals: https://contentsignals.org/
 
-# AI-open on purpose: crawling, search indexing, answer grounding and model
-# training are all permitted, so one `*` group states the whole policy. Per-agent
-# groups are deliberately absent: a bot matching its own group ignores `*`
-# entirely, so copies of this policy can only drift out of sync with it.
-#
-# No `Content-Signal:` line either. Content signals are a reservation mechanism,
-# so the absence of one already means no restriction is expressed. An all-yes
-# signal would state nothing extra while drawing an unknown-directive warning in
-# Search Console and Semrush. Add one the day a value needs to be `no`.
-
-# The single exclusion is the dynamic icon API, kept out to spare bandwidth
-# rather than to restrict use: it renders on demand and holds no crawlable
-# content that the docs pages do not already carry.
+# AI-open on purpose: search indexing, answer grounding / agent input, and
+# model training are all allowed. One `*` group states the whole policy —
+# per-agent groups are deliberately absent so the policy cannot drift.
 User-agent: *
 Allow: /
 Disallow: /icons/api/
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 Sitemap: https://blode.co/icons/sitemap.xml

@@ -62,6 +62,7 @@ Registry index: ${siteUrl}/r/registry.json
 - ${siteUrl}/llms-full.txt
 - ${siteUrl}/.well-known/mcp.json
 - ${siteUrl}/mcp
-- ${siteUrl}/stats
+
+APIs are public — no auth required.
 `;
 }

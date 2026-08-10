@@ -1,28 +1,22 @@
+import type { ReactNode } from "react";
+
 import { CodeBlock } from "@/components/code-block";
+import { CopyPromptButton } from "@/components/copy-prompt-button";
 import { InstallTabs } from "@/components/install-tabs";
 import { asset } from "@/lib/config";
 
-const USAGE_EXAMPLE = `import { SearchIcon, PlusIcon } from "blode-icons-react";
+const USAGE_EXAMPLE = `import { SearchIcon, Search } from "blode-icons-react";
 
-<SearchIcon size={32} />
-<PlusIcon color="red" strokeWidth={1.5} />`;
+export function Example() {
+  return (
+    <>
+      <SearchIcon size={24} />
+      <Search size={20} strokeWidth={1.5} />
+    </>
+  );
+}`;
 
-const LUCIDE_EXAMPLE = `// Lucide-compatible names (drop-in replacement)
-import { ChevronDown, Search, Plus } from "blode-icons-react";
-
-// Full library names (with Icon suffix)
-import { ChevronDownIcon, SparkleIcon } from "blode-icons-react";`;
-
-const DYNAMIC_EXAMPLE = `import { DynamicIcon } from "blode-icons-react/dynamic";
-
-<DynamicIcon
-  name="SearchIcon"
-  size={24}
-  fallback={<span>Loading...</span>}
-/>`;
-
-const MCP_EXAMPLE = `# Cursor / Claude Code / other MCP clients
-{
+const MCP_EXAMPLE = `{
   "mcpServers": {
     "blode-icons": {
       "url": "https://blode.co/icons/mcp"
@@ -30,147 +24,110 @@ const MCP_EXAMPLE = `# Cursor / Claude Code / other MCP clients
   }
 }`;
 
-const REGISTRY_EXAMPLE = `# Single icon (package-backed re-export)
-npx shadcn@latest add https://blode.co/icons/r/magnifying-glass.json
+const AGENT_PROMPT = `Use Blode Icons in this project.
 
-# Or configure once in components.json
-{
-  "registries": {
-    "@blode": "https://blode.co/icons/r/{name}.json"
-  }
-}`;
+Install:
+npm install blode-icons-react
+
+Import React icons from the package root. Prefer *Icon names; verified Lucide aliases (no suffix) also work:
+import { SearchIcon, Search } from "blode-icons-react";
+
+Props match lucide-react: size, color, strokeWidth, absoluteStrokeWidth.
+
+For agents:
+- MCP: https://blode.co/icons/mcp (tools: search_icons, get_icon, get_usage)
+- Skill: npx skills add mblode/blode-icons -g --all -y
+- Summary: https://blode.co/icons/llms.txt
+
+APIs are public — no auth. Prefer npm install over copying source.`;
+
+function Step({
+  n,
+  title,
+  children,
+}: {
+  n: number;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="grid gap-3 sm:grid-cols-[2rem_1fr]">
+      <div
+        aria-hidden="true"
+        className="flex size-8 items-center justify-center rounded-full bg-muted font-medium text-sm"
+      >
+        {n}
+      </div>
+      <div className="min-w-0">
+        <h2 className="font-medium text-base">{title}</h2>
+        <div className="mt-2 space-y-3 text-muted-foreground text-sm leading-relaxed">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function GettingStarted() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-8">
-      <h1 className="font-semibold text-lg">Installation</h1>
-      <div className="mt-3">
-        <InstallTabs />
-      </div>
+      <div className="rounded-2xl border bg-background p-6 sm:p-8">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="font-semibold text-xl tracking-tight">Install</h1>
+            <p className="mt-1 text-muted-foreground text-sm">
+              MIT-licensed React icons. Lucide-compatible names and props.
+            </p>
+          </div>
+          <CopyPromptButton prompt={AGENT_PROMPT} />
+        </div>
 
-      <h2 className="mt-10 font-semibold text-lg">Usage</h2>
-      <p className="mt-1 text-muted-foreground text-sm">
-        Import icons by name and use them as React components.
-      </p>
-      <div className="mt-3">
-        <CodeBlock code={USAGE_EXAMPLE} />
-      </div>
+        <div className="mt-8 space-y-10">
+          <Step n={1} title="Add the package">
+            <p>Install once, then import only the icons you use.</p>
+            <InstallTabs />
+          </Step>
 
-      <h2 className="mt-10 font-semibold text-lg">Lucide Compatibility</h2>
-      <p className="mt-1 text-muted-foreground text-sm">
-        Same props as lucide-react, and 579 Lucide names — including historical
-        aliases like <code className="text-foreground">AlertCircle</code> —
-        import straight from this package. Each one is verified by rendering
-        both icons, so a Lucide name never resolves to an unrelated drawing.
-        Names without a real Blode counterpart are left out rather than mapped
-        to something that merely sounds similar.
-      </p>
-      <div className="mt-3">
-        <CodeBlock code={LUCIDE_EXAMPLE} />
-      </div>
+          <Step n={2} title="Drop an icon into your UI">
+            <p>
+              Prefer <code className="text-foreground">*Icon</code> names.
+              Verified Lucide aliases like{" "}
+              <code className="text-foreground">Search</code> work too — names
+              without a real Blode match are left out on purpose.
+            </p>
+            <CodeBlock code={USAGE_EXAMPLE} />
+            <p>
+              Props: <code className="text-foreground">size</code>,{" "}
+              <code className="text-foreground">color</code>,{" "}
+              <code className="text-foreground">strokeWidth</code>,{" "}
+              <code className="text-foreground">absoluteStrokeWidth</code>.
+            </p>
+          </Step>
 
-      <h2 className="mt-10 font-semibold text-lg">Props</h2>
-      <p className="mt-1 text-muted-foreground text-sm">
-        All icons accept the same props as lucide-react.
-      </p>
-      <div className="mt-3 overflow-x-auto rounded-xl bg-code text-code-foreground">
-        <table className="w-full text-left text-sm">
-          <thead className="border-border/50 border-b">
-            <tr>
-              <th className="px-4 py-2.5 font-medium">Prop</th>
-              <th className="px-4 py-2.5 font-medium">Type</th>
-              <th className="px-4 py-2.5 font-medium">Default</th>
-            </tr>
-          </thead>
-          <tbody className="font-mono text-xs">
-            <tr className="border-border/50 border-b">
-              <td className="px-4 py-2.5">size</td>
-              <td className="px-4 py-2.5">string | number</td>
-              <td className="px-4 py-2.5">24</td>
-            </tr>
-            <tr className="border-border/50 border-b">
-              <td className="px-4 py-2.5">color</td>
-              <td className="px-4 py-2.5">string</td>
-              <td className="px-4 py-2.5">currentColor</td>
-            </tr>
-            <tr className="border-border/50 border-b">
-              <td className="px-4 py-2.5">strokeWidth</td>
-              <td className="px-4 py-2.5">string | number</td>
-              <td className="px-4 py-2.5">2</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2.5">absoluteStrokeWidth</td>
-              <td className="px-4 py-2.5">boolean</td>
-              <td className="px-4 py-2.5">false</td>
-            </tr>
-          </tbody>
-        </table>
+          <Step n={3} title="Point your agent at Blode">
+            <p>
+              Paste this into Cursor, Claude Code, or any MCP client. Then{" "}
+              <code className="text-foreground">search_icons</code> →{" "}
+              <code className="text-foreground">get_icon</code>.
+            </p>
+            <CodeBlock code={MCP_EXAMPLE} lang="json" />
+            <p>
+              Or install the skill:{" "}
+              <code className="text-foreground">
+                npx skills add mblode/blode-icons -g --all -y
+              </code>
+              . More in{" "}
+              <a
+                className="text-foreground underline underline-offset-2"
+                href={asset("/llms.txt")}
+              >
+                llms.txt
+              </a>
+              .
+            </p>
+          </Step>
+        </div>
       </div>
-
-      <h2 className="mt-10 font-semibold text-lg">Dynamic Imports</h2>
-      <p className="mt-1 text-muted-foreground text-sm">
-        Load icons by name at runtime. Useful when the icon comes from a
-        database or API.
-      </p>
-      <div className="mt-3">
-        <CodeBlock code={DYNAMIC_EXAMPLE} />
-      </div>
-
-      <h2 className="mt-10 font-semibold text-lg">For agents</h2>
-      <p className="mt-1 text-muted-foreground text-sm">
-        MIT licensed. Prefer{" "}
-        <code className="text-foreground">npm install blode-icons-react</code>,
-        then search and fetch via MCP. License is returned on every{" "}
-        <code className="text-foreground">get_icon</code> response.
-      </p>
-      <div className="mt-3">
-        <CodeBlock code={MCP_EXAMPLE} />
-      </div>
-      <ul className="mt-3 list-disc space-y-1 pl-5 text-muted-foreground text-sm">
-        <li>
-          <a
-            className="text-foreground underline underline-offset-2"
-            href={asset("/llms.txt")}
-          >
-            llms.txt
-          </a>{" "}
-          — agent summary
-        </li>
-        <li>
-          MCP tools: <code className="text-foreground">search_icons</code>,{" "}
-          <code className="text-foreground">get_icon</code>,{" "}
-          <code className="text-foreground">get_usage</code>
-        </li>
-        <li>
-          Skill:{" "}
-          <code className="text-foreground">
-            npx skills add mblode/blode-icons -g --all -y
-          </code>
-        </li>
-      </ul>
-
-      <h2 className="mt-10 font-semibold text-lg">shadcn registry</h2>
-      <p className="mt-1 text-muted-foreground text-sm">
-        Install a single icon as a thin re-export of{" "}
-        <code className="text-foreground">blode-icons-react</code> (keeps
-        tree-shaking).
-      </p>
-      <div className="mt-3">
-        <CodeBlock code={REGISTRY_EXAMPLE} />
-      </div>
-
-      <p className="mt-10 text-muted-foreground text-sm">
-        View the source, report issues, or contribute on{" "}
-        <a
-          className="text-foreground underline underline-offset-2"
-          href="https://github.com/mblode/blode-icons"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          GitHub
-        </a>
-        .
-      </p>
     </section>
   );
 }

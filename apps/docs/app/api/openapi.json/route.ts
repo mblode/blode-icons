@@ -111,18 +111,6 @@ export function GET() {
           summary: "Get icon React component source",
         },
       },
-      "/api/stats": {
-        get: {
-          operationId: "getAgentStats",
-          responses: {
-            "200": {
-              content: { "application/json": { schema: { type: "object" } } },
-              description: "Aggregated agent fetch/search stats",
-            },
-          },
-          summary: "Agent usage stats snapshot",
-        },
-      },
     },
     servers: [{ url: siteUrl }],
   };

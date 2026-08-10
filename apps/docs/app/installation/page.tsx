@@ -4,9 +4,10 @@ import { GettingStarted } from "@/components/getting-started";
 import { siteUrl } from "@/lib/config";
 
 const description =
-  "Install Blode Icons in your React app. Add the blode-icons-react package with npm, pnpm, or bun, then import 4,000+ icons with Lucide-compatible names.";
+  "Install blode-icons-react, drop icons into your UI, and point your agent at Blode via MCP.";
 
-const title = "Install Blode Icons: React setup and usage guide";
+const title = "Install";
+const cardTitle = "Install Blode Icons";
 const pageUrl = `${siteUrl}/installation`;
 
 export const metadata: Metadata = {
@@ -19,17 +20,17 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image" }],
     locale: "en_US",
     siteName: "Matthew Blode",
-    title,
+    title: cardTitle,
     type: "article",
     url: pageUrl,
   },
-  title: { absolute: title },
+  title,
   twitter: {
     card: "summary_large_image",
     creator: "@mattblode",
     description,
     images: ["/twitter-image"],
-    title,
+    title: cardTitle,
   },
 };
 

@@ -49,64 +49,40 @@ Each icon is retrievable directly as SVG or TSX:
 - OpenAPI spec: \`${basePath}/api/openapi.json\`
 - API catalog: \`${basePath}/.well-known/api-catalog\`
 
-## Agent discovery
+## Agents
 
 - \`${basePath}/llms.txt\` — agent summary
-- \`${basePath}/llms-full.txt\` — full agent guide
-- \`${basePath}/mcp\` — remote MCP server (\`search_icons\`, \`get_icon\`, \`get_usage\`)
+- \`${basePath}/mcp\` — MCP (\`search_icons\`, \`get_icon\`, \`get_usage\`)
 - \`${basePath}/.well-known/mcp.json\` — MCP discovery
-- \`${basePath}/robots.txt\` — crawl policy
-- \`${basePath}/sitemap.xml\` — canonical URL list
-- \`${basePath}/.well-known/agent-skills/index.json\` — agent skills index
-- \`${basePath}/stats\` — agent fetch stats
+- APIs are public — no auth required
 `,
-  "/installation": `# Installation
-
-Install the \`blode-icons-react\` package from npm:
+  "/installation": `# Install
 
 \`\`\`bash
 npm install blode-icons-react
 \`\`\`
 
-\`\`\`bash
-pnpm add blode-icons-react
-\`\`\`
-
-\`\`\`bash
-yarn add blode-icons-react
-\`\`\`
-
 ## Usage
 
-Import any icon by name. All icons are React components.
-
 \`\`\`tsx
-import { CheckIcon, ArrowRightIcon } from "blode-icons-react";
+import { SearchIcon, Search } from "blode-icons-react";
 
-export function Example() {
-  return (
-    <div>
-      <CheckIcon size={16} />
-      <ArrowRightIcon size={16} />
-    </div>
-  );
-}
+<SearchIcon size={24} />
+<Search size={20} strokeWidth={1.5} />
 \`\`\`
 
-## Variants
+Props match lucide-react: \`size\`, \`color\`, \`strokeWidth\`, \`absoluteStrokeWidth\`.
 
-Outline is the default. Filled variants are exported as \`{Name}FilledIcon\`.
+## Agents
 
-\`\`\`tsx
-import { HeartIcon, HeartFilledIcon } from "blode-icons-react";
+MCP: ${siteUrl}/mcp — \`search_icons\` → \`get_icon\`
+
+\`\`\`bash
+npx skills add mblode/blode-icons -g --all -y
 \`\`\`
 
-## Raw sources
-
-Fetch an icon's source directly:
-
-- \`${siteUrl}/api/icons/{name}/svg\`
-- \`${siteUrl}/api/icons/{name}/tsx\`
+- ${siteUrl}/llms.txt
+- ${siteUrl}/.well-known/mcp.json
 `,
 };
 

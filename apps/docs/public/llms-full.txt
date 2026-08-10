@@ -52,8 +52,9 @@ GET /api/icons/{slug}/svg
 GET /api/icons/{slug}/tsx
 GET /api/openapi.json
 GET /api/health
-GET /api/stats
 ```
+
+APIs are public — no auth required.
 
 Search returns JSON documents with `slug`, `name`, `title`, `tags`, `category`, `hasFilled`, and `lucideAliases`.
 
@@ -118,7 +119,6 @@ Configure in `components.json`:
 - https://blode.co/icons/.well-known/agent-skills/index.json
 - https://blode.co/icons/sitemap.xml
 - https://blode.co/icons/robots.txt
-- https://blode.co/icons/stats
 
 ## Skill install
 
