@@ -1,9 +1,9 @@
 <h3 align="center">blode-icons-react</h3>
-<p align="center">2,000+ icons for React, with Lucide-compatible names and props.</p>
+<p align="center">4,193 icons for React, with Lucide-compatible names and props.</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/blode-icons-react"><img alt="npm version" src="https://img.shields.io/npm/v/blode-icons-react"></a>
-  <a href="https://github.com/mblode/blode-icons/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="https://github.com/mblode/blode-icons/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 ## Highlights
@@ -79,4 +79,4 @@ All icons accept standard SVG attributes plus:
 
 ## License
 
-[MIT](https://github.com/mblode/blode-icons/blob/main/LICENSE)
+[MIT](https://github.com/mblode/blode-icons/blob/main/LICENSE.md)
