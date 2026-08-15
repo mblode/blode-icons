@@ -238,7 +238,7 @@ export const IconSearch = ({
                 <MagnifyingGlassIcon className="absolute top-1/2 left-4 size-4 -translate-y-1/2" />
               }
               onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder={`Search all ${filterIconsByStyle(getAllSearchDocs(), iconStyle).length} icons...`}
+              placeholder={`Search all ${filterIconsByStyle(getAllSearchDocs(), iconStyle).length.toLocaleString("en-US")} icons...`}
               type="text"
               value={searchQuery}
             />
