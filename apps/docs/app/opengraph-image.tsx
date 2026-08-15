@@ -1,4 +1,5 @@
 import { renderZoneOgImage } from "@/app/og-image-shared";
+import { OgLogo } from "@/app/og-logo";
 
 export {
   OG_CONTENT_TYPE as contentType,
@@ -15,9 +16,9 @@ export const alt = "Blode Icons";
  */
 export default function OpengraphImage() {
   return renderZoneOgImage({
-    badge: "ICONS",
-    eyebrow: "blode.co/icons",
-    subtitle: "A beautifully crafted icon library. Open source.",
+    background: "#f0eee6",
+    color: "#e8391c",
+    logo: <OgLogo />,
     title: "Blode Icons",
   });
 }
