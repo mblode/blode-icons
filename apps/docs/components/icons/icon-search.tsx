@@ -9,6 +9,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PAGE_SIZE } from "@/lib/icon-grid";
 import {
   filterIconsByStyle,
+  getAllSearchDocs,
   getIconDisplayName,
   searchIcons,
 } from "@/lib/icon-search";
@@ -237,7 +238,7 @@ export const IconSearch = ({
                 <MagnifyingGlassIcon className="absolute top-1/2 left-4 size-4 -translate-y-1/2" />
               }
               onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder="Search all icons..."
+              placeholder={`Search all ${filterIconsByStyle(getAllSearchDocs(), iconStyle).length} icons...`}
               type="text"
               value={searchQuery}
             />
@@ -247,13 +248,19 @@ export const IconSearch = ({
               onValueChange={(value) => setIconStyle(value as IconStyle)}
               value={iconStyle}
             >
-              <TabsList className="h-[52px]! w-full sm:w-auto">
-                <TabsTrigger className="w-full px-4 sm:w-auto" value="OUTLINE">
-                  <div className="mr-2 size-2 rounded-full border border-foreground" />
-                  Outline
+              <TabsList className="h-[52px]! w-full rounded-2xl sm:w-auto [&>span]:rounded-xl">
+                <TabsTrigger
+                  className="w-full gap-1 rounded-xl px-4 sm:w-auto"
+                  value="OUTLINE"
+                >
+                  <div className="size-2 rounded-full border border-foreground" />
+                  Line
                 </TabsTrigger>
-                <TabsTrigger className="w-full px-4 sm:w-auto" value="SOLID">
-                  <div className="mr-2 size-2 rounded-full border border-foreground bg-foreground" />
+                <TabsTrigger
+                  className="w-full gap-1 rounded-xl px-4 sm:w-auto"
+                  value="SOLID"
+                >
+                  <div className="size-2 rounded-full border border-foreground bg-foreground" />
                   Solid
                 </TabsTrigger>
               </TabsList>
