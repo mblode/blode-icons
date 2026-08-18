@@ -72,6 +72,11 @@ interface Delta {
 const ROOT = path.join(import.meta.dirname, "..");
 const SVG_DIR = path.join(ROOT, "icons-svg");
 const BASELINE = path.join(ROOT, "audit-baseline.json");
+// Without this the cohort-align count is measured against families guessed from
+// name prefixes, which lumps desk-lamp in with desk-office and reports 437
+// findings of which an unknown share are meaningless. With it, 284 — every one
+// a family that genuinely swaps in a UI slot.
+const COHORTS = path.join(ROOT, "icons-data", "_cohorts.json");
 const FORGE = process.env.FORGE ?? "npx --yes --package=icon-forge forge";
 
 // The census only counts an element as recurring past this many icons. Fixed
@@ -110,7 +115,9 @@ const forge = <T,>(args: string): T => {
 
 /** The numbers the gate watches. Each one only ever goes down. */
 const measure = (): Metrics => {
-  const lint = forge<LintReport>(`lint --dir "${SVG_DIR}"`);
+  const lint = forge<LintReport>(
+    `lint --dir "${SVG_DIR}" --cohorts "${COHORTS}"`
+  );
   const census = forge<CensusReport>(
     `elements --dir "${SVG_DIR}" --min ${MIN_ICONS}`
   );

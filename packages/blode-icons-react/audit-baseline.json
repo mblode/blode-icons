@@ -1,16 +1,17 @@
 {
   "icons": 4357,
-  "errors": 686,
-  "warnings": 3545,
-  "cohortSplits": 186,
+  "errors": 533,
+  "warnings": 4942,
+  "cohortSplits": 137,
   "rules": {
     "bleed": 249,
-    "centred": 407,
-    "cohort-align": 437,
+    "centred": 434,
+    "cohort-align": 284,
     "density": 53,
     "gap": 783,
-    "keyline": 2302
+    "keyline": 2302,
+    "off-axis": 1370
   },
-  "recurringElements": 196,
-  "disagreeingElements": 42
+  "recurringElements": 188,
+  "disagreeingElements": 39
 }
