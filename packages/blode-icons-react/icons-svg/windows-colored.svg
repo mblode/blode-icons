@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
->
-  <rect x="12.75" y="12.75" width="7.5" height="7.5" fill="#FEBA08" />
-  <rect x="3.75" y="12.75" width="7.5" height="7.5" fill="#05A6F0" />
-  <rect x="12.75" y="3.75" width="7.5" height="7.5" fill="#80BC06" />
-  <rect x="3.75" y="3.75" width="7.5" height="7.5" fill="#F25325" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#FEBA08" d="M12.75 12.75h7.5v7.5h-7.5z"/><path fill="#05A6F0" d="M3.75 12.75h7.5v7.5h-7.5z"/><path fill="#80BC06" d="M12.75 3.75h7.5v7.5h-7.5z"/><path fill="#F25325" d="M3.75 3.75h7.5v7.5h-7.5z"/></svg>

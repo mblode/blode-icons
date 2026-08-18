@@ -1,3 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 12H8M4 12V8M4 12V16M8 12H16M8 12V16M8 12V8M16 12H20M16 12V16.4444M16 12V8M20 12V8M20 12V16.4444M16 20H17C18.6569 20 20 18.6569 20 17V16.4444M16 20V16.4444M16 20H8M16 4H17C18.6569 4 20 5.34315 20 7V8M16 4V8M16 4H8M16 8H20M16 16.4444H20M8 20H7C5.34315 20 4 18.6569 4 17V16M8 20V16M8 4H7C5.34315 4 4 5.34315 4 7V8M8 4V8M4 8H8M4 16H8" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M4 12h4m-4 0V8m0 4v4m4-4h8m-8 0v4m0-4V8m8 4h4m-4 0v4.4444M16 12V8m4 4V8m0 4v4.4444M16 20h1c1.6569 0 3-1.3431 3-3v-.5556M16 20v-3.5556M16 20H8m8-16h1c1.6569 0 3 1.3431 3 3v1m-4-4v4m0-4H8m8 4h4m-4 8.4444h4M8 20H7c-1.6569 0-3-1.3431-3-3v-1m4 4v-4M8 4H7C5.3431 4 4 5.3431 4 7v1m4-4v4M4 8h4m-4 8h4"/></svg>

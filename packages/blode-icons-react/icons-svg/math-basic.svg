@@ -1,8 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7 4V10M4 7H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.5 14.5L7.00002 17M7.00002 17L9.5 19.5M7.00002 17L4.5 19.5M7.00002 17L9.5 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 14H17.0001" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M17 20H17.0001" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v6M4 7h6"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 14.5 7 17m0 0 2.5 2.5M7 17l-2.5 2.5M7 17l2.5-2.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 7h6"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 17h6"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.2" d="M17 14h.0001"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.2" d="M17 20h.0001"/></svg>
