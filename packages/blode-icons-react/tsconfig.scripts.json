@@ -1,0 +1,19 @@
+{
+  // The build and audit scripts are TypeScript, run directly by Node 24's
+  // native type stripping. The main tsconfig cannot cover them: it sets
+  // rootDir to src and emits to dist, so pulling scripts/ into it would try to
+  // publish them. This config only type-checks.
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2023",
+    "types": ["node"]
+  },
+  "include": ["scripts"],
+  "exclude": ["node_modules"]
+}

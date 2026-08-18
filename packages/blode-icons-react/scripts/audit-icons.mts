@@ -27,16 +27,47 @@
  * neutral.
  *
  * Usage:
- *   node scripts/audit-icons.mjs              compare against the baseline
- *   node scripts/audit-icons.mjs --update     rewrite the baseline
- *   node scripts/audit-icons.mjs --json       machine-readable summary
+ *   node scripts/audit-icons.mts              compare against the baseline
+ *   node scripts/audit-icons.mts --update     rewrite the baseline
+ *   node scripts/audit-icons.mts --json       machine-readable summary
  *
  * FORGE overrides the binary, for running against a local icon-forge checkout:
- *   FORGE="npx tsx ../../../icon-forge/src/cli.ts" node scripts/audit-icons.mjs
+ *   FORGE="npx tsx ../../../icon-forge/src/cli.ts" node scripts/audit-icons.mts
  */
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+
+/** What `forge lint --output json` returns. Only the fields this script reads. */
+interface LintReport {
+  cohorts: unknown[];
+  errors: number;
+  files: { file: string; issues: { rule: string; severity: string }[] }[];
+  warnings: number;
+}
+
+/** What `forge elements --output json` returns. */
+interface CensusReport {
+  elements: { consistentPlace: boolean; consistentSize: boolean }[];
+}
+
+/** The numbers the baseline holds. Every one is a count of things wrong except
+ *  `icons`, which is why `compare` has to treat that key differently. */
+interface Metrics {
+  cohortSplits: number;
+  disagreeingElements: number;
+  errors: number;
+  icons: number;
+  recurringElements: number;
+  rules: Record<string, number>;
+  warnings: number;
+}
+
+interface Delta {
+  label: string;
+  now: number;
+  was: number;
+}
 
 const ROOT = path.join(import.meta.dirname, "..");
 const SVG_DIR = path.join(ROOT, "icons-svg");
@@ -48,11 +79,11 @@ const FORGE = process.env.FORGE ?? "npx --yes --package=icon-forge forge";
 // icon-forge changes its default.
 const MIN_ICONS = 4;
 
-const forge = (args) => {
+const forge = <T,>(args: string): T => {
   // `lint` exits 1 when it finds errors, which is its contract and not a
   // failure of this script — the whole point is that errors currently exist.
   // stdout is the report either way; only an empty stdout means it really died.
-  let stdout;
+  let stdout: string | undefined;
   try {
     stdout = execSync(`${FORGE} --output json ${args}`, {
       encoding: "utf-8",
@@ -60,24 +91,31 @@ const forge = (args) => {
       stdio: ["ignore", "pipe", "pipe"],
     });
   } catch (error) {
-    stdout = error.stdout;
+    const failure = error as {
+      message?: string;
+      stderr?: string;
+      stdout?: string;
+    };
+    stdout = failure.stdout;
     if (!stdout?.trim()) {
       throw new Error(
-        `forge ${args} produced no output.\n${error.stderr ?? error.message}\n\n` +
+        `forge ${args} produced no output.\n${failure.stderr ?? failure.message}\n\n` +
           `Is icon-forge installed? Set FORGE to point at a local checkout.`,
         { cause: error }
       );
     }
   }
-  return JSON.parse(stdout);
+  return JSON.parse(stdout) as T;
 };
 
 /** The numbers the gate watches. Each one only ever goes down. */
-const measure = () => {
-  const lint = forge(`lint --dir "${SVG_DIR}"`);
-  const census = forge(`elements --dir "${SVG_DIR}" --min ${MIN_ICONS}`);
+const measure = (): Metrics => {
+  const lint = forge<LintReport>(`lint --dir "${SVG_DIR}"`);
+  const census = forge<CensusReport>(
+    `elements --dir "${SVG_DIR}" --min ${MIN_ICONS}`
+  );
 
-  const bySeverity = {};
+  const bySeverity: Record<string, number> = {};
   for (const file of lint.files) {
     for (const issue of file.issues) {
       bySeverity[issue.rule] = (bySeverity[issue.rule] ?? 0) + 1;
@@ -104,34 +142,51 @@ const measure = () => {
 /** Every metric here is a count of things wrong, so an increase is the
  *  regression and a decrease is the point. `icons` is the exception: it goes up
  *  when icons are added, which is not a regression. */
-const COUNTS_WRONG = (key) => key !== "icons";
+const COUNTS_WRONG = (key: string): boolean => key !== "icons";
 
-const compare = (baseline, current) => {
-  const regressions = [];
-  const improvements = [];
-  const walk = (base, now, prefix = "") => {
+const compare = (
+  baseline: Metrics,
+  current: Metrics
+): { improvements: Delta[]; regressions: Delta[] } => {
+  const regressions: Delta[] = [];
+  const improvements: Delta[] = [];
+  const walk = (
+    base: Record<string, unknown>,
+    now: Record<string, unknown>,
+    prefix = ""
+  ): void => {
     for (const [key, value] of Object.entries(now)) {
       const label = prefix + key;
-      if (typeof value === "object") {
-        walk(base?.[key] ?? {}, value, `${label}.`);
+      if (typeof value === "object" && value !== null) {
+        walk(
+          (base?.[key] as Record<string, unknown>) ?? {},
+          value as Record<string, unknown>,
+          `${label}.`
+        );
         continue;
       }
-      const was = base?.[key] ?? 0;
+      if (typeof value !== "number") {
+        continue;
+      }
+      const was = (base?.[key] as number) ?? 0;
       if (value === was || !COUNTS_WRONG(key)) {
         continue;
       }
       (value > was ? regressions : improvements).push({
         label,
-        was,
         now: value,
+        was,
       });
     }
   };
-  walk(baseline, current);
+  walk(
+    baseline as unknown as Record<string, unknown>,
+    current as unknown as Record<string, unknown>
+  );
   return { regressions, improvements };
 };
 
-const main = () => {
+const main = (): void => {
   const update = process.argv.includes("--update");
   const asJson = process.argv.includes("--json");
   const current = measure();
@@ -150,7 +205,7 @@ const main = () => {
     );
   }
 
-  const baseline = JSON.parse(fs.readFileSync(BASELINE, "utf-8"));
+  const baseline = JSON.parse(fs.readFileSync(BASELINE, "utf-8")) as Metrics;
   const { regressions, improvements } = compare(baseline, current);
 
   if (asJson) {

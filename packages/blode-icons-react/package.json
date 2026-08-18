@@ -52,10 +52,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "audit": "node scripts/audit-icons.mjs",
-    "audit:update": "node scripts/audit-icons.mjs --update",
+    "audit": "node scripts/audit-icons.mts",
+    "audit:update": "node scripts/audit-icons.mts --update",
     "build": "node --experimental-strip-types scripts/build.mjs",
-    "check:types": "tsc --noEmit",
+    "check:types": "tsc --noEmit && tsc -p tsconfig.scripts.json",
     "enrich": "node scripts/enrich-icons-data.mjs",
     "format": "ultracite fix",
     "format:check": "ultracite check",
