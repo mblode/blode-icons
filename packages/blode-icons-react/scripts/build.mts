@@ -58,7 +58,7 @@ const svgrConfig: Config = {
   svgoConfig,
   typescript: true,
 };
-const FORMAT_VERSION = "3"; // bump when individual icon output format changes
+const FORMAT_VERSION = "4"; // bump when individual icon output format changes
 const configHash = crypto
   .createHash("md5")
   .update(JSON.stringify(svgrConfig) + FORMAT_VERSION)
@@ -78,6 +78,71 @@ function stripRedundantCurrentColorStyles(code: string): string {
       /\sstyle=\{\{\s*stroke:\s*"currentColor",\s*strokeOpacity:\s*1\s*\}\}/g,
       ""
     );
+}
+
+/** Every stroked child element of an icon, as an "effective stroke width":
+ *  the number it hardcodes, or `inherit` when it takes the root's. */
+const CHILD_ELEMENT_RE =
+  /<(?:path|circle|rect|line|ellipse|polyline|polygon|g)\b([^>]*?)\/?>/g;
+const STROKE_WIDTH_ATTR_RE = /\sstrokeWidth=\{([\d.]+)\}/g;
+const HAS_STROKE_WIDTH_RE = /strokeWidth=/;
+const STROKE_NONE_RE = /\sstroke="none"/;
+const HAS_STROKE_RE = /\sstroke="/;
+const ROOT_STROKED_RE = /\sstroke="(?!none)/;
+const SVG_OPEN_TAG_RE = /<svg\b([^>]*)>/;
+const BASE_STROKE_WIDTH = "2";
+
+/**
+ * Let the svg-level `strokeWidth` prop reach the artwork.
+ *
+ * SVGR copies every `stroke-width` off the source SVG onto the children, and a
+ * child presentation attribute beats the one inherited from `<svg>`, so the
+ * prop `createLucideIcon` puts on the root is dead on arrival. Removing the
+ * child attributes lets it inherit.
+ *
+ * The strip is per icon and all-or-nothing, never per attribute. Some icons
+ * thin an interior stroke below the 2px base so it does not clog beside a
+ * container (see DESIGN.md, "the 1.8 tier"). Stripping the 2s while leaving a
+ * hardcoded 1.8 behind would, at `strokeWidth={1}`, render the thinned stroke
+ * *thicker* than the one it was thinning — inverting the optical adjustment.
+ *
+ * So an icon is only stripped when every stroked child agrees on one width and
+ * that width is the 2px base:
+ *  - disagreeing widths: an optical adjustment, left hardcoded.
+ *  - a stroked child with no width of its own: it already tracks the prop, so
+ *    the icon's widths disagree the moment the prop moves off 2.
+ *  - a uniform width that is not 2: the whole icon is drawn off-base, and
+ *    stripping would retune it at default props.
+ */
+function stripUniformChildStrokeWidth(code: string): string {
+  const rootMatch = code.match(SVG_OPEN_TAG_RE);
+  if (!rootMatch) {
+    return code;
+  }
+  const rootAttrs = rootMatch[1];
+  const childrenStart = (rootMatch.index ?? 0) + rootMatch[0].length;
+  const children = code.slice(childrenStart);
+
+  const widths = new Set(
+    [...children.matchAll(STROKE_WIDTH_ATTR_RE)].map((m) => m[1])
+  );
+  if (widths.size !== 1 || !widths.has(BASE_STROKE_WIDTH)) {
+    return code;
+  }
+
+  const rootIsStroked = ROOT_STROKED_RE.test(rootAttrs);
+  for (const [, attrs] of children.matchAll(CHILD_ELEMENT_RE)) {
+    if (HAS_STROKE_WIDTH_RE.test(attrs) || STROKE_NONE_RE.test(attrs)) {
+      continue;
+    }
+    if (HAS_STROKE_RE.test(attrs) || rootIsStroked) {
+      return code; // a child already tracking the prop: widths would diverge.
+    }
+  }
+
+  return (
+    code.slice(0, childrenStart) + children.replaceAll(STROKE_WIDTH_ATTR_RE, "")
+  );
 }
 
 function toComponentName(str: string): string {
@@ -316,10 +381,12 @@ async function generateIcons(): Promise<void> {
           const rawCode = await transform(svgCode, svgrConfig, {
             componentName,
           });
-          const componentCode = stripRedundantCurrentColorStyles(
-            `import { createLucideIcon } from './create-lucide-icon'\n${rawCode}`.replace(
-              "export default ForwardRef;",
-              `export default createLucideIcon('${componentName}', ForwardRef);`
+          const componentCode = stripUniformChildStrokeWidth(
+            stripRedundantCurrentColorStyles(
+              `import { createLucideIcon } from './create-lucide-icon'\n${rawCode}`.replace(
+                "export default ForwardRef;",
+                `export default createLucideIcon('${componentName}', ForwardRef);`
+              )
             )
           );
           if (!componentCode.includes("createLucideIcon(")) {
