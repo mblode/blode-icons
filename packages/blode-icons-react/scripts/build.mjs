@@ -593,10 +593,15 @@ function compile() {
 async function main() {
   const t0 = performance.now();
 
-  // Gate: validate the SVG tree before generating anything.
-  execFileSync("node", [path.join(__dirname, "validate-icons.mjs")], {
-    stdio: "inherit",
-  });
+  // Gate: validate the SVG tree and its metadata before generating anything.
+  // validate-icons-data.mjs was written, wired to an npm script, and then
+  // invoked by nothing — not the build, not prepublishOnly, not lefthook — so
+  // a malformed category or a duplicate tag shipped unnoticed. Running it here
+  // costs milliseconds and is the only place every path to a published package
+  // passes through.
+  for (const gate of ["validate-icons.mjs", "validate-icons-data.mjs"]) {
+    execFileSync("node", [path.join(__dirname, gate)], { stdio: "inherit" });
+  }
 
   generateSupportFiles();
   await generateIcons();

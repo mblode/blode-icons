@@ -1,0 +1,16 @@
+{
+  "icons": 4357,
+  "errors": 686,
+  "warnings": 3545,
+  "cohortSplits": 186,
+  "rules": {
+    "bleed": 249,
+    "centred": 407,
+    "cohort-align": 437,
+    "density": 53,
+    "gap": 783,
+    "keyline": 2302
+  },
+  "recurringElements": 319,
+  "disagreeingElements": 105
+}
