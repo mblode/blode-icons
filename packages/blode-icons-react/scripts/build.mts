@@ -418,52 +418,13 @@ async function generateIcons(): Promise<void> {
     }
   }
 
-  // Generate filled aliases for outline icons missing a filled SVG
-  const outlineNames = new Set<string>();
-  const filledNames = new Set<string>();
+  // A `-filled` name is only exported when a `-filled` SVG exists. Missing
+  // filled art is a gap in the drawing, not something the build can paper over:
+  // an alias back to the outline made the name resolve while rendering outline
+  // strokes, so a caller toggling outline → filled saw no change and no error.
 
-  for (const f of svgFiles) {
-    const name = path.basename(f, ".svg");
-    if (name.endsWith("-filled")) {
-      filledNames.add(name.slice(0, -"-filled".length));
-    } else {
-      outlineNames.add(name);
-    }
-  }
-
-  const filledAliases = new Set<string>();
-  for (const name of outlineNames) {
-    if (!filledNames.has(name)) {
-      filledAliases.add(`${name}-filled`);
-    }
-  }
-
-  let aliasCount = 0;
-  for (const aliasName of filledAliases) {
-    const outlineName = aliasName.slice(0, -"-filled".length);
-    const aliasFilePath = path.join(srcDir, `${aliasName}.tsx`);
-    const aliasContent = `export { default } from './${outlineName}';\n`;
-
-    if (
-      !fs.existsSync(aliasFilePath) ||
-      fs.readFileSync(aliasFilePath, "utf-8") !== aliasContent
-    ) {
-      fs.writeFileSync(aliasFilePath, aliasContent);
-      aliasCount++;
-    }
-  }
-
-  if (filledAliases.size > 0) {
-    console.log(
-      `  ${aliasCount} filled alias(es) written (${filledAliases.size} total)`
-    );
-  }
-
-  // Remove stale components — always use full svgFiles list + aliases, not filtered subset
+  // Remove stale components — always use the full svgFiles list, not a filtered subset
   const allIconNames = new Set(svgFiles.map((f) => path.basename(f, ".svg")));
-  for (const alias of filledAliases) {
-    allIconNames.add(alias);
-  }
   const existingComponents = fs
     .readdirSync(srcDir)
     .filter(
@@ -486,11 +447,7 @@ async function generateIcons(): Promise<void> {
   }
 
   // Build sorted re-exports — each icon file already wraps with createLucideIcon
-  const allExportNames = svgFiles.map((f) => path.basename(f, ".svg"));
-  for (const alias of filledAliases) {
-    allExportNames.push(alias);
-  }
-  const sortedNames = allExportNames.toSorted();
+  const sortedNames = svgFiles.map((f) => path.basename(f, ".svg")).toSorted();
 
   const iconLines: string[] = [];
   for (const name of sortedNames) {
@@ -516,7 +473,7 @@ async function generateIcons(): Promise<void> {
   const elapsed = ((performance.now() - t0) / 1000).toFixed(1);
 
   console.log(
-    `Done in ${elapsed}s — ${changedCount} changed, ${cachedCount} cached, ${filledAliases.size} aliases, ${sortedNames.length} total`
+    `Done in ${elapsed}s — ${changedCount} changed, ${cachedCount} cached, ${sortedNames.length} total`
   );
 
   if (errors.length) {

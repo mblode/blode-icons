@@ -44,3 +44,25 @@ These need no handling. SVGR emits `{...props}` last in the root tag, so the pro
 ## `absoluteStrokeWidth`
 
 `createLucideIcon` scales `strokeWidth` by `24 / size` when `absoluteStrokeWidth` is set, matching lucide-react. It reaches exactly the same icons as `strokeWidth`, for exactly the same reasons.
+
+## Concepts with more than one candidate
+
+`icons-data/_concepts.json` answers "which icon for X" with exactly one slug, for 114 concepts. For 105 of them the answer was obvious: one icon in the set draws the idea and nothing else competes.
+
+Nine were not obvious. Two or more existing icons are drawing the same idea, and the table had to pick one. **The tie was broken by a naming rule — the unnumbered or simplest-named member wins — not by a design judgement about which mark is better.** Nobody compared them at 16px and chose. A maintainer who wants to overrule any of these needs no argument beyond preferring the other drawing.
+
+| Concept | `_concepts.json` says | Also drawing it |
+| --- | --- | --- |
+| `confirm` | `checkmark-1` | `checkmark-2`, `check` |
+| `close` | `cross-medium` | `x`, `circle-x`, `close-circle-dashed` |
+| `settings` | `settings-gear-1` | `settings-gear-2`, `-3`, `-4` |
+| `edit` | `pencil` | `pencil-2`, `pencil-3`, `edit-big`, `edit-small-1`, `edit-small-2` |
+| `menu` | `bars-three` | `bars-three-2`, `bars-three-3` |
+| `search` | `magnifying-glass` | `magnifying-glass-2` |
+| `delete` | `trash-can` | `trash-can-simple`, `trash-can-2` |
+| `info` | `circle-info` | `info`, `info-simple` |
+| `chart` | `chart-1` | `chart-2` … `chart-8` |
+
+Size variants are not on this list. `plus-large`/`-medium`/`-small`, `cross-large`/`-medium`/`-small` and `checkmark-1-medium`/`-small` are one mark at several optical sizes, which is a system working as intended; the table names the middle tier and that is a default, not a tie-break. Semantic variants are not on it either: `pencil-ai`, `pencil-sparkle` and `pencil-wave` draw a different idea from `pencil`, so they compete for nothing.
+
+What is left is duplication. `settings-gear-1` through `-4` are four attempts at one idea, and `chart-1` through `-8` are eight; neither set encodes a distinction a caller could act on, which is why a naming rule was the only rule available. This is the failure mode a concepts table exists to surface — a set that grows a second answer to a question that takes one stops being a system and becomes a pile — so the nine belong in a backlog, not in a footnote on the answer. Consolidating them is tracked separately.

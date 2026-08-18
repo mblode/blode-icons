@@ -1,0 +1,13 @@
+---
+"blode-icons-react": minor
+---
+
+Remove 85 `-filled` exports that rendered outline art.
+
+The build generated a `-filled` alias for every outline icon that had no filled SVG, re-exporting the outline component under the filled name. `AmazonFilledIcon`, `PaypalFilledIcon`, `KeyFilledIcon` and 82 others were in the public API and in `DynamicIcon`'s name union, and every one of them drew 2px strokes. Toggling an icon from outline to filled — the thing the pair exists for — changed nothing on screen and raised no error.
+
+**Breaking:** these 85 names no longer exist. Nothing renders differently, because the alias resolved to the outline component the whole time: replace `XFilledIcon` with `XIcon` and the pixels are identical. TypeScript flags the static imports at compile time; `DynamicIcon` logs and falls back for a name it cannot find. No Lucide-compatible alias referenced any of the 85, so that surface is unchanged.
+
+A `-filled` name is now exported only when a `-filled` SVG exists. Roughly half of the 85 are brand marks — payment cards, platform logos — where a filled counterpart is not a style the set should be expected to draw; the rest are gaps in the artwork, and the honest signal for a gap is a missing export rather than a name that quietly points somewhere else.
+
+Dropped: `amazon`, `apple-podcast`, `arrow-curve-down-left`, `arrow-curve-right`, `arrow-from-line-down`, `arrow-from-line-up`, `arrow-merge-left`, `arrow-merge-right`, `audible`, `audio-bars`, `beehiiv`, `branches`, `brand-amex`, `brand-jcb`, `brand-mastercard`, `brand-visa`, `brand-zoom`, `buymeacoffee`, `cable-knife`, `cashapp`, `chevron-down`, `chevron-up`, `circle-exclamation`, `circle-outline`, `cloud-dots`, `copy-simple`, `doordash`, `dot-grid-2x3-horizontal`, `dot-grid-2x3-vertical`, `dot-small`, `exposure`, `file-arrow-left`, `file-arrow-left-2`, `file-arrow-right`, `file-arrow-right-2`, `flick`, `four-k`, `frame-simple`, `git-commit-vertical`, `google-colored`, `google-play`, `info`, `kakaotalk`, `key`, `kick`, `knife-spoon`, `land-plot-simple`, `line-brand`, `login`, `macinthosh`, `magic`, `mailchimp`, `meandu`, `onlyfans`, `opentable`, `paypal`, `pencel-line`, `person-simple`, `pie-chart`, `quote`, `roundness`, `satellite`, `sevenrooms`, `shopify`, `sidebar-left-arrow-right`, `signal`, `slash-forward`, `soundcloud`, `square-arrow-down-2`, `square-arrow-left`, `square-arrow-right`, `square-arrow-up-2`, `tactics`, `three-d-sphere`, `trending-down-simple`, `uber`, `verified-check`, `video-play`, `vimeo`, `vk`, `voice`, `waves-simple`, `weibo`, `windows-colored`, `x-twitter` — each `-filled`.
