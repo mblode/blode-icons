@@ -38,22 +38,3 @@ jobs:
         run: npm run validate:icons-data --workspace blode-icons-react
       - name: Build
         run: npm run build
-
-  audit:
-    # The house-spec audit. Separate from `check` because it gates on a trend
-    # rather than on correctness: it fails when a metric gets worse than the
-    # committed baseline, not when the set is imperfect. The set is currently
-    # 686 errors from perfect and that is the known starting point, not a
-    # reason to block every PR.
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-      - name: Audit icons against the house spec
-        run: node scripts/audit-icons.mjs
-        working-directory: packages/blode-icons-react

@@ -1,5 +1,5 @@
 /**
- * The house-spec audit, and the gate that keeps it from getting worse.
+ * The house-spec audit: what the set looks like, measured.
  *
  * Nothing in this repo had ever read a path. `validate-icons.mjs` checks slugs,
  * filled siblings and a `viewBox` substring; the two properties that actually
@@ -13,11 +13,18 @@
  * importing icon-forge's API would pull @ai-sdk/anthropic, ai, zod and sharp into
  * a package whose audit never calls a model.
  *
- * THE GATE IS NO-REGRESSION, NOT ZERO. The 686 errors are `bleed` (the drawing
- * sits outside the live area) and `cohort-align` (a family disagrees with itself).
- * Neither is mechanically fixable — one needs the icon rescaled, the other needs
- * the family redrawn. A gate demanding zero would be red forever and would teach
- * everyone to ignore it.
+ * DELIBERATELY NOT IN CI. It compares absolute counts, so adding a normal icon
+ * adds findings and reads as a regression; the only available response is to run
+ * --update, which teaches nothing and costs a commit. A gate that fires on every
+ * PR and is always answered the same way is worse than no gate. It would also put
+ * a published copy of icon-forge on the critical path of every build, for a
+ * measurement nobody is blocked on.
+ *
+ * So this is a tool you run when you want to know: before and after a
+ * normalisation pass, or when a family starts looking wrong. The baseline is
+ * there to diff against, not to gate on. If it ever does belong in CI, it needs
+ * to compare per-icon rates rather than totals, so that adding an average icon is
+ * neutral.
  *
  * Usage:
  *   node scripts/audit-icons.mjs              compare against the baseline
@@ -166,7 +173,7 @@ const main = () => {
 
   if (regressions.length > 0) {
     process.stderr.write(
-      `\n${regressions.length} metric(s) got worse. Fix them, or run --update if the change is deliberate and explained in the PR.\n`
+      `\n${regressions.length} metric(s) got worse than the baseline. Run --update once you have looked at them.\n`
     );
     process.exitCode = 1;
   }
