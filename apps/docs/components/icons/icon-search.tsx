@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { asset } from "@/lib/config";
+import { downloadSvg } from "@/lib/icon-download";
 import { PAGE_SIZE } from "@/lib/icon-grid";
 import {
   filterIconsByStyle,
@@ -15,6 +17,7 @@ import {
 } from "@/lib/icon-search";
 import { loadIconSource, loadIconSvgBatch } from "@/lib/icon-source";
 import type { IconCopyKind, IconStyle, SearchDoc } from "@/lib/icon-types";
+import ArrowDownWallIcon from "@/src/icons-tsx/arrow-down-wall";
 import MagnifyingGlassIcon from "@/src/icons-tsx/magnifying-glass";
 
 const COPY_KIND_LABEL: Record<IconCopyKind, string> = {
@@ -49,49 +52,87 @@ const IconCell = ({
   onCopy: (slug: string, name: string, copyKind: IconCopyKind) => void;
 }) => {
   const { slug, name } = resolveVariant(doc, style);
+  const displayName = getIconDisplayName(name);
 
   return (
     <div>
-      <div className="group relative flex h-[104px] flex-col items-center justify-center overflow-hidden rounded-xl border border-border px-2 [contain-intrinsic-size:104px] [content-visibility:auto]">
-        {markup ? (
-          // Zoom the glyph on hover/focus instead of hiding it behind the copy
-          // buttons, so you can actually see the icon while deciding (issue #14).
-          //
-          // dangerouslySetInnerHTML rather than assigning innerHTML in an
-          // effect: the effect only runs after hydration, so the server HTML
-          // shipped an empty div and the whole grid stayed blank until the
-          // bundle booted. This renders the glyph into the document itself.
-          // The markup is this repo's own src/icons-svg files, never user input.
-          <div
-            className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
-            dangerouslySetInnerHTML={{ __html: markup }}
-          />
-        ) : (
-          <div className="size-6 rounded-md bg-muted/40" />
-        )}
+      <div className="group relative h-[104px] overflow-hidden rounded-xl border border-border [contain-intrinsic-size:104px] [content-visibility:auto]">
+        {/*
+          The glyph is a link to the icon's own page, where it is shown at
+          every size with its category, tags, aliases and import line. The
+          copy buttons sit on top of it, so a click on one never falls through
+          to the link. Raw anchor rather than next/link: the grid can hold
+          2,000 cells, and prefetching every visible one is a request storm
+          for pages nobody may open.
+        */}
+        <a
+          className="absolute inset-0 flex items-center justify-center rounded-xl px-2 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+          href={asset(`/${doc.slug}`)}
+        >
+          <span className="sr-only">{displayName}</span>
+          {markup ? (
+            // Zoom the glyph on hover/focus instead of hiding it behind the copy
+            // buttons, so you can actually see the icon while deciding (issue #14).
+            //
+            // dangerouslySetInnerHTML rather than assigning innerHTML in an
+            // effect: the effect only runs after hydration, so the server HTML
+            // shipped an empty div and the whole grid stayed blank until the
+            // bundle booted. This renders the glyph into the document itself.
+            // The markup is this repo's own src/icons-svg files, never user input.
+            <div
+              className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
+              dangerouslySetInnerHTML={{ __html: markup }}
+            />
+          ) : (
+            <div className="size-6 rounded-md bg-muted/40" />
+          )}
+        </a>
 
         <div className="absolute inset-x-0 bottom-0 flex gap-1 bg-gradient-to-t from-background via-background/95 to-transparent p-1.5 opacity-0 transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100">
           <Button
-            aria-label={`Copy ${getIconDisplayName(name)} SVG`}
-            className="h-7 flex-1 cursor-pointer px-2 text-xs"
+            aria-label={`Copy ${displayName} SVG`}
+            className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
             onClick={() => onCopy(slug, name, "SVG")}
             variant="secondary"
           >
             SVG
           </Button>
           <Button
-            aria-label={`Copy ${getIconDisplayName(name)} name`}
-            className="h-7 flex-1 cursor-pointer px-2 text-xs"
+            aria-label={`Copy ${displayName} React component source`}
+            className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
+            onClick={() => onCopy(slug, name, "TSX")}
+            variant="secondary"
+          >
+            TSX
+          </Button>
+          <Button
+            aria-label={`Copy ${displayName} name`}
+            className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
             onClick={() => onCopy(slug, name, "NAME")}
             variant="secondary"
           >
             Name
           </Button>
+          {/*
+            The markup is already in memory for the cell, so the download costs
+            no request. Disabled until it arrives rather than saving an empty
+            file.
+          */}
+          <Button
+            aria-label={`Download ${displayName} SVG`}
+            className="shrink-0 cursor-pointer"
+            disabled={!markup}
+            onClick={() => markup && downloadSvg(slug, markup)}
+            size="icon-sm"
+            variant="secondary"
+          >
+            <ArrowDownWallIcon className="size-3.5" />
+          </Button>
         </div>
       </div>
 
       <span className="mt-2 line-clamp-2 text-center text-muted-foreground text-xs">
-        {getIconDisplayName(name)}
+        {displayName}
       </span>
     </div>
   );

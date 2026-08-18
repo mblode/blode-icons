@@ -1,0 +1,346 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
+import { CodeBlock } from "@/components/code-block";
+import { asset, siteUrl } from "@/lib/config";
+
+const description =
+  "The house spec behind Blode Icons: a 24x24 grid, a 2px base stroke, named optical thinning tiers, cohorts that share a bounding box, and how to add an icon.";
+const title = "Philosophy";
+const pageUrl = `${siteUrl}/philosophy`;
+
+export const metadata: Metadata = {
+  alternates: { canonical: pageUrl },
+  description,
+  openGraph: {
+    description,
+    images: [{ url: "/opengraph-image" }],
+    locale: "en_US",
+    siteName: "Matthew Blode",
+    title,
+    type: "article",
+    url: pageUrl,
+  },
+  title,
+  twitter: {
+    card: "summary_large_image",
+    creator: "@mattblode",
+    description,
+    images: ["/opengraph-image"],
+    title,
+  },
+};
+
+const ADD_ICON_STEPS = `# 1. Draw it. 24x24 viewBox, 2px stroke, stroke="currentColor".
+#    Save as packages/blode-icons-react/icons-svg/<slug>.svg
+#    A filled companion, when it has one, is <slug>-filled.svg
+
+# 2. Describe it. packages/blode-icons-react/icons-data/<slug>.json
+#    { "icon": "<slug>", "category": "...", "tags": [...] }
+
+# 3. Check the data before anything is generated from it.
+npm run validate:icons-data --workspace blode-icons-react
+
+# 4. Generate the React components from the SVGs.
+npm run build --workspace blode-icons-react
+
+# 5. Copy the set into the docs app and rebuild its search index.
+npm run copy-icons --workspace docs
+
+# 6. Record the change for the next release.
+npm run changeset`;
+
+const METADATA_EXAMPLE = `{
+  "icon": "airplane",
+  "category": "Things",
+  "tags": ["flight", "travel", "plane", "trip", "aviation"]
+}`;
+
+const Section = ({
+  children,
+  id,
+  title: heading,
+}: {
+  children: ReactNode;
+  id: string;
+  title: string;
+}) => (
+  <section className="mt-12 scroll-mt-8" id={id}>
+    <h2 className="font-semibold text-lg tracking-tight">{heading}</h2>
+    <div className="mt-3 space-y-4 text-muted-foreground text-sm leading-relaxed">
+      {children}
+    </div>
+  </section>
+);
+
+const Code = ({ children }: { children: ReactNode }) => (
+  <code className="font-mono text-foreground">{children}</code>
+);
+
+const TIERS: { tier: string; use: string }[] = [
+  {
+    tier: "2",
+    use: "The base. Every outline stroke, unless something below applies.",
+  },
+  {
+    tier: "1.8",
+    use: "An interior mark inside a 2px container that would otherwise clog.",
+  },
+  {
+    tier: "1.5 to 1.9",
+    use: "The same adjustment, tuned per glyph where 1.8 was not enough.",
+  },
+  {
+    tier: "0.75, 0.5",
+    use: "Hairlines: text ruling, screen content, signal bars. Marks that stand for detail rather than being detail.",
+  },
+];
+
+const UNREACHED: { count: string; reason: ReactNode; what: string }[] = [
+  {
+    count: "58",
+    reason: (
+      <>
+        Mixed widths. An optical adjustment as above, like{" "}
+        <Code>coin-lira</Code> or <Code>circle-info</Code>.
+      </>
+    ),
+    what: "Outline icons with an interior tier",
+  },
+  {
+    count: "18",
+    reason: (
+      <>
+        A uniform width that is not 2. The whole glyph is drawn off the base
+        tier, so stripping would retune it at default props.
+      </>
+    ),
+    what: "Outline icons drawn off the base",
+  },
+  {
+    count: "4",
+    reason: (
+      <>
+        A stroked child with no width of its own. Its widths agree at the
+        default and diverge the moment the prop moves.
+      </>
+    ),
+    what: "Outline icons with an inheriting child",
+  },
+  {
+    count: "2,471",
+    reason: (
+      <>
+        Filled art is outline-expanded from a 2px stroke into a{" "}
+        <Code>fill</Code>. There is no stroke left to vary. lucide-react behaves
+        the same way for the same reason.
+      </>
+    ),
+    what: "Filled components",
+  },
+];
+
+export default function PhilosophyPage() {
+  return (
+    <div className="mx-auto w-full max-w-3xl px-4 py-8">
+      <h1 className="font-semibold text-2xl tracking-tight">
+        How these icons are drawn
+      </h1>
+      <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
+        An icon set is a vocabulary, and a vocabulary only works if every word
+        is spelled the same way. What follows is the house spec: the facts about
+        the art that the code depends on, written down so an adjustment can be
+        told apart from drift.
+      </p>
+
+      <Section id="grid" title="The grid and the base stroke">
+        <p>
+          Every outline icon is drawn on a 24x24 grid with a 2px stroke. That is
+          the base tier, and it is what <Code>strokeWidth</Code> means by
+          default. Strokes are <Code>currentColor</Code>, so an icon takes the
+          colour of the text around it and needs no theme wiring.
+        </p>
+        <p>
+          Most icons also ship a filled companion, generated by expanding that
+          2px outline into a fill. The two are drawn to the same silhouette, so
+          swapping style in a toggle does not move the mark.
+        </p>
+      </Section>
+
+      <Section id="thinning" title="Optical thinning is a tier, not drift">
+        <p>
+          A dense glyph cannot hold the base tier everywhere. Where a small
+          interior mark sits inside a container that is also 2px, the two
+          adjacent strokes close the light between them and the glyph reads as a
+          blob at 16px. The interior is therefore drawn thinner on purpose.
+        </p>
+        <p>
+          An undocumented adjustment is indistinguishable from drift, so the
+          thinned values are named. A lint rule that flags &ldquo;stroke width
+          is not 2&rdquo; exempts them.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-border border-b">
+                <th className="py-2 pr-4 font-medium text-foreground">Tier</th>
+                <th className="py-2 font-medium text-foreground">Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              {TIERS.map((row) => (
+                <tr className="border-border border-b" key={row.tier}>
+                  <td className="py-2 pr-4 align-top">
+                    <Code>{row.tier}</Code>
+                  </td>
+                  <td className="py-2 align-top">{row.use}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section id="stroke-width" title="What strokeWidth reaches">
+        <p>
+          The <Code>strokeWidth</Code> prop lands on the root <Code>svg</Code>,
+          where children inherit it. A child that carries its own{" "}
+          <Code>stroke-width</Code> beats that inherited value, so the build
+          strips those child attributes. It does so per icon and all-or-nothing.
+        </p>
+        <p>
+          All-or-nothing is the point. Strip <Code>coin-lira</Code>&rsquo;s 2s
+          and leave its 1.8, and at <Code>strokeWidth={"{1}"}</Code> the thinned
+          interior renders <em>thicker</em> than the stroke it was thinning: the
+          optical adjustment inverted. That is a worse bug than an inert prop.
+        </p>
+        <p>
+          1,788 outline icons respond to the prop. These do not, and the reason
+          matters more than the count:
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-border border-b">
+                <th className="py-2 pr-4 font-medium text-foreground">Count</th>
+                <th className="py-2 pr-4 font-medium text-foreground">What</th>
+                <th className="py-2 font-medium text-foreground">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              {UNREACHED.map((row) => (
+                <tr className="border-border border-b" key={row.what}>
+                  <td className="py-2 pr-4 align-top tabular-nums">
+                    {row.count}
+                  </td>
+                  <td className="py-2 pr-4 align-top">{row.what}</td>
+                  <td className="py-2 align-top">{row.reason}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <Code>absoluteStrokeWidth</Code> scales <Code>strokeWidth</Code> by{" "}
+          <Code>24 / size</Code>, matching lucide-react, and reaches exactly the
+          same icons for exactly the same reasons.
+        </p>
+      </Section>
+
+      <Section id="cohorts" title="Icons that swap must share an extent">
+        <p>
+          When one icon replaces another in the same slot, a toggle state, an
+          enumeration, a status set sharing a container, the two must agree on
+          their bounding box. A swap across disagreeing extents makes the icon
+          jump in place.
+        </p>
+        <p>
+          Those groups are recorded in <Code>icons-data/_cohorts.json</Code> and
+          checked. Membership is behavioural, not lexical: a shared noun is not
+          enough, which is why <Code>desk-lamp</Code> is recorded as{" "}
+          <em>not</em> a <Code>desk-office</Code> variant rather than left to a
+          name-prefix guess.
+        </p>
+        <p>
+          A stroked icon&rsquo;s visual extent is its path bounding box inflated
+          by the stroke width, half per side. Comparing a stroked bounding box
+          against a filled one conflates a rendering fact with a design fact,
+          and it is the single mistake that has produced the most wrong
+          measurements here.
+        </p>
+      </Section>
+
+      <Section id="naming" title="One idea, one icon">
+        <p>
+          Tags are many-to-many and they collide, which is right for finding
+          something and wrong for deciding something. The{" "}
+          <a
+            className="text-foreground underline underline-offset-2"
+            href={asset("/concepts")}
+          >
+            concepts table
+          </a>{" "}
+          is the other half: each concept resolves to exactly one canonical
+          icon, so a set cannot quietly grow two answers to the same question.
+        </p>
+        <p>
+          Search covers the case where you cannot name the thing. It runs an
+          exact match on slug and alias, then an all-token match, then a fuzzy
+          pass over names, tags, categories, and Lucide aliases. That is why{" "}
+          <Code>search</Code> finds{" "}
+          <a
+            className="text-foreground underline underline-offset-2"
+            href={asset("/magnifying-glass")}
+          >
+            magnifying glass
+          </a>
+          , and why{" "}
+          <a
+            className="text-foreground underline underline-offset-2"
+            href={asset("/categories")}
+          >
+            categories
+          </a>{" "}
+          exist for browsing what the set already covers.
+        </p>
+      </Section>
+
+      <Section id="contributing" title="Adding an icon">
+        <p>
+          An icon is two files: the drawing and the record that describes it.
+          Everything else is generated.
+        </p>
+        <CodeBlock code={ADD_ICON_STEPS} lang="bash" />
+        <p>The record is small on purpose:</p>
+        <CodeBlock code={METADATA_EXAMPLE} lang="json" />
+        <p>
+          <Code>category</Code> must be one of the names in{" "}
+          <Code>_categories.json</Code>, and validation fails on anything else,
+          so the taxonomy cannot grow a synonym by accident. Tags are the search
+          surface: write the words someone would type when they cannot remember
+          what the icon is called.
+        </p>
+        <p>
+          If the new icon swaps with an existing one, add it to its cohort in{" "}
+          <Code>_cohorts.json</Code>. If it answers a concept nothing else
+          answers, add it to <Code>_concepts.json</Code>. If it takes over a
+          concept an older icon held, change that entry rather than adding a
+          second.
+        </p>
+        <p>
+          User-facing changes to the package need a changeset before merge. The
+          full source, and the scripts every step above runs, are on{" "}
+          <a
+            className="text-foreground underline underline-offset-2"
+            href="https://github.com/mblode/blode-icons"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </Section>
+    </div>
+  );
+}

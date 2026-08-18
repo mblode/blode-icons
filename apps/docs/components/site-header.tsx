@@ -16,6 +16,18 @@ export function SiteHeader() {
       </a>
       <nav className="flex items-center gap-4">
         <a
+          className="hidden text-muted-foreground text-sm underline-offset-2 hover:text-foreground hover:underline sm:inline"
+          href={asset("/categories")}
+        >
+          Categories
+        </a>
+        <a
+          className="hidden text-muted-foreground text-sm underline-offset-2 hover:text-foreground hover:underline sm:inline"
+          href={asset("/philosophy")}
+        >
+          Philosophy
+        </a>
+        <a
           className="text-muted-foreground text-sm underline-offset-2 hover:text-foreground hover:underline"
           href={asset("/installation")}
         >
