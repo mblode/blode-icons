@@ -2,8 +2,9 @@ import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { pathToFileURL } from "node:url";
 
+import type { Config } from "@svgr/core";
 import { transform } from "@svgr/core";
 
 const __dirname = import.meta.dirname;
@@ -21,15 +22,37 @@ const ICON_SUFFIX_RE = /Icon$/;
 const args = process.argv.slice(2);
 const force = args.includes("--force");
 const filterArg = args.find((a) => a.startsWith("--filter="));
-const filterPattern = filterArg ? filterArg.split("=")[1] : null;
+const filterPattern = filterArg ? (filterArg.split("=")[1] ?? null) : null;
 
-// Load SVGO config
-const svgoConfig = JSON.parse(
+/** The cache manifest: icon slug → hash of its SVG plus the SVGR config. */
+type Manifest = Record<string, string>;
+
+/** One SVG's trip through SVGR. The failed arm carries no hash, so the manifest
+ *  cannot be written from a result that never produced a component. */
+type IconResult =
+  | { cached: boolean; hash: string; iconName: string; ok: true }
+  | { error: string; iconName: string; ok: false };
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
+// Load SVGO config. It is a hand-edited JSON file, so it is checked for being an
+// object and then handed to SVGR, which validates the rest of it.
+const rawSvgoConfig: unknown = JSON.parse(
   fs.readFileSync(path.join(ROOT, "svgo.json"), "utf-8")
 );
+if (!isRecord(rawSvgoConfig)) {
+  throw new Error(`${path.join(ROOT, "svgo.json")}: expected a JSON object.`);
+}
+const svgoConfig = rawSvgoConfig as Config["svgoConfig"];
 
 // SVGR options — hash includes config so cache busts on config changes
-const svgrConfig = {
+const svgrConfig: Config = {
   plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
   ref: true,
   svgoConfig,
@@ -41,7 +64,7 @@ const configHash = crypto
   .update(JSON.stringify(svgrConfig) + FORMAT_VERSION)
   .digest("hex");
 
-function stripRedundantCurrentColorStyles(code) {
+function stripRedundantCurrentColorStyles(code: string): string {
   return code
     .replaceAll(
       /\sstyle=\{\{\s*fill:\s*"currentColor",\s*fillOpacity:\s*1,\s*stroke:\s*"currentColor",\s*strokeOpacity:\s*1\s*\}\}/g,
@@ -57,14 +80,14 @@ function stripRedundantCurrentColorStyles(code) {
     );
 }
 
-function toComponentName(str) {
+function toComponentName(str: string): string {
   return `${str
     .split("-")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join("")}Icon`;
 }
 
-function matchesFilter(name) {
+function matchesFilter(name: string): boolean {
   if (!filterPattern) {
     return true;
   }
@@ -76,16 +99,28 @@ function matchesFilter(name) {
   return name.includes(filterPattern);
 }
 
-function loadManifest() {
+function loadManifest(): Manifest {
+  let parsed: unknown;
   try {
-    return JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+    parsed = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
   } catch {
     return {};
   }
+  if (!isRecord(parsed)) {
+    return {};
+  }
+  // A hand-mangled manifest must not smuggle non-hash values into the next one.
+  const manifest: Manifest = {};
+  for (const [key, value] of Object.entries(parsed)) {
+    if (typeof value === "string") {
+      manifest[key] = value;
+    }
+  }
+  return manifest;
 }
 
 // ─── Step 0: Write support files that src/ needs but aren't generated ─
-function generateSupportFiles() {
+function generateSupportFiles(): void {
   fs.mkdirSync(srcDir, { recursive: true });
 
   fs.writeFileSync(
@@ -228,7 +263,7 @@ export default DynamicIcon
 
 // ─── Step 1: Generate icon components from SVGs ─────────────────────
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: build script with batched processing, caching, and cleanup
-async function generateIcons() {
+async function generateIcons(): Promise<void> {
   const t0 = performance.now();
 
   fs.mkdirSync(srcDir, { recursive: true });
@@ -238,9 +273,9 @@ async function generateIcons() {
     .filter((file) => file.endsWith(".svg"));
 
   const savedManifest = loadManifest();
-  const oldManifest = force ? {} : savedManifest;
-  const newManifest = filterPattern ? { ...savedManifest } : {};
-  const errors = [];
+  const oldManifest: Manifest = force ? {} : savedManifest;
+  const newManifest: Manifest = filterPattern ? { ...savedManifest } : {};
+  const errors: { error: string; file: string }[] = [];
   let changedCount = 0;
   let cachedCount = 0;
 
@@ -256,8 +291,8 @@ async function generateIcons() {
   const BATCH_SIZE = 50;
   for (let i = 0; i < filesToProcess.length; i += BATCH_SIZE) {
     const batch = filesToProcess.slice(i, i + BATCH_SIZE);
-    const results = await Promise.all(
-      batch.map(async (file) => {
+    const results: IconResult[] = await Promise.all(
+      batch.map(async (file): Promise<IconResult> => {
         const iconName = path.basename(file, ".svg");
         const componentName = toComponentName(iconName);
         const svgFilePath = path.join(svgDir, file);
@@ -275,7 +310,7 @@ async function generateIcons() {
             oldManifest[iconName] === hash &&
             fs.existsSync(componentFilePath)
           ) {
-            return { cached: true, hash, iconName };
+            return { cached: true, hash, iconName, ok: true };
           }
 
           const rawCode = await transform(svgCode, svgrConfig, {
@@ -293,31 +328,32 @@ async function generateIcons() {
             );
           }
           fs.writeFileSync(componentFilePath, `${componentCode}\n`);
-          return { cached: false, hash, iconName };
+          return { cached: false, hash, iconName, ok: true };
         } catch (error) {
-          console.error(`  Failed: ${file} - ${error.message}`);
-          return { error: error.message, iconName };
+          const message = errorMessage(error);
+          console.error(`  Failed: ${file} - ${message}`);
+          return { error: message, iconName, ok: false };
         }
       })
     );
 
     for (const r of results) {
-      if (r.error) {
-        errors.push({ error: r.error, file: r.iconName });
-      } else {
+      if (r.ok) {
         newManifest[r.iconName] = r.hash;
         if (r.cached) {
           cachedCount++;
         } else {
           changedCount++;
         }
+      } else {
+        errors.push({ error: r.error, file: r.iconName });
       }
     }
   }
 
   // Generate filled aliases for outline icons missing a filled SVG
-  const outlineNames = new Set();
-  const filledNames = new Set();
+  const outlineNames = new Set<string>();
+  const filledNames = new Set<string>();
 
   for (const f of svgFiles) {
     const name = path.basename(f, ".svg");
@@ -328,7 +364,7 @@ async function generateIcons() {
     }
   }
 
-  const filledAliases = new Set();
+  const filledAliases = new Set<string>();
   for (const name of outlineNames) {
     if (!filledNames.has(name)) {
       filledAliases.add(`${name}-filled`);
@@ -389,14 +425,14 @@ async function generateIcons() {
   }
   const sortedNames = allExportNames.toSorted();
 
-  const iconLines = [];
+  const iconLines: string[] = [];
   for (const name of sortedNames) {
     const componentName = toComponentName(name);
     iconLines.push(`export { default as ${componentName} } from './${name}'`);
   }
 
   const allIconsHeader = [
-    "// Auto-generated by scripts/build.mjs — do not edit manually.",
+    "// Auto-generated by scripts/build.mts — do not edit manually.",
     "",
     "export type { LucideProps, LucideIcon } from './lucide-types'",
     "",
@@ -427,7 +463,29 @@ async function generateIcons() {
 
 // ─── Step 2: Append lucide aliases to all-icons.ts ──────────────────
 
-function addReExportAlias(name, sourceFile, aliasLines, exportedNames, seen) {
+/** The only three fields of a mapping entry this build reads. */
+interface MappingEntry {
+  blodeName: string;
+  hasMatch: boolean;
+  lucideName: string;
+}
+
+function isMappingEntry(value: unknown): value is MappingEntry {
+  return (
+    isRecord(value) &&
+    typeof value.blodeName === "string" &&
+    typeof value.lucideName === "string" &&
+    typeof value.hasMatch === "boolean"
+  );
+}
+
+function addReExportAlias(
+  name: string,
+  sourceFile: string,
+  aliasLines: string[],
+  exportedNames: Set<string>,
+  seen: Set<string>
+): void {
   if (exportedNames.has(name) || seen.has(name)) {
     return;
   }
@@ -435,18 +493,33 @@ function addReExportAlias(name, sourceFile, aliasLines, exportedNames, seen) {
   seen.add(name);
 }
 
-async function generateLucideAliases() {
+async function generateLucideAliases(): Promise<void> {
   // Import the module rather than regex the file. The previous version matched
   // `lucideName, blodeName, category, hasMatch` in that exact order, so when
   // the formatter alphabetised the object keys it silently matched nothing and
   // the build dropped every alias while still exiting 0. Node strips the types
   // natively, so the mapping is read as data and key order stops mattering.
-  const { mappings } = await import(pathToFileURL(mappingFile).href);
-  const entries = mappings.map(({ blodeName, hasMatch, lucideName }) => ({
-    blodeName,
-    hasMatch,
-    lucideName,
-  }));
+  const loaded: unknown = await import(pathToFileURL(mappingFile).href);
+  const raw = isRecord(loaded) ? loaded.mappings : undefined;
+  if (!Array.isArray(raw)) {
+    throw new TypeError(
+      `${path.basename(mappingFile)} does not export a \`mappings\` array.`
+    );
+  }
+  // A malformed entry is a broken mapping file, not something to skip past:
+  // dropping it silently is the same failure mode the regex reader had.
+  const entries: MappingEntry[] = (raw as unknown[]).map((entry, index) => {
+    if (!isMappingEntry(entry)) {
+      throw new Error(
+        `${path.basename(mappingFile)}: mappings[${index}] is missing blodeName, lucideName or hasMatch.`
+      );
+    }
+    return {
+      blodeName: entry.blodeName,
+      hasMatch: entry.hasMatch,
+      lucideName: entry.lucideName,
+    };
+  });
 
   console.log(`Found ${entries.length} mappings in lucide-mapping.ts`);
 
@@ -464,8 +537,8 @@ async function generateLucideAliases() {
   // Read all-icons.ts to build component→file lookup and exported names set
   const allIconsFile = path.join(srcDir, "all-icons.ts");
   const allIconsContent = fs.readFileSync(allIconsFile, "utf-8");
-  const exportedNames = new Set();
-  const componentToFile = new Map();
+  const exportedNames = new Set<string>();
+  const componentToFile = new Map<string, string>();
   const reExportRegex = /export \{ default as (\w+) \} from '\.\/([^']+)'/g;
   for (const match of allIconsContent.matchAll(reExportRegex)) {
     exportedNames.add(match[1]);
@@ -474,8 +547,8 @@ async function generateLucideAliases() {
 
   // Build alias lines
   const aliasLines = ["", "// Lucide-compatible aliases"];
-  const errors = [];
-  const seen = new Set();
+  const errors: string[] = [];
+  const seen = new Set<string>();
 
   for (const { lucideName, blodeName } of validEntries) {
     const sourceFile = componentToFile.get(blodeName);
@@ -541,20 +614,20 @@ async function generateLucideAliases() {
 }
 
 // ─── Step 3: Generate dynamicIconImports.ts ─────────────────────────
-function generateDynamicImports() {
+function generateDynamicImports(): void {
   const allIconsContent = fs.readFileSync(
     path.join(srcDir, "all-icons.ts"),
     "utf-8"
   );
   const reExportRegex = /export \{ default as (\w+) \} from '\.\/([^']+)'/g;
 
-  const entries = [];
+  const entries: string[] = [];
   for (const match of allIconsContent.matchAll(reExportRegex)) {
     entries.push(`  '${match[1]}': () => import('./${match[2]}')`);
   }
 
   const content = [
-    "// Auto-generated by scripts/build.mjs — do not edit manually.",
+    "// Auto-generated by scripts/build.mts — do not edit manually.",
     "",
     "import type { LucideIcon } from './lucide-types'",
     "",
@@ -571,7 +644,7 @@ function generateDynamicImports() {
 }
 
 // ─── Step 4: Compile with tsc ───────────────────────────────────────
-function compile() {
+function compile(): void {
   const t0 = performance.now();
 
   if (force) {
@@ -590,16 +663,16 @@ function compile() {
 }
 
 // ─── Main ───────────────────────────────────────────────────────────
-async function main() {
+async function main(): Promise<void> {
   const t0 = performance.now();
 
   // Gate: validate the SVG tree and its metadata before generating anything.
-  // validate-icons-data.mjs was written, wired to an npm script, and then
+  // validate-icons-data.mts was written, wired to an npm script, and then
   // invoked by nothing — not the build, not prepublishOnly, not lefthook — so
   // a malformed category or a duplicate tag shipped unnoticed. Running it here
   // costs milliseconds and is the only place every path to a published package
   // passes through.
-  for (const gate of ["validate-icons.mjs", "validate-icons-data.mjs"]) {
+  for (const gate of ["validate-icons.mts", "validate-icons-data.mts"]) {
     execFileSync("node", [path.join(__dirname, gate)], { stdio: "inherit" });
   }
 

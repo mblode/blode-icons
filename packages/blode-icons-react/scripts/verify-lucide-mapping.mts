@@ -13,7 +13,7 @@
  * as unit vectors. The threshold is calibrated against exact-name pairs, whose
  * scores are printed on every run so a drift is visible.
  *
- * Usage: node --experimental-strip-types scripts/verify-lucide-mapping.mjs [--apply]
+ * Usage: node scripts/verify-lucide-mapping.mts [--apply]
  */
 import fs from "node:fs";
 import { createRequire } from "node:module";
@@ -54,7 +54,60 @@ const BLUR = 1.6;
 const VETO_SCORE = 0.45;
 const RESCUE_SCORE = 0.82;
 
-function pascalToKebab(name) {
+/** A row of lucide-mapping.ts, as this script needs to read and rewrite it. */
+interface Mapping {
+  blodeName: string;
+  category: string;
+  hasMatch: boolean;
+  lucideName: string;
+  match: string;
+}
+
+/** A row plus its rendered similarity. null means one SVG was missing. */
+interface Scored extends Mapping {
+  score: number | null;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isMapping(value: unknown): value is Mapping {
+  return (
+    isRecord(value) &&
+    typeof value.blodeName === "string" &&
+    typeof value.category === "string" &&
+    typeof value.hasMatch === "boolean" &&
+    typeof value.lucideName === "string" &&
+    typeof value.match === "string"
+  );
+}
+
+async function loadMappings(): Promise<Mapping[]> {
+  const loaded: unknown = await import(pathToFileURL(mappingPath).href);
+  const raw = isRecord(loaded) ? loaded.mappings : undefined;
+  if (!Array.isArray(raw)) {
+    throw new TypeError(
+      `${path.basename(mappingPath)} does not export a \`mappings\` array.`
+    );
+  }
+  return (raw as unknown[]).map((entry, index) => {
+    if (!isMapping(entry)) {
+      throw new Error(
+        `${path.basename(mappingPath)}: mappings[${index}] is not a complete mapping row.`
+      );
+    }
+    return {
+      blodeName: entry.blodeName,
+      category: entry.category,
+      hasMatch: entry.hasMatch,
+      lucideName: entry.lucideName,
+      match: entry.match,
+    };
+  });
+}
+
+function pascalToKebab(name: string): string {
   return name
     .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
     .replace(/([A-Z])([A-Z][a-z])/g, "$1-$2")
@@ -62,13 +115,17 @@ function pascalToKebab(name) {
 }
 
 /** Alias → canonical, so an alias resolves to the SVG file Lucide ships. */
-function loadAliasMap() {
-  const declaration = fs.readFileSync(
-    require.resolve("lucide-static/dist/lucide-static.d.ts"),
-    "utf-8"
-  );
+function loadAliasMap(): Record<string, string> {
+  const declarationPath =
+    require.resolve("lucide-static/dist/lucide-static.d.ts");
+  const declaration = fs.readFileSync(declarationPath, "utf-8");
   const block = declaration.match(/export \{([^}]*)\};?\s*$/m);
-  const aliases = {};
+  if (!block) {
+    throw new Error(
+      `Could not find the export list in ${declarationPath}. The lucide-static layout changed; update this parser.`
+    );
+  }
+  const aliases: Record<string, string> = {};
   for (const entry of block[1].split(",")) {
     const pair = entry.trim().match(/^(\w+) as (\w+)$/);
     if (pair) {
@@ -78,14 +135,14 @@ function loadAliasMap() {
   return aliases;
 }
 
-const renderCache = new Map();
+const renderCache = new Map<string, Float64Array>();
 
 /**
  * Rasterise an SVG to a normalised ink vector. `currentColor` never resolves
  * off-page, so it is pinned to black before rendering or every icon would be
  * uniformly blank and every comparison would score 1.
  */
-async function inkVector(svgPath) {
+async function inkVector(svgPath: string): Promise<Float64Array> {
   const cached = renderCache.get(svgPath);
   if (cached) {
     return cached;
@@ -121,7 +178,7 @@ async function inkVector(svgPath) {
   return ink;
 }
 
-function cosine(a, b) {
+function cosine(a: Float64Array, b: Float64Array): number {
   let dot = 0;
   for (let i = 0; i < a.length; i++) {
     dot += a[i] * b[i];
@@ -129,7 +186,7 @@ function cosine(a, b) {
   return dot;
 }
 
-function percentile(sorted, p) {
+function percentile(sorted: number[], p: number): number {
   if (sorted.length === 0) {
     return Number.NaN;
   }
@@ -140,12 +197,27 @@ function percentile(sorted, p) {
   return sorted[index];
 }
 
-async function main() {
+/** Print a handful of pairs, best (or worst) first. Entries without a render
+ *  never reach here — they keep the name verdict, so they never move. */
+function report(entries: Scored[], worstFirst: boolean): void {
+  const rendered = entries.filter(
+    (entry): entry is Scored & { score: number } => entry.score !== null
+  );
+  for (const entry of rendered
+    .toSorted((a, b) => (worstFirst ? a.score - b.score : b.score - a.score))
+    .slice(0, 6)) {
+    console.log(
+      `      ${entry.lucideName} → ${entry.blodeName} (${entry.score.toFixed(2)}${worstFirst ? `, ${entry.match}` : ""})`
+    );
+  }
+}
+
+async function main(): Promise<void> {
   const apply = process.argv.includes("--apply");
-  const { mappings } = await import(pathToFileURL(mappingPath).href);
+  const mappings = await loadMappings();
   const aliasToCanonical = loadAliasMap();
 
-  const scored = [];
+  const scored: Scored[] = [];
   let missing = 0;
 
   for (const entry of mappings) {
@@ -172,7 +244,9 @@ async function main() {
     scored.push({ ...entry, score: cosine(a, b) });
   }
 
-  const withScore = scored.filter((entry) => entry.score !== null);
+  const withScore = scored.filter(
+    (entry): entry is Scored & { score: number } => entry.score !== null
+  );
   const exactScores = withScore
     .filter((entry) => entry.match === "exact")
     .map((entry) => entry.score)
@@ -186,7 +260,7 @@ async function main() {
     `Veto below ${VETO_SCORE} (named pairs), rescue at/above ${RESCUE_SCORE} (fuzzy guesses)\n`
   );
 
-  const finalEntries = scored.map((entry) => {
+  const finalEntries: Scored[] = scored.map((entry) => {
     // No render means no evidence either way, so keep the name verdict.
     if (entry.score === null) {
       return { ...entry, hasMatch: entry.hasMatch };
@@ -214,23 +288,11 @@ async function main() {
   console.log(
     `  +${promoted.length} rescued (fuzzy guess, but the drawings really match)`
   );
-  for (const entry of promoted
-    .toSorted((a, b) => b.score - a.score)
-    .slice(0, 6)) {
-    console.log(
-      `      ${entry.lucideName} → ${entry.blodeName} (${entry.score.toFixed(2)})`
-    );
-  }
+  report(promoted, false);
   console.log(
     `  -${demoted.length} vetoed (name said yes, the drawings are unrelated)`
   );
-  for (const entry of demoted
-    .toSorted((a, b) => a.score - b.score)
-    .slice(0, 6)) {
-    console.log(
-      `      ${entry.lucideName} → ${entry.blodeName} (${entry.score.toFixed(2)}, ${entry.match})`
-    );
-  }
+  report(demoted, true);
 
   if (!apply) {
     console.log("\nDry run. Pass --apply to rewrite lucide-mapping.ts.");
@@ -263,8 +325,8 @@ async function main() {
   visualScore: number | null;
 }
 
-// Generated by scripts/generate-lucide-mapping.mjs, then verified by
-// scripts/verify-lucide-mapping.mjs — do not edit by hand.
+// Generated by scripts/generate-lucide-mapping.mts, then verified by
+// scripts/verify-lucide-mapping.mts — do not edit by hand.
 // ${exported.length} of ${finalEntries.length} pairs export: both icons were rendered and
 // compared, and a named pair is vetoed below ${VETO_SCORE} and a fuzzy
 // guess is only exported at/above ${RESCUE_SCORE}.

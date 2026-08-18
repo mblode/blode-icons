@@ -3,11 +3,10 @@
 // is empty (brand/custom icons) or one of the known categories, and that tags
 // are unique non-empty strings. Exits non-zero on any error.
 //
-// Usage: node scripts/validate-icons-data.mjs
+// Usage: node scripts/validate-icons-data.mts
 
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
@@ -15,27 +14,51 @@ const DATA_DIR = path.join(ROOT, "icons-data");
 
 const SLUG_RE = /^[a-z][a-z0-9-]*$/;
 
+/** Metadata files are user-authored, so nothing about their shape is assumed
+ *  until it is checked; every read goes through `unknown`. */
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function loadCategories(): Set<string> {
+  const file = path.join(DATA_DIR, "_categories.json");
+  const parsed: unknown = JSON.parse(fs.readFileSync(file, "utf-8"));
+  const categories = isRecord(parsed) ? parsed.categories : undefined;
+  if (
+    !(
+      Array.isArray(categories) &&
+      categories.every((c) => typeof c === "string")
+    )
+  ) {
+    throw new Error(`${file}: "categories" must be an array of strings.`);
+  }
+  return new Set(categories);
+}
+
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: a flat sequence of independent per-file checks
-function main() {
-  const categories = new Set(
-    JSON.parse(
-      fs.readFileSync(path.join(DATA_DIR, "_categories.json"), "utf-8")
-    ).categories
-  );
+function main(): void {
+  const categories = loadCategories();
 
   const files = fs
     .readdirSync(DATA_DIR)
     .filter((f) => f.endsWith(".json") && !f.startsWith("_"));
 
-  const errors = [];
+  const errors: string[] = [];
   for (const file of files) {
     const slug = path.basename(file, ".json");
     const where = `${file}`;
-    let data;
+    let data: unknown;
     try {
       data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf-8"));
     } catch (error) {
-      errors.push(`${where}: invalid JSON (${error.message})`);
+      errors.push(
+        `${where}: invalid JSON (${error instanceof Error ? error.message : String(error)})`
+      );
+      continue;
+    }
+
+    if (!isRecord(data)) {
+      errors.push(`${where}: must be a JSON object.`);
       continue;
     }
 
@@ -53,8 +76,8 @@ function main() {
       );
     }
     if (Array.isArray(data.tags)) {
-      const seen = new Set();
-      for (const tag of data.tags) {
+      const seen = new Set<unknown>();
+      for (const tag of data.tags as unknown[]) {
         if (typeof tag !== "string" || tag.trim() === "") {
           errors.push(`${where}: tags must be non-empty strings.`);
         } else if (seen.has(tag)) {

@@ -6,11 +6,10 @@
 // Input: a JSON file (default scripts/.enrichment.json) — an array of
 //   { "slug": "trash", "keywords": ["delete", "remove", "bin"] }
 //
-// Usage: node scripts/enrich-icons-data.mjs [path-to-enrichment.json] [--force]
+// Usage: node scripts/enrich-icons-data.mts [path-to-enrichment.json] [--force]
 
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
@@ -28,11 +27,37 @@ const inputPath =
   argv.find((a) => !a.startsWith("--")) ??
   path.join(__dirname, ".enrichment.json");
 
+/** One entry of the enrichment input. Both fields are checked before use — the
+ *  file is model output, so neither is guaranteed to be there. */
+interface Enrichment {
+  keywords: unknown;
+  slug: string;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function asEnrichment(value: unknown): Enrichment | null {
+  if (!(isRecord(value) && typeof value.slug === "string" && value.slug)) {
+    return null;
+  }
+  return { keywords: value.keywords, slug: value.slug };
+}
+
+/** Existing tags, keeping only the strings — a hand-edited file can hold
+ *  anything, and a number here used to crash the merge on `.toLowerCase()`. */
+function existingTags(data: Record<string, unknown>): string[] {
+  return Array.isArray(data.tags)
+    ? (data.tags as unknown[]).filter((t): t is string => typeof t === "string")
+    : [];
+}
+
 // Short arrays inline when they fit, otherwise expanded.
-function formatMetadata(obj) {
+function formatMetadata(obj: Record<string, unknown>): string {
   const collapsed = JSON.stringify(obj, null, 2).replace(
     JSON_ARRAY_BLOCK_RE,
-    (match, indent, key, inner) => {
+    (match: string, indent: string, key: string, inner: string) => {
       const inline = `${indent}${key}[${inner
         .split(JSON_ARRAY_ITEM_SEP_RE)
         .map((s) => s.trim())
@@ -44,11 +69,11 @@ function formatMetadata(obj) {
 }
 
 // Words already implied by the slug — no value re-adding them as tags.
-function slugWords(slug) {
+function slugWords(slug: string): Set<string> {
   return new Set(slug.split("-"));
 }
 
-function cleanKeyword(kw) {
+function cleanKeyword(kw: unknown): string {
   return String(kw)
     .toLowerCase()
     .trim()
@@ -57,13 +82,13 @@ function cleanKeyword(kw) {
 }
 
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: a flat per-icon merge with guards; clearest in one pass
-function main() {
+function main(): void {
   if (!fs.existsSync(inputPath)) {
     console.error(`Enrichment input not found: ${inputPath}`);
     process.exit(1);
   }
-  const enrichments = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
-  if (!Array.isArray(enrichments)) {
+  const parsed: unknown = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
+  if (!Array.isArray(parsed)) {
     console.error("Enrichment input must be an array of { slug, keywords }.");
     process.exit(1);
   }
@@ -72,15 +97,26 @@ function main() {
   let skippedRich = 0;
   let missing = 0;
   let addedTags = 0;
+  let malformed = 0;
 
-  for (const { slug, keywords } of enrichments) {
+  for (const raw of parsed as unknown[]) {
+    const entry = asEnrichment(raw);
+    if (!entry) {
+      malformed++;
+      continue;
+    }
+    const { slug, keywords } = entry;
     const file = path.join(DATA_DIR, `${slug}.json`);
     if (!fs.existsSync(file)) {
       missing++;
       continue;
     }
-    const data = JSON.parse(fs.readFileSync(file, "utf-8"));
-    const existing = Array.isArray(data.tags) ? data.tags : [];
+    const data: unknown = JSON.parse(fs.readFileSync(file, "utf-8"));
+    if (!isRecord(data)) {
+      malformed++;
+      continue;
+    }
+    const existing = existingTags(data);
 
     // Idempotency guard: leave already-tagged icons alone unless forced.
     if (existing.length > 1 && !force) {
@@ -90,9 +126,11 @@ function main() {
 
     const blocked = slugWords(slug);
     const seen = new Set(existing.map((t) => t.toLowerCase()));
-    const additions = [];
-    for (const raw of keywords ?? []) {
-      const kw = cleanKeyword(raw);
+    const additions: string[] = [];
+    for (const candidate of Array.isArray(keywords)
+      ? (keywords as unknown[])
+      : []) {
+      const kw = cleanKeyword(candidate);
       if (!kw || blocked.has(kw) || seen.has(kw)) {
         continue;
       }
@@ -113,7 +151,7 @@ function main() {
   }
 
   console.log(
-    `Enriched ${updated} icons (+${addedTags} tags). Skipped ${skippedRich} already-tagged, ${missing} missing.`
+    `Enriched ${updated} icons (+${addedTags} tags). Skipped ${skippedRich} already-tagged, ${missing} missing, ${malformed} malformed.`
   );
 }
 

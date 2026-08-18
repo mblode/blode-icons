@@ -54,18 +54,18 @@
   "scripts": {
     "audit": "node scripts/audit-icons.mts",
     "audit:update": "node scripts/audit-icons.mts --update",
-    "build": "node --experimental-strip-types scripts/build.mjs",
+    "build": "node scripts/build.mts",
     "check:types": "tsc --noEmit && tsc -p tsconfig.scripts.json",
-    "enrich": "node scripts/enrich-icons-data.mjs",
+    "enrich": "node scripts/enrich-icons-data.mts",
     "format": "ultracite fix",
     "format:check": "ultracite check",
-    "generate:lucide-mapping": "node --experimental-strip-types scripts/generate-lucide-mapping.mjs",
+    "generate:lucide-mapping": "node scripts/generate-lucide-mapping.mts",
     "lint": "ultracite check",
     "lint:fix": "ultracite fix",
-    "prepublishOnly": "node --experimental-strip-types scripts/build.mjs",
-    "validate": "node scripts/validate-icons.mjs",
-    "validate:icons-data": "node scripts/validate-icons-data.mjs",
-    "verify:lucide-mapping": "node --experimental-strip-types scripts/verify-lucide-mapping.mjs"
+    "prepublishOnly": "node scripts/build.mts",
+    "validate": "node scripts/validate-icons.mts",
+    "validate:icons-data": "node scripts/validate-icons-data.mts",
+    "verify:lucide-mapping": "node scripts/verify-lucide-mapping.mts"
   },
   "devDependencies": {
     "@svgr/core": "^8.1.0",

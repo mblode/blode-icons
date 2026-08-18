@@ -4,11 +4,10 @@
 // name). Cosmetic issues (non-24 viewBox, stray colors) are warnings so the
 // existing brand-icon outliers don't block builds.
 //
-// Usage: node scripts/validate-icons.mjs   (exit 1 on any error)
+// Usage: node scripts/validate-icons.mts   (exit 1 on any error)
 
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 const __dirname = import.meta.dirname;
 const ROOT = path.join(__dirname, "..");
@@ -18,7 +17,7 @@ const SLUG_RE = /^[a-z][a-z0-9-]*$/;
 const FILLED_SUFFIX = "-filled";
 const HARDCODED_COLOR_RE = /(?:fill|stroke)="(?:#|black)/i;
 
-function toComponentName(slug) {
+function toComponentName(slug: string): string {
   return `${slug
     .split("-")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
@@ -26,14 +25,14 @@ function toComponentName(slug) {
 }
 
 // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: a flat sequence of independent per-icon checks; splitting would scatter the validation
-function main() {
+function main(): void {
   const files = fs.readdirSync(SVG_DIR).filter((f) => f.endsWith(".svg"));
   const slugs = files.map((f) => path.basename(f, ".svg"));
   const slugSet = new Set(slugs);
 
-  const errors = [];
-  const warnings = [];
-  const componentToSlugs = new Map();
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  const componentToSlugs = new Map<string, string[]>();
 
   for (const slug of slugs) {
     const base = slug.endsWith(FILLED_SUFFIX)
@@ -51,8 +50,9 @@ function main() {
 
     // Track component-name collisions (e.g. "eye-open" vs "eyeopen").
     const component = toComponentName(slug);
-    if (componentToSlugs.has(component)) {
-      componentToSlugs.get(component).push(slug);
+    const owners = componentToSlugs.get(component);
+    if (owners) {
+      owners.push(slug);
     } else {
       componentToSlugs.set(component, [slug]);
     }

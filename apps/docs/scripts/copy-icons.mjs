@@ -192,7 +192,7 @@ async function main() {
   // Gate: never build docs (or its search index) on invalid metadata.
   execFileSync(
     "node",
-    [path.join(LIB_ROOT, "scripts", "validate-icons-data.mjs")],
+    [path.join(LIB_ROOT, "scripts", "validate-icons-data.mts")],
     { stdio: "inherit" }
   );
 

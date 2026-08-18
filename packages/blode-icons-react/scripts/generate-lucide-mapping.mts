@@ -11,7 +11,7 @@
  *
  * Only 1–4 are exported from the package. Fuse accepts any best match, so a
  * fuzzy hit means "closest of 2000 icons", not "the same icon" — those are
- * written with `hasMatch: false` so `build.mjs` skips them. Promote one by
+ * written with `hasMatch: false` so `build.mts` skips them. Promote one by
  * adding it to CURATED once a human has eyeballed the pair.
  *
  * The Lucide catalog comes from the `lucide-static` devDependency, so this is
@@ -20,7 +20,7 @@
 import fs from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { pathToFileURL } from "node:url";
 
 import Fuse from "fuse.js";
 
@@ -32,6 +32,45 @@ const dataDir = path.join(packageRoot, "icons-data");
 
 const require = createRequire(import.meta.url);
 
+/** A Blode icon as Fuse sees it. */
+interface BlodeDoc {
+  category: string;
+  name: string;
+  slug: string;
+  tags: string[];
+  title: string;
+}
+
+/** A row of the generated mapping file. */
+interface Mapping {
+  blodeName: string;
+  category: string;
+  hasMatch: boolean;
+  lucideName: string;
+  match: string;
+}
+
+/** The fields this script needs from a previously generated (or seed) mapping.
+ *  The seed file predates `match` and `visualScore`, so neither is assumed. */
+interface SeedEntry {
+  blodeName: string;
+  hasMatch: boolean;
+  lucideName: string;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isSeedEntry(value: unknown): value is SeedEntry {
+  return (
+    isRecord(value) &&
+    typeof value.blodeName === "string" &&
+    typeof value.lucideName === "string" &&
+    typeof value.hasMatch === "boolean"
+  );
+}
+
 /** Match kinds a human (or an exact slug) stands behind. Everything else is a guess. */
 const TRUSTED_MATCHES = new Set(["existing", "exact", "curated", "reordered"]);
 
@@ -39,29 +78,29 @@ const TRUSTED_MATCHES = new Set(["existing", "exact", "curated", "reordered"]);
  * A historical alias is exactly as trustworthy as the canonical name it
  * redirects to, so its match kind is recorded as `alias:<canonical kind>`.
  */
-function isTrustedMatch(match) {
+function isTrustedMatch(match: string): boolean {
   return TRUSTED_MATCHES.has(match.replace(/^alias:/, ""));
 }
 
-function kebabToPascal(kebab) {
+function kebabToPascal(kebab: string): string {
   return kebab
     .split("-")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join("");
 }
 
-function pascalToKebab(name) {
+function pascalToKebab(name: string): string {
   return name
     .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
     .replace(/([A-Z])([A-Z][a-z])/g, "$1-$2")
     .toLowerCase();
 }
 
-function slugToComponent(slug) {
+function slugToComponent(slug: string): string {
   return `${kebabToPascal(slug)}Icon`;
 }
 
-function inferCategory(slug, metaCategory) {
+function inferCategory(slug: string, metaCategory: string): string {
   if (metaCategory) {
     return metaCategory;
   }
@@ -90,7 +129,7 @@ function inferCategory(slug, metaCategory) {
 }
 
 /** High-traffic Lucide names → Blode kebab slugs (validated at runtime). */
-const CURATED = {
+const CURATED: Record<string, string> = {
   Search: "magnifying-glass",
   Home: "home",
   House: "home",
@@ -487,22 +526,44 @@ const CURATED = {
   AirVent: "airplay",
 };
 
-async function loadExistingMappings(sourcePath) {
+async function loadExistingMappings(
+  sourcePath: string
+): Promise<Map<string, SeedEntry>> {
   if (!fs.existsSync(sourcePath)) {
     return new Map();
   }
   // Read as a module (node strips the types) rather than scraping the source,
   // so reformatting the mapping cannot silently yield zero seeds.
-  const { mappings } = await import(pathToFileURL(sourcePath).href);
+  const loaded: unknown = await import(pathToFileURL(sourcePath).href);
+  const raw = isRecord(loaded) ? loaded.mappings : undefined;
+  if (!Array.isArray(raw)) {
+    throw new TypeError(
+      `${path.basename(sourcePath)} does not export a \`mappings\` array.`
+    );
+  }
   return new Map(
-    mappings
+    (raw as unknown[])
+      .filter(isSeedEntry)
       .filter((entry) => entry.hasMatch)
-      .map((entry) => [entry.lucideName, entry])
+      .map((entry) => [entry.lucideName, entry] as const)
   );
 }
 
-function loadLucideCatalog() {
-  const tags = require("lucide-static/tags.json");
+function loadLucideCatalog(): {
+  aliasToCanonical: Record<string, string>;
+  canonicalPascal: string[];
+  tags: Record<string, string[]>;
+} {
+  const rawTags: unknown = require("lucide-static/tags.json");
+  if (!isRecord(rawTags)) {
+    throw new Error("lucide-static/tags.json is not an object.");
+  }
+  const tags: Record<string, string[]> = {};
+  for (const [slug, value] of Object.entries(rawTags)) {
+    tags[slug] = Array.isArray(value)
+      ? value.filter((tag): tag is string => typeof tag === "string")
+      : [];
+  }
   const canonicalPascal = Object.keys(tags).map(kebabToPascal);
 
   // lucide-static's declaration file ends in one `export { ... }` listing every
@@ -518,7 +579,7 @@ function loadLucideCatalog() {
     );
   }
 
-  const aliasToCanonical = {};
+  const aliasToCanonical: Record<string, string> = {};
   for (const entry of exportBlock[1].split(",")) {
     const aliased = entry.trim().match(/^(\w+) as (\w+)$/);
     if (aliased) {
@@ -526,31 +587,42 @@ function loadLucideCatalog() {
     }
   }
 
+  const pkg: unknown = require("lucide-static/package.json");
+  const version =
+    isRecord(pkg) && typeof pkg.version === "string" ? pkg.version : "unknown";
   console.log(
-    `Lucide catalog: ${canonicalPascal.length} canonical names, ${Object.keys(aliasToCanonical).length} historical aliases (lucide-static ${require("lucide-static/package.json").version})`
+    `Lucide catalog: ${canonicalPascal.length} canonical names, ${Object.keys(aliasToCanonical).length} historical aliases (lucide-static ${version})`
   );
 
   return { aliasToCanonical, canonicalPascal, tags };
 }
 
-function loadBlodeDocs() {
+function loadBlodeDocs(): {
+  bySlug: Map<string, BlodeDoc>;
+  docs: BlodeDoc[];
+  slugSet: Set<string>;
+} {
   const svgNames = fs
     .readdirSync(svgDir)
     .filter((f) => f.endsWith(".svg"))
     .map((f) => f.slice(0, -4));
   const baseSlugs = svgNames.filter((n) => !n.endsWith("-filled")).toSorted();
-  const bySlug = new Map();
+  const bySlug = new Map<string, BlodeDoc>();
 
   const docs = baseSlugs.map((slug) => {
-    let tags = [];
+    let tags: string[] = [];
     let category = "";
     const fp = path.join(dataDir, `${slug}.json`);
     if (fs.existsSync(fp)) {
-      const meta = JSON.parse(fs.readFileSync(fp, "utf-8"));
-      tags = Array.isArray(meta.tags) ? meta.tags : [];
-      category = meta.category || "";
+      const meta: unknown = JSON.parse(fs.readFileSync(fp, "utf-8"));
+      if (isRecord(meta)) {
+        tags = Array.isArray(meta.tags)
+          ? meta.tags.filter((tag): tag is string => typeof tag === "string")
+          : [];
+        category = typeof meta.category === "string" ? meta.category : "";
+      }
     }
-    const doc = {
+    const doc: BlodeDoc = {
       category,
       name: slugToComponent(slug),
       slug,
@@ -564,7 +636,10 @@ function loadBlodeDocs() {
   return { bySlug, docs, slugSet: new Set(baseSlugs) };
 }
 
-function resolveSlug(candidate, slugSet) {
+function resolveSlug(
+  candidate: string | undefined,
+  slugSet: Set<string>
+): string | null {
   if (!candidate) {
     return null;
   }
@@ -574,7 +649,7 @@ function resolveSlug(candidate, slugSet) {
   return null;
 }
 
-async function main() {
+async function main(): Promise<void> {
   // Seed from the original curated file when present; otherwise from current.
   const seedPath = path.join(__dirname, "lucide-mapping.seed.ts");
   const existing = await loadExistingMappings(
@@ -596,10 +671,14 @@ async function main() {
     threshold: 1,
   });
 
-  /** @type {Map<string, { blodeName: string, category: string, hasMatch: boolean, lucideName: string, match: string }>} */
-  const out = new Map();
+  const out = new Map<string, Mapping>();
 
-  const setMapping = (lucideName, slug, match, force = false) => {
+  const setMapping = (
+    lucideName: string,
+    slug: string,
+    match: string,
+    force = false
+  ): void => {
     if (out.has(lucideName) && !force) {
       return;
     }
@@ -655,7 +734,7 @@ async function main() {
   // Lucide writes `circle-arrow-left`; an identical multiset of words is a
   // strong signal, so these are exported like an exact hit. Without this the
   // whole circle-arrow/square-arrow family falls through to a fuzzy guess.
-  const bySortedWords = new Map();
+  const bySortedWords = new Map<string, string>();
   for (const doc of docs) {
     const key = doc.slug.split("-").toSorted().join("-");
     if (!bySortedWords.has(key)) {
@@ -683,7 +762,7 @@ async function main() {
       continue;
     }
     const kebab = pascalToKebab(lucideName);
-    const lucideTags = tags[kebab] || [];
+    const lucideTags = tags[kebab] ?? [];
     const query = [kebab.replaceAll("-", " "), ...lucideTags].join(" ");
     const hits = fuse.search(query, { limit: 1 });
     const slug = hits[0]?.item?.slug ?? "circle";
@@ -720,7 +799,7 @@ async function main() {
     a.lucideName.localeCompare(b.lucideName)
   );
 
-  const counts = entries.reduce((acc, e) => {
+  const counts = entries.reduce<Record<string, number>>((acc, e) => {
     acc[e.match] = (acc[e.match] || 0) + 1;
     return acc;
   }, {});
@@ -739,7 +818,7 @@ async function main() {
     "  match: string;",
     "}",
     "",
-    "// Generated by scripts/generate-lucide-mapping.mjs — do not edit by hand.",
+    "// Generated by scripts/generate-lucide-mapping.mts — do not edit by hand.",
     `// ${exported.length} of ${entries.length} Lucide names export (the rest are`,
     "// fuzzy guesses kept for triage; promote one via CURATED in the generator).",
     `// match breakdown: ${JSON.stringify(counts)}`,
