@@ -47,6 +47,9 @@
     },
     "blode-icons-react#check:types": {
       "dependsOn": ["build"]
+    },
+    "docs#check:types": {
+      "dependsOn": ["copy-icons"]
     }
   }
 }
