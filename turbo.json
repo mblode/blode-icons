@@ -44,6 +44,9 @@
     "format:check": {},
     "check:types": {
       "dependsOn": ["^build"]
+    },
+    "blode-icons-react#check:types": {
+      "dependsOn": ["build"]
     }
   }
 }
