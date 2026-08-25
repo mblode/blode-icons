@@ -1,5 +1,5 @@
 {
-  "category": "Interface General",
   "icon": "window-square-delete",
-  "tags": ["browser", "app", "desktop"]
+  "category": "Interface General",
+  "tags": ["browser", "close", "remove", "app", "tab"]
 }

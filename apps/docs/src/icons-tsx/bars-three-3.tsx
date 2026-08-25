@@ -1,7 +1,28 @@
-import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const BarsThree3Icon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h10M3 6h18M3 18h18" /></svg>;
+
+import { createLucideIcon } from "./create-lucide-icon";
+const BarsThree3Icon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    viewBox="0 0 24 24"
+    ref={ref}
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 12h10M3 6h18M3 18h18"
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(BarsThree3Icon);
-export default createLucideIcon('BarsThree3Icon', ForwardRef);
+export default createLucideIcon("BarsThree3Icon", ForwardRef);

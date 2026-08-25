@@ -3,6 +3,14 @@
     "category": "",
     "tags": []
   },
+  "_cohorts": {
+    "category": "",
+    "tags": []
+  },
+  "_concepts": {
+    "category": "",
+    "tags": []
+  },
   "add-image": {
     "category": "Photography & Video",
     "tags": [
@@ -55,9 +63,28 @@
     "category": "Code",
     "tags": ["connections", "flow"]
   },
+  "ai-bot-head": {
+    "category": "AI & Magic",
+    "tags": ["assistant", "chatbot", "robot", "face", "agent"]
+  },
+  "ai-bot-head-looking": {
+    "category": "AI & Magic",
+    "tags": ["assistant", "chatbot", "robot", "glance", "thinking", "agent"]
+  },
   "ai-slop": {
     "category": "AI & Magic",
     "tags": ["trash", "garbage", "low-quality", "generated", "junk", "waste"]
+  },
+  "ai-slop-sign": {
+    "category": "AI & Magic",
+    "tags": [
+      "warning",
+      "caution",
+      "low-quality",
+      "generated",
+      "junk",
+      "melting"
+    ]
   },
   "ai-tokens": {
     "category": "AI & Magic",
@@ -119,6 +146,10 @@
     "category": "Sound & Music",
     "tags": ["cover", "music", "record", "playlist", "collection", "gallery"]
   },
+  "albums-2": {
+    "category": "Sound & Music",
+    "tags": ["cover", "music", "record", "playlist", "collection", "gallery"]
+  },
   "alien": {
     "category": "Things",
     "tags": ["ufo", "extraterrestrial", "space", "martian", "et"]
@@ -172,6 +203,10 @@
   "alt": {
     "category": "Photography & Video",
     "tags": ["option", "key", "modifier", "keyboard", "shortcut"]
+  },
+  "amazon": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "shop", "ecommerce", "retail", "marketplace"]
   },
   "american-football": {
     "category": "Sports",
@@ -297,6 +332,10 @@
     "category": "Food",
     "tags": ["low-hanging-fruits", "fall"]
   },
+  "apple-podcast": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "audio", "show", "listen", "subscribe"]
+  },
   "apple-spring": {
     "category": "Social Media & Brands",
     "tags": ["motion", "animation", "framework", "brand", "bounce"]
@@ -413,6 +452,14 @@
     "category": "Arrows",
     "tags": ["bend", "turn", "redirect", "route", "angle"]
   },
+  "arrow-curve-down-left": {
+    "category": "Arrows",
+    "tags": ["curved", "bend", "turn", "direction", "reply", "return"]
+  },
+  "arrow-curve-right": {
+    "category": "Arrows",
+    "tags": ["curved", "bend", "turn", "direction", "forward", "redo"]
+  },
   "arrow-down": {
     "category": "Arrows",
     "tags": ["descend", "decrease", "scroll", "lower", "south"]
@@ -452,6 +499,14 @@
     "category": "Arrows",
     "tags": ["heighten", "stretch", "resize", "vertical", "spread"]
   },
+  "arrow-from-line-down": {
+    "category": "Arrows",
+    "tags": ["out", "away", "export", "eject", "downward", "release"]
+  },
+  "arrow-from-line-up": {
+    "category": "Arrows",
+    "tags": ["out", "away", "export", "eject", "upward", "release"]
+  },
   "arrow-inbox": {
     "category": "Interface General",
     "tags": ["download", "file", "down", "save"]
@@ -487,6 +542,14 @@
   "arrow-loop-down-left": {
     "category": "Arrows",
     "tags": ["restore", "reset"]
+  },
+  "arrow-merge-left": {
+    "category": "Arrows",
+    "tags": ["combine", "join", "converge", "lane", "direction", "traffic"]
+  },
+  "arrow-merge-right": {
+    "category": "Arrows",
+    "tags": ["combine", "join", "converge", "lane", "direction", "traffic"]
   },
   "arrow-out-of-box": {
     "category": "Interface General",
@@ -551,6 +614,10 @@
   "arrow-rotate-left-right": {
     "category": "Arrows",
     "tags": ["repeat", "refresh"]
+  },
+  "arrow-rotate-point": {
+    "category": "Arrows",
+    "tags": ["refresh", "reload", "sync", "turn", "pivot", "repeat"]
   },
   "arrow-rotate-right-left": {
     "category": "Arrows",
@@ -766,13 +833,32 @@
     "category": "Keyboard",
     "tags": ["handle", "@"]
   },
+  "atlassian": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "jira", "confluence", "software"]
+  },
   "atom": {
     "category": "Nature & Energy",
     "tags": ["science", "physics", "molecule", "nuclear", "react"]
   },
+  "audible": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "audiobook", "listen", "amazon", "spoken"]
+  },
   "audio": {
     "category": "Sound & Music",
     "tags": ["music", "playlist", "musical-note"]
+  },
+  "audio-bars": {
+    "category": "Sound & Music",
+    "tags": [
+      "equaliser",
+      "equalizer",
+      "levels",
+      "waveform",
+      "volume",
+      "spectrum"
+    ]
   },
   "aura": {
     "category": "People",
@@ -886,6 +972,10 @@
     "category": "Interface General",
     "tags": ["menu", "nav"]
   },
+  "base44": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "app-builder", "vibe-coding", "platform"]
+  },
   "baseball": {
     "category": "Sports",
     "tags": ["sport", "mlb", "ball", "pitch", "game"]
@@ -965,6 +1055,10 @@
     "category": "Things",
     "tags": ["fly", "insect", "honey", "bug", "buzz", "pollinate"]
   },
+  "beehiiv": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "newsletter", "email", "publishing", "subscribe"]
+  },
   "beer": {
     "category": "Food",
     "tags": ["cheers", "drink", "alcohol", "pub", "pint"]
@@ -981,9 +1075,25 @@
     "category": "Interface General",
     "tags": ["notification", "activity", "alert"]
   },
+  "bell-2-active": {
+    "category": "Interface General",
+    "tags": ["notification", "alert", "ringing", "activity", "unread"]
+  },
+  "bell-2-off": {
+    "category": "Interface General",
+    "tags": ["notification", "mute", "silence", "alert", "disable"]
+  },
   "bell-2-snooze": {
     "category": "Interface General",
     "tags": ["notification", "activity", "alert"]
+  },
+  "bell-active": {
+    "category": "Interface General",
+    "tags": ["notification", "alert", "ringing", "activity", "unread"]
+  },
+  "bell-alarm": {
+    "category": "Interface General",
+    "tags": ["notification", "alert", "reminder", "ring", "wake", "clock"]
   },
   "bell-check": {
     "category": "Interface General",
@@ -1133,6 +1243,10 @@
     "category": "Communication",
     "tags": ["guide", "info", "faq"]
   },
+  "book-heart": {
+    "category": "Communication",
+    "tags": ["favorite", "saved", "diary", "journal", "love", "guide"]
+  },
   "book-simple": {
     "category": "Communication",
     "tags": ["guide", "info", "faq"]
@@ -1248,6 +1362,37 @@
   "branch-simple": {
     "category": "Code",
     "tags": ["git", "fork", "version-control", "merge", "tree"]
+  },
+  "branches": {
+    "category": "Code",
+    "tags": ["git", "fork", "version-control", "split", "repository", "tree"]
+  },
+  "brand-amex": {
+    "category": "Social Media & Brands",
+    "tags": [
+      "american-express",
+      "card",
+      "payment",
+      "credit",
+      "logo",
+      "checkout"
+    ]
+  },
+  "brand-jcb": {
+    "category": "Social Media & Brands",
+    "tags": ["card", "payment", "credit", "logo", "checkout", "japan"]
+  },
+  "brand-mastercard": {
+    "category": "Social Media & Brands",
+    "tags": ["card", "payment", "credit", "logo", "checkout"]
+  },
+  "brand-visa": {
+    "category": "Social Media & Brands",
+    "tags": ["card", "payment", "credit", "logo", "checkout"]
+  },
+  "brand-zoom": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "meeting", "video-call", "conference", "webinar"]
   },
   "breakfast": {
     "category": "Food",
@@ -1467,6 +1612,10 @@
       "school"
     ]
   },
+  "buymeacoffee": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "tip", "donate", "support", "creator"]
+  },
   "c": {
     "category": "Social Media & Brands",
     "tags": ["language", "letter", "programming", "brand", "logo"]
@@ -1474,6 +1623,10 @@
   "cabinet": {
     "category": "Furniture & Household",
     "tags": ["storage", "cupboard", "furniture", "shelf", "wardrobe"]
+  },
+  "cable-knife": {
+    "category": "Things",
+    "tags": ["stripper", "cutter", "tool", "wire", "electrician", "blade"]
   },
   "calculator": {
     "category": "Devices & Signals",
@@ -1784,6 +1937,10 @@
     "category": "Interface General",
     "tags": ["profile", "avatar", "account"]
   },
+  "card-nfc": {
+    "category": "Shopping & Payment",
+    "tags": ["contactless", "tap", "wireless", "payment", "near-field"]
+  },
   "carussel": {
     "category": "Layout",
     "tags": ["slides", "slider", "gallery", "rotate", "banner", "showcase"]
@@ -1791,6 +1948,14 @@
   "cash": {
     "category": "Social Media & Brands",
     "tags": ["money", "payment", "banknote", "currency", "wallet"]
+  },
+  "cashapp": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "payment", "money", "transfer", "wallet"]
+  },
+  "castle": {
+    "category": "Building",
+    "tags": ["fortress", "tower", "medieval", "fort", "palace"]
   },
   "cat": {
     "category": "Photography & Video",
@@ -1872,6 +2037,10 @@
     "category": "Statistics & Charts",
     "tags": ["statistics", "graph"]
   },
+  "chart-8": {
+    "category": "Statistics & Charts",
+    "tags": ["statistics", "graph", "bars", "analytics", "report"]
+  },
   "chart-compare": {
     "category": "Statistics & Charts",
     "tags": ["graph", "analytics", "versus", "bars", "data"]
@@ -1895,6 +2064,10 @@
   "chat-bubbles": {
     "category": "Communication",
     "tags": ["message", "speech", "comment", "conversation", "talk"]
+  },
+  "check": {
+    "category": "Interface General",
+    "tags": ["tick", "done", "confirm", "success", "complete", "approve"]
   },
   "check-circle-2": {
     "category": "Interface General",
@@ -1968,6 +2141,10 @@
     "category": "Arrows",
     "tags": ["collapse", "top", "fast", "scroll", "caret"]
   },
+  "chevron-down": {
+    "category": "Arrows",
+    "tags": ["caret", "expand", "dropdown", "open", "collapse", "disclosure"]
+  },
   "chevron-down-medium": {
     "category": "Arrows",
     "tags": ["expand", "dropdown", "collapse", "caret", "scroll"]
@@ -1980,9 +2157,17 @@
     "category": "Arrows",
     "tags": ["resize", "drag", "handle", "slider", "adjust"]
   },
+  "chevron-grabber-horizontal-toward": {
+    "category": "Arrows",
+    "tags": ["collapse", "shrink", "inward", "resize", "drag", "handle"]
+  },
   "chevron-grabber-vertical": {
     "category": "Arrows",
     "tags": ["resize", "drag", "handle", "slider", "adjust"]
+  },
+  "chevron-grabber-vertical-toward": {
+    "category": "Arrows",
+    "tags": ["collapse", "shrink", "inward", "resize", "drag", "handle"]
   },
   "chevron-large-down": {
     "category": "Arrows",
@@ -2060,6 +2245,10 @@
     "category": "Arrows",
     "tags": ["dropdown", "collapse", "menu", "select", "caret", "picker"]
   },
+  "chevron-up": {
+    "category": "Arrows",
+    "tags": ["caret", "collapse", "close", "expand", "disclosure", "scroll-top"]
+  },
   "chip": {
     "category": "Devices & Signals",
     "tags": [
@@ -2127,6 +2316,10 @@
     "category": "Interface General",
     "tags": ["outline", "loading", "progress", "pending", "placeholder"]
   },
+  "circle-exclamation": {
+    "category": "Interface General",
+    "tags": ["warning", "alert", "error", "attention", "important", "caution"]
+  },
   "circle-half-fill": {
     "category": "Accessibility",
     "tags": ["contrast", "a11y", "theme", "brightness", "dark-light", "balance"]
@@ -2139,9 +2332,17 @@
     "category": "Interface General",
     "tags": ["remove", "subtract", "delete", "deduct", "exclude", "decrease"]
   },
+  "circle-outline": {
+    "category": "Interface General",
+    "tags": ["ring", "empty", "unselected", "radio", "shape", "placeholder"]
+  },
   "circle-person": {
     "category": "Accessibility",
     "tags": ["accessibility", "a11y"]
+  },
+  "circle-placeholder-dashed": {
+    "category": "Interface General",
+    "tags": ["empty", "unselected", "optional", "slot", "drop-target"]
   },
   "circle-placeholder-off": {
     "category": "Interface General",
@@ -2255,10 +2456,6 @@
     "category": "Weather",
     "tags": ["clouds", "forecast", "overcast", "sky", "climate", "weather"]
   },
-  "cloud-": {
-    "category": "Clouds",
-    "tags": ["storage", "weather", "sky", "backup", "server"]
-  },
   "cloud-2": {
     "category": "Clouds",
     "tags": ["storage", "weather", "sky", "backup", "server"]
@@ -2277,6 +2474,10 @@
   "cloud-check": {
     "category": "Clouds",
     "tags": ["save", "saved", "synced", "backup", "uploaded", "done"]
+  },
+  "cloud-dots": {
+    "category": "Clouds",
+    "tags": ["loading", "pending", "sync", "progress", "server", "storage"]
   },
   "cloud-download": {
     "category": "Clouds",
@@ -2409,6 +2610,10 @@
     "category": "Social Media & Brands",
     "tags": ["editor", "sandbox", "frontend", "demo", "playground"]
   },
+  "coin": {
+    "category": "Crypto",
+    "tags": ["money", "currency", "token", "cash", "payment", "credit"]
+  },
   "coin-1": {
     "category": "Crypto",
     "tags": ["credits", "money"]
@@ -2537,6 +2742,14 @@
     "category": "Code",
     "tags": ["git", "version", "history", "changes", "revision", "push"]
   },
+  "compass-pointer": {
+    "category": "Location",
+    "tags": ["navigation", "cursor", "direction", "heading", "arrow"]
+  },
+  "compass-pointer-square": {
+    "category": "Location",
+    "tags": ["navigation", "cursor", "direction", "heading", "arrow"]
+  },
   "compass-round": {
     "category": "Interface General",
     "tags": ["browser", "safari", "web", "internet", "navigation"]
@@ -2560,6 +2773,10 @@
   "conductor": {
     "category": "Sound & Music",
     "tags": ["ochestrator", "vibe"]
+  },
+  "confluence": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "atlassian", "wiki", "docs"]
   },
   "connectors-1": {
     "category": "Devices & Signals",
@@ -2605,6 +2822,22 @@
     "category": "Keyboard",
     "tags": ["ctrl", "shortcut", "modifier", "hotkey", "command"]
   },
+  "controller-button-circle": {
+    "category": "Gaming",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  "controller-button-square": {
+    "category": "Gaming",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  "controller-button-triangle": {
+    "category": "Gaming",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  "controller-button-x": {
+    "category": "Gaming",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
   "cookies": {
     "category": "Food",
     "tags": ["biscuit", "snack", "dessert", "treat", "bakery", "sweet"]
@@ -2616,6 +2849,10 @@
   "copilot": {
     "category": "Social Media & Brands",
     "tags": ["github", "ai-coding", "assistant", "autocomplete", "helper"]
+  },
+  "copy-simple": {
+    "category": "Interface General",
+    "tags": ["duplicate", "clipboard", "clone", "paste", "replicate"]
   },
   "copyright": {
     "category": "Things",
@@ -2644,6 +2881,10 @@
   "credit-card-add": {
     "category": "Shopping & Payment",
     "tags": ["card", "payment"]
+  },
+  "credit-card-nfc": {
+    "category": "Shopping & Payment",
+    "tags": ["contactless", "tap", "wireless", "checkout", "near-field"]
   },
   "crop": {
     "category": "Photography & Video",
@@ -2771,6 +3012,14 @@
       "performance",
       "average"
     ]
+  },
+  "databricks": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "data", "lakehouse", "analytics"]
+  },
+  "databricks-genie-code": {
+    "category": "AI & Magic",
+    "tags": ["lamp", "wish", "assistant", "magic", "sql", "query"]
   },
   "date-custom": {
     "category": "Time & Date",
@@ -3024,6 +3273,10 @@
     "category": "Things",
     "tags": ["sign", "do-not-disdurb"]
   },
+  "doordash": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "delivery", "food", "takeaway", "order"]
+  },
   "dossier": {
     "category": "Folders & Files",
     "tags": ["folder", "file", "document", "case", "record", "portfolio"]
@@ -3048,9 +3301,21 @@
     "category": "Interface General",
     "tags": ["menu", "drag", "grab"]
   },
+  "dot-grid-2x3-horizontal": {
+    "category": "Interface General",
+    "tags": ["drag-handle", "reorder", "menu", "dots", "grip", "more"]
+  },
+  "dot-grid-2x3-vertical": {
+    "category": "Interface General",
+    "tags": ["drag-handle", "reorder", "menu", "dots", "grip", "more"]
+  },
   "dot-grid-3x3": {
     "category": "Interface General",
     "tags": ["menu", "drag", "grab"]
+  },
+  "dot-small": {
+    "category": "Interface General",
+    "tags": ["point", "bullet", "marker", "indicator", "status", "unread"]
   },
   "douple-check": {
     "category": "Interface General",
@@ -3148,6 +3413,10 @@
     "category": "Location",
     "tags": ["globe", "world"]
   },
+  "earth-2": {
+    "category": "Location",
+    "tags": ["globe", "world", "planet", "international", "map"]
+  },
   "edit-big": {
     "category": "Edit",
     "tags": ["box", "pencil", "pen", "write", "draw"]
@@ -3211,6 +3480,30 @@
       "contact",
       "send"
     ]
+  },
+  "email-2-block": {
+    "category": "Communication",
+    "tags": ["envelope", "mail", "spam", "blocked", "forbidden"]
+  },
+  "email-2-check": {
+    "category": "Communication",
+    "tags": ["envelope", "mail", "sent", "delivered", "verified"]
+  },
+  "email-2-incoming": {
+    "category": "Communication",
+    "tags": ["envelope", "mail", "inbox", "receive", "arrive"]
+  },
+  "email-2-plus": {
+    "category": "Communication",
+    "tags": ["envelope", "mail", "compose", "new", "add"]
+  },
+  "email-2-remove": {
+    "category": "Communication",
+    "tags": ["envelope", "mail", "delete", "cancel", "unsubscribe"]
+  },
+  "email-2-unread": {
+    "category": "Communication",
+    "tags": ["envelope", "mail", "new", "badge", "inbox"]
   },
   "email-3": {
     "category": "Communication",
@@ -3335,6 +3628,10 @@
     "category": "Emoji",
     "tags": ["fun", "playful", "goofy", "crazy", "silly", "joking"]
   },
+  "enter": {
+    "category": "Keyboard",
+    "tags": ["return", "key", "submit", "newline", "keyboard"]
+  },
   "eraser": {
     "category": "Edit",
     "tags": ["rubber", "clean-up"]
@@ -3395,6 +3692,10 @@
     "category": "Things",
     "tags": ["boom", "bang", "pop"]
   },
+  "exposure": {
+    "category": "Photography & Video",
+    "tags": ["brightness", "camera", "light", "stops", "compensation", "ev"]
+  },
   "exposure-1": {
     "category": "Photography & Video",
     "tags": ["plus-minus", "brightness", "light", "adjust", "ev"]
@@ -3402,6 +3703,10 @@
   "exposure-2": {
     "category": "Nature & Energy",
     "tags": ["macro", "flower"]
+  },
+  "extend-image": {
+    "category": "Photography & Video",
+    "tags": ["outpaint", "uncrop", "expand", "generative-fill", "canvas"]
   },
   "eye-closed": {
     "category": "Accessibility",
@@ -3487,7 +3792,7 @@
     "tags": ["skip", "seek", "jump", "advance", "ahead"]
   },
   "fast-shipping": {
-    "category": "Vehicles & Aircrafts",
+    "category": "Vehicles",
     "tags": ["truck", "delivery"]
   },
   "feather": {
@@ -3510,6 +3815,14 @@
     "category": "Social Media & Brands",
     "tags": ["design", "tool", "prototype", "ui", "logo"]
   },
+  "file-arrow-left": {
+    "category": "Folders & Files",
+    "tags": ["move", "import", "transfer", "back", "document", "receive"]
+  },
+  "file-arrow-left-2": {
+    "category": "Folders & Files",
+    "tags": ["move", "import", "transfer", "back", "document", "receive"]
+  },
   "file-arrow-left-in": {
     "category": "Folders & Files",
     "tags": ["document-arrow-left-in", "incoming"]
@@ -3517,6 +3830,14 @@
   "file-arrow-left-out": {
     "category": "Folders & Files",
     "tags": ["document-arrow-left-out", "outgoing"]
+  },
+  "file-arrow-right": {
+    "category": "Folders & Files",
+    "tags": ["move", "export", "transfer", "forward", "document", "send"]
+  },
+  "file-arrow-right-2": {
+    "category": "Folders & Files",
+    "tags": ["move", "export", "transfer", "forward", "document", "send"]
   },
   "file-arrow-right-in": {
     "category": "Folders & Files",
@@ -3677,6 +3998,10 @@
     "category": "Things",
     "tags": ["cards", "pages"]
   },
+  "flick": {
+    "category": "Interface General",
+    "tags": ["swipe", "gesture", "fling", "touch", "scroll", "toss"]
+  },
   "floppy-disk-1": {
     "category": "Folders & Files",
     "tags": ["save", "store", "diskette", "backup"]
@@ -3688,6 +4013,10 @@
   "flower-shape": {
     "category": "Forms & Shapes",
     "tags": ["petal", "bloom", "blossom", "floral", "scallop"]
+  },
+  "focus": {
+    "category": "Photography & Video",
+    "tags": ["camera", "autofocus", "target", "sharpen", "lens", "viewfinder"]
   },
   "focus-auto": {
     "category": "Photography & Video",
@@ -3768,6 +4097,10 @@
   "folder-download": {
     "category": "Folders & Files",
     "tags": ["save", "export", "directory", "fetch", "get"]
+  },
+  "folder-edit": {
+    "category": "Folders & Files",
+    "tags": ["rename", "pencil", "modify", "directory", "write"]
   },
   "folder-link": {
     "category": "Folders & Files",
@@ -3944,6 +4277,10 @@
     "category": "Photography & Video",
     "tags": ["resolution", "ultra-hd", "video", "quality", "2160p"]
   },
+  "frame-simple": {
+    "category": "Layout",
+    "tags": ["artboard", "canvas", "border", "container", "crop", "boundary"]
+  },
   "framer": {
     "category": "Social Media & Brands",
     "tags": ["design", "prototype", "motion", "no-code", "web"]
@@ -4104,6 +4441,22 @@
     "category": "Social Media & Brands",
     "tags": ["version-control", "repository", "source", "vcs", "commit"]
   },
+  "git-branches": {
+    "category": "Code",
+    "tags": ["fork", "version-control", "repository", "split", "merge"]
+  },
+  "git-commit-vertical": {
+    "category": "Code",
+    "tags": ["version-control", "revision", "history", "save", "changeset"]
+  },
+  "git-fork": {
+    "category": "Code",
+    "tags": ["version-control", "copy", "repository", "branch", "clone"]
+  },
+  "git-pull-request": {
+    "category": "Code",
+    "tags": ["version-control", "review", "merge", "pr", "contribute"]
+  },
   "github": {
     "category": "Social Media & Brands",
     "tags": ["repository", "octocat", "code-hosting", "vcs", "open-source"]
@@ -4168,9 +4521,17 @@
     "category": "Social Media & Brands",
     "tags": ["gemini", "developer", "ml", "platform", "build"]
   },
+  "google-colored": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "search", "sign-in", "oauth", "multicolour"]
+  },
   "google-deepmind": {
     "category": "Social Media & Brands",
     "tags": ["ai-research", "ml", "lab", "neural", "gemini"]
+  },
+  "google-play": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "android", "app-store", "download", "install"]
   },
   "google-play-store": {
     "category": "Social Media & Brands",
@@ -4210,6 +4571,14 @@
       "clean",
       "environment"
     ]
+  },
+  "grid": {
+    "category": "Layout",
+    "tags": ["guides", "alignment", "columns", "rule-of-thirds", "hash"]
+  },
+  "grid-box": {
+    "category": "Layout",
+    "tags": ["tiles", "cells", "table", "gallery", "arrange"]
   },
   "grok": {
     "category": "Social Media & Brands",
@@ -4270,6 +4639,10 @@
   "hand-bell": {
     "category": "Interface General",
     "tags": ["ring", "alert", "notification", "service", "alarm"]
+  },
+  "hand-touch": {
+    "category": "Hands",
+    "tags": ["tap", "gesture", "press", "finger", "interact"]
   },
   "handshake": {
     "category": "Hands",
@@ -4378,6 +4751,10 @@
   "home-personal-feed": {
     "category": "Building",
     "tags": ["for-you", "house", "dashboard", "recommended", "timeline", "main"]
+  },
+  "home-plus": {
+    "category": "Building",
+    "tags": ["house", "add", "new", "property", "create"]
   },
   "home-roof": {
     "category": "Building",
@@ -4541,6 +4918,10 @@
     "category": "Things",
     "tags": ["loop", "boomerang"]
   },
+  "info": {
+    "category": "Interface General",
+    "tags": ["information", "help", "about", "detail", "hint", "tooltip"]
+  },
   "info-simple": {
     "category": "Interface General",
     "tags": ["tooltip", "information"]
@@ -4597,6 +4978,10 @@
     "category": "Social Media & Brands",
     "tags": ["js", "programming", "language", "web", "frontend"]
   },
+  "jira": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "atlassian", "tickets", "issues"]
+  },
   "json": {
     "category": "Social Media & Brands",
     "tags": ["data", "format", "object", "api", "config"]
@@ -4609,9 +4994,17 @@
     "category": "Arrows",
     "tags": ["skip", "next", "advance", "leap", "forward"]
   },
+  "kakaotalk": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "chat", "messaging", "korea", "social"]
+  },
   "kanban-view": {
     "category": "Layout",
     "tags": ["columns", "board", "tasks", "trello", "workflow", "cards"]
+  },
+  "key": {
+    "category": "Security",
+    "tags": ["password", "access", "unlock", "credential", "secret", "api-key"]
   },
   "key-1": {
     "category": "Security",
@@ -4653,9 +5046,21 @@
     "category": "Security",
     "tags": ["lock", "unlock"]
   },
+  "kick": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "streaming", "live", "video", "creator"]
+  },
   "kickball": {
     "category": "Sports",
     "tags": ["ball", "game", "playground", "sport", "recreation"]
+  },
+  "kimi": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "ai", "moonshot", "chatbot"]
+  },
+  "knife-spoon": {
+    "category": "Food",
+    "tags": ["cutlery", "restaurant", "dining", "eat", "utensils", "meal"]
   },
   "lab": {
     "category": "Things",
@@ -4664,6 +5069,10 @@
   "ladybug": {
     "category": "Code",
     "tags": ["issue", "bug", "insect", "error", "defect", "beetle"]
+  },
+  "land-plot-simple": {
+    "category": "Location",
+    "tags": ["parcel", "property", "area", "real-estate", "boundary", "survey"]
   },
   "law": {
     "category": "Security",
@@ -4689,6 +5098,10 @@
     "category": "Layout",
     "tags": ["arrange", "position", "grid", "structure", "frame"]
   },
+  "layout-align-left-right": {
+    "category": "Layout",
+    "tags": ["arrange", "position", "distribute", "horizontal", "structure"]
+  },
   "layout-align-right": {
     "category": "Layout",
     "tags": ["arrange", "position", "grid", "structure", "frame"]
@@ -4697,9 +5110,21 @@
     "category": "Layout",
     "tags": ["arrange", "position", "grid", "structure", "frame"]
   },
+  "layout-align-top-bottom": {
+    "category": "Layout",
+    "tags": ["arrange", "position", "distribute", "vertical", "structure"]
+  },
+  "layout-all-sides": {
+    "category": "Layout",
+    "tags": ["padding", "margin", "spacing", "inset", "around"]
+  },
   "layout-bottom": {
     "category": "Layout",
     "tags": ["grid", "window"]
+  },
+  "layout-bottom-full": {
+    "category": "Layout",
+    "tags": ["split", "panel", "window", "tile", "region"]
   },
   "layout-column": {
     "category": "Layout",
@@ -4717,17 +5142,37 @@
     "category": "Layout",
     "tags": ["grid", "arrange", "tiles", "columns", "structure", "masonry"]
   },
+  "layout-grid-3": {
+    "category": "Layout",
+    "tags": ["columns", "tiles", "gallery", "arrange", "dashboard", "masonry"]
+  },
   "layout-half": {
     "category": "Layout",
     "tags": ["split", "divide", "columns", "section", "panel"]
+  },
+  "layout-half-full": {
+    "category": "Layout",
+    "tags": ["split", "divide", "panel", "window", "tile"]
   },
   "layout-left": {
     "category": "Layout",
     "tags": ["grid", "window"]
   },
+  "layout-left-full": {
+    "category": "Layout",
+    "tags": ["split", "panel", "sidebar", "window", "tile"]
+  },
+  "layout-left-right": {
+    "category": "Layout",
+    "tags": ["padding", "margin", "spacing", "horizontal", "inset"]
+  },
   "layout-right": {
     "category": "Layout",
     "tags": ["grid", "window"]
+  },
+  "layout-right-full": {
+    "category": "Layout",
+    "tags": ["split", "panel", "sidebar", "window", "tile"]
   },
   "layout-sidebar": {
     "category": "Layout",
@@ -4737,9 +5182,21 @@
     "category": "Layout",
     "tags": ["split", "divide", "columns", "section", "panel"]
   },
+  "layout-third-full": {
+    "category": "Layout",
+    "tags": ["split", "divide", "panel", "window", "tile"]
+  },
   "layout-top": {
     "category": "Layout",
     "tags": ["grid", "window"]
+  },
+  "layout-top-bottom": {
+    "category": "Layout",
+    "tags": ["padding", "margin", "spacing", "vertical", "inset"]
+  },
+  "layout-top-full": {
+    "category": "Layout",
+    "tags": ["split", "panel", "window", "tile", "region"]
   },
   "layout-topbar": {
     "category": "Layout",
@@ -4848,6 +5305,10 @@
   "limit": {
     "category": "Things",
     "tags": ["cap", "restrict", "threshold", "maximum", "boundary", "quota"]
+  },
+  "line-brand": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "chat", "messaging", "japan", "social"]
   },
   "line-chart-1": {
     "category": "Statistics & Charts",
@@ -5023,6 +5484,10 @@
       "privacy"
     ]
   },
+  "login": {
+    "category": "Interface General",
+    "tags": ["sign-in", "enter", "authenticate", "access", "account", "session"]
+  },
   "lottielab": {
     "category": "Social Media & Brands",
     "tags": ["animation", "motion", "editor", "logo", "tool", "vector"]
@@ -5050,6 +5515,10 @@
     "category": "Devices & Signals",
     "tags": ["apple", "laptop", "notebook", "portable", "computer", "mac"]
   },
+  "macinthosh": {
+    "category": "Devices & Signals",
+    "tags": ["macintosh", "mac", "computer", "desktop", "apple", "retro"]
+  },
   "macintosh": {
     "category": "Devices & Signals",
     "tags": [
@@ -5061,6 +5530,10 @@
       "classic",
       "desktop"
     ]
+  },
+  "magic": {
+    "category": "AI & Magic",
+    "tags": ["wand", "sparkle", "auto", "enhance", "generate", "ai"]
   },
   "magic-book": {
     "category": "AI & Magic",
@@ -5133,6 +5606,10 @@
       "receive",
       "envelope"
     ]
+  },
+  "mailchimp": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "email", "newsletter", "marketing", "campaign"]
   },
   "maintenance": {
     "category": "Filter & Settings",
@@ -5341,6 +5818,10 @@
       "compute"
     ]
   },
+  "meandu": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "ordering", "hospitality", "menu", "payments"]
+  },
   "medal": {
     "category": "Things",
     "tags": ["trophy", "badge", "winner", "win"]
@@ -5450,6 +5931,10 @@
   "midjourney": {
     "category": "Social Media & Brands",
     "tags": ["image-gen", "ai-art", "generative", "logo", "diffusion", "brand"]
+  },
+  "minimax": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "ai", "chatbot", "model"]
   },
   "minimize": {
     "category": "Photography & Video",
@@ -5588,6 +6073,10 @@
       "drag",
       "reorganize"
     ]
+  },
+  "move-folder-inside": {
+    "category": "Folders & Files",
+    "tags": ["relocate", "transfer", "directory", "into", "organize"]
   },
   "multi-media": {
     "category": "Photography & Video",
@@ -5824,6 +6313,10 @@
     "category": "Arrows",
     "tags": ["moving", "progress", "continuous", "active", "running", "loop"]
   },
+  "onlyfans": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "creator", "subscription", "social", "content"]
+  },
   "open-quote-1": {
     "category": "Typography",
     "tags": ["blockquote", "quotation", "citation", "speech", "punctuation"]
@@ -5859,6 +6352,10 @@
   "opencode": {
     "category": "Social Media & Brands",
     "tags": ["coding", "ai", "brand", "editor", "assistant"]
+  },
+  "opentable": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "restaurant", "booking", "reservation", "dining"]
   },
   "opera": {
     "category": "Social Media & Brands",
@@ -6119,9 +6616,17 @@
     "category": "Shopping & Payment",
     "tags": ["flow", "connection"]
   },
+  "paypal": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "payment", "checkout", "money", "wallet"]
+  },
   "peace": {
     "category": "Things",
     "tags": ["victory", "love", "hippie", "harmony", "sign"]
+  },
+  "pencel-line": {
+    "category": "Edit",
+    "tags": ["pencil", "write", "draw", "annotate", "underline", "compose"]
   },
   "pencil": {
     "category": "Edit",
@@ -6253,6 +6758,10 @@
     "category": "Social Media & Brands",
     "tags": ["ai", "search", "chatbot", "assistant", "brand"]
   },
+  "person-simple": {
+    "category": "People",
+    "tags": ["user", "profile", "avatar", "account", "individual", "member"]
+  },
   "persona": {
     "category": "People",
     "tags": ["thanos-effect", "remove-user", "remove-account", "blip"]
@@ -6270,6 +6779,10 @@
     "tags": ["iphone", "smartphone", "mobile", "notch", "device"]
   },
   "phone-haptic": {
+    "category": "Devices & Signals",
+    "tags": ["vibration", "buzz", "silent", "feedback", "ringtone"]
+  },
+  "phone-haptic-2": {
     "category": "Devices & Signals",
     "tags": ["vibration", "buzz", "silent", "feedback", "ringtone"]
   },
@@ -6300,6 +6813,10 @@
   "picture-in-picture": {
     "category": "Photography & Video",
     "tags": ["pip", "floating", "overlay", "minimize", "multitask"]
+  },
+  "pie-chart": {
+    "category": "Statistics & Charts",
+    "tags": ["graph", "analytics", "share", "proportion", "breakdown", "report"]
   },
   "pie-chart-1": {
     "category": "Statistics & Charts",
@@ -6349,6 +6866,10 @@
     "category": "Location",
     "tags": ["location", "marker", "goal", "destination", "checkpoint"]
   },
+  "pin-focus": {
+    "category": "Location",
+    "tags": ["marker", "place", "gps", "target", "locate"]
+  },
   "pin-location": {
     "category": "Location",
     "tags": ["marker", "place", "gps", "map", "destination"]
@@ -6364,6 +6885,10 @@
   "pinterest-simple": {
     "category": "Social Media & Brands",
     "tags": ["social", "brand", "boards", "bookmark", "share"]
+  },
+  "pipe": {
+    "category": "Things",
+    "tags": ["plumbing", "tube", "conduit", "duct", "pipeline"]
   },
   "pizza": {
     "category": "Food",
@@ -6401,6 +6926,10 @@
     "category": "Social Media & Brands",
     "tags": ["console", "gaming", "sony", "controller", "brand"]
   },
+  "plugin": {
+    "category": "Things",
+    "tags": ["extension", "addon", "integration", "module", "connect", "widget"]
+  },
   "plugin-1": {
     "category": "Things",
     "tags": ["power", "adapter"]
@@ -6408,6 +6937,10 @@
   "plugin-2": {
     "category": "Things",
     "tags": ["build", "extension", "addon", "integration", "module"]
+  },
+  "plugins": {
+    "category": "Things",
+    "tags": ["extension", "addon", "integration", "module", "connect"]
   },
   "plus-large": {
     "category": "Interface General",
@@ -6477,11 +7010,19 @@
     "category": "Nature & Energy",
     "tags": ["coal", "gas", "factory"]
   },
+  "presentation-analytics": {
+    "category": "Statistics & Charts",
+    "tags": ["slides", "deck", "report", "graph", "meeting", "data"]
+  },
   "preview": {
     "category": "Interface General",
     "tags": ["details", "view", "look", "inspect", "glance"]
   },
   "printer": {
+    "category": "Devices & Signals",
+    "tags": ["print", "document", "output", "paper", "hardcopy"]
+  },
+  "printer-2": {
     "category": "Devices & Signals",
     "tags": ["print", "document", "output", "paper", "hardcopy"]
   },
@@ -6584,6 +7125,25 @@
   "quora": {
     "category": "Social Media & Brands",
     "tags": ["q-and-a", "questions", "forum", "knowledge", "community"]
+  },
+  "quote": {
+    "category": "Typography",
+    "tags": [
+      "quotation",
+      "blockquote",
+      "citation",
+      "testimonial",
+      "speech",
+      "marks"
+    ]
+  },
+  "qwen": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "ai", "alibaba", "model"]
+  },
+  "qwik": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "framework", "javascript", "web"]
   },
   "racing-flag": {
     "category": "Things",
@@ -6748,6 +7308,10 @@
     "category": "Communication",
     "tags": ["books", "study", "library", "knowledge"]
   },
+  "reframe": {
+    "category": "Augmented Reality",
+    "tags": ["axes", "gizmo", "orientation", "transform", "spatial", "3d"]
+  },
   "remix": {
     "category": "Arrows",
     "tags": ["new-try", "repeat"]
@@ -6888,6 +7452,10 @@
     "category": "Things",
     "tags": ["startup", "launch"]
   },
+  "rocket-2": {
+    "category": "Things",
+    "tags": ["startup", "launch", "ship", "boost", "space"]
+  },
   "rocking-horse": {
     "category": "Things",
     "tags": ["child", "kids", "toy"]
@@ -6919,6 +7487,17 @@
   "roulette-2": {
     "category": "Gaming",
     "tags": ["coincidence", "gambling"]
+  },
+  "roundness": {
+    "category": "Edit",
+    "tags": [
+      "corner-radius",
+      "rounded",
+      "border-radius",
+      "shape",
+      "smooth",
+      "bevel"
+    ]
   },
   "rss-feed": {
     "category": "Social Media & Brands",
@@ -6970,6 +7549,10 @@
   "sankey-chart": {
     "category": "Statistics & Charts",
     "tags": ["flow", "diagram", "data", "graph", "distribution"]
+  },
+  "satellite": {
+    "category": "Devices & Signals",
+    "tags": ["orbit", "space", "gps", "signal", "communication", "antenna"]
   },
   "satellite-1": {
     "category": "Devices & Signals",
@@ -7164,6 +7747,17 @@
     "category": "Filter & Settings",
     "tags": ["switch", "on-off", "options", "control", "preferences", "flip"]
   },
+  "sevenrooms": {
+    "category": "Social Media & Brands",
+    "tags": [
+      "brand",
+      "logo",
+      "restaurant",
+      "reservation",
+      "hospitality",
+      "booking"
+    ]
+  },
   "shader-effect": {
     "category": "Edit",
     "tags": ["material", "texture", "render", "gradient", "graphics", "surface"]
@@ -7187,6 +7781,10 @@
   "shapes-plus-x-square-circle": {
     "category": "Interface General",
     "tags": ["icon", "icons", "shapes", "games"]
+  },
+  "share": {
+    "category": "Interface General",
+    "tags": ["send", "export", "social", "distribute", "forward", "link"]
   },
   "share-android": {
     "category": "Interface General",
@@ -7276,9 +7874,17 @@
     "category": "Security",
     "tags": ["locked", "private", "encrypted", "guarded", "credentials"]
   },
+  "shield-safe-search": {
+    "category": "Security",
+    "tags": ["parental-control", "kids", "filter", "safety", "protect"]
+  },
   "shield-search": {
     "category": "Security",
     "tags": ["safety", "privacy", "security", "scan"]
+  },
+  "shield-user": {
+    "category": "Security",
+    "tags": ["account", "privacy", "protect", "profile", "permission"]
   },
   "shift": {
     "category": "Keyboard",
@@ -7293,8 +7899,12 @@
     "tags": ["changelog", "deploy", "release", "launch", "publish"]
   },
   "shipping": {
-    "category": "Vehicles & Aircrafts",
+    "category": "Vehicles",
     "tags": ["truck", "delivery"]
+  },
+  "shopify": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "ecommerce", "store", "shop", "checkout"]
   },
   "shopping-bag-1": {
     "category": "Shopping & Payment",
@@ -7386,6 +7996,10 @@
     "category": "Layout",
     "tags": ["panel", "expand", "navigation", "toggle", "menu"]
   },
+  "sidebar-left-arrow-right": {
+    "category": "Layout",
+    "tags": ["collapse", "expand", "panel", "drawer", "toggle", "navigation"]
+  },
   "sidebar-simple-left-square": {
     "category": "Layout",
     "tags": ["panel", "navigation", "menu", "drawer", "layout"]
@@ -7405,6 +8019,17 @@
   "sidebar-wide-left-arrow": {
     "category": "Layout",
     "tags": ["panel", "expand", "navigation", "toggle", "menu"]
+  },
+  "signal": {
+    "category": "Devices & Signals",
+    "tags": [
+      "reception",
+      "bars",
+      "network",
+      "strength",
+      "wireless",
+      "connection"
+    ]
   },
   "signal-tower": {
     "category": "Devices & Signals",
@@ -7434,6 +8059,14 @@
     "category": "Social Media & Brands",
     "tags": ["voice-assistant", "apple", "ai", "speak", "helper"]
   },
+  "siri-gen-1": {
+    "category": "Social Media & Brands",
+    "tags": ["voice-assistant", "apple", "ai", "speak", "helper"]
+  },
+  "siri-gen-2": {
+    "category": "Social Media & Brands",
+    "tags": ["voice-assistant", "apple", "ai", "speak", "helper"]
+  },
   "sketch": {
     "category": "Social Media & Brands",
     "tags": ["design-tool", "ui", "wireframe", "app", "mac"]
@@ -7449,6 +8082,10 @@
   "slack": {
     "category": "Social Media & Brands",
     "tags": ["chat", "messaging", "team", "workspace", "communication"]
+  },
+  "slash-forward": {
+    "category": "Typography",
+    "tags": ["divider", "separator", "url", "path", "punctuation", "stroke"]
   },
   "sleep": {
     "category": "Time & Date",
@@ -7545,6 +8182,10 @@
       "mixing"
     ]
   },
+  "soundcloud": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "audio", "streaming", "podcast"]
+  },
   "space": {
     "category": "Things",
     "tags": ["star", "cosmos", "universe", "galaxy", "astronomy", "night"]
@@ -7563,6 +8204,10 @@
       "padding",
       "whitespace"
     ]
+  },
+  "spacexai": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "rocket", "space", "launch"]
   },
   "sparkle": {
     "category": "AI & Magic",
@@ -7671,13 +8316,25 @@
     "category": "Interface General",
     "tags": ["download square", "save"]
   },
+  "square-arrow-down-2": {
+    "category": "Arrows",
+    "tags": ["download", "boxed", "direction", "descend", "move"]
+  },
   "square-arrow-in-top-left": {
     "category": "Arrows",
     "tags": ["dock", "box", "arrow"]
   },
+  "square-arrow-left": {
+    "category": "Arrows",
+    "tags": ["back", "boxed", "direction", "previous", "move"]
+  },
   "square-arrow-out-top-left": {
     "category": "Arrows",
     "tags": ["undock", "box", "arrow"]
+  },
+  "square-arrow-right": {
+    "category": "Arrows",
+    "tags": ["forward", "boxed", "direction", "next", "move"]
   },
   "square-arrow-top-left-corner": {
     "category": "Arrows",
@@ -7694,6 +8351,10 @@
   "square-arrow-top-right-corner": {
     "category": "Arrows",
     "tags": ["diagonal", "direction", "expand", "external", "resize"]
+  },
+  "square-arrow-up-2": {
+    "category": "Arrows",
+    "tags": ["upload", "boxed", "direction", "ascend", "move"]
   },
   "square-behind-square-1": {
     "category": "Interface General",
@@ -7845,6 +8506,10 @@
     "category": "Interface General",
     "tags": ["favorite", "award"]
   },
+  "star-half": {
+    "category": "Interface General",
+    "tags": ["rating", "review", "partial", "favourite", "score", "half-filled"]
+  },
   "star-lines": {
     "category": "Interface General",
     "tags": ["features", "favorite", "award", "to the moon"]
@@ -7901,6 +8566,10 @@
     "category": "Sound & Music",
     "tags": ["halt", "end", "pause", "cease", "button"]
   },
+  "stop-share-screen": {
+    "category": "Photography & Video",
+    "tags": ["screen-sharing", "end", "present", "cast", "meeting", "off"]
+  },
   "stopwatch": {
     "category": "Time & Date",
     "tags": ["track", "timer", "countdown", "duration", "chronometer", "lap"]
@@ -7928,6 +8597,10 @@
   "stores": {
     "category": "Building",
     "tags": ["shops", "mall"]
+  },
+  "stors": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "storage", "retail", "platform"]
   },
   "strawberry": {
     "category": "Food",
@@ -8076,6 +8749,10 @@
   "tablet": {
     "category": "Devices & Signals",
     "tags": ["ipad", "mobile"]
+  },
+  "tactics": {
+    "category": "Things",
+    "tags": ["strategy", "plan", "board", "formation", "play", "chess"]
   },
   "tactics-1": {
     "category": "Things",
@@ -8387,6 +9064,10 @@
     "category": "Food",
     "tags": ["breakfest", "bread", "breakfast", "slice", "food", "notification"]
   },
+  "todoist": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "tasks", "todo", "productivity"]
+  },
   "todos": {
     "category": "Interface General",
     "tags": ["check", "things", "task"]
@@ -8410,6 +9091,10 @@
   "toque": {
     "category": "Food",
     "tags": ["chefs-cap", "cook"]
+  },
+  "torch": {
+    "category": "Things",
+    "tags": ["flashlight", "light", "lamp", "beam", "search"]
   },
   "touch": {
     "category": "Hands",
@@ -8446,6 +9131,10 @@
   "trash-can": {
     "category": "Interface General",
     "tags": ["delete", "remove", "garbage", "waste"]
+  },
+  "trash-can-2": {
+    "category": "Interface General",
+    "tags": ["delete", "bin", "remove", "discard", "rubbish", "garbage"]
   },
   "trash-can-simple": {
     "category": "Interface General",
@@ -8531,6 +9220,10 @@
     "category": "Statistics & Charts",
     "tags": ["growth", "rising", "popular", "momentum", "upward", "hot"]
   },
+  "trending-down-simple": {
+    "category": "Statistics & Charts",
+    "tags": ["decline", "decrease", "fall", "graph", "loss", "arrow"]
+  },
   "trial": {
     "category": "Interface General",
     "tags": ["try", "money-back", "test-phase"]
@@ -8570,6 +9263,10 @@
   "typescript": {
     "category": "Social Media & Brands",
     "tags": ["language", "programming", "ts", "javascript", "code", "brand"]
+  },
+  "uber": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "rideshare", "taxi", "transport", "delivery"]
   },
   "ufo": {
     "category": "Things",
@@ -8749,6 +9446,10 @@
     "category": "Social Media & Brands",
     "tags": ["hosting", "deploy", "cloud", "nextjs", "brand", "logo"]
   },
+  "verified-check": {
+    "category": "Interface General",
+    "tags": ["badge", "confirmed", "trusted", "authentic", "approved", "tick"]
+  },
   "versus-circle": {
     "category": "Sports",
     "tags": ["vs", "match", "battle", "compete", "duel", "against"]
@@ -8805,6 +9506,10 @@
     "category": "Photography & Video",
     "tags": ["cam-on", "camera", "enable", "webcam", "call", "record", "start"]
   },
+  "video-play": {
+    "category": "Photography & Video",
+    "tags": ["watch", "media", "start", "clip", "player", "stream"]
+  },
   "video-roll": {
     "category": "Photography & Video",
     "tags": ["movie", "film", "clip", "footage", "reel", "media"]
@@ -8841,6 +9546,10 @@
     "category": "Photography & Video",
     "tags": ["filter", "effect", "darken", "border", "photo", "edges"]
   },
+  "vimeo": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "video", "streaming", "hosting"]
+  },
   "vision-pro": {
     "category": "Augmented Reality",
     "tags": ["goggles", "headset", "vr", "apple", "spatial", "mixed-reality"]
@@ -8853,6 +9562,10 @@
     "category": "AI & Magic",
     "tags": ["ai", "scan", "recognize", "camera", "detect", "smart"]
   },
+  "vk": {
+    "category": "Social Media & Brands",
+    "tags": ["vkontakte", "brand", "logo", "social", "network", "russia"]
+  },
   "vkontakte": {
     "category": "Social Media & Brands",
     "tags": ["vk", "social", "russian", "network", "brand", "logo"]
@@ -8860,6 +9573,10 @@
   "vocal-microphone": {
     "category": "Sound & Music",
     "tags": ["singing", "karaoke"]
+  },
+  "voice": {
+    "category": "Sound & Music",
+    "tags": ["microphone", "speak", "audio", "record", "talk", "sound"]
   },
   "voice-1": {
     "category": "Sound & Music",
@@ -9059,6 +9776,18 @@
       "junk"
     ]
   },
+  "wave": {
+    "category": "Sound & Music",
+    "tags": ["waveform", "signal", "sine", "audio", "frequency"]
+  },
+  "wave-round-2": {
+    "category": "Sound & Music",
+    "tags": ["waveform", "signal", "curve", "audio", "frequency"]
+  },
+  "waves-simple": {
+    "category": "Sound & Music",
+    "tags": ["waveform", "audio", "signal", "sound", "vibration", "frequency"]
+  },
   "web3": {
     "category": "Crypto",
     "tags": ["crypto-space", "nft"]
@@ -9071,6 +9800,10 @@
     "category": "Social Media & Brands",
     "tags": ["website", "builder", "nocode", "design", "brand", "logo"]
   },
+  "webhooks": {
+    "category": "Code",
+    "tags": ["api", "callback", "integration", "endpoint", "trigger"]
+  },
   "website": {
     "category": "Code",
     "tags": ["webbuilder", "coding"]
@@ -9078,6 +9811,10 @@
   "wechat": {
     "category": "Social Media & Brands",
     "tags": ["messaging", "chat", "social", "china", "brand", "logo"]
+  },
+  "weibo": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "social", "microblog", "china", "network"]
   },
   "weight": {
     "category": "Things",
@@ -9162,6 +9899,30 @@
     "category": "AI & Magic",
     "tags": ["whisper", "api", "app", "software"]
   },
+  "window-square": {
+    "category": "Interface General",
+    "tags": ["browser", "app", "desktop", "page", "screen"]
+  },
+  "window-square-delete": {
+    "category": "Interface General",
+    "tags": ["browser", "close", "remove", "app", "tab"]
+  },
+  "window-square-locked": {
+    "category": "Interface General",
+    "tags": ["browser", "secure", "private", "padlock", "restricted"]
+  },
+  "window-square-plus": {
+    "category": "Interface General",
+    "tags": ["browser", "new", "add", "tab", "open"]
+  },
+  "window-square-security": {
+    "category": "Interface General",
+    "tags": ["browser", "shield", "protected", "safe", "privacy"]
+  },
+  "windows-colored": {
+    "category": "Social Media & Brands",
+    "tags": ["brand", "logo", "microsoft", "os", "pc", "multicolour"]
+  },
   "windsurf": {
     "category": "Social Media & Brands",
     "tags": ["editor", "ide", "coding-tool", "ai-assistant", "developer"]
@@ -9225,6 +9986,10 @@
   "youtube": {
     "category": "Social Media & Brands",
     "tags": ["video", "streaming", "watch", "channel", "play", "social"]
+  },
+  "zai": {
+    "category": "Social Media & Brands",
+    "tags": ["logo", "brand", "ai", "chatbot", "model"]
   },
   "zap": {
     "category": "Photography & Video",

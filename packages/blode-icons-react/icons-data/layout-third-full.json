@@ -1,5 +1,5 @@
 {
-  "category": "Layout",
   "icon": "layout-third-full",
-  "tags": []
+  "category": "Layout",
+  "tags": ["split", "divide", "panel", "window", "tile"]
 }

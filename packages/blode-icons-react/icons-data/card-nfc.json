@@ -1,5 +1,5 @@
 {
-  "category": "Shopping & Payment",
   "icon": "card-nfc",
-  "tags": ["payment"]
+  "category": "Shopping & Payment",
+  "tags": ["contactless", "tap", "wireless", "payment", "near-field"]
 }

@@ -1,7 +1,28 @@
-import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const BlackHoleIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinejoin="round" strokeWidth={2} d="M3.5 19.5336V12c0-4.6944 3.8056-8.5 8.5-8.5 2.1941 0 4.1941.8314 5.702 2.1962l.9175-1.7039c.4926-.9147 1.8805-.5648 1.8805.4741V12c0 4.6945-3.8056 8.5-8.5 8.5-2.1941 0-4.194-.8313-5.702-2.1962l-.9175 1.7039c-.4926.9148-1.8805.5648-1.8805-.4741Z" /><circle cx={12} cy={12} r={3.5} stroke="currentColor" strokeWidth={2} /></svg>;
+
+import { createLucideIcon } from "./create-lucide-icon";
+const BlackHoleIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    viewBox="0 0 24 24"
+    ref={ref}
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinejoin="round"
+      d="M3.5 19.5336V12c0-4.6944 3.8056-8.5 8.5-8.5 2.1941 0 4.1941.8314 5.702 2.1962l.9175-1.7039c.4926-.9147 1.8805-.5648 1.8805.4741V12c0 4.6945-3.8056 8.5-8.5 8.5-2.1941 0-4.194-.8313-5.702-2.1962l-.9175 1.7039c-.4926.9148-1.8805.5648-1.8805-.4741Z"
+    />
+    <circle cx={12} cy={12} r={3.5} stroke="currentColor" />
+  </svg>
+);
 const ForwardRef = forwardRef(BlackHoleIcon);
-export default createLucideIcon('BlackHoleIcon', ForwardRef);
+export default createLucideIcon("BlackHoleIcon", ForwardRef);

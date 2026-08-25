@@ -1,5 +1,5 @@
 {
-  "category": "Layout",
   "icon": "layout-align-top-bottom",
-  "tags": ["padding"]
+  "category": "Layout",
+  "tags": ["arrange", "position", "distribute", "vertical", "structure"]
 }

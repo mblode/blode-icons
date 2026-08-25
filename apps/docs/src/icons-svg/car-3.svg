@@ -1,6 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5 17H19.803C21.0164 17 22 16.0164 22 14.803V14.5669C22 11.9115 20.1257 9.62513 17.5218 9.10435C17.1858 9.03715 16.8863 8.84844 16.6807 8.57432L15.2 6.6C14.4446 5.59278 13.259 5 12 5H7.71208C4.46434 5 2 7.5 2 11.5819V14.5C2 15.8807 3.11929 17 4.5 17" stroke="currentColor" stroke-width="2"/>
-<circle cx="7" cy="16.75" r="2.25" stroke="currentColor" stroke-width="2"/>
-<circle cx="17" cy="16.75" r="2.25" stroke="currentColor" stroke-width="2"/>
-<path d="M14.5 17H9.5" stroke="currentColor" stroke-width="2"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M18.5 17h1.303C21.0164 17 22 16.0164 22 14.803v-.2361c0-2.6554-1.8743-4.9418-4.4782-5.4625-.336-.0672-.6355-.256-.8411-.53L15.2 6.6C14.4446 5.5928 13.259 5 12 5H7.712C4.4644 5 2 7.5 2 11.5819V14.5C2 15.8807 3.1193 17 4.5 17"/><circle cx="7" cy="16.75" r="2.25" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="16.75" r="2.25" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M14.5 17h-5"/></svg>

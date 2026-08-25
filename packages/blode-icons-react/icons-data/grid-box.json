@@ -1,5 +1,5 @@
 {
-  "category": "Layout",
   "icon": "grid-box",
-  "tags": ["grid-9"]
+  "category": "Layout",
+  "tags": ["tiles", "cells", "table", "gallery", "arrange"]
 }

@@ -1,5 +1,5 @@
 {
-  "category": "Edit",
   "icon": "extend-image",
-  "tags": []
+  "category": "Photography & Video",
+  "tags": ["outpaint", "uncrop", "expand", "generative-fill", "canvas"]
 }

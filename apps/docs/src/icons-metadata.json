@@ -5,6 +5,16 @@
     "tags": []
   },
   {
+    "category": "",
+    "icon": "_cohorts",
+    "tags": []
+  },
+  {
+    "category": "",
+    "icon": "_concepts",
+    "tags": []
+  },
+  {
     "category": "Photography & Video",
     "icon": "add-image",
     "tags": [
@@ -69,8 +79,30 @@
   },
   {
     "category": "AI & Magic",
+    "icon": "ai-bot-head",
+    "tags": ["assistant", "chatbot", "robot", "face", "agent"]
+  },
+  {
+    "category": "AI & Magic",
+    "icon": "ai-bot-head-looking",
+    "tags": ["assistant", "chatbot", "robot", "glance", "thinking", "agent"]
+  },
+  {
+    "category": "AI & Magic",
     "icon": "ai-slop",
     "tags": ["trash", "garbage", "low-quality", "generated", "junk", "waste"]
+  },
+  {
+    "category": "AI & Magic",
+    "icon": "ai-slop-sign",
+    "tags": [
+      "warning",
+      "caution",
+      "low-quality",
+      "generated",
+      "junk",
+      "melting"
+    ]
   },
   {
     "category": "AI & Magic",
@@ -148,6 +180,11 @@
     "tags": ["cover", "music", "record", "playlist", "collection", "gallery"]
   },
   {
+    "category": "Sound & Music",
+    "icon": "albums-2",
+    "tags": ["cover", "music", "record", "playlist", "collection", "gallery"]
+  },
+  {
     "category": "Things",
     "icon": "alien",
     "tags": ["ufo", "extraterrestrial", "space", "martian", "et"]
@@ -210,6 +247,11 @@
     "category": "Photography & Video",
     "icon": "alt",
     "tags": ["option", "key", "modifier", "keyboard", "shortcut"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "amazon",
+    "tags": ["brand", "logo", "shop", "ecommerce", "retail", "marketplace"]
   },
   {
     "category": "Sports",
@@ -368,6 +410,11 @@
   },
   {
     "category": "Social Media & Brands",
+    "icon": "apple-podcast",
+    "tags": ["brand", "logo", "audio", "show", "listen", "subscribe"]
+  },
+  {
+    "category": "Social Media & Brands",
     "icon": "apple-spring",
     "tags": ["motion", "animation", "framework", "brand", "bounce"]
   },
@@ -513,6 +560,16 @@
   },
   {
     "category": "Arrows",
+    "icon": "arrow-curve-down-left",
+    "tags": ["curved", "bend", "turn", "direction", "reply", "return"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "arrow-curve-right",
+    "tags": ["curved", "bend", "turn", "direction", "forward", "redo"]
+  },
+  {
+    "category": "Arrows",
     "icon": "arrow-down",
     "tags": ["descend", "decrease", "scroll", "lower", "south"]
   },
@@ -559,6 +616,16 @@
     "tags": ["heighten", "stretch", "resize", "vertical", "spread"]
   },
   {
+    "category": "Arrows",
+    "icon": "arrow-from-line-down",
+    "tags": ["out", "away", "export", "eject", "downward", "release"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "arrow-from-line-up",
+    "tags": ["out", "away", "export", "eject", "upward", "release"]
+  },
+  {
     "category": "Interface General",
     "icon": "arrow-inbox",
     "tags": ["download", "file", "down", "save"]
@@ -602,6 +669,16 @@
     "category": "Arrows",
     "icon": "arrow-loop-down-left",
     "tags": ["restore", "reset"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "arrow-merge-left",
+    "tags": ["combine", "join", "converge", "lane", "direction", "traffic"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "arrow-merge-right",
+    "tags": ["combine", "join", "converge", "lane", "direction", "traffic"]
   },
   {
     "category": "Interface General",
@@ -682,6 +759,11 @@
     "category": "Arrows",
     "icon": "arrow-rotate-left-right",
     "tags": ["repeat", "refresh"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "arrow-rotate-point",
+    "tags": ["refresh", "reload", "sync", "turn", "pivot", "repeat"]
   },
   {
     "category": "Arrows",
@@ -948,14 +1030,36 @@
     "tags": ["handle", "@"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "atlassian",
+    "tags": ["logo", "brand", "jira", "confluence", "software"]
+  },
+  {
     "category": "Nature & Energy",
     "icon": "atom",
     "tags": ["science", "physics", "molecule", "nuclear", "react"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "audible",
+    "tags": ["brand", "logo", "audiobook", "listen", "amazon", "spoken"]
+  },
+  {
     "category": "Sound & Music",
     "icon": "audio",
     "tags": ["music", "playlist", "musical-note"]
+  },
+  {
+    "category": "Sound & Music",
+    "icon": "audio-bars",
+    "tags": [
+      "equaliser",
+      "equalizer",
+      "levels",
+      "waveform",
+      "volume",
+      "spectrum"
+    ]
   },
   {
     "category": "People",
@@ -1098,6 +1202,11 @@
     "tags": ["menu", "nav"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "base44",
+    "tags": ["logo", "brand", "app-builder", "vibe-coding", "platform"]
+  },
+  {
     "category": "Sports",
     "icon": "baseball",
     "tags": ["sport", "mlb", "ball", "pitch", "game"]
@@ -1195,6 +1304,11 @@
     "tags": ["fly", "insect", "honey", "bug", "buzz", "pollinate"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "beehiiv",
+    "tags": ["brand", "logo", "newsletter", "email", "publishing", "subscribe"]
+  },
+  {
     "category": "Food",
     "icon": "beer",
     "tags": ["cheers", "drink", "alcohol", "pub", "pint"]
@@ -1216,8 +1330,28 @@
   },
   {
     "category": "Interface General",
+    "icon": "bell-2-active",
+    "tags": ["notification", "alert", "ringing", "activity", "unread"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "bell-2-off",
+    "tags": ["notification", "mute", "silence", "alert", "disable"]
+  },
+  {
+    "category": "Interface General",
     "icon": "bell-2-snooze",
     "tags": ["notification", "activity", "alert"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "bell-active",
+    "tags": ["notification", "alert", "ringing", "activity", "unread"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "bell-alarm",
+    "tags": ["notification", "alert", "reminder", "ring", "wake", "clock"]
   },
   {
     "category": "Interface General",
@@ -1406,6 +1540,11 @@
   },
   {
     "category": "Communication",
+    "icon": "book-heart",
+    "tags": ["favorite", "saved", "diary", "journal", "love", "guide"]
+  },
+  {
+    "category": "Communication",
     "icon": "book-simple",
     "tags": ["guide", "info", "faq"]
   },
@@ -1548,6 +1687,43 @@
     "category": "Code",
     "icon": "branch-simple",
     "tags": ["git", "fork", "version-control", "merge", "tree"]
+  },
+  {
+    "category": "Code",
+    "icon": "branches",
+    "tags": ["git", "fork", "version-control", "split", "repository", "tree"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "brand-amex",
+    "tags": [
+      "american-express",
+      "card",
+      "payment",
+      "credit",
+      "logo",
+      "checkout"
+    ]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "brand-jcb",
+    "tags": ["card", "payment", "credit", "logo", "checkout", "japan"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "brand-mastercard",
+    "tags": ["card", "payment", "credit", "logo", "checkout"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "brand-visa",
+    "tags": ["card", "payment", "credit", "logo", "checkout"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "brand-zoom",
+    "tags": ["logo", "meeting", "video-call", "conference", "webinar"]
   },
   {
     "category": "Food",
@@ -1820,6 +1996,11 @@
   },
   {
     "category": "Social Media & Brands",
+    "icon": "buymeacoffee",
+    "tags": ["brand", "logo", "tip", "donate", "support", "creator"]
+  },
+  {
+    "category": "Social Media & Brands",
     "icon": "c",
     "tags": ["language", "letter", "programming", "brand", "logo"]
   },
@@ -1827,6 +2008,11 @@
     "category": "Furniture & Household",
     "icon": "cabinet",
     "tags": ["storage", "cupboard", "furniture", "shelf", "wardrobe"]
+  },
+  {
+    "category": "Things",
+    "icon": "cable-knife",
+    "tags": ["stripper", "cutter", "tool", "wire", "electrician", "blade"]
   },
   {
     "category": "Devices & Signals",
@@ -2203,6 +2389,11 @@
     "tags": ["profile", "avatar", "account"]
   },
   {
+    "category": "Shopping & Payment",
+    "icon": "card-nfc",
+    "tags": ["contactless", "tap", "wireless", "payment", "near-field"]
+  },
+  {
     "category": "Layout",
     "icon": "carussel",
     "tags": ["slides", "slider", "gallery", "rotate", "banner", "showcase"]
@@ -2211,6 +2402,16 @@
     "category": "Social Media & Brands",
     "icon": "cash",
     "tags": ["money", "payment", "banknote", "currency", "wallet"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "cashapp",
+    "tags": ["brand", "logo", "payment", "money", "transfer", "wallet"]
+  },
+  {
+    "category": "Building",
+    "icon": "castle",
+    "tags": ["fortress", "tower", "medieval", "fort", "palace"]
   },
   {
     "category": "Photography & Video",
@@ -2314,6 +2515,11 @@
   },
   {
     "category": "Statistics & Charts",
+    "icon": "chart-8",
+    "tags": ["statistics", "graph", "bars", "analytics", "report"]
+  },
+  {
+    "category": "Statistics & Charts",
     "icon": "chart-compare",
     "tags": ["graph", "analytics", "versus", "bars", "data"]
   },
@@ -2341,6 +2547,11 @@
     "category": "Communication",
     "icon": "chat-bubbles",
     "tags": ["message", "speech", "comment", "conversation", "talk"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "check",
+    "tags": ["tick", "done", "confirm", "success", "complete", "approve"]
   },
   {
     "category": "Interface General",
@@ -2434,6 +2645,11 @@
   },
   {
     "category": "Arrows",
+    "icon": "chevron-down",
+    "tags": ["caret", "expand", "dropdown", "open", "collapse", "disclosure"]
+  },
+  {
+    "category": "Arrows",
     "icon": "chevron-down-medium",
     "tags": ["expand", "dropdown", "collapse", "caret", "scroll"]
   },
@@ -2449,8 +2665,18 @@
   },
   {
     "category": "Arrows",
+    "icon": "chevron-grabber-horizontal-toward",
+    "tags": ["collapse", "shrink", "inward", "resize", "drag", "handle"]
+  },
+  {
+    "category": "Arrows",
     "icon": "chevron-grabber-vertical",
     "tags": ["resize", "drag", "handle", "slider", "adjust"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "chevron-grabber-vertical-toward",
+    "tags": ["collapse", "shrink", "inward", "resize", "drag", "handle"]
   },
   {
     "category": "Arrows",
@@ -2548,6 +2774,11 @@
     "tags": ["dropdown", "collapse", "menu", "select", "caret", "picker"]
   },
   {
+    "category": "Arrows",
+    "icon": "chevron-up",
+    "tags": ["caret", "collapse", "close", "expand", "disclosure", "scroll-top"]
+  },
+  {
     "category": "Devices & Signals",
     "icon": "chip",
     "tags": [
@@ -2628,6 +2859,11 @@
     "tags": ["outline", "loading", "progress", "pending", "placeholder"]
   },
   {
+    "category": "Interface General",
+    "icon": "circle-exclamation",
+    "tags": ["warning", "alert", "error", "attention", "important", "caution"]
+  },
+  {
     "category": "Accessibility",
     "icon": "circle-half-fill",
     "tags": ["contrast", "a11y", "theme", "brightness", "dark-light", "balance"]
@@ -2643,9 +2879,19 @@
     "tags": ["remove", "subtract", "delete", "deduct", "exclude", "decrease"]
   },
   {
+    "category": "Interface General",
+    "icon": "circle-outline",
+    "tags": ["ring", "empty", "unselected", "radio", "shape", "placeholder"]
+  },
+  {
     "category": "Accessibility",
     "icon": "circle-person",
     "tags": ["accessibility", "a11y"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "circle-placeholder-dashed",
+    "tags": ["empty", "unselected", "optional", "slot", "drop-target"]
   },
   {
     "category": "Interface General",
@@ -2789,11 +3035,6 @@
   },
   {
     "category": "Clouds",
-    "icon": "cloud-",
-    "tags": ["storage", "weather", "sky", "backup", "server"]
-  },
-  {
-    "category": "Clouds",
     "icon": "cloud-2",
     "tags": ["storage", "weather", "sky", "backup", "server"]
   },
@@ -2813,6 +3054,11 @@
     "category": "Clouds",
     "icon": "cloud-check",
     "tags": ["save", "saved", "synced", "backup", "uploaded", "done"]
+  },
+  {
+    "category": "Clouds",
+    "icon": "cloud-dots",
+    "tags": ["loading", "pending", "sync", "progress", "server", "storage"]
   },
   {
     "category": "Clouds",
@@ -2976,6 +3222,11 @@
   },
   {
     "category": "Crypto",
+    "icon": "coin",
+    "tags": ["money", "currency", "token", "cash", "payment", "credit"]
+  },
+  {
+    "category": "Crypto",
     "icon": "coin-1",
     "tags": ["credits", "money"]
   },
@@ -3135,6 +3386,16 @@
     "tags": ["git", "version", "history", "changes", "revision", "push"]
   },
   {
+    "category": "Location",
+    "icon": "compass-pointer",
+    "tags": ["navigation", "cursor", "direction", "heading", "arrow"]
+  },
+  {
+    "category": "Location",
+    "icon": "compass-pointer-square",
+    "tags": ["navigation", "cursor", "direction", "heading", "arrow"]
+  },
+  {
     "category": "Interface General",
     "icon": "compass-round",
     "tags": ["browser", "safari", "web", "internet", "navigation"]
@@ -3163,6 +3424,11 @@
     "category": "Sound & Music",
     "icon": "conductor",
     "tags": ["ochestrator", "vibe"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "confluence",
+    "tags": ["logo", "brand", "atlassian", "wiki", "docs"]
   },
   {
     "category": "Devices & Signals",
@@ -3220,6 +3486,26 @@
     "tags": ["ctrl", "shortcut", "modifier", "hotkey", "command"]
   },
   {
+    "category": "Gaming",
+    "icon": "controller-button-circle",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  {
+    "category": "Gaming",
+    "icon": "controller-button-square",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  {
+    "category": "Gaming",
+    "icon": "controller-button-triangle",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  {
+    "category": "Gaming",
+    "icon": "controller-button-x",
+    "tags": ["playstation", "gamepad", "console", "input", "key"]
+  },
+  {
     "category": "Food",
     "icon": "cookies",
     "tags": ["biscuit", "snack", "dessert", "treat", "bakery", "sweet"]
@@ -3233,6 +3519,11 @@
     "category": "Social Media & Brands",
     "icon": "copilot",
     "tags": ["github", "ai-coding", "assistant", "autocomplete", "helper"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "copy-simple",
+    "tags": ["duplicate", "clipboard", "clone", "paste", "replicate"]
   },
   {
     "category": "Things",
@@ -3268,6 +3559,11 @@
     "category": "Shopping & Payment",
     "icon": "credit-card-add",
     "tags": ["card", "payment"]
+  },
+  {
+    "category": "Shopping & Payment",
+    "icon": "credit-card-nfc",
+    "tags": ["contactless", "tap", "wireless", "checkout", "near-field"]
   },
   {
     "category": "Photography & Video",
@@ -3425,6 +3721,16 @@
       "performance",
       "average"
     ]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "databricks",
+    "tags": ["logo", "brand", "data", "lakehouse", "analytics"]
+  },
+  {
+    "category": "AI & Magic",
+    "icon": "databricks-genie-code",
+    "tags": ["lamp", "wish", "assistant", "magic", "sql", "query"]
   },
   {
     "category": "Time & Date",
@@ -3725,6 +4031,11 @@
     "tags": ["sign", "do-not-disdurb"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "doordash",
+    "tags": ["brand", "logo", "delivery", "food", "takeaway", "order"]
+  },
+  {
     "category": "Folders & Files",
     "icon": "dossier",
     "tags": ["folder", "file", "document", "case", "record", "portfolio"]
@@ -3756,8 +4067,23 @@
   },
   {
     "category": "Interface General",
+    "icon": "dot-grid-2x3-horizontal",
+    "tags": ["drag-handle", "reorder", "menu", "dots", "grip", "more"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "dot-grid-2x3-vertical",
+    "tags": ["drag-handle", "reorder", "menu", "dots", "grip", "more"]
+  },
+  {
+    "category": "Interface General",
     "icon": "dot-grid-3x3",
     "tags": ["menu", "drag", "grab"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "dot-small",
+    "tags": ["point", "bullet", "marker", "indicator", "status", "unread"]
   },
   {
     "category": "Interface General",
@@ -3878,6 +4204,11 @@
     "tags": ["globe", "world"]
   },
   {
+    "category": "Location",
+    "icon": "earth-2",
+    "tags": ["globe", "world", "planet", "international", "map"]
+  },
+  {
     "category": "Edit",
     "icon": "edit-big",
     "tags": ["box", "pencil", "pen", "write", "draw"]
@@ -3950,6 +4281,36 @@
       "contact",
       "send"
     ]
+  },
+  {
+    "category": "Communication",
+    "icon": "email-2-block",
+    "tags": ["envelope", "mail", "spam", "blocked", "forbidden"]
+  },
+  {
+    "category": "Communication",
+    "icon": "email-2-check",
+    "tags": ["envelope", "mail", "sent", "delivered", "verified"]
+  },
+  {
+    "category": "Communication",
+    "icon": "email-2-incoming",
+    "tags": ["envelope", "mail", "inbox", "receive", "arrive"]
+  },
+  {
+    "category": "Communication",
+    "icon": "email-2-plus",
+    "tags": ["envelope", "mail", "compose", "new", "add"]
+  },
+  {
+    "category": "Communication",
+    "icon": "email-2-remove",
+    "tags": ["envelope", "mail", "delete", "cancel", "unsubscribe"]
+  },
+  {
+    "category": "Communication",
+    "icon": "email-2-unread",
+    "tags": ["envelope", "mail", "new", "badge", "inbox"]
   },
   {
     "category": "Communication",
@@ -4100,6 +4461,11 @@
     "tags": ["fun", "playful", "goofy", "crazy", "silly", "joking"]
   },
   {
+    "category": "Keyboard",
+    "icon": "enter",
+    "tags": ["return", "key", "submit", "newline", "keyboard"]
+  },
+  {
     "category": "Edit",
     "icon": "eraser",
     "tags": ["rubber", "clean-up"]
@@ -4176,6 +4542,11 @@
   },
   {
     "category": "Photography & Video",
+    "icon": "exposure",
+    "tags": ["brightness", "camera", "light", "stops", "compensation", "ev"]
+  },
+  {
+    "category": "Photography & Video",
     "icon": "exposure-1",
     "tags": ["plus-minus", "brightness", "light", "adjust", "ev"]
   },
@@ -4183,6 +4554,11 @@
     "category": "Nature & Energy",
     "icon": "exposure-2",
     "tags": ["macro", "flower"]
+  },
+  {
+    "category": "Photography & Video",
+    "icon": "extend-image",
+    "tags": ["outpaint", "uncrop", "expand", "generative-fill", "canvas"]
   },
   {
     "category": "Accessibility",
@@ -4287,7 +4663,7 @@
     "tags": ["skip", "seek", "jump", "advance", "ahead"]
   },
   {
-    "category": "Vehicles & Aircrafts",
+    "category": "Vehicles",
     "icon": "fast-shipping",
     "tags": ["truck", "delivery"]
   },
@@ -4318,6 +4694,16 @@
   },
   {
     "category": "Folders & Files",
+    "icon": "file-arrow-left",
+    "tags": ["move", "import", "transfer", "back", "document", "receive"]
+  },
+  {
+    "category": "Folders & Files",
+    "icon": "file-arrow-left-2",
+    "tags": ["move", "import", "transfer", "back", "document", "receive"]
+  },
+  {
+    "category": "Folders & Files",
     "icon": "file-arrow-left-in",
     "tags": ["document-arrow-left-in", "incoming"]
   },
@@ -4325,6 +4711,16 @@
     "category": "Folders & Files",
     "icon": "file-arrow-left-out",
     "tags": ["document-arrow-left-out", "outgoing"]
+  },
+  {
+    "category": "Folders & Files",
+    "icon": "file-arrow-right",
+    "tags": ["move", "export", "transfer", "forward", "document", "send"]
+  },
+  {
+    "category": "Folders & Files",
+    "icon": "file-arrow-right-2",
+    "tags": ["move", "export", "transfer", "forward", "document", "send"]
   },
   {
     "category": "Folders & Files",
@@ -4524,6 +4920,11 @@
     "tags": ["cards", "pages"]
   },
   {
+    "category": "Interface General",
+    "icon": "flick",
+    "tags": ["swipe", "gesture", "fling", "touch", "scroll", "toss"]
+  },
+  {
     "category": "Folders & Files",
     "icon": "floppy-disk-1",
     "tags": ["save", "store", "diskette", "backup"]
@@ -4537,6 +4938,11 @@
     "category": "Forms & Shapes",
     "icon": "flower-shape",
     "tags": ["petal", "bloom", "blossom", "floral", "scallop"]
+  },
+  {
+    "category": "Photography & Video",
+    "icon": "focus",
+    "tags": ["camera", "autofocus", "target", "sharpen", "lens", "viewfinder"]
   },
   {
     "category": "Photography & Video",
@@ -4637,6 +5043,11 @@
     "category": "Folders & Files",
     "icon": "folder-download",
     "tags": ["save", "export", "directory", "fetch", "get"]
+  },
+  {
+    "category": "Folders & Files",
+    "icon": "folder-edit",
+    "tags": ["rename", "pencil", "modify", "directory", "write"]
   },
   {
     "category": "Folders & Files",
@@ -4856,6 +5267,11 @@
     "tags": ["resolution", "ultra-hd", "video", "quality", "2160p"]
   },
   {
+    "category": "Layout",
+    "icon": "frame-simple",
+    "tags": ["artboard", "canvas", "border", "container", "crop", "boundary"]
+  },
+  {
     "category": "Social Media & Brands",
     "icon": "framer",
     "tags": ["design", "prototype", "motion", "no-code", "web"]
@@ -5056,6 +5472,26 @@
     "tags": ["version-control", "repository", "source", "vcs", "commit"]
   },
   {
+    "category": "Code",
+    "icon": "git-branches",
+    "tags": ["fork", "version-control", "repository", "split", "merge"]
+  },
+  {
+    "category": "Code",
+    "icon": "git-commit-vertical",
+    "tags": ["version-control", "revision", "history", "save", "changeset"]
+  },
+  {
+    "category": "Code",
+    "icon": "git-fork",
+    "tags": ["version-control", "copy", "repository", "branch", "clone"]
+  },
+  {
+    "category": "Code",
+    "icon": "git-pull-request",
+    "tags": ["version-control", "review", "merge", "pr", "contribute"]
+  },
+  {
     "category": "Social Media & Brands",
     "icon": "github",
     "tags": ["repository", "octocat", "code-hosting", "vcs", "open-source"]
@@ -5137,8 +5573,18 @@
   },
   {
     "category": "Social Media & Brands",
+    "icon": "google-colored",
+    "tags": ["brand", "logo", "search", "sign-in", "oauth", "multicolour"]
+  },
+  {
+    "category": "Social Media & Brands",
     "icon": "google-deepmind",
     "tags": ["ai-research", "ml", "lab", "neural", "gemini"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "google-play",
+    "tags": ["brand", "logo", "android", "app-store", "download", "install"]
   },
   {
     "category": "Social Media & Brands",
@@ -5186,6 +5632,16 @@
       "clean",
       "environment"
     ]
+  },
+  {
+    "category": "Layout",
+    "icon": "grid",
+    "tags": ["guides", "alignment", "columns", "rule-of-thirds", "hash"]
+  },
+  {
+    "category": "Layout",
+    "icon": "grid-box",
+    "tags": ["tiles", "cells", "table", "gallery", "arrange"]
   },
   {
     "category": "Social Media & Brands",
@@ -5261,6 +5717,11 @@
     "category": "Interface General",
     "icon": "hand-bell",
     "tags": ["ring", "alert", "notification", "service", "alarm"]
+  },
+  {
+    "category": "Hands",
+    "icon": "hand-touch",
+    "tags": ["tap", "gesture", "press", "finger", "interact"]
   },
   {
     "category": "Hands",
@@ -5396,6 +5857,11 @@
     "category": "Building",
     "icon": "home-personal-feed",
     "tags": ["for-you", "house", "dashboard", "recommended", "timeline", "main"]
+  },
+  {
+    "category": "Building",
+    "icon": "home-plus",
+    "tags": ["house", "add", "new", "property", "create"]
   },
   {
     "category": "Building",
@@ -5600,6 +6066,11 @@
   },
   {
     "category": "Interface General",
+    "icon": "info",
+    "tags": ["information", "help", "about", "detail", "hint", "tooltip"]
+  },
+  {
+    "category": "Interface General",
     "icon": "info-simple",
     "tags": ["tooltip", "information"]
   },
@@ -5670,6 +6141,11 @@
   },
   {
     "category": "Social Media & Brands",
+    "icon": "jira",
+    "tags": ["logo", "brand", "atlassian", "tickets", "issues"]
+  },
+  {
+    "category": "Social Media & Brands",
     "icon": "json",
     "tags": ["data", "format", "object", "api", "config"]
   },
@@ -5684,9 +6160,19 @@
     "tags": ["skip", "next", "advance", "leap", "forward"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "kakaotalk",
+    "tags": ["brand", "logo", "chat", "messaging", "korea", "social"]
+  },
+  {
     "category": "Layout",
     "icon": "kanban-view",
     "tags": ["columns", "board", "tasks", "trello", "workflow", "cards"]
+  },
+  {
+    "category": "Security",
+    "icon": "key",
+    "tags": ["password", "access", "unlock", "credential", "secret", "api-key"]
   },
   {
     "category": "Security",
@@ -5739,9 +6225,24 @@
     "tags": ["lock", "unlock"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "kick",
+    "tags": ["brand", "logo", "streaming", "live", "video", "creator"]
+  },
+  {
     "category": "Sports",
     "icon": "kickball",
     "tags": ["ball", "game", "playground", "sport", "recreation"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "kimi",
+    "tags": ["logo", "brand", "ai", "moonshot", "chatbot"]
+  },
+  {
+    "category": "Food",
+    "icon": "knife-spoon",
+    "tags": ["cutlery", "restaurant", "dining", "eat", "utensils", "meal"]
   },
   {
     "category": "Things",
@@ -5752,6 +6253,11 @@
     "category": "Code",
     "icon": "ladybug",
     "tags": ["issue", "bug", "insect", "error", "defect", "beetle"]
+  },
+  {
+    "category": "Location",
+    "icon": "land-plot-simple",
+    "tags": ["parcel", "property", "area", "real-estate", "boundary", "survey"]
   },
   {
     "category": "Security",
@@ -5785,6 +6291,11 @@
   },
   {
     "category": "Layout",
+    "icon": "layout-align-left-right",
+    "tags": ["arrange", "position", "distribute", "horizontal", "structure"]
+  },
+  {
+    "category": "Layout",
     "icon": "layout-align-right",
     "tags": ["arrange", "position", "grid", "structure", "frame"]
   },
@@ -5795,8 +6306,23 @@
   },
   {
     "category": "Layout",
+    "icon": "layout-align-top-bottom",
+    "tags": ["arrange", "position", "distribute", "vertical", "structure"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-all-sides",
+    "tags": ["padding", "margin", "spacing", "inset", "around"]
+  },
+  {
+    "category": "Layout",
     "icon": "layout-bottom",
     "tags": ["grid", "window"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-bottom-full",
+    "tags": ["split", "panel", "window", "tile", "region"]
   },
   {
     "category": "Layout",
@@ -5820,8 +6346,18 @@
   },
   {
     "category": "Layout",
+    "icon": "layout-grid-3",
+    "tags": ["columns", "tiles", "gallery", "arrange", "dashboard", "masonry"]
+  },
+  {
+    "category": "Layout",
     "icon": "layout-half",
     "tags": ["split", "divide", "columns", "section", "panel"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-half-full",
+    "tags": ["split", "divide", "panel", "window", "tile"]
   },
   {
     "category": "Layout",
@@ -5830,8 +6366,23 @@
   },
   {
     "category": "Layout",
+    "icon": "layout-left-full",
+    "tags": ["split", "panel", "sidebar", "window", "tile"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-left-right",
+    "tags": ["padding", "margin", "spacing", "horizontal", "inset"]
+  },
+  {
+    "category": "Layout",
     "icon": "layout-right",
     "tags": ["grid", "window"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-right-full",
+    "tags": ["split", "panel", "sidebar", "window", "tile"]
   },
   {
     "category": "Layout",
@@ -5845,8 +6396,23 @@
   },
   {
     "category": "Layout",
+    "icon": "layout-third-full",
+    "tags": ["split", "divide", "panel", "window", "tile"]
+  },
+  {
+    "category": "Layout",
     "icon": "layout-top",
     "tags": ["grid", "window"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-top-bottom",
+    "tags": ["padding", "margin", "spacing", "vertical", "inset"]
+  },
+  {
+    "category": "Layout",
+    "icon": "layout-top-full",
+    "tags": ["split", "panel", "window", "tile", "region"]
   },
   {
     "category": "Layout",
@@ -5976,6 +6542,11 @@
     "category": "Things",
     "icon": "limit",
     "tags": ["cap", "restrict", "threshold", "maximum", "boundary", "quota"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "line-brand",
+    "tags": ["logo", "chat", "messaging", "japan", "social"]
   },
   {
     "category": "Statistics & Charts",
@@ -6178,6 +6749,11 @@
     ]
   },
   {
+    "category": "Interface General",
+    "icon": "login",
+    "tags": ["sign-in", "enter", "authenticate", "access", "account", "session"]
+  },
+  {
     "category": "Social Media & Brands",
     "icon": "lottielab",
     "tags": ["animation", "motion", "editor", "logo", "tool", "vector"]
@@ -6211,6 +6787,11 @@
   },
   {
     "category": "Devices & Signals",
+    "icon": "macinthosh",
+    "tags": ["macintosh", "mac", "computer", "desktop", "apple", "retro"]
+  },
+  {
+    "category": "Devices & Signals",
     "icon": "macintosh",
     "tags": [
       "mac",
@@ -6221,6 +6802,11 @@
       "classic",
       "desktop"
     ]
+  },
+  {
+    "category": "AI & Magic",
+    "icon": "magic",
+    "tags": ["wand", "sparkle", "auto", "enhance", "generate", "ai"]
   },
   {
     "category": "AI & Magic",
@@ -6305,6 +6891,11 @@
       "receive",
       "envelope"
     ]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "mailchimp",
+    "tags": ["brand", "logo", "email", "newsletter", "marketing", "campaign"]
   },
   {
     "category": "Filter & Settings",
@@ -6540,6 +7131,11 @@
     ]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "meandu",
+    "tags": ["brand", "logo", "ordering", "hospitality", "menu", "payments"]
+  },
+  {
     "category": "Things",
     "icon": "medal",
     "tags": ["trophy", "badge", "winner", "win"]
@@ -6668,6 +7264,11 @@
     "category": "Social Media & Brands",
     "icon": "midjourney",
     "tags": ["image-gen", "ai-art", "generative", "logo", "diffusion", "brand"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "minimax",
+    "tags": ["logo", "brand", "ai", "chatbot", "model"]
   },
   {
     "category": "Photography & Video",
@@ -6829,6 +7430,11 @@
       "drag",
       "reorganize"
     ]
+  },
+  {
+    "category": "Folders & Files",
+    "icon": "move-folder-inside",
+    "tags": ["relocate", "transfer", "directory", "into", "organize"]
   },
   {
     "category": "Photography & Video",
@@ -7121,6 +7727,11 @@
     "tags": ["moving", "progress", "continuous", "active", "running", "loop"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "onlyfans",
+    "tags": ["brand", "logo", "creator", "subscription", "social", "content"]
+  },
+  {
     "category": "Typography",
     "icon": "open-quote-1",
     "tags": ["blockquote", "quotation", "citation", "speech", "punctuation"]
@@ -7164,6 +7775,11 @@
     "category": "Social Media & Brands",
     "icon": "opencode",
     "tags": ["coding", "ai", "brand", "editor", "assistant"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "opentable",
+    "tags": ["brand", "logo", "restaurant", "booking", "reservation", "dining"]
   },
   {
     "category": "Social Media & Brands",
@@ -7488,9 +8104,19 @@
     "tags": ["flow", "connection"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "paypal",
+    "tags": ["brand", "logo", "payment", "checkout", "money", "wallet"]
+  },
+  {
     "category": "Things",
     "icon": "peace",
     "tags": ["victory", "love", "hippie", "harmony", "sign"]
+  },
+  {
+    "category": "Edit",
+    "icon": "pencel-line",
+    "tags": ["pencil", "write", "draw", "annotate", "underline", "compose"]
   },
   {
     "category": "Edit",
@@ -7653,6 +8279,11 @@
   },
   {
     "category": "People",
+    "icon": "person-simple",
+    "tags": ["user", "profile", "avatar", "account", "individual", "member"]
+  },
+  {
+    "category": "People",
     "icon": "persona",
     "tags": ["thanos-effect", "remove-user", "remove-account", "blip"]
   },
@@ -7674,6 +8305,11 @@
   {
     "category": "Devices & Signals",
     "icon": "phone-haptic",
+    "tags": ["vibration", "buzz", "silent", "feedback", "ringtone"]
+  },
+  {
+    "category": "Devices & Signals",
+    "icon": "phone-haptic-2",
     "tags": ["vibration", "buzz", "silent", "feedback", "ringtone"]
   },
   {
@@ -7710,6 +8346,11 @@
     "category": "Photography & Video",
     "icon": "picture-in-picture",
     "tags": ["pip", "floating", "overlay", "minimize", "multitask"]
+  },
+  {
+    "category": "Statistics & Charts",
+    "icon": "pie-chart",
+    "tags": ["graph", "analytics", "share", "proportion", "breakdown", "report"]
   },
   {
     "category": "Statistics & Charts",
@@ -7773,6 +8414,11 @@
   },
   {
     "category": "Location",
+    "icon": "pin-focus",
+    "tags": ["marker", "place", "gps", "target", "locate"]
+  },
+  {
+    "category": "Location",
     "icon": "pin-location",
     "tags": ["marker", "place", "gps", "map", "destination"]
   },
@@ -7790,6 +8436,11 @@
     "category": "Social Media & Brands",
     "icon": "pinterest-simple",
     "tags": ["social", "brand", "boards", "bookmark", "share"]
+  },
+  {
+    "category": "Things",
+    "icon": "pipe",
+    "tags": ["plumbing", "tube", "conduit", "duct", "pipeline"]
   },
   {
     "category": "Food",
@@ -7838,6 +8489,11 @@
   },
   {
     "category": "Things",
+    "icon": "plugin",
+    "tags": ["extension", "addon", "integration", "module", "connect", "widget"]
+  },
+  {
+    "category": "Things",
     "icon": "plugin-1",
     "tags": ["power", "adapter"]
   },
@@ -7845,6 +8501,11 @@
     "category": "Things",
     "icon": "plugin-2",
     "tags": ["build", "extension", "addon", "integration", "module"]
+  },
+  {
+    "category": "Things",
+    "icon": "plugins",
+    "tags": ["extension", "addon", "integration", "module", "connect"]
   },
   {
     "category": "Interface General",
@@ -7932,6 +8593,11 @@
     "tags": ["coal", "gas", "factory"]
   },
   {
+    "category": "Statistics & Charts",
+    "icon": "presentation-analytics",
+    "tags": ["slides", "deck", "report", "graph", "meeting", "data"]
+  },
+  {
     "category": "Interface General",
     "icon": "preview",
     "tags": ["details", "view", "look", "inspect", "glance"]
@@ -7939,6 +8605,11 @@
   {
     "category": "Devices & Signals",
     "icon": "printer",
+    "tags": ["print", "document", "output", "paper", "hardcopy"]
+  },
+  {
+    "category": "Devices & Signals",
+    "icon": "printer-2",
     "tags": ["print", "document", "output", "paper", "hardcopy"]
   },
   {
@@ -8065,6 +8736,28 @@
     "category": "Social Media & Brands",
     "icon": "quora",
     "tags": ["q-and-a", "questions", "forum", "knowledge", "community"]
+  },
+  {
+    "category": "Typography",
+    "icon": "quote",
+    "tags": [
+      "quotation",
+      "blockquote",
+      "citation",
+      "testimonial",
+      "speech",
+      "marks"
+    ]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "qwen",
+    "tags": ["logo", "brand", "ai", "alibaba", "model"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "qwik",
+    "tags": ["logo", "brand", "framework", "javascript", "web"]
   },
   {
     "category": "Things",
@@ -8259,6 +8952,11 @@
     "tags": ["books", "study", "library", "knowledge"]
   },
   {
+    "category": "Augmented Reality",
+    "icon": "reframe",
+    "tags": ["axes", "gizmo", "orientation", "transform", "spatial", "3d"]
+  },
+  {
     "category": "Arrows",
     "icon": "remix",
     "tags": ["new-try", "repeat"]
@@ -8433,6 +9131,11 @@
   },
   {
     "category": "Things",
+    "icon": "rocket-2",
+    "tags": ["startup", "launch", "ship", "boost", "space"]
+  },
+  {
+    "category": "Things",
     "icon": "rocking-horse",
     "tags": ["child", "kids", "toy"]
   },
@@ -8470,6 +9173,18 @@
     "category": "Gaming",
     "icon": "roulette-2",
     "tags": ["coincidence", "gambling"]
+  },
+  {
+    "category": "Edit",
+    "icon": "roundness",
+    "tags": [
+      "corner-radius",
+      "rounded",
+      "border-radius",
+      "shape",
+      "smooth",
+      "bevel"
+    ]
   },
   {
     "category": "Social Media & Brands",
@@ -8530,6 +9245,11 @@
     "category": "Statistics & Charts",
     "icon": "sankey-chart",
     "tags": ["flow", "diagram", "data", "graph", "distribution"]
+  },
+  {
+    "category": "Devices & Signals",
+    "icon": "satellite",
+    "tags": ["orbit", "space", "gps", "signal", "communication", "antenna"]
   },
   {
     "category": "Devices & Signals",
@@ -8762,6 +9482,18 @@
     "tags": ["switch", "on-off", "options", "control", "preferences", "flip"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "sevenrooms",
+    "tags": [
+      "brand",
+      "logo",
+      "restaurant",
+      "reservation",
+      "hospitality",
+      "booking"
+    ]
+  },
+  {
     "category": "Edit",
     "icon": "shader-effect",
     "tags": ["material", "texture", "render", "gradient", "graphics", "surface"]
@@ -8790,6 +9522,11 @@
     "category": "Interface General",
     "icon": "shapes-plus-x-square-circle",
     "tags": ["icon", "icons", "shapes", "games"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "share",
+    "tags": ["send", "export", "social", "distribute", "forward", "link"]
   },
   {
     "category": "Interface General",
@@ -8896,8 +9633,18 @@
   },
   {
     "category": "Security",
+    "icon": "shield-safe-search",
+    "tags": ["parental-control", "kids", "filter", "safety", "protect"]
+  },
+  {
+    "category": "Security",
     "icon": "shield-search",
     "tags": ["safety", "privacy", "security", "scan"]
+  },
+  {
+    "category": "Security",
+    "icon": "shield-user",
+    "tags": ["account", "privacy", "protect", "profile", "permission"]
   },
   {
     "category": "Keyboard",
@@ -8915,9 +9662,14 @@
     "tags": ["changelog", "deploy", "release", "launch", "publish"]
   },
   {
-    "category": "Vehicles & Aircrafts",
+    "category": "Vehicles",
     "icon": "shipping",
     "tags": ["truck", "delivery"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "shopify",
+    "tags": ["brand", "logo", "ecommerce", "store", "shop", "checkout"]
   },
   {
     "category": "Shopping & Payment",
@@ -9030,6 +9782,11 @@
   },
   {
     "category": "Layout",
+    "icon": "sidebar-left-arrow-right",
+    "tags": ["collapse", "expand", "panel", "drawer", "toggle", "navigation"]
+  },
+  {
+    "category": "Layout",
     "icon": "sidebar-simple-left-square",
     "tags": ["panel", "navigation", "menu", "drawer", "layout"]
   },
@@ -9052,6 +9809,18 @@
     "category": "Layout",
     "icon": "sidebar-wide-left-arrow",
     "tags": ["panel", "expand", "navigation", "toggle", "menu"]
+  },
+  {
+    "category": "Devices & Signals",
+    "icon": "signal",
+    "tags": [
+      "reception",
+      "bars",
+      "network",
+      "strength",
+      "wireless",
+      "connection"
+    ]
   },
   {
     "category": "Devices & Signals",
@@ -9090,6 +9859,16 @@
   },
   {
     "category": "Social Media & Brands",
+    "icon": "siri-gen-1",
+    "tags": ["voice-assistant", "apple", "ai", "speak", "helper"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "siri-gen-2",
+    "tags": ["voice-assistant", "apple", "ai", "speak", "helper"]
+  },
+  {
+    "category": "Social Media & Brands",
     "icon": "sketch",
     "tags": ["design-tool", "ui", "wireframe", "app", "mac"]
   },
@@ -9107,6 +9886,11 @@
     "category": "Social Media & Brands",
     "icon": "slack",
     "tags": ["chat", "messaging", "team", "workspace", "communication"]
+  },
+  {
+    "category": "Typography",
+    "icon": "slash-forward",
+    "tags": ["divider", "separator", "url", "path", "punctuation", "stroke"]
   },
   {
     "category": "Time & Date",
@@ -9226,6 +10010,11 @@
     ]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "soundcloud",
+    "tags": ["brand", "logo", "audio", "streaming", "podcast"]
+  },
+  {
     "category": "Things",
     "icon": "space",
     "tags": ["star", "cosmos", "universe", "galaxy", "astronomy", "night"]
@@ -9246,6 +10035,11 @@
       "padding",
       "whitespace"
     ]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "spacexai",
+    "tags": ["logo", "brand", "rocket", "space", "launch"]
   },
   {
     "category": "AI & Magic",
@@ -9381,13 +10175,28 @@
   },
   {
     "category": "Arrows",
+    "icon": "square-arrow-down-2",
+    "tags": ["download", "boxed", "direction", "descend", "move"]
+  },
+  {
+    "category": "Arrows",
     "icon": "square-arrow-in-top-left",
     "tags": ["dock", "box", "arrow"]
   },
   {
     "category": "Arrows",
+    "icon": "square-arrow-left",
+    "tags": ["back", "boxed", "direction", "previous", "move"]
+  },
+  {
+    "category": "Arrows",
     "icon": "square-arrow-out-top-left",
     "tags": ["undock", "box", "arrow"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "square-arrow-right",
+    "tags": ["forward", "boxed", "direction", "next", "move"]
   },
   {
     "category": "Arrows",
@@ -9408,6 +10217,11 @@
     "category": "Arrows",
     "icon": "square-arrow-top-right-corner",
     "tags": ["diagonal", "direction", "expand", "external", "resize"]
+  },
+  {
+    "category": "Arrows",
+    "icon": "square-arrow-up-2",
+    "tags": ["upload", "boxed", "direction", "ascend", "move"]
   },
   {
     "category": "Interface General",
@@ -9597,6 +10411,11 @@
   },
   {
     "category": "Interface General",
+    "icon": "star-half",
+    "tags": ["rating", "review", "partial", "favourite", "score", "half-filled"]
+  },
+  {
+    "category": "Interface General",
     "icon": "star-lines",
     "tags": ["features", "favorite", "award", "to the moon"]
   },
@@ -9666,6 +10485,11 @@
     "tags": ["halt", "end", "pause", "cease", "button"]
   },
   {
+    "category": "Photography & Video",
+    "icon": "stop-share-screen",
+    "tags": ["screen-sharing", "end", "present", "cast", "meeting", "off"]
+  },
+  {
     "category": "Time & Date",
     "icon": "stopwatch",
     "tags": ["track", "timer", "countdown", "duration", "chronometer", "lap"]
@@ -9699,6 +10523,11 @@
     "category": "Building",
     "icon": "stores",
     "tags": ["shops", "mall"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "stors",
+    "tags": ["brand", "logo", "storage", "retail", "platform"]
   },
   {
     "category": "Food",
@@ -9880,6 +10709,11 @@
     "category": "Devices & Signals",
     "icon": "tablet",
     "tags": ["ipad", "mobile"]
+  },
+  {
+    "category": "Things",
+    "icon": "tactics",
+    "tags": ["strategy", "plan", "board", "formation", "play", "chess"]
   },
   {
     "category": "Things",
@@ -10258,6 +11092,11 @@
     "tags": ["breakfest", "bread", "breakfast", "slice", "food", "notification"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "todoist",
+    "tags": ["logo", "brand", "tasks", "todo", "productivity"]
+  },
+  {
     "category": "Interface General",
     "icon": "todos",
     "tags": ["check", "things", "task"]
@@ -10286,6 +11125,11 @@
     "category": "Food",
     "icon": "toque",
     "tags": ["chefs-cap", "cook"]
+  },
+  {
+    "category": "Things",
+    "icon": "torch",
+    "tags": ["flashlight", "light", "lamp", "beam", "search"]
   },
   {
     "category": "Hands",
@@ -10331,6 +11175,11 @@
     "category": "Interface General",
     "icon": "trash-can",
     "tags": ["delete", "remove", "garbage", "waste"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "trash-can-2",
+    "tags": ["delete", "bin", "remove", "discard", "rubbish", "garbage"]
   },
   {
     "category": "Interface General",
@@ -10430,6 +11279,11 @@
     "tags": ["growth", "rising", "popular", "momentum", "upward", "hot"]
   },
   {
+    "category": "Statistics & Charts",
+    "icon": "trending-down-simple",
+    "tags": ["decline", "decrease", "fall", "graph", "loss", "arrow"]
+  },
+  {
     "category": "Interface General",
     "icon": "trial",
     "tags": ["try", "money-back", "test-phase"]
@@ -10476,6 +11330,11 @@
     "category": "Social Media & Brands",
     "icon": "typescript",
     "tags": ["language", "programming", "ts", "javascript", "code", "brand"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "uber",
+    "tags": ["brand", "logo", "rideshare", "taxi", "transport", "delivery"]
   },
   {
     "category": "Things",
@@ -10693,6 +11552,11 @@
     "tags": ["hosting", "deploy", "cloud", "nextjs", "brand", "logo"]
   },
   {
+    "category": "Interface General",
+    "icon": "verified-check",
+    "tags": ["badge", "confirmed", "trusted", "authentic", "approved", "tick"]
+  },
+  {
     "category": "Sports",
     "icon": "versus-circle",
     "tags": ["vs", "match", "battle", "compete", "duel", "against"]
@@ -10764,6 +11628,11 @@
   },
   {
     "category": "Photography & Video",
+    "icon": "video-play",
+    "tags": ["watch", "media", "start", "clip", "player", "stream"]
+  },
+  {
+    "category": "Photography & Video",
     "icon": "video-roll",
     "tags": ["movie", "film", "clip", "footage", "reel", "media"]
   },
@@ -10804,6 +11673,11 @@
     "tags": ["filter", "effect", "darken", "border", "photo", "edges"]
   },
   {
+    "category": "Social Media & Brands",
+    "icon": "vimeo",
+    "tags": ["brand", "logo", "video", "streaming", "hosting"]
+  },
+  {
     "category": "Augmented Reality",
     "icon": "vision-pro",
     "tags": ["goggles", "headset", "vr", "apple", "spatial", "mixed-reality"]
@@ -10820,6 +11694,11 @@
   },
   {
     "category": "Social Media & Brands",
+    "icon": "vk",
+    "tags": ["vkontakte", "brand", "logo", "social", "network", "russia"]
+  },
+  {
+    "category": "Social Media & Brands",
     "icon": "vkontakte",
     "tags": ["vk", "social", "russian", "network", "brand", "logo"]
   },
@@ -10827,6 +11706,11 @@
     "category": "Sound & Music",
     "icon": "vocal-microphone",
     "tags": ["singing", "karaoke"]
+  },
+  {
+    "category": "Sound & Music",
+    "icon": "voice",
+    "tags": ["microphone", "speak", "audio", "record", "talk", "sound"]
   },
   {
     "category": "Sound & Music",
@@ -11063,6 +11947,21 @@
     ]
   },
   {
+    "category": "Sound & Music",
+    "icon": "wave",
+    "tags": ["waveform", "signal", "sine", "audio", "frequency"]
+  },
+  {
+    "category": "Sound & Music",
+    "icon": "wave-round-2",
+    "tags": ["waveform", "signal", "curve", "audio", "frequency"]
+  },
+  {
+    "category": "Sound & Music",
+    "icon": "waves-simple",
+    "tags": ["waveform", "audio", "signal", "sound", "vibration", "frequency"]
+  },
+  {
     "category": "Crypto",
     "icon": "web3",
     "tags": ["crypto-space", "nft"]
@@ -11079,6 +11978,11 @@
   },
   {
     "category": "Code",
+    "icon": "webhooks",
+    "tags": ["api", "callback", "integration", "endpoint", "trigger"]
+  },
+  {
+    "category": "Code",
     "icon": "website",
     "tags": ["webbuilder", "coding"]
   },
@@ -11086,6 +11990,11 @@
     "category": "Social Media & Brands",
     "icon": "wechat",
     "tags": ["messaging", "chat", "social", "china", "brand", "logo"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "weibo",
+    "tags": ["brand", "logo", "social", "microblog", "china", "network"]
   },
   {
     "category": "Things",
@@ -11188,6 +12097,36 @@
     "tags": ["whisper", "api", "app", "software"]
   },
   {
+    "category": "Interface General",
+    "icon": "window-square",
+    "tags": ["browser", "app", "desktop", "page", "screen"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "window-square-delete",
+    "tags": ["browser", "close", "remove", "app", "tab"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "window-square-locked",
+    "tags": ["browser", "secure", "private", "padlock", "restricted"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "window-square-plus",
+    "tags": ["browser", "new", "add", "tab", "open"]
+  },
+  {
+    "category": "Interface General",
+    "icon": "window-square-security",
+    "tags": ["browser", "shield", "protected", "safe", "privacy"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "windows-colored",
+    "tags": ["brand", "logo", "microsoft", "os", "pc", "multicolour"]
+  },
+  {
     "category": "Social Media & Brands",
     "icon": "windsurf",
     "tags": ["editor", "ide", "coding-tool", "ai-assistant", "developer"]
@@ -11266,6 +12205,11 @@
     "category": "Social Media & Brands",
     "icon": "youtube",
     "tags": ["video", "streaming", "watch", "channel", "play", "social"]
+  },
+  {
+    "category": "Social Media & Brands",
+    "icon": "zai",
+    "tags": ["logo", "brand", "ai", "chatbot", "model"]
   },
   {
     "category": "Photography & Video",

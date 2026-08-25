@@ -1,7 +1,28 @@
-import { createLucideIcon } from './create-lucide-icon'
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-const FileDownloadIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 21c-1.6569 0-3-1.3431-3-3V6c0-1.6569 1.3431-3 3-3h4.1716a2 2 0 0 1 1.4142.5858l4.8284 4.8284A2 2 0 0 1 19 9.8284V18c0 1.6569-1.3431 3-3 3M13 3.5V7c0 1.1046.8954 2 2 2h3.5M12 14v6m0 0 2.5-2.5M12 20l-2.5-2.5" /></svg>;
+
+import { createLucideIcon } from "./create-lucide-icon";
+const FileDownloadIcon = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    viewBox="0 0 24 24"
+    ref={ref}
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M8 21c-1.6569 0-3-1.3431-3-3V6c0-1.6569 1.3431-3 3-3h4.1716a2 2 0 0 1 1.4142.5858l4.8284 4.8284c.3751.375.5858.8838.5858 1.4142V18c0 1.6569-1.3431 3-3 3M13 3.5V7c0 1.1046.8954 2 2 2h3.5M12 14v6m0 0 2.5-2.5M12 20l-2.5-2.5"
+    />
+  </svg>
+);
 const ForwardRef = forwardRef(FileDownloadIcon);
-export default createLucideIcon('FileDownloadIcon', ForwardRef);
+export default createLucideIcon("FileDownloadIcon", ForwardRef);

@@ -1,5 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.5 7H9.5C8.67157 7 8 7.67157 8 8.5C8 9.32843 8.67157 10 9.5 10H18.5C19.3284 10 20 9.32843 20 8.5C20 7.67157 19.3284 7 18.5 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.5 14H9.5C8.67157 14 8 14.6716 8 15.5C8 16.3284 8.67157 17 9.5 17H14.5C15.3284 17 16 16.3284 16 15.5C16 14.6716 15.3284 14 14.5 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5 7h-9C8.6716 7 8 7.6716 8 8.5S8.6716 10 9.5 10h9c.8284 0 1.5-.6716 1.5-1.5S19.3284 7 18.5 7Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.5 14h-5c-.8284 0-1.5.6716-1.5 1.5S8.6716 17 9.5 17h5c.8284 0 1.5-.6716 1.5-1.5s-.6716-1.5-1.5-1.5Z"/></svg>

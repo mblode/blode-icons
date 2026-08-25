@@ -1,5 +1,5 @@
 {
-  "category": "Layout",
   "icon": "layout-all-sides",
-  "tags": ["margin", "padding"]
+  "category": "Layout",
+  "tags": ["padding", "margin", "spacing", "inset", "around"]
 }

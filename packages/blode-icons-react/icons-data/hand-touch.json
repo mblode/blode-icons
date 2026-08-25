@@ -1,5 +1,5 @@
 {
-  "category": "Hands",
   "icon": "hand-touch",
-  "tags": ["input", "area", "target"]
+  "category": "Hands",
+  "tags": ["tap", "gesture", "press", "finger", "interact"]
 }

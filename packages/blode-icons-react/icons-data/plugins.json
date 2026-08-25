@@ -1,5 +1,5 @@
 {
-  "category": "Things",
   "icon": "plugins",
-  "tags": ["apps", "connection", "electricity", "power", "at"]
+  "category": "Things",
+  "tags": ["extension", "addon", "integration", "module", "connect"]
 }

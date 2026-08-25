@@ -1,5 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.5 8C14.6716 8 14 8.67157 14 9.5V14.5C14 15.3284 14.6716 16 15.5 16C16.3284 16 17 15.3284 17 14.5V9.5C17 8.67157 16.3284 8 15.5 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.5 8C7.67157 8 7 8.67157 7 9.5V18.5C7 19.3284 7.67157 20 8.5 20C9.32843 20 10 19.3284 10 18.5V9.5C10 8.67157 9.32843 8 8.5 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.5 8c-.8284 0-1.5.6716-1.5 1.5v5c0 .8284.6716 1.5 1.5 1.5s1.5-.6716 1.5-1.5v-5c0-.8284-.6716-1.5-1.5-1.5Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 8C7.6716 8 7 8.6716 7 9.5v9c0 .8284.6716 1.5 1.5 1.5s1.5-.6716 1.5-1.5v-9C10 8.6716 9.3284 8 8.5 8Z"/></svg>

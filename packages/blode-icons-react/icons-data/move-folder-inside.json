@@ -1,5 +1,5 @@
 {
-  "category": "Folders & Files",
   "icon": "move-folder-inside",
-  "tags": []
+  "category": "Folders & Files",
+  "tags": ["relocate", "transfer", "directory", "into", "organize"]
 }

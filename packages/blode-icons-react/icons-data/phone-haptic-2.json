@@ -1,5 +1,5 @@
 {
-  "category": "Devices & Signals",
   "icon": "phone-haptic-2",
-  "tags": ["vibration", "sound"]
+  "category": "Devices & Signals",
+  "tags": ["vibration", "buzz", "silent", "feedback", "ringtone"]
 }
