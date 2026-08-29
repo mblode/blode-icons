@@ -73,7 +73,7 @@ All icons accept standard SVG attributes plus:
 ## Agents
 
 - Site: https://blode.co/icons
-- MCP: https://blode.co/icons/mcp (`search_icons`, `get_icon`)
+- MCP: https://blode.co/icons/mcp (`search_icons`, `get_icon`, `get_usage`)
 - `llms.txt`: https://blode.co/icons/llms.txt
 - shadcn registry: `npx shadcn@latest add https://blode.co/icons/r/<slug>.json`
 
