@@ -2,6 +2,12 @@ import { asset, siteConfig } from "@/lib/config";
 
 export const SiteFooter = () => (
   <footer className="flex flex-col items-center justify-center gap-2 pt-16 pb-8 text-muted-foreground text-sm">
+    <a
+      className="mb-4 rounded-lg border border-border px-4 py-3 text-center transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4"
+      href="https://github.com/sponsors/mblode"
+    >
+      Using Blode Icons at work? Sponsor its maintenance.
+    </a>
     {/*
       blode.co and blode.co/projects are this same origin behind a rewrite, so
       both are internal links: same tab, and no rel="noopener noreferrer", which
