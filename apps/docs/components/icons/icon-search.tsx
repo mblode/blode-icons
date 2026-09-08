@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { asset } from "@/lib/config";
+import { copyIconContent } from "@/lib/conversion-events";
 import { downloadSvg } from "@/lib/icon-download";
 import { PAGE_SIZE } from "@/lib/icon-grid";
 import {
@@ -252,7 +253,12 @@ export const IconSearch = ({
         return;
       }
 
-      await navigator.clipboard.writeText(value);
+      await copyIconContent(
+        value,
+        `copy-${copyKind.toLowerCase()}`,
+        "icon-search",
+        slug
+      );
       toast(
         `"${getIconDisplayName(name)}" ${COPY_KIND_LABEL[copyKind]} copied to clipboard`
       );

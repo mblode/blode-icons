@@ -1,3 +1,5 @@
+import { captureIconAction } from "./conversion-events";
+
 /**
  * Save an SVG to disk from the browser.
  *
@@ -17,6 +19,7 @@ export const downloadSvg = (fileStem: string, source: string) => {
   anchor.rel = "noopener";
   document.body.append(anchor);
   anchor.click();
+  captureIconAction("download_clicked", "download-svg", "icon", fileStem);
   anchor.remove();
   URL.revokeObjectURL(url);
 };

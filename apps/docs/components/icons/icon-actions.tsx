@@ -3,6 +3,7 @@
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
+import { copyIconContent } from "@/lib/conversion-events";
 import { downloadSvg } from "@/lib/icon-download";
 import ArrowDownWallIcon from "@/src/icons-tsx/arrow-down-wall";
 
@@ -29,7 +30,12 @@ export const IconActions = ({
       return;
     }
     try {
-      await navigator.clipboard.writeText(value);
+      await copyIconContent(
+        value,
+        `copy-${label.toLowerCase()}`,
+        "icon-detail",
+        slug
+      );
       toast(`${componentName} ${label} copied to clipboard`);
     } catch {
       toast.error(`Failed to copy ${componentName} ${label}`);
