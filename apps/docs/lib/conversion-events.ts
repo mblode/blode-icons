@@ -1,5 +1,7 @@
 import posthog from "posthog-js";
 
+import { copyText } from "@/lib/clipboard";
+
 /** Action intent only: no copied SVG, code, prompt, or customer content. */
 export const captureIconAction = (
   event: "cta_clicked" | "download_clicked",
@@ -19,12 +21,17 @@ export const captureIconAction = (
   }
 };
 
+/**
+ * `content` may be a promise for source that is still being fetched, so the
+ * clipboard write can be registered inside the tap that asked for it. See
+ * `lib/clipboard`.
+ */
 export const copyIconContent = async (
-  content: string,
+  content: string | Promise<string>,
   label: string,
   location: string,
   icon?: string
 ): Promise<void> => {
-  await navigator.clipboard.writeText(content);
+  await copyText(content);
   captureIconAction("cta_clicked", label, location, icon);
 };

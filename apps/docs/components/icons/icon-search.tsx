@@ -89,7 +89,13 @@ const IconCell = ({
           )}
         </a>
 
-        <div className="absolute inset-x-0 bottom-0 flex gap-1 bg-gradient-to-t from-background via-background/95 to-transparent p-1.5 opacity-0 transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100">
+        {/*
+          Revealed on hover on a pointer device, but always visible where there
+          is no hover to give: Tailwind scopes `hover:` to `(hover: hover)`, so
+          on a phone the bar stayed at `opacity-0` while still taking the tap —
+          you could only copy an icon by hitting a button you could not see.
+        */}
+        <div className="absolute inset-x-0 bottom-0 flex gap-1 bg-gradient-to-t from-background via-background/95 to-transparent p-1.5 opacity-0 transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
           <Button
             aria-label={`Copy ${displayName} SVG`}
             className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
@@ -242,19 +248,22 @@ export const IconSearch = ({
     name: string,
     copyKind: IconCopyKind
   ) => {
+    // The fetch is started but deliberately not awaited: handing the pending
+    // promise straight to the clipboard keeps the write inside the tap that
+    // asked for it, which is the only thing Safari accepts.
+    const source =
+      copyKind === "NAME"
+        ? name
+        : loadIconSource({ copyKind, iconName: slug }).then((value) => {
+            if (!value) {
+              throw new Error(`No ${copyKind} source for ${slug}`);
+            }
+            return value;
+          });
+
     try {
-      const value =
-        copyKind === "NAME"
-          ? name
-          : await loadIconSource({ copyKind, iconName: slug });
-
-      if (!value) {
-        toast.error(`Failed to copy ${name}`);
-        return;
-      }
-
       await copyIconContent(
-        value,
+        source,
         `copy-${copyKind.toLowerCase()}`,
         "icon-search",
         slug
