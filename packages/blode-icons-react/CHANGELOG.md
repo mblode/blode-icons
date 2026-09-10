@@ -1,5 +1,12 @@
 # blode-icons-react
 
+## 1.0.1
+
+### Patch Changes
+
+- 5aaa468: Add the latest icon set.
+- c0f1696: List the hosted MCP `get_usage` tool in the published package README.
+
 ## 1.0.0
 
 ### Major Changes
