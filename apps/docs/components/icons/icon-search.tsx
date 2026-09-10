@@ -33,33 +33,6 @@ const FILLED_SUFFIX = "FilledIcon";
 // Module-level cache so toggling style / re-searching never re-fetches an SVG.
 const svgCache = new Map<string, string>();
 
-const GLYPH_SURFACE =
-  "absolute inset-0 flex cursor-pointer items-center justify-center rounded-xl px-2 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2";
-
-/**
- * Whether the device has no hover to give — the same `(hover: none)` that
- * Tailwind scopes its `hover:` variants to, so the JS and the CSS agree on
- * which cells can reveal their action bar.
- *
- * Lives here rather than in `IconCell` so the grid holds one listener instead
- * of one per visible cell. It starts false so the server and the first client
- * render both emit the anchor, which is what keeps 2,200 icon pages linked.
- */
-const useIsTouch = () => {
-  const [isTouch, setIsTouch] = useState(false);
-
-  useEffect(() => {
-    const query = window.matchMedia("(hover: none)");
-    setIsTouch(query.matches);
-
-    const onChange = (event: MediaQueryListEvent) => setIsTouch(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-
-  return isTouch;
-};
-
 const resolveVariant = (doc: SearchDoc, style: IconStyle) => {
   const solid = style === "SOLID" && doc.hasFilled;
   return {
@@ -73,129 +46,105 @@ const IconCell = ({
   style,
   markup,
   onCopy,
-  isTouch,
 }: {
   doc: SearchDoc;
   style: IconStyle;
   markup: string | null;
   onCopy: (slug: string, name: string, copyKind: IconCopyKind) => void;
-  isTouch: boolean;
 }) => {
   const { slug, name } = resolveVariant(doc, style);
   const displayName = getIconDisplayName(name);
-  const href = asset(`/${doc.slug}`);
-
-  const glyph = markup ? (
-    // Zoom the glyph on hover/focus instead of hiding it behind the copy
-    // buttons, so you can actually see the icon while deciding (issue #14).
-    //
-    // dangerouslySetInnerHTML rather than assigning innerHTML in an effect: the
-    // effect only runs after hydration, so the server HTML shipped an empty div
-    // and the whole grid stayed blank until the bundle booted. This renders the
-    // glyph into the document itself. The markup is this repo's own
-    // src/icons-svg files, never user input.
-    <div
-      className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
-      dangerouslySetInnerHTML={{ __html: markup }}
-    />
-  ) : (
-    <div className="size-6 rounded-md bg-muted/40" />
-  );
 
   return (
     <div>
       <div className="group relative h-[104px] overflow-hidden rounded-xl border border-border [contain-intrinsic-size:104px] [content-visibility:auto]">
         {/*
-          Two different controls, because the two kinds of device want different
-          things from a tap.
-
-          With a pointer, the glyph is a link to the icon's own page and the
-          copy buttons reveal on hover above it. Raw anchor rather than
-          next/link: the grid can hold 2,000 cells, and prefetching every
-          visible one is a request storm for pages nobody may open.
-
-          With a touchscreen there is no hover, so those buttons can never
-          appear — the whole cell is a button that copies the name instead, and
-          the label underneath carries the link to the page. It is a button, not
-          an anchor with its default suppressed, so a screen reader is told what
-          the tap will actually do.
+          The glyph is a link to the icon's own page, where it is shown at
+          every size with its category, tags, aliases and import line. The
+          copy buttons sit on top of it, so a click on one never falls through
+          to the link. Raw anchor rather than next/link: the grid can hold
+          2,000 cells, and prefetching every visible one is a request storm
+          for pages nobody may open.
         */}
-        {isTouch ? (
-          <button
-            className={GLYPH_SURFACE}
-            onClick={() => onCopy(slug, name, "NAME")}
-            type="button"
-          >
-            <span className="sr-only">Copy {displayName} name</span>
-            {glyph}
-          </button>
-        ) : (
-          <a className={GLYPH_SURFACE} href={href}>
-            <span className="sr-only">{displayName}</span>
-            {glyph}
-          </a>
-        )}
+        <a
+          className="absolute inset-0 flex items-center justify-center rounded-xl px-2 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+          href={asset(`/${doc.slug}`)}
+        >
+          <span className="sr-only">{displayName}</span>
+          {markup ? (
+            // Zoom the glyph on hover/focus instead of hiding it behind the copy
+            // buttons, so you can actually see the icon while deciding (issue #14).
+            //
+            // dangerouslySetInnerHTML rather than assigning innerHTML in an
+            // effect: the effect only runs after hydration, so the server HTML
+            // shipped an empty div and the whole grid stayed blank until the
+            // bundle booted. This renders the glyph into the document itself.
+            // The markup is this repo's own src/icons-svg files, never user input.
+            <div
+              className="flex size-6 items-center justify-center transition-transform duration-150 ease-out group-focus-within:-translate-y-1.5 group-focus-within:scale-[1.85] group-hover:-translate-y-1.5 group-hover:scale-[1.85] [&_svg]:size-6"
+              dangerouslySetInnerHTML={{ __html: markup }}
+            />
+          ) : (
+            <div className="size-6 rounded-md bg-muted/40" />
+          )}
+        </a>
 
         {/*
-          Dropped entirely on touch rather than left at `opacity-0`: an
-          invisible bar still swallowed every tap along the bottom of the cell,
-          so copying meant hitting a button you could not see.
+          Dropped where there is no hover to reveal it. Tailwind scopes `hover:`
+          to `(hover: hover)`, so on a phone this bar could never appear — yet
+          at `opacity-0` it still swallowed every tap along the bottom of the
+          cell, which is why copying an icon there meant hitting a button you
+          could not see. `display: none` takes it out of the tap target, the tab
+          order and the a11y tree together, leaving the whole cell as the link
+          to the icon's page, where the same four actions are always visible at
+          a size worth aiming at.
         */}
-        {isTouch ? null : (
-          <div className="absolute inset-x-0 bottom-0 flex gap-1 bg-gradient-to-t from-background via-background/95 to-transparent p-1.5 opacity-0 transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100">
-            <Button
-              aria-label={`Copy ${displayName} SVG`}
-              className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
-              onClick={() => onCopy(slug, name, "SVG")}
-              variant="secondary"
-            >
-              SVG
-            </Button>
-            <Button
-              aria-label={`Copy ${displayName} React component source`}
-              className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
-              onClick={() => onCopy(slug, name, "TSX")}
-              variant="secondary"
-            >
-              TSX
-            </Button>
-            <Button
-              aria-label={`Copy ${displayName} name`}
-              className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
-              onClick={() => onCopy(slug, name, "NAME")}
-              variant="secondary"
-            >
-              Name
-            </Button>
-            {/*
+        <div className="absolute inset-x-0 bottom-0 flex gap-1 bg-gradient-to-t from-background via-background/95 to-transparent p-1.5 opacity-0 transition-opacity duration-150 group-focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:hidden">
+          <Button
+            aria-label={`Copy ${displayName} SVG`}
+            className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
+            onClick={() => onCopy(slug, name, "SVG")}
+            variant="secondary"
+          >
+            SVG
+          </Button>
+          <Button
+            aria-label={`Copy ${displayName} React component source`}
+            className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
+            onClick={() => onCopy(slug, name, "TSX")}
+            variant="secondary"
+          >
+            TSX
+          </Button>
+          <Button
+            aria-label={`Copy ${displayName} name`}
+            className="h-7 min-w-0 flex-1 cursor-pointer px-1 text-[11px]"
+            onClick={() => onCopy(slug, name, "NAME")}
+            variant="secondary"
+          >
+            Name
+          </Button>
+          {/*
             The markup is already in memory for the cell, so the download costs
             no request. Disabled until it arrives rather than saving an empty
             file.
           */}
-            <Button
-              aria-label={`Download ${displayName} SVG`}
-              className="shrink-0 cursor-pointer"
-              disabled={!markup}
-              onClick={() => markup && downloadSvg(slug, markup)}
-              size="icon-sm"
-              variant="secondary"
-            >
-              <ArrowDownWallIcon className="size-3.5" />
-            </Button>
-          </div>
-        )}
+          <Button
+            aria-label={`Download ${displayName} SVG`}
+            className="shrink-0 cursor-pointer"
+            disabled={!markup}
+            onClick={() => markup && downloadSvg(slug, markup)}
+            size="icon-sm"
+            variant="secondary"
+          >
+            <ArrowDownWallIcon className="size-3.5" />
+          </Button>
+        </div>
       </div>
 
-      {/*
-        Always a link, so the icon's page stays reachable on a phone, where the
-        glyph above copies instead of navigating.
-      */}
-      <a
-        className="mt-2 line-clamp-2 block text-center text-muted-foreground text-xs hover:text-foreground"
-        href={href}
-      >
+      <span className="mt-2 line-clamp-2 text-center text-muted-foreground text-xs">
         {displayName}
-      </a>
+      </span>
     </div>
   );
 };
@@ -208,7 +157,6 @@ export const IconSearch = ({
 }) => {
   const [iconStyle, setIconStyle] = useState<IconStyle>("OUTLINE");
   const [searchQuery, setSearchQuery] = useState("");
-  const isTouch = useIsTouch();
 
   const searchResults = useMemo(() => searchIcons(searchQuery), [searchQuery]);
   const filteredIcons = useMemo(
@@ -386,7 +334,6 @@ export const IconSearch = ({
           {visibleIcons.map((doc) => (
             <IconCell
               doc={doc}
-              isTouch={isTouch}
               key={doc.slug}
               markup={
                 markupBySlug.get(resolveVariant(doc, iconStyle).slug) ?? null
